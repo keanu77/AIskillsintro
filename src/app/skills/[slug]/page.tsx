@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 
 import { getSkillBySlug, getAllSlugs } from "@/data/skills";
 import { getSkillContent } from "@/lib/getSkillContent";
+import { translateContent } from "@/lib/translateContent";
 
 // Template detail components
 import SkillDetailHero from "@/components/detail/SkillDetailHero";
@@ -46,14 +47,15 @@ export default async function SkillDetailPage({ params }: PageProps) {
 
   if (!skill) notFound();
 
-  const content = getSkillContent(skill.slug);
+  const raw = getSkillContent(skill.slug);
+  const content = raw ? translateContent(raw) : null;
 
   return (
     <>
       <BackToCatalog />
       <SkillDetailHero skill={skill} />
-      {content && <SkillGuide content={content} />}
       <Installation slug={skill.slug} />
+      {content && <SkillGuide content={content} />}
       <Footer skillName={skill.name} />
     </>
   );
