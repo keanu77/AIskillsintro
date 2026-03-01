@@ -74,7 +74,7 @@ export default function Home() {
 
             {/* K-Dense Scientific Skills */}
             <a
-              href="https://github.com/anthropics/claude-scientific-skills"
+              href="https://github.com/K-Dense-AI/claude-scientific-skills"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-start gap-4 rounded-2xl border border-slate-200 bg-slate-50/50 p-5 transition-all hover:border-blue-200 hover:bg-blue-50/50 hover:shadow-md"
@@ -102,11 +102,11 @@ export default function Home() {
                   </svg>
                 </div>
                 <p className="mt-1 text-sm text-slate-500">
-                  anthropics/claude-scientific-skills — 143 個科學研究與資料分析
+                  K-Dense-AI/claude-scientific-skills — 143 個科學研究與資料分析
                   Skills
                 </p>
                 <p className="mt-1.5 font-mono text-xs text-slate-400">
-                  github.com/anthropics/claude-scientific-skills
+                  github.com/K-Dense-AI/claude-scientific-skills
                 </p>
               </div>
             </a>
