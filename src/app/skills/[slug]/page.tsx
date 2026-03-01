@@ -2,9 +2,11 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
 import { getSkillBySlug, getAllSlugs } from "@/data/skills";
+import { getSkillContent } from "@/lib/getSkillContent";
 
 // Template detail components
 import SkillDetailHero from "@/components/detail/SkillDetailHero";
+import SkillGuide from "@/components/detail/SkillGuide";
 
 // Shared components
 import Installation from "@/components/shared/Installation";
@@ -44,10 +46,13 @@ export default async function SkillDetailPage({ params }: PageProps) {
 
   if (!skill) notFound();
 
+  const content = getSkillContent(skill.slug);
+
   return (
     <>
       <BackToCatalog />
       <SkillDetailHero skill={skill} />
+      {content && <SkillGuide content={content} />}
       <Installation slug={skill.slug} />
       <Footer skillName={skill.name} />
     </>
