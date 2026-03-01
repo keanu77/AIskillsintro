@@ -1,4 +1,4 @@
-// Auto-generated from ~/.claude/skills/ — 148 skills
+// Auto-generated from ~/.claude/skills/ + Anthropic official skills — 159 skills
 // Last updated: 2026-03-01
 
 // ── Types ──────────────────────────────────────────────
@@ -13,6 +13,7 @@ export interface Skill {
 }
 
 export type CategoryId =
+  | "official"
   | "databases"
   | "bioinformatics"
   | "chemistry"
@@ -32,6 +33,12 @@ export interface Category {
 // ── Categories ─────────────────────────────────────────
 
 export const CATEGORIES: Category[] = [
+  {
+    id: "official",
+    label: "Anthropic 官方 Skills",
+    description: "Anthropic 官方發布的文件處理、設計、開發工具 Skills",
+    icon: "⭐",
+  },
   {
     id: "databases",
     label: "資料庫存取",
@@ -359,36 +366,144 @@ export const SKILLS: Skill[] = [
     slug: "document-skills--docx",
     name: "DOCX",
     description:
-      "文件工具包（.docx）。建立/編輯文件、追蹤修訂、註解、格式保留、文字擷取。",
+      "Word 文件工具包（.docx）。建立/編輯文件、追蹤修訂、註解、格式保留、文字擷取。",
     icon: "📄",
-    category: "productivity",
+    category: "official",
     status: "live",
   },
   {
     slug: "document-skills--pdf",
     name: "PDF",
     description:
-      "PDF 操作工具包。擷取文字/表格、建立 PDF、合併/分割、填寫表單。",
+      "PDF 操作工具包。擷取文字/表格、建立 PDF、合併/分割、填寫表單、OCR 掃描。",
     icon: "📕",
-    category: "productivity",
+    category: "official",
     status: "live",
   },
   {
     slug: "document-skills--pptx",
     name: "PPTX",
     description:
-      "簡報工具包（.pptx）。建立/編輯投影片、版面配置、內容、講者備忘稿、註解。",
+      "簡報工具包（.pptx）。建立/編輯投影片、版面配置、講者備忘稿、合併/分割檔案。",
     icon: "📊",
-    category: "productivity",
+    category: "official",
     status: "live",
   },
   {
     slug: "document-skills--xlsx",
     name: "XLSX",
     description:
-      "試算表工具包（.xlsx/.csv）。建立/編輯含公式/格式、資料分析、視覺化、公式重新計算。",
+      "試算表工具包（.xlsx/.csv）。建立/編輯含公式/格式、資料清理、圖表視覺化。",
     icon: "📗",
-    category: "productivity",
+    category: "official",
+    status: "live",
+  },
+  {
+    slug: "algorithmic-art",
+    name: "Algorithmic Art",
+    description:
+      "使用 p5.js 創作演算法藝術。支援種子隨機、互動參數探索、流場、粒子系統等生成式藝術。",
+    icon: "🎨",
+    category: "official",
+    status: "live",
+  },
+  {
+    slug: "brand-guidelines",
+    name: "Brand Guidelines",
+    description:
+      "套用 Anthropic 官方品牌色彩與字型到各種產出物。適用於需要品牌一致性的視覺設計。",
+    icon: "🏷️",
+    category: "official",
+    status: "live",
+  },
+  {
+    slug: "canvas-design",
+    name: "Canvas Design",
+    description:
+      "以設計哲學創作精美視覺藝術。支援 .png 和 .pdf 輸出，適用於海報、藝術作品等靜態設計。",
+    icon: "🖼️",
+    category: "official",
+    status: "live",
+  },
+  {
+    slug: "doc-coauthoring",
+    name: "Doc Co-authoring",
+    description:
+      "結構化文件共同撰寫工作流程。適用於撰寫文件、提案、技術規格書、決策文件等。",
+    icon: "✍️",
+    category: "official",
+    status: "live",
+  },
+  {
+    slug: "frontend-design",
+    name: "Frontend Design",
+    description:
+      "建立高品質前端介面與 UI 設計。支援網站、Landing Page、儀表板、React 元件等，避免制式 AI 風格。",
+    icon: "💻",
+    category: "official",
+    status: "live",
+  },
+  {
+    slug: "internal-comms",
+    name: "Internal Comms",
+    description:
+      "撰寫各類企業內部溝通文件。狀態報告、主管更新、公司通訊、FAQ、事件報告等。",
+    icon: "📨",
+    category: "official",
+    status: "live",
+  },
+  {
+    slug: "mcp-builder",
+    name: "MCP Builder",
+    description:
+      "建立高品質 MCP（Model Context Protocol）伺服器。支援 Python（FastMCP）和 Node/TypeScript SDK 整合外部 API。",
+    icon: "🔌",
+    category: "official",
+    status: "live",
+  },
+  {
+    slug: "skill-creator",
+    name: "Skill Creator",
+    description:
+      "建立新 Skill、改善現有 Skill、執行評估測試。支援從零開始建立、效能基準測試與觸發精準度優化。",
+    icon: "🧩",
+    category: "official",
+    status: "live",
+  },
+  {
+    slug: "slack-gif-creator",
+    name: "Slack GIF Creator",
+    description:
+      "建立針對 Slack 最佳化的動畫 GIF。提供尺寸限制、驗證工具與動畫概念參考。",
+    icon: "🎬",
+    category: "official",
+    status: "live",
+  },
+  {
+    slug: "theme-factory",
+    name: "Theme Factory",
+    description:
+      "為各種產出物套用主題樣式。內建 10 種預設主題（色彩/字型），可套用於投影片、文件、網頁等。",
+    icon: "🎭",
+    category: "official",
+    status: "live",
+  },
+  {
+    slug: "web-artifacts-builder",
+    name: "Web Artifacts Builder",
+    description:
+      "建立複雜的多元件網頁應用。使用 React、Tailwind CSS、shadcn/ui，支援狀態管理與路由。",
+    icon: "🌐",
+    category: "official",
+    status: "live",
+  },
+  {
+    slug: "webapp-testing",
+    name: "Webapp Testing",
+    description:
+      "使用 Playwright 測試本地網頁應用。驗證前端功能、除錯 UI 行為、擷取螢幕截圖、檢視瀏覽器日誌。",
+    icon: "🧪",
+    category: "official",
     status: "live",
   },
   {
