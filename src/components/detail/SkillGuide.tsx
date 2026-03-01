@@ -17,6 +17,33 @@ export default function SkillGuide({ content }: SkillGuideProps) {
         <article className="prose prose-slate prose-lg max-w-none prose-headings:scroll-mt-20 prose-h1:text-2xl prose-h1:font-bold prose-h2:text-xl prose-h2:font-semibold prose-h2:border-b prose-h2:border-slate-200 prose-h2:pb-2 prose-h3:text-lg prose-code:before:content-none prose-code:after:content-none prose-code:rounded prose-code:bg-slate-100 prose-code:px-1.5 prose-code:py-0.5 prose-code:text-sm prose-code:font-normal prose-code:text-pink-600 prose-pre:bg-slate-900 prose-pre:text-slate-200 prose-pre:rounded-xl prose-pre:shadow-lg prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline prose-table:text-sm prose-th:bg-slate-50 prose-img:rounded-xl">
           <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
         </article>
+
+        {/* 回到頁首 */}
+        <div className="mt-12 text-center">
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+            className="group inline-flex items-center gap-2 rounded-full bg-slate-100 px-5 py-2.5 text-sm font-medium text-slate-600 transition-all hover:bg-blue-50 hover:text-blue-600"
+          >
+            <svg
+              className="h-4 w-4 transition-transform group-hover:-translate-y-0.5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M5 15l7-7 7 7"
+              />
+            </svg>
+            回到頁首
+          </a>
+        </div>
       </div>
     </section>
   );
