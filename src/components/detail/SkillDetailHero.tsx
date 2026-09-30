@@ -1,5 +1,6 @@
 import type { Skill } from "@/data/skills";
 import { getCategoryById } from "@/data/skills";
+import { getSource, repoUrl, skillFileUrl } from "@/data/sources";
 
 interface SkillDetailHeroProps {
   skill: Skill;
@@ -7,6 +8,7 @@ interface SkillDetailHeroProps {
 
 export default function SkillDetailHero({ skill }: SkillDetailHeroProps) {
   const category = getCategoryById(skill.category);
+  const source = getSource(skill.upstream.source);
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-950 px-6 py-24 sm:py-32">
@@ -16,10 +18,17 @@ export default function SkillDetailHero({ skill }: SkillDetailHeroProps) {
       <div className="absolute bottom-0 left-0 h-96 w-96 rounded-full bg-indigo-500/8 blur-3xl" />
 
       <div className="relative mx-auto max-w-3xl text-center">
-        {/* Status badge */}
-        <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-500/10 px-5 py-2 text-sm text-emerald-300 glass-dark">
-          <span className="inline-block h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-          已安裝
+        {/* Source badge */}
+        <div>
+          <a
+            href={repoUrl(source.repo)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mb-8 inline-flex items-center gap-2 rounded-full border border-blue-400/20 bg-blue-500/10 px-5 py-2 text-sm text-blue-200 glass-dark transition hover:border-blue-300/40 hover:text-white"
+          >
+            <span aria-hidden>{source.icon}</span>
+            來源：{source.label}
+          </a>
         </div>
 
         {/* Icon */}
@@ -46,7 +55,7 @@ export default function SkillDetailHero({ skill }: SkillDetailHeroProps) {
         </p>
 
         {/* CTA */}
-        <div className="mt-10">
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
           <a
             href="#installation"
             className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-blue-500/25 transition-all hover:shadow-xl hover:shadow-blue-500/30 hover:brightness-110"
@@ -59,8 +68,20 @@ export default function SkillDetailHero({ skill }: SkillDetailHeroProps) {
               stroke="currentColor"
               strokeWidth={2}
             >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M19 9l-7 7-7-7"
+              />
             </svg>
+          </a>
+          <a
+            href={skillFileUrl(source.repo, source.sha, skill.upstream.dir)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-base font-semibold text-slate-200 ring-1 ring-white/20 transition hover:bg-white/10 hover:text-white"
+          >
+            原始 SKILL.md
           </a>
         </div>
       </div>
