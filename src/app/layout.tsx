@@ -14,11 +14,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "AI Skills Catalog — 醫師專用 AI 技能目錄",
+    default: "AI Skills Catalog — Agent Skills 中文目錄",
     template: "%s — AI Skills Catalog",
   },
   description:
-    "為臨床、研究、寫作、教學打造的 Claude Code / Gemini CLI Skills 目錄。",
+    "可搜尋、分類瀏覽的 Agent Skills 中文目錄，附 Claude Code、Codex、Gemini CLI、Grok 的安裝指令。",
 };
 
 export default function RootLayout({

@@ -8,7 +8,7 @@ export default function Footer({ skillName }: FooterProps) {
       <div className="mx-auto max-w-5xl text-center">
         <p className="text-sm text-slate-500">
           {skillName} — Built for{" "}
-          <span className="font-medium text-slate-700">Claude Code / Gemini CLI</span>
+          <span className="font-medium text-slate-700">Claude Code / Codex / Gemini CLI / Grok</span>
         </p>
         <p className="mt-2 text-xs text-slate-400">
           Made with AI-assisted development

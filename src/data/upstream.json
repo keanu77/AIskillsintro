@@ -1,0 +1,1664 @@
+{
+  "syncedAt": "2026-09-30",
+  "sources": [
+    {
+      "id": "anthropic",
+      "repo": "anthropics/skills",
+      "sha": "8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4"
+    },
+    {
+      "id": "k-dense",
+      "repo": "K-Dense-AI/scientific-agent-skills",
+      "sha": "65d6e786832e2c52832713117bbbf5096b56f77f"
+    }
+  ],
+  "skills": [
+    {
+      "slug": "academy-guide",
+      "source": "anthropic",
+      "dir": "academy-guide",
+      "name": "academy-guide",
+      "license": "Complete terms in LICENSE.txt",
+      "plugin": "academy-guide",
+      "mirrored": true
+    },
+    {
+      "slug": "algorithmic-art",
+      "source": "anthropic",
+      "dir": "algorithmic-art",
+      "name": "algorithmic-art",
+      "license": "Complete terms in LICENSE.txt",
+      "plugin": "example-skills",
+      "mirrored": true
+    },
+    {
+      "slug": "brand-guidelines",
+      "source": "anthropic",
+      "dir": "brand-guidelines",
+      "name": "brand-guidelines",
+      "license": "Complete terms in LICENSE.txt",
+      "plugin": "example-skills",
+      "mirrored": true
+    },
+    {
+      "slug": "canvas-design",
+      "source": "anthropic",
+      "dir": "canvas-design",
+      "name": "canvas-design",
+      "license": "Complete terms in LICENSE.txt",
+      "plugin": "example-skills",
+      "mirrored": true
+    },
+    {
+      "slug": "claude-api",
+      "source": "anthropic",
+      "dir": "claude-api",
+      "name": "claude-api",
+      "license": "Complete terms in LICENSE.txt",
+      "plugin": "claude-api",
+      "mirrored": true
+    },
+    {
+      "slug": "discernment-nudge",
+      "source": "anthropic",
+      "dir": "discernment-nudge",
+      "name": "discernment-nudge",
+      "license": "Complete terms in LICENSE.txt",
+      "plugin": "discernment-nudge",
+      "mirrored": true
+    },
+    {
+      "slug": "doc-coauthoring",
+      "source": "anthropic",
+      "dir": "doc-coauthoring",
+      "name": "doc-coauthoring",
+      "license": null,
+      "plugin": "example-skills",
+      "mirrored": true
+    },
+    {
+      "slug": "document-skills--docx",
+      "source": "anthropic",
+      "dir": "docx",
+      "name": "docx",
+      "license": "Proprietary. LICENSE.txt has complete terms",
+      "plugin": "document-skills",
+      "mirrored": false
+    },
+    {
+      "slug": "frontend-design",
+      "source": "anthropic",
+      "dir": "frontend-design",
+      "name": "frontend-design",
+      "license": "Complete terms in LICENSE.txt",
+      "plugin": "example-skills",
+      "mirrored": true
+    },
+    {
+      "slug": "internal-comms",
+      "source": "anthropic",
+      "dir": "internal-comms",
+      "name": "internal-comms",
+      "license": "Complete terms in LICENSE.txt",
+      "plugin": "example-skills",
+      "mirrored": true
+    },
+    {
+      "slug": "mcp-builder",
+      "source": "anthropic",
+      "dir": "mcp-builder",
+      "name": "mcp-builder",
+      "license": "Complete terms in LICENSE.txt",
+      "plugin": "example-skills",
+      "mirrored": true
+    },
+    {
+      "slug": "document-skills--pdf",
+      "source": "anthropic",
+      "dir": "pdf",
+      "name": "pdf",
+      "license": "Proprietary. LICENSE.txt has complete terms",
+      "plugin": "document-skills",
+      "mirrored": false
+    },
+    {
+      "slug": "document-skills--pptx",
+      "source": "anthropic",
+      "dir": "pptx",
+      "name": "pptx",
+      "license": "Proprietary. LICENSE.txt has complete terms",
+      "plugin": "document-skills",
+      "mirrored": false
+    },
+    {
+      "slug": "skill-creator",
+      "source": "anthropic",
+      "dir": "skill-creator",
+      "name": "skill-creator",
+      "license": null,
+      "plugin": "example-skills",
+      "mirrored": true
+    },
+    {
+      "slug": "slack-gif-creator",
+      "source": "anthropic",
+      "dir": "slack-gif-creator",
+      "name": "slack-gif-creator",
+      "license": "Complete terms in LICENSE.txt",
+      "plugin": "example-skills",
+      "mirrored": true
+    },
+    {
+      "slug": "theme-factory",
+      "source": "anthropic",
+      "dir": "theme-factory",
+      "name": "theme-factory",
+      "license": "Complete terms in LICENSE.txt",
+      "plugin": "example-skills",
+      "mirrored": true
+    },
+    {
+      "slug": "web-artifacts-builder",
+      "source": "anthropic",
+      "dir": "web-artifacts-builder",
+      "name": "web-artifacts-builder",
+      "license": "Complete terms in LICENSE.txt",
+      "plugin": "example-skills",
+      "mirrored": true
+    },
+    {
+      "slug": "webapp-testing",
+      "source": "anthropic",
+      "dir": "webapp-testing",
+      "name": "webapp-testing",
+      "license": "Complete terms in LICENSE.txt",
+      "plugin": "example-skills",
+      "mirrored": true
+    },
+    {
+      "slug": "document-skills--xlsx",
+      "source": "anthropic",
+      "dir": "xlsx",
+      "name": "xlsx",
+      "license": "Proprietary. LICENSE.txt has complete terms",
+      "plugin": "document-skills",
+      "mirrored": false
+    },
+    {
+      "slug": "13c-metabolic-flux",
+      "source": "k-dense",
+      "dir": "13c-metabolic-flux",
+      "name": "13c-metabolic-flux",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "adaptyv",
+      "source": "k-dense",
+      "dir": "adaptyv",
+      "name": "adaptyv",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "aeon",
+      "source": "k-dense",
+      "dir": "aeon",
+      "name": "aeon",
+      "license": "BSD-3-Clause license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "alphagenome",
+      "source": "k-dense",
+      "dir": "alphagenome",
+      "name": "alphagenome",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "analytical-method-validation",
+      "source": "k-dense",
+      "dir": "analytical-method-validation",
+      "name": "analytical-method-validation",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "anndata",
+      "source": "k-dense",
+      "dir": "anndata",
+      "name": "anndata",
+      "license": "BSD-3-Clause license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "arbor",
+      "source": "k-dense",
+      "dir": "arbor",
+      "name": "arbor",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "arboreto",
+      "source": "k-dense",
+      "dir": "arboreto",
+      "name": "arboreto",
+      "license": "BSD-3-Clause license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "astropy",
+      "source": "k-dense",
+      "dir": "astropy",
+      "name": "astropy",
+      "license": "BSD-3-Clause license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "autoskill",
+      "source": "k-dense",
+      "dir": "autoskill",
+      "name": "autoskill",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "benchling-integration",
+      "source": "k-dense",
+      "dir": "benchling-integration",
+      "name": "benchling-integration",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "bgpt-paper-search",
+      "source": "k-dense",
+      "dir": "bgpt-paper-search",
+      "name": "bgpt-paper-search",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "bids",
+      "source": "k-dense",
+      "dir": "bids",
+      "name": "bids",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "biopython",
+      "source": "k-dense",
+      "dir": "biopython",
+      "name": "biopython",
+      "license": "Biopython License Agreement",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "bioservices",
+      "source": "k-dense",
+      "dir": "bioservices",
+      "name": "bioservices",
+      "license": "GPLv3 license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "bulk-rnaseq",
+      "source": "k-dense",
+      "dir": "bulk-rnaseq",
+      "name": "bulk-rnaseq",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "cellxgene-census",
+      "source": "k-dense",
+      "dir": "cellxgene-census",
+      "name": "cellxgene-census",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "cirq",
+      "source": "k-dense",
+      "dir": "cirq",
+      "name": "cirq",
+      "license": "Apache-2.0 license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "citation-management",
+      "source": "k-dense",
+      "dir": "citation-management",
+      "name": "citation-management",
+      "license": "MIT License",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "clinical-decision-support",
+      "source": "k-dense",
+      "dir": "clinical-decision-support",
+      "name": "clinical-decision-support",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "clinical-reports",
+      "source": "k-dense",
+      "dir": "clinical-reports",
+      "name": "clinical-reports",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "cobrapy",
+      "source": "k-dense",
+      "dir": "cobrapy",
+      "name": "cobrapy",
+      "license": "GPL-2.0 license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "consciousness-council",
+      "source": "k-dense",
+      "dir": "consciousness-council",
+      "name": "consciousness-council",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "dask",
+      "source": "k-dense",
+      "dir": "dask",
+      "name": "dask",
+      "license": "BSD-3-Clause license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "database-lookup",
+      "source": "k-dense",
+      "dir": "database-lookup",
+      "name": "database-lookup",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "datalad",
+      "source": "k-dense",
+      "dir": "datalad",
+      "name": "datalad",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "datamol",
+      "source": "k-dense",
+      "dir": "datamol",
+      "name": "datamol",
+      "license": "Apache-2.0 license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "deepchem",
+      "source": "k-dense",
+      "dir": "deepchem",
+      "name": "deepchem",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "deepspot-m",
+      "source": "k-dense",
+      "dir": "deepspot-m",
+      "name": "deepspot-m",
+      "license": "PolyForm-Noncommercial-1.0.0",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "deeptools",
+      "source": "k-dense",
+      "dir": "deeptools",
+      "name": "deeptools",
+      "license": "BSD license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "depmap",
+      "source": "k-dense",
+      "dir": "depmap",
+      "name": "depmap",
+      "license": "CC-BY-4.0",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "dhdna-profiler",
+      "source": "k-dense",
+      "dir": "dhdna-profiler",
+      "name": "dhdna-profiler",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "diffdock",
+      "source": "k-dense",
+      "dir": "diffdock",
+      "name": "diffdock",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "dnanexus-integration",
+      "source": "k-dense",
+      "dir": "dnanexus-integration",
+      "name": "dnanexus-integration",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "esm",
+      "source": "k-dense",
+      "dir": "esm",
+      "name": "esm",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "etetoolkit",
+      "source": "k-dense",
+      "dir": "etetoolkit",
+      "name": "etetoolkit",
+      "license": "GPL-3.0-or-later",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "exa-search",
+      "source": "k-dense",
+      "dir": "exa-search",
+      "name": "exa-search",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "experimental-design",
+      "source": "k-dense",
+      "dir": "experimental-design",
+      "name": "experimental-design",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "exploratory-data-analysis",
+      "source": "k-dense",
+      "dir": "exploratory-data-analysis",
+      "name": "exploratory-data-analysis",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "fictiv",
+      "source": "k-dense",
+      "dir": "fictiv",
+      "name": "fictiv",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "flowio",
+      "source": "k-dense",
+      "dir": "flowio",
+      "name": "flowio",
+      "license": "BSD-3-Clause license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "fluidsim",
+      "source": "k-dense",
+      "dir": "fluidsim",
+      "name": "fluidsim",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "folklore-variant-evidence",
+      "source": "k-dense",
+      "dir": "folklore-variant-evidence",
+      "name": "folklore-variant-evidence",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "generate-image",
+      "source": "k-dense",
+      "dir": "generate-image",
+      "name": "generate-image",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "geniml",
+      "source": "k-dense",
+      "dir": "geniml",
+      "name": "geniml",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "genomic-coordinates",
+      "source": "k-dense",
+      "dir": "genomic-coordinates",
+      "name": "genomic-coordinates",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "genomic-intelligence",
+      "source": "k-dense",
+      "dir": "genomic-intelligence",
+      "name": "genomic-intelligence",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "geomaster",
+      "source": "k-dense",
+      "dir": "geomaster",
+      "name": "geomaster",
+      "license": "MIT License",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "geopandas",
+      "source": "k-dense",
+      "dir": "geopandas",
+      "name": "geopandas",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "get-available-resources",
+      "source": "k-dense",
+      "dir": "get-available-resources",
+      "name": "get-available-resources",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "gget",
+      "source": "k-dense",
+      "dir": "gget",
+      "name": "gget",
+      "license": "BSD-2-Clause license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "ginkgo-cloud-lab",
+      "source": "k-dense",
+      "dir": "ginkgo-cloud-lab",
+      "name": "ginkgo-cloud-lab",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "glycoengineering",
+      "source": "k-dense",
+      "dir": "glycoengineering",
+      "name": "glycoengineering",
+      "license": "Unknown",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "gtars",
+      "source": "k-dense",
+      "dir": "gtars",
+      "name": "gtars",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "histolab",
+      "source": "k-dense",
+      "dir": "histolab",
+      "name": "histolab",
+      "license": "Apache-2.0 license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "hugging-science",
+      "source": "k-dense",
+      "dir": "hugging-science",
+      "name": "hugging-science",
+      "license": null,
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "hypogenic",
+      "source": "k-dense",
+      "dir": "hypogenic",
+      "name": "hypogenic",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "hypothesis-generation",
+      "source": "k-dense",
+      "dir": "hypothesis-generation",
+      "name": "hypothesis-generation",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "imaging-data-commons",
+      "source": "k-dense",
+      "dir": "imaging-data-commons",
+      "name": "imaging-data-commons",
+      "license": "This skill is provided under the MIT License. IDC data itself has individual licensing (mostly CC-BY, some CC-NC) that must be respected when using the data.",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "infographics",
+      "source": "k-dense",
+      "dir": "infographics",
+      "name": "infographics",
+      "license": null,
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "iso-standards-readiness",
+      "source": "k-dense",
+      "dir": "iso-standards-readiness",
+      "name": "iso-standards-readiness",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "lab-hardware-cad",
+      "source": "k-dense",
+      "dir": "lab-hardware-cad",
+      "name": "lab-hardware-cad",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "labarchive-integration",
+      "source": "k-dense",
+      "dir": "labarchive-integration",
+      "name": "labarchive-integration",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "lamindb",
+      "source": "k-dense",
+      "dir": "lamindb",
+      "name": "lamindb",
+      "license": "Apache-2.0 license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "latchbio-integration",
+      "source": "k-dense",
+      "dir": "latchbio-integration",
+      "name": "latchbio-integration",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "latex-posters",
+      "source": "k-dense",
+      "dir": "latex-posters",
+      "name": "latex-posters",
+      "license": null,
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "liteparse",
+      "source": "k-dense",
+      "dir": "liteparse",
+      "name": "liteparse",
+      "license": "Apache-2.0",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "literature-review",
+      "source": "k-dense",
+      "dir": "literature-review",
+      "name": "literature-review",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "markdown-mermaid-writing",
+      "source": "k-dense",
+      "dir": "markdown-mermaid-writing",
+      "name": "markdown-mermaid-writing",
+      "license": "Apache-2.0",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "market-research-reports",
+      "source": "k-dense",
+      "dir": "market-research-reports",
+      "name": "market-research-reports",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "markitdown",
+      "source": "k-dense",
+      "dir": "markitdown",
+      "name": "markitdown",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "matchms",
+      "source": "k-dense",
+      "dir": "matchms",
+      "name": "matchms",
+      "license": "Apache-2.0",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "matlab",
+      "source": "k-dense",
+      "dir": "matlab",
+      "name": "matlab",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "matplotlib",
+      "source": "k-dense",
+      "dir": "matplotlib",
+      "name": "matplotlib",
+      "license": "https://github.com/matplotlib/matplotlib/tree/main/LICENSE",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "medchem",
+      "source": "k-dense",
+      "dir": "medchem",
+      "name": "medchem",
+      "license": "Apache-2.0 license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "modal",
+      "source": "k-dense",
+      "dir": "modal",
+      "name": "modal",
+      "license": "Apache-2.0",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "molecular-dynamics",
+      "source": "k-dense",
+      "dir": "molecular-dynamics",
+      "name": "molecular-dynamics",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "molfeat",
+      "source": "k-dense",
+      "dir": "molfeat",
+      "name": "molfeat",
+      "license": "Apache-2.0 license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "ncats-arax",
+      "source": "k-dense",
+      "dir": "ncats-arax",
+      "name": "ncats-arax",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "networkx",
+      "source": "k-dense",
+      "dir": "networkx",
+      "name": "networkx",
+      "license": "3-clause BSD license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "neurokit2",
+      "source": "k-dense",
+      "dir": "neurokit2",
+      "name": "neurokit2",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "neuropixels-analysis",
+      "source": "k-dense",
+      "dir": "neuropixels-analysis",
+      "name": "neuropixels-analysis",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "nextflow",
+      "source": "k-dense",
+      "dir": "nextflow",
+      "name": "nextflow",
+      "license": "Apache-2.0",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "omero-integration",
+      "source": "k-dense",
+      "dir": "omero-integration",
+      "name": "omero-integration",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "onekgpd",
+      "source": "k-dense",
+      "dir": "onekgpd",
+      "name": "onekgpd",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "ontology-term-resolution",
+      "source": "k-dense",
+      "dir": "ontology-term-resolution",
+      "name": "ontology-term-resolution",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "open-notebook",
+      "source": "k-dense",
+      "dir": "open-notebook",
+      "name": "open-notebook",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "openpiv",
+      "source": "k-dense",
+      "dir": "openpiv",
+      "name": "openpiv",
+      "license": "BSD-3-Clause",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "opentrons-integration",
+      "source": "k-dense",
+      "dir": "opentrons-integration",
+      "name": "opentrons-integration",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "optimize-for-gpu",
+      "source": "k-dense",
+      "dir": "optimize-for-gpu",
+      "name": "optimize-for-gpu",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "pacsomatic",
+      "source": "k-dense",
+      "dir": "pacsomatic",
+      "name": "pacsomatic",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "paper-lookup",
+      "source": "k-dense",
+      "dir": "paper-lookup",
+      "name": "paper-lookup",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "paperclip",
+      "source": "k-dense",
+      "dir": "paperclip",
+      "name": "paperclip",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "paperzilla",
+      "source": "k-dense",
+      "dir": "paperzilla",
+      "name": "paperzilla",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "parallel-web",
+      "source": "k-dense",
+      "dir": "parallel-web",
+      "name": "parallel-web",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "pathml",
+      "source": "k-dense",
+      "dir": "pathml",
+      "name": "pathml",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "pathogen-variant-surveillance",
+      "source": "k-dense",
+      "dir": "pathogen-variant-surveillance",
+      "name": "pathogen-variant-surveillance",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "pathway-enrichment",
+      "source": "k-dense",
+      "dir": "pathway-enrichment",
+      "name": "pathway-enrichment",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "peer-review",
+      "source": "k-dense",
+      "dir": "peer-review",
+      "name": "peer-review",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "pennylane",
+      "source": "k-dense",
+      "dir": "pennylane",
+      "name": "pennylane",
+      "license": "Apache-2.0 license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "phylogenetics",
+      "source": "k-dense",
+      "dir": "phylogenetics",
+      "name": "phylogenetics",
+      "license": "Unknown",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "pi-agent",
+      "source": "k-dense",
+      "dir": "pi-agent",
+      "name": "pi-agent",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "pkpd-modeling",
+      "source": "k-dense",
+      "dir": "pkpd-modeling",
+      "name": "pkpd-modeling",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "polars",
+      "source": "k-dense",
+      "dir": "polars",
+      "name": "polars",
+      "license": "https://github.com/pola-rs/polars/blob/main/LICENSE",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "polars-bio",
+      "source": "k-dense",
+      "dir": "polars-bio",
+      "name": "polars-bio",
+      "license": "Apache-2.0",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "pptx-posters",
+      "source": "k-dense",
+      "dir": "pptx-posters",
+      "name": "pptx-posters",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "primekg",
+      "source": "k-dense",
+      "dir": "primekg",
+      "name": "primekg",
+      "license": "Unknown",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "protocolsio-integration",
+      "source": "k-dense",
+      "dir": "protocolsio-integration",
+      "name": "protocolsio-integration",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "pufferlib",
+      "source": "k-dense",
+      "dir": "pufferlib",
+      "name": "pufferlib",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "pydeseq2",
+      "source": "k-dense",
+      "dir": "pydeseq2",
+      "name": "pydeseq2",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "pydicom",
+      "source": "k-dense",
+      "dir": "pydicom",
+      "name": "pydicom",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "pyhealth",
+      "source": "k-dense",
+      "dir": "pyhealth",
+      "name": "pyhealth",
+      "license": null,
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "pylabrobot",
+      "source": "k-dense",
+      "dir": "pylabrobot",
+      "name": "pylabrobot",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "pymatgen",
+      "source": "k-dense",
+      "dir": "pymatgen",
+      "name": "pymatgen",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "pymc",
+      "source": "k-dense",
+      "dir": "pymc",
+      "name": "pymc",
+      "license": "Apache License, Version 2.0",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "pymoo",
+      "source": "k-dense",
+      "dir": "pymoo",
+      "name": "pymoo",
+      "license": "Apache-2.0 license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "pyopenms",
+      "source": "k-dense",
+      "dir": "pyopenms",
+      "name": "pyopenms",
+      "license": "3 clause BSD license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "pysam",
+      "source": "k-dense",
+      "dir": "pysam",
+      "name": "pysam",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "pytdc",
+      "source": "k-dense",
+      "dir": "pytdc",
+      "name": "pytdc",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "pytorch-lightning",
+      "source": "k-dense",
+      "dir": "pytorch-lightning",
+      "name": "pytorch-lightning",
+      "license": "Apache-2.0 license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "pyzotero",
+      "source": "k-dense",
+      "dir": "pyzotero",
+      "name": "pyzotero",
+      "license": "MIT License",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "qiskit",
+      "source": "k-dense",
+      "dir": "qiskit",
+      "name": "qiskit",
+      "license": "Apache-2.0",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "qutip",
+      "source": "k-dense",
+      "dir": "qutip",
+      "name": "qutip",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "rdkit",
+      "source": "k-dense",
+      "dir": "rdkit",
+      "name": "rdkit",
+      "license": "BSD-3-Clause license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "relsa-severity-assessment",
+      "source": "k-dense",
+      "dir": "relsa-severity-assessment",
+      "name": "relsa-severity-assessment",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "research-grants",
+      "source": "k-dense",
+      "dir": "research-grants",
+      "name": "research-grants",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "research-lookup",
+      "source": "k-dense",
+      "dir": "research-lookup",
+      "name": "research-lookup",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "rowan",
+      "source": "k-dense",
+      "dir": "rowan",
+      "name": "rowan",
+      "license": "Proprietary (API key required)",
+      "plugin": null,
+      "mirrored": false
+    },
+    {
+      "slug": "scanpy",
+      "source": "k-dense",
+      "dir": "scanpy",
+      "name": "scanpy",
+      "license": "BSD-3-Clause",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "scholar-evaluation",
+      "source": "k-dense",
+      "dir": "scholar-evaluation",
+      "name": "scholar-evaluation",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "scientific-brainstorming",
+      "source": "k-dense",
+      "dir": "scientific-brainstorming",
+      "name": "scientific-brainstorming",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "scientific-critical-thinking",
+      "source": "k-dense",
+      "dir": "scientific-critical-thinking",
+      "name": "scientific-critical-thinking",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "scientific-schematics",
+      "source": "k-dense",
+      "dir": "scientific-schematics",
+      "name": "scientific-schematics",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "scientific-slides",
+      "source": "k-dense",
+      "dir": "scientific-slides",
+      "name": "scientific-slides",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "scientific-visualization",
+      "source": "k-dense",
+      "dir": "scientific-visualization",
+      "name": "scientific-visualization",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "scientific-writing",
+      "source": "k-dense",
+      "dir": "scientific-writing",
+      "name": "scientific-writing",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "scikit-bio",
+      "source": "k-dense",
+      "dir": "scikit-bio",
+      "name": "scikit-bio",
+      "license": "BSD-3-Clause license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "scikit-learn",
+      "source": "k-dense",
+      "dir": "scikit-learn",
+      "name": "scikit-learn",
+      "license": "BSD-3-Clause license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "scikit-survival",
+      "source": "k-dense",
+      "dir": "scikit-survival",
+      "name": "scikit-survival",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "scvelo",
+      "source": "k-dense",
+      "dir": "scvelo",
+      "name": "scvelo",
+      "license": "BSD-3-Clause",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "scvi-tools",
+      "source": "k-dense",
+      "dir": "scvi-tools",
+      "name": "scvi-tools",
+      "license": "BSD-3-Clause license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "seaborn",
+      "source": "k-dense",
+      "dir": "seaborn",
+      "name": "seaborn",
+      "license": "BSD-3-Clause license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "shap",
+      "source": "k-dense",
+      "dir": "shap",
+      "name": "shap",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "simpy",
+      "source": "k-dense",
+      "dir": "simpy",
+      "name": "simpy",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "stable-baselines3",
+      "source": "k-dense",
+      "dir": "stable-baselines3",
+      "name": "stable-baselines3",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "statistical-analysis",
+      "source": "k-dense",
+      "dir": "statistical-analysis",
+      "name": "statistical-analysis",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "statistical-power",
+      "source": "k-dense",
+      "dir": "statistical-power",
+      "name": "statistical-power",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "statsmodels",
+      "source": "k-dense",
+      "dir": "statsmodels",
+      "name": "statsmodels",
+      "license": "BSD-3-Clause license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "sympy",
+      "source": "k-dense",
+      "dir": "sympy",
+      "name": "sympy",
+      "license": "https://github.com/sympy/sympy/blob/master/LICENSE",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "tamarind",
+      "source": "k-dense",
+      "dir": "tamarind",
+      "name": "tamarind",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "tiledbvcf",
+      "source": "k-dense",
+      "dir": "tiledbvcf",
+      "name": "tiledbvcf",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "timesfm-forecasting",
+      "source": "k-dense",
+      "dir": "timesfm-forecasting",
+      "name": "timesfm-forecasting",
+      "license": "Apache-2.0 license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "torch-geometric",
+      "source": "k-dense",
+      "dir": "torch-geometric",
+      "name": "torch-geometric",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "torchdrug",
+      "source": "k-dense",
+      "dir": "torchdrug",
+      "name": "torchdrug",
+      "license": "Apache-2.0 license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "transformers",
+      "source": "k-dense",
+      "dir": "transformers",
+      "name": "transformers",
+      "license": "Apache-2.0 license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "treatment-plans",
+      "source": "k-dense",
+      "dir": "treatment-plans",
+      "name": "treatment-plans",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "umap-learn",
+      "source": "k-dense",
+      "dir": "umap-learn",
+      "name": "umap-learn",
+      "license": "BSD-3-Clause license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "uncertainty-and-units",
+      "source": "k-dense",
+      "dir": "uncertainty-and-units",
+      "name": "uncertainty-and-units",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "usfiscaldata",
+      "source": "k-dense",
+      "dir": "usfiscaldata",
+      "name": "usfiscaldata",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "vaex",
+      "source": "k-dense",
+      "dir": "vaex",
+      "name": "vaex",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "venue-templates",
+      "source": "k-dense",
+      "dir": "venue-templates",
+      "name": "venue-templates",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "waypoint-bio",
+      "source": "k-dense",
+      "dir": "waypoint-bio",
+      "name": "waypoint-bio",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "what-if-oracle",
+      "source": "k-dense",
+      "dir": "what-if-oracle",
+      "name": "what-if-oracle",
+      "license": "CC BY-NC-SA 4.0",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "zarr-python",
+      "source": "k-dense",
+      "dir": "zarr-python",
+      "name": "zarr-python",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true
+    }
+  ]
+}

@@ -42,9 +42,9 @@ export default function CatalogHero({ onSearch }: CatalogHeroProps) {
         </h1>
 
         <p className="animate-fade-in-up delay-200 mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-300/90 opacity-0">
-          Claude Code / Gemini CLI 技能目錄 — 收錄{" "}
+          Claude Code / Codex / Gemini CLI / Grok 通用的 Agent Skills 目錄 — 收錄{" "}
           <span className="font-semibold text-blue-300">{SKILLS.length}</span>{" "}
-          個 AI Skills，涵蓋資料庫存取、生物資訊、資料科學、學術寫作等領域。
+          個 Skills，涵蓋文件處理、資料科學、生物資訊、學術寫作等領域。
         </p>
 
         {/* Search bar */}
