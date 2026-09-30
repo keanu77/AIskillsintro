@@ -22,7 +22,15 @@
 npm ci
 npm run dev      # http://localhost:3000
 npm test         # vitest
-npm run build    # 靜態輸出到 out/，部署到 Cloudflare Pages
+npm run build    # 靜態輸出到 out/
 ```
+
+## 部署
+
+Cloudflare Pages（Direct Upload 專案 `aiskillsintro`）由 `.github/workflows/ci.yml` 部署：
+
+- PR：lint / typecheck / test / build 通過後部署到 `pr-<編號>.aiskillsintro.pages.dev`，並在 PR 留言附網址。
+- push 到 `main`：部署正式站。
+- 需要 repo secret `CLOUDFLARE_API_TOKEN`（權限：Account → Cloudflare Pages → Edit）；未設定時只跑檢查、跳過部署。
 
 `GITHUB_TOKEN=$(gh auth token) npm run sync` 可避開 GitHub API 匿名限流。
