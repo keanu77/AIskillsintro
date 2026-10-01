@@ -54,11 +54,11 @@ async function overflowingElements(page: Page): Promise<string[]> {
 
 for (const path of PAGES) {
   test.describe(path, () => {
-    test("has no axe WCAG 2.1 AA violations", async ({ page }) => {
+    test("has no axe WCAG 2.2 AA violations", async ({ page }) => {
       await page.goto(path);
       await page.waitForLoadState("networkidle");
       const { violations } = await new AxeBuilder({ page })
-        .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "best-practice"])
+        .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa", "best-practice"])
         .analyze();
       const summary = violations.map(
         (v) => `${v.id} (${v.impact}): ${v.nodes.slice(0, 3).map((n) => n.target.join(" ")).join(" | ")}`,

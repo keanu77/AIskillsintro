@@ -17,7 +17,7 @@
 - `content/sources.json` 是唯一的來源登錄表；新增來源同時擴充 `SourceId`。
 - `npm run sync` 只同步追蹤來源，固定到 commit SHA；寫入實際目錄、skill 資料夾 hash、授權、plugin 及來源專案 stars。授權缺失、自訂或無法確認時僅提供摘要及來源連結。
 - 全文保存在 `content/skills/*.md`；授權與來源證據保存在 `content/licenses/*.txt`，詳情頁可展開閱讀。
-- 中文名稱、描述、分類、icon 寫在 `src/data/overlay/<分類>.ts`。新增三個來源的第一批介紹在 `overlay/ecosystem.ts`，文件核對證據在 `content/editorial/`。
+- 中文名稱、描述、分類 寫在 `src/data/overlay/<分類>.ts`。新增三個來源的第一批介紹在 `overlay/ecosystem.ts`，文件核對證據在 `content/editorial/`。
 - 上游新增但缺中文 overlay 的 skill **不會直接出現在中文目錄**，而會出現在 `/updates` 的待整理清單。英文原文在 `content/upstream-descriptions.json`。
 - 上游刪除或合併的 skill，舊網址在 `public/_redirects` 轉址。
 

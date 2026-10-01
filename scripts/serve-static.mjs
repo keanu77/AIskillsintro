@@ -5,6 +5,7 @@
 import fs from "node:fs";
 import http from "node:http";
 import path from "node:path";
+import zlib from "node:zlib";
 
 const ROOT = path.resolve(import.meta.dirname, "../out");
 const PORT = Number(process.env.PORT ?? 4173);
@@ -37,7 +38,14 @@ http
     const status = file ? 200 : 404;
     const target = file ?? path.join(ROOT, "404.html");
     const type = pathname === "/opengraph-image" ? "image/png" : TYPES[path.extname(target)];
-    res.writeHead(status, { "Content-Type": type ?? "application/octet-stream" });
-    fs.createReadStream(target).pipe(res);
+    // gzip text like Cloudflare does, so local performance runs are comparable.
+    const compressible = /^(text\/|application\/(json|xml)|image\/svg)/.test(type ?? "");
+    const gzip = compressible && /\bgzip\b/.test(req.headers["accept-encoding"] ?? "");
+    res.writeHead(status, {
+      "Content-Type": type ?? "application/octet-stream",
+      ...(gzip && { "Content-Encoding": "gzip", Vary: "Accept-Encoding" }),
+    });
+    const stream = fs.createReadStream(target);
+    (gzip ? stream.pipe(zlib.createGzip()) : stream).pipe(res);
   })
   .listen(PORT, () => console.log(`serving ${ROOT} on http://localhost:${PORT}`));

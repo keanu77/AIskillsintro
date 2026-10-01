@@ -1,19 +1,26 @@
 import Link from "next/link";
+import { SOURCES, SYNCED_AT, repoUrl } from "@/data/sources";
 
-interface FooterProps {
-  title: string;
-}
-
-export default function Footer({ title }: FooterProps) {
+export default function Footer() {
   return (
-    <footer className="border-t border-slate-200/80 bg-gradient-to-b from-white to-slate-50 px-6 py-12">
-      <div className="mx-auto max-w-5xl text-center">
-        <p className="text-sm text-slate-600">
-          {title} — Built for{" "}
-          <span className="font-medium text-slate-800">跨平台 Agent Skills</span>
+    <footer className="border-t-2 border-ink">
+      <div className="mx-auto flex max-w-[1240px] flex-col gap-4 px-5 py-8 sm:px-10">
+        <div className="flex flex-wrap items-baseline justify-between gap-x-8 gap-y-3">
+          <p className="font-wide text-base font-black">Skills 週期表 — 跨平台 Agent Skills 中文目錄</p>
+          <Link href="/updates" className="font-bold text-accent hover:text-accent-strong">
+            每週更新與收錄方式 →
+          </Link>
+        </div>
+        {/* Links are ≥24px tall with room around them (WCAG 2.2 target size). */}
+        <p className="flex flex-wrap items-center gap-x-5 gap-y-2 font-mono text-xs text-ink-muted">
+          <span>資料來源</span>
+          {SOURCES.map((s) => (
+            <a key={s.id} href={repoUrl(s.repo)} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-6 items-center text-ink underline-offset-2 hover:text-accent">
+              {s.repo}
+            </a>
+          ))}
+          <span>同步於 {SYNCED_AT}</span>
         </p>
-        <Link href="/updates" className="mt-3 inline-block text-sm text-blue-700 hover:underline">每週更新與收錄方式</Link>
-        <p className="mt-2 text-xs text-slate-500">Made with AI-assisted development</p>
       </div>
     </footer>
   );

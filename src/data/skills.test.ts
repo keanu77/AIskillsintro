@@ -51,8 +51,8 @@ describe("buildSkills", () => {
     const overlays = {
       ...Object.fromEntries(CATEGORIES.map((c) => [c.id, []])),
       databases: [
-        { slug: "a", name: "A", icon: "🗄️", description: "甲" },
-        { slug: "gone", name: "Gone", icon: "🗄️", description: "已移除" },
+        { slug: "a", name: "A", description: "甲" },
+        { slug: "gone", name: "Gone", description: "已移除" },
       ],
     } as unknown as typeof OVERLAYS;
     expect(buildSkills(upstream, overlays).map((s) => s.slug)).toEqual(["a"]);

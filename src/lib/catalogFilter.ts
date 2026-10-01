@@ -22,14 +22,27 @@ export function hasActiveFilters(filters: CatalogFilters): boolean {
   return terms(filters.query).length > 0 || filters.category !== null || filters.source !== null || filters.agent !== null;
 }
 
+const escapeRegExp = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+/**
+ * Latin terms match at word starts only ("rna" finds "RNA-seq", not
+ * "Internal"); terms with CJK or symbols match anywhere, since Chinese has
+ * no word spacing.
+ */
+function termMatcher(term: string): (haystack: string) => boolean {
+  if (!/^[a-z0-9]+$/.test(term)) return (h) => h.includes(term);
+  const re = new RegExp(`(^|[^a-z0-9])${escapeRegExp(term)}`);
+  return (h) => re.test(h);
+}
+
 export function filterSkills(skills: Skill[], filters: CatalogFilters): Skill[] {
-  const wanted = terms(filters.query);
+  const matchers = terms(filters.query).map(termMatcher);
   return skills.filter((s) => {
     if (filters.category && s.category !== filters.category) return false;
     if (filters.source && s.upstream.source !== filters.source) return false;
     if (filters.agent && !declaredAgents(s.upstream).includes(filters.agent)) return false;
     const haystack = `${s.name} ${s.slug} ${s.description}`.toLowerCase();
-    return wanted.every((t) => haystack.includes(t));
+    return matchers.every((m) => m(haystack));
   });
 }
 

@@ -6,7 +6,6 @@ export interface Source {
   id: SourceId;
   label: string;
   repo: string;
-  icon: string;
   blurb: string;
   /** Commit the catalog was last synced from. */
   sha: string;
