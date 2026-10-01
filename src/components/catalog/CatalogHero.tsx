@@ -12,7 +12,7 @@ interface CatalogHeroProps {
 export default function CatalogHero({ query, onQueryChange, onCategoryJump }: CatalogHeroProps) {
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-950 px-6 py-24 sm:py-32">
+    <header className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-950 px-6 py-24 sm:py-32">
       {/* Animated background elements */}
       <div aria-hidden className="absolute inset-0 grid-pattern" />
       <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
@@ -116,6 +116,6 @@ export default function CatalogHero({ query, onQueryChange, onCategoryJump }: Ca
           ))}
         </nav>
       </div>
-    </section>
+    </header>
   );
 }

@@ -53,7 +53,10 @@ export async function generateMetadata({
 
 // ── Page component ─────────────────────────────────────
 
-const REPOS = Object.fromEntries(SOURCES.map((s) => [s.id, s.repo])) as Record<SourceId, string>;
+const REPOS = Object.fromEntries(SOURCES.map((s) => [s.id, s.repo])) as Record<
+  SourceId,
+  string
+>;
 
 function WithheldNotice({ href }: { href: string }) {
   return (
@@ -62,7 +65,12 @@ function WithheldNotice({ href }: { href: string }) {
         <p className="font-semibold">此 Skill 的授權不允許轉載全文</p>
         <p className="mt-2 text-sm">
           請至{" "}
-          <a href={href} target="_blank" rel="noopener noreferrer" className="font-medium underline">
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium underline"
+          >
             原始 SKILL.md
           </a>{" "}
           閱讀完整使用說明。
@@ -85,13 +93,17 @@ export default async function SkillDetailPage({ params }: PageProps) {
   return (
     <>
       <BackToCatalog />
-      <SkillDetailHero skill={skill} />
-      <Installation skill={skill.upstream} repos={REPOS} />
-      {content ? (
-        <SkillGuide content={content} />
-      ) : (
-        <WithheldNotice href={skillFileUrl(source.repo, source.sha, skill.upstream.dir)} />
-      )}
+      <main>
+        <SkillDetailHero skill={skill} />
+        <Installation skill={skill.upstream} repos={REPOS} />
+        {content ? (
+          <SkillGuide content={content} />
+        ) : (
+          <WithheldNotice
+            href={skillFileUrl(source.repo, source.sha, skill.upstream.dir)}
+          />
+        )}
+      </main>
       <Footer title={skill.name} />
     </>
   );
