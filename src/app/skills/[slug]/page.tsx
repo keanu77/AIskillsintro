@@ -82,7 +82,7 @@ export default async function SkillDetailPage({ params }: PageProps) {
       ) : (
         <WithheldNotice href={skillFileUrl(source.repo, source.sha, skill.upstream.dir)} />
       )}
-      <Footer skillName={skill.name} />
+      <Footer title={skill.name} />
     </>
   );
 }
