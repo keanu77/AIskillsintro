@@ -1,21 +1,12 @@
 import type { Metadata } from "next";
 import { DM_Mono } from "next/font/google";
-import localFont from "next/font/local";
+import "./fonts/archivo-display.css";
 import "./globals.css";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
 
-// Archivo (OFL, see fonts/Archivo-OFL.txt) instanced to the range the design
-// uses — wght 800–900, wdth 100–125 — and subset to Basic Latin plus a few
-// symbols: 24 KB instead of the 90 KB Google build. Chinese text uses the
-// system CJK stack (globals.css) to keep pages light.
-const archivo = localFont({
-  src: "./fonts/archivo-display.woff2",
-  variable: "--font-archivo",
-  weight: "800 900",
-  display: "swap",
-  declarations: [{ prop: "font-stretch", value: "100% 125%" }],
-});
-
+// The display face (Archivo subset) is inlined in fonts/archivo-display.css
+// so headings render in it on first paint; see scripts/build-font-css.mjs.
+// Chinese text uses the system CJK stack (globals.css) to keep pages light.
 const dmMono = DM_Mono({
   variable: "--font-dm-mono",
   subsets: ["latin"],
@@ -49,7 +40,7 @@ export default function RootLayout({
   return (
     <html lang="zh-TW">
       <body
-        className={`${archivo.variable} ${dmMono.variable} antialiased font-sans`}
+        className={`${dmMono.variable} antialiased font-sans`}
       >
         {children}
       </body>

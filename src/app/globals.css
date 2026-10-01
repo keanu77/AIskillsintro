@@ -20,6 +20,10 @@
   --font-mono: var(--font-dm-mono), ui-monospace, "SFMono-Regular", Menlo, monospace;
 }
 
+:root {
+  --font-archivo: "Archivo Display";
+}
+
 body {
   background: var(--color-paper);
   color: var(--color-ink);
@@ -30,7 +34,7 @@ html {
 }
 
 /* Wide display setting for headings. `@theme inline` does not emit runtime
-   variables, so reference next/font's --font-archivo directly. */
+   variables, so use --font-archivo (inlined font, :root) directly. */
 .font-wide,
 .font-wider {
   font-family: var(--font-archivo), "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
