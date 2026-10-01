@@ -75,4 +75,8 @@ Cloudflare Pages（Direct Upload 專案 `aiskillsintro`）由 `.github/workflows
 - push 到 `main`：部署正式站。
 - 需要 repo secret `CLOUDFLARE_API_TOKEN`（權限：Account → Cloudflare Pages → Edit）；未設定時只跑檢查、跳過部署。
 
+效能以 `.github/workflows/lighthouse.yml` 為準（不要量預覽站，網路浮動大）：PR 上 build 後用 `scripts/serve-static.mjs`（gzip）起站，
+`/`、`/skills/scanpy`、`/skills/claude-api`、`/updates` 各跑 5 次取中位數，performance < 95 或 accessibility < 100 即失敗。
+本機重現：`npm run build && npx @lhci/cli@0.15.1 autorun`（設定在 `lighthouserc.json`）。
+
 `GITHUB_TOKEN=$(gh auth token) npm run sync` 可避開 GitHub API 匿名限流。
