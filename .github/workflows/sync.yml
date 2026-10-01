@@ -1,0 +1,103 @@
+name: Sync upstream skills
+
+on:
+  schedule:
+    - cron: "0 1 * * 1" # Mondays 09:00 Asia/Taipei
+  workflow_dispatch:
+
+concurrency:
+  group: upstream-sync
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "24"
+          cache: npm
+      - run: npm ci
+
+      - name: Sync SKILL.md from upstream repos
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run sync
+
+      - name: Detect changes
+        id: diff
+        run: |
+          # syncedAt alone changes every run; ignore it when deciding.
+          if git diff --quiet -I '"syncedAt"' -- content src/data/upstream.json \
+            && [ -z "$(git status --porcelain -- content)" ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      # PRs opened with GITHUB_TOKEN do not trigger ci.yml, so verify here and
+      # report the result in the PR body instead.
+      - name: Verify synced catalog
+        if: steps.diff.outputs.changed == 'true'
+        id: verify
+        run: |
+          set +e
+          npm test > test.log 2>&1; test_rc=$?
+          npm run build > build.log 2>&1; build_rc=$?
+          {
+            echo "report<<EOF"
+            if [ $test_rc -eq 0 ] && [ $build_rc -eq 0 ]; then
+              echo "✅ \`npm test\` 與 \`npm run build\` 通過。"
+            else
+              echo "❌ 驗證失敗（test=$test_rc, build=$build_rc）。新增的 skill 通常需要在 \`src/data/overlay/<分類>.ts\` 補中文 overlay，英文原文見 \`content/upstream-descriptions.json\`。"
+              echo
+              echo '```'
+              grep -E 'FAIL|AssertionError|expected|untranslated|^\s+[-+] ' test.log | head -40
+              tail -15 build.log
+              echo '```'
+            fi
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+          rm -f test.log build.log
+
+      - name: Summarize changed skills
+        if: steps.diff.outputs.changed == 'true'
+        id: summary
+        run: |
+          {
+            echo "files<<EOF"
+            git status --porcelain -- content/skills | awk '{print $1, $2}' | sed 's#content/skills/##; s#\.md$##' | head -60
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Open or update sync PR
+        if: steps.diff.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v8
+        with:
+          branch: bot/upstream-sync
+          delete-branch: true
+          commit-message: "chore: sync upstream skills"
+          title: "chore: 同步上游 Skills"
+          add-paths: |
+            content
+            src/data/upstream.json
+          body: |
+            每週自動同步 `anthropics/skills` 與 `K-Dense-AI/scientific-agent-skills`。
+
+            ### 驗證
+            ${{ steps.verify.outputs.report }}
+
+            ### 變動的 skill（`M` 修改、`??`/`A` 新增、`D` 移除）
+            ```
+            ${{ steps.summary.outputs.files }}
+            ```
+
+            ### 合併前檢查
+            - [ ] 新增的 skill 已在 `src/data/overlay/` 補上中文名稱、描述與分類
+            - [ ] 被移除的 skill 已在 `public/_redirects` 加轉址
+            - [ ] PR 上的 CI 通過（此 PR 由 bot 開啟，需推一個 commit 或關閉再開才會觸發 CI）

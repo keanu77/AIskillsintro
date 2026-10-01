@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState, type KeyboardEvent } from "react";
 import type { SourceId, UpstreamSkill } from "@/data/types";
 import { AGENTS, buildInstallGuide, type AgentId } from "@/lib/installCommands";
 import CopyButton from "./CopyButton";
@@ -24,26 +24,48 @@ function CodeBlock({ title, code }: { title: string; code: string }) {
 
 export default function Installation({ skill, repos }: InstallationProps) {
   const [agentId, setAgentId] = useState<AgentId>("claude-code");
+  const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
   const guide = buildInstallGuide(skill, agentId, repos);
+
+  // Arrow/Home/End move between tabs (WAI-ARIA tabs pattern).
+  const handleKeyDown = (e: KeyboardEvent<HTMLDivElement>) => {
+    const current = AGENTS.findIndex((a) => a.id === agentId);
+    const last = AGENTS.length - 1;
+    const target =
+      e.key === "ArrowRight" ? (current + 1) % AGENTS.length
+      : e.key === "ArrowLeft" ? (current - 1 + AGENTS.length) % AGENTS.length
+      : e.key === "Home" ? 0
+      : e.key === "End" ? last
+      : null;
+    if (target === null) return;
+    e.preventDefault();
+    setAgentId(AGENTS[target].id);
+    tabRefs.current[target]?.focus();
+  };
 
   return (
     <section id="installation" className="relative scroll-mt-4 bg-gradient-to-b from-slate-900 to-slate-950 px-6 py-20 sm:py-24">
-      <div className="absolute inset-0 grid-pattern" />
+      <div aria-hidden className="absolute inset-0 grid-pattern" />
       <div className="relative mx-auto max-w-3xl">
         <div className="text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">安裝教學</h2>
           <p className="mt-4 text-lg text-slate-400">選擇你使用的 AI coding agent，複製指令到終端機執行</p>
         </div>
 
-        <div role="tablist" aria-label="選擇 AI agent" className="mt-12 flex flex-wrap gap-1">
-          {AGENTS.map((agent) => {
+        <div role="tablist" aria-label="選擇 AI agent" onKeyDown={handleKeyDown} className="mt-12 flex flex-wrap gap-1">
+          {AGENTS.map((agent, index) => {
             const selected = agent.id === agentId;
             return (
               <button
                 key={agent.id}
+                ref={(el) => {
+                  tabRefs.current[index] = el;
+                }}
+                id={`tab-${agent.id}`}
                 type="button"
                 role="tab"
                 aria-selected={selected}
+                tabIndex={selected ? 0 : -1}
                 aria-controls="install-panel"
                 onClick={() => setAgentId(agent.id)}
                 className={`rounded-t-xl px-5 py-3 text-sm font-semibold transition-all ${
@@ -58,7 +80,7 @@ export default function Installation({ skill, repos }: InstallationProps) {
           })}
         </div>
 
-        <div id="install-panel" role="tabpanel" className="space-y-5 rounded-b-2xl rounded-tr-2xl bg-slate-800/40 p-5 ring-1 ring-white/5">
+        <div id="install-panel" role="tabpanel" aria-labelledby={`tab-${agentId}`} className="space-y-5 rounded-b-2xl rounded-tr-2xl bg-slate-800/40 p-5 ring-1 ring-white/5">
           <CodeBlock title="一鍵安裝（需要 Node.js）" code={guide.command} />
 
           {guide.plugin && (
