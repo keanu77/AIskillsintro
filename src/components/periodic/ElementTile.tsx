@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { formatNumber, type SkillElement } from "@/lib/elements";
+import { softHyphenate } from "@/lib/softHyphenate";
 
 type Size = "sm" | "md" | "lg";
 
@@ -13,8 +14,6 @@ interface ElementTileProps {
   onPreview?: (element: SkillElement) => void;
   className?: string;
 }
-
-const LATIN = /^[\x20-\x7E]+$/;
 
 // sm names wrap to two lines so the table stays readable without hovering.
 const SIZES: Record<Size, { box: string; num: string; sym: string; name: string }> = {
@@ -40,9 +39,8 @@ export default function ElementTile({ element, size = "sm", dimmed = false, asFi
         {size !== "sm" && <span>{category.code}</span>}
       </span>
       <span className={`font-display font-extrabold leading-[0.85] ${s.sym}`}>{symbol}</span>
-      {/* lang="en" lets long Latin names hyphenate instead of splitting mid-word. */}
-      <span lang={LATIN.test(skill.name) ? "en" : undefined} className={`hyphens-auto ${s.name} ${size === "lg" ? "font-wide font-extrabold" : ""}`}>
-        {skill.name}
+      <span className={`${s.name} ${size === "lg" ? "font-wide font-extrabold" : ""}`}>
+        {size === "sm" ? softHyphenate(skill.name) : skill.name}
       </span>
     </>
   );

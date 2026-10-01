@@ -87,7 +87,7 @@ export default function Home() {
                 <section key={category.id} aria-labelledby={`family-${category.id}`}>
                   <h3 id={`family-${category.id}`} className="mb-2 flex items-center gap-2 text-sm font-bold">
                     <span aria-hidden className="size-3 flex-none border border-ink/40" style={{ backgroundColor: category.color }} />
-                    {category.label}
+                    {category.shortLabel}
                     <span className="font-mono text-xs font-normal text-ink-muted">{COUNTS[category.id]}</span>
                   </h3>
                   <ol className="grid grid-cols-[repeat(auto-fill,minmax(62px,1fr))] gap-1">
