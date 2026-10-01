@@ -26,6 +26,8 @@ export function useCatalogState() {
   const [open, setOpen] = useState<ReadonlySet<CategoryId>>(
     () => new Set<CategoryId>([CATEGORIES[0].id]),
   );
+  // Object identity makes repeat jumps to the same category re-trigger.
+  const [scrollTarget, setScrollTarget] = useState<{ id: CategoryId } | null>(null);
 
   const setFilters = useCallback((next: CatalogFilters) => {
     setFiltersState(next);
@@ -47,10 +49,15 @@ export function useCatalogState() {
     (id: CategoryId) => {
       setFilters(EMPTY_FILTERS);
       setOpen((prev) => new Set(prev).add(id));
-      requestAnimationFrame(() => document.getElementById(id)?.scrollIntoView());
+      setScrollTarget({ id });
     },
     [setFilters],
   );
+
+  // Scroll after React has rendered the sections back (they are hidden while filtering).
+  useEffect(() => {
+    if (scrollTarget) document.getElementById(scrollTarget.id)?.scrollIntoView();
+  }, [scrollTarget]);
 
   // Read the URL after hydration so the static HTML stays deterministic.
   useEffect(() => {
