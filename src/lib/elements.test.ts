@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { CATEGORIES } from "@/data/categories";
 import { SKILLS } from "@/data/skills";
 import type { Skill } from "@/data/types";
-import { buildElements, elementSymbol, formatNumber } from "./elements";
+import { buildElements, formatNumber, symbolCandidates } from "./elements";
 
 function skill(slug: string, name: string, category: Skill["category"]): Skill {
   return {
@@ -14,7 +14,8 @@ function skill(slug: string, name: string, category: Skill["category"]): Skill {
   };
 }
 
-describe("elementSymbol", () => {
+describe("symbolCandidates first choice", () => {
+  const elementSymbol = (name: string) => symbolCandidates(name)[0] ?? "?";
   it("uses the first two letters of the first word that starts with a letter", () => {
     expect(elementSymbol("Scanpy")).toBe("Sc");
     expect(elementSymbol("RELION")).toBe("Re");
@@ -27,6 +28,20 @@ describe("elementSymbol", () => {
   it("falls back to a single letter or ?", () => {
     expect(elementSymbol("R")).toBe("R");
     expect(elementSymbol("123")).toBe("?");
+  });
+});
+
+describe("symbolCandidates", () => {
+  it("tries the first two letters, then word initials, then later letters, then three letters", () => {
+    const c = symbolCandidates("Scikit Learn");
+    expect(c[0]).toBe("Sc");
+    expect(c[1]).toBe("Sl");
+    expect(c).toContain("Si");
+    expect(c.indexOf("Sk")).toBeLessThan(c.findIndex((x) => x.length === 3));
+  });
+
+  it("ignores digits and punctuation", () => {
+    expect(symbolCandidates("13C Metabolic Flux").slice(0, 2)).toEqual(["Me", "Mf"]);
   });
 });
 
@@ -59,6 +74,19 @@ describe("buildElements", () => {
     const zh = { ...skill("web-design-guidelines", "網頁介面設計準則", "development") };
     zh.upstream = { ...zh.upstream, name: "web-design-guidelines" };
     expect(buildElements([zh], CATEGORIES)[0].symbol).toBe("We");
+  });
+
+  it("gives clashing names distinct symbols, first come keeps the plain one", () => {
+    const els = buildElements(
+      [skill("scanpy", "Scanpy", "bioinformatics"), skill("scvelo", "scVelo", "bioinformatics"), skill("scvi", "scvi-tools", "bioinformatics")],
+      CATEGORIES,
+    );
+    expect(els.map((e) => e.symbol)).toEqual(["Sc", "Sv", "St"]);
+  });
+
+  it("gives every catalog element a unique symbol", () => {
+    const symbols = buildElements(SKILLS, CATEGORIES).map((e) => e.symbol);
+    expect(new Set(symbols).size).toBe(symbols.length);
   });
 
   it("gives every catalog element a real symbol", () => {

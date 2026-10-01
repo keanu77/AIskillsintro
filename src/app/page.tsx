@@ -1,10 +1,12 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import ElementList from "@/components/periodic/ElementList";
 import ElementTile from "@/components/periodic/ElementTile";
 import Legend from "@/components/periodic/Legend";
 import PreviewPanel from "@/components/periodic/PreviewPanel";
 import SiteHeader from "@/components/periodic/SiteHeader";
+import ViewToggle from "@/components/periodic/ViewToggle";
 import { useCatalogFilters } from "@/components/periodic/useCatalogFilters";
 import Footer from "@/components/shared/Footer";
 import { CATEGORIES, SKILLS } from "@/data/skills";
@@ -16,12 +18,21 @@ const ELEMENTS = buildElements(SKILLS, CATEGORIES);
 const COUNTS = Object.fromEntries(
   CATEGORIES.map((c) => [c.id, SKILLS.filter((s) => s.category === c.id).length]),
 ) as Record<CategoryId, number>;
+// Each family starts its own block, like a column of the real table.
+const FAMILIES = CATEGORIES.map((category) => ({
+  category,
+  elements: ELEMENTS.filter((el) => el.category.id === category.id),
+})).filter((f) => f.elements.length > 0);
+// Shown in the side panel until the visitor hovers or focuses a tile.
+const FEATURED_SLUG = "claude-api";
+const FEATURED = ELEMENTS.find((el) => el.skill.slug === FEATURED_SLUG) ?? ELEMENTS[0];
 
 export default function Home() {
   const { filters, setFilters } = useCatalogFilters();
   const [preview, setPreview] = useState<SkillElement | null>(null);
 
   const filtering = hasActiveFilters(filters);
+  const listView = filters.view === "list";
   const matches = useMemo(
     () => new Set(filterSkills(SKILLS, filters).map((s) => s.slug)),
     [filters],
@@ -67,32 +78,58 @@ export default function Home() {
         </section>
 
         <section id="table" aria-labelledby="table-heading" className="mx-auto max-w-[1240px] scroll-mt-4 px-5 pb-20 sm:px-10">
-          <div className="mb-3 flex flex-wrap items-baseline justify-between gap-3">
-            <h2 id="table-heading" className="font-wide text-xl font-black">元素表</h2>
-            <p aria-live="polite" className="font-mono text-xs text-ink-muted">
-              {filtering ? `符合 ${matches.size} / ${SKILLS.length}` : `${SKILLS.length} 個元素`}
-            </p>
+          <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
+            <div className="flex items-baseline gap-3">
+              <h2 id="table-heading" className="font-wide text-xl font-black">元素表</h2>
+              <p aria-live="polite" className="font-mono text-xs text-ink-muted">
+                {filtering ? `符合 ${matches.size} / ${SKILLS.length}` : `${SKILLS.length} 個元素`}
+              </p>
+            </div>
+            <ViewToggle view={filters.view} onChange={(view) => setFilters({ ...filters, view })} />
           </div>
           <div className="flex items-start gap-8">
-            <ol className="grid min-w-0 flex-1 grid-cols-[repeat(auto-fill,minmax(62px,1fr))] gap-1">
-              {ELEMENTS.map((el) => {
-                const dimmed = filtering && !matches.has(el.skill.slug);
+            <div className="flex min-w-0 flex-1 flex-col gap-6">
+              {FAMILIES.map(({ category, elements }) => {
+                // The list hides non-matches; the table dims them to keep its shape.
+                const shown = listView ? elements.filter((el) => !filtering || matches.has(el.skill.slug)) : elements;
+                if (shown.length === 0) return null;
                 return (
-                  // Non-matching tiles stay visible for context but leave the a11y tree.
-                  <li key={el.skill.slug} aria-hidden={dimmed || undefined}>
-                    <ElementTile element={el} dimmed={dimmed} onPreview={setPreview} />
-                  </li>
+                  <section key={category.id} aria-labelledby={`family-${category.id}`}>
+                    <h3 id={`family-${category.id}`} className="mb-2 flex items-center gap-2 text-sm font-bold">
+                      <span aria-hidden className="size-3 flex-none border border-ink/40" style={{ backgroundColor: category.color }} />
+                      {category.shortLabel}
+                      <span className="font-mono text-xs font-normal text-ink-muted">{COUNTS[category.id]}</span>
+                    </h3>
+                    {listView ? (
+                      <ElementList elements={shown} />
+                    ) : (
+                      <ol className="grid grid-cols-[repeat(auto-fill,minmax(62px,1fr))] gap-1">
+                        {shown.map((el) => {
+                          const dimmed = filtering && !matches.has(el.skill.slug);
+                          return (
+                            // Non-matching tiles stay visible for context but leave the a11y tree.
+                            <li key={el.skill.slug} aria-hidden={dimmed || undefined}>
+                              <ElementTile element={el} dimmed={dimmed} onPreview={setPreview} />
+                            </li>
+                          );
+                        })}
+                      </ol>
+                    )}
+                  </section>
                 );
               })}
-            </ol>
-            <aside aria-label="元素預覽" className="sticky top-6 hidden w-[340px] flex-none lg:block">
-              <PreviewPanel element={preview} />
-            </aside>
+            </div>
+            {/* The list already shows each summary, so the preview is table-only. */}
+            {!listView && (
+              <aside aria-label="元素預覽" className="sticky top-6 hidden w-[340px] flex-none lg:block">
+                <PreviewPanel element={preview ?? FEATURED} featured={!preview} />
+              </aside>
+            )}
           </div>
           {filtering && matches.size === 0 && (
             <p className="mt-6 text-ink-soft">
               沒有符合的元素。
-              <button type="button" onClick={() => setFilters(EMPTY_FILTERS)} className="font-bold text-accent underline">
+              <button type="button" onClick={() => setFilters({ ...EMPTY_FILTERS, view: filters.view })} className="font-bold text-accent underline">
                 清除篩選
               </button>
             </p>

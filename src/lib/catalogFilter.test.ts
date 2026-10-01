@@ -123,6 +123,7 @@ describe("URL round trip", () => {
       category: "chemistry",
       source: "anthropic",
       agent: null,
+      view: "table",
     });
     expect(parseFilters("?category=nope&source=evil&q=")).toEqual(
       EMPTY_FILTERS,
@@ -148,6 +149,15 @@ describe("URL round trip", () => {
     const declared = skill({ slug: "declared", upstream: { ...SKILLS[0].upstream, declaredAgents: ["codex"] } });
     expect(filterSkills([declared], { ...EMPTY_FILTERS, agent: "codex" })).toEqual([declared]);
     expect(filterSkills([declared], { ...EMPTY_FILTERS, agent: "claude-code" })).toEqual([]);
+  });
+
+  it("round trips the list view without counting it as a filter", () => {
+    const list = { ...EMPTY_FILTERS, view: "list" as const };
+    expect(parseFilters("?view=list").view).toBe("list");
+    expect(parseFilters("?view=grid").view).toBe("table");
+    expect(serializeFilters(list)).toBe("?view=list");
+    expect(parseFilters(serializeFilters({ ...list, query: "pdf" }))).toEqual({ ...list, query: "pdf" });
+    expect(hasActiveFilters(list)).toBe(false);
   });
 
   it("detects active filters", () => {

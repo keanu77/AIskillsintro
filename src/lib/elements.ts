@@ -8,18 +8,45 @@ export interface SkillElement {
   category: Category;
 }
 
-/** Two-letter symbol from the first word that starts with a letter ("13C Metabolic Flux" → "Me"). */
-export function elementSymbol(name: string): string {
-  const word = name.split(/\s+/).find((w) => /^[A-Za-z]/.test(w));
-  const letters = (word ?? "").replace(/[^A-Za-z]/g, "");
-  if (!letters) return "?";
-  return letters.charAt(0).toUpperCase() + letters.charAt(1).toLowerCase();
+/**
+ * Symbols to try in order, like the periodic table resolving clashes:
+ * first two letters, then first letter + a later word's initial, then
+ * first letter + any later letter, then three-letter forms.
+ */
+export function symbolCandidates(name: string): string[] {
+  const words = name
+    .split(/\s+/)
+    .filter((w) => /^[A-Za-z]/.test(w))
+    .flatMap((w) => w.split(/[^A-Za-z]+|(?<=[a-z])(?=[A-Z])/))
+    .filter(Boolean);
+  const letters = words.join("");
+  if (!letters) return [];
+  const head = letters.charAt(0).toUpperCase();
+  const rest = letters.slice(1).toLowerCase();
+  const initials = words.slice(1).map((w) => w.charAt(0).toLowerCase());
+  const pairs = [...rest].flatMap((a, i) => [...rest.slice(i + 1)].map((b) => a + b));
+  const all = [rest ? head + rest.charAt(0) : head, ...initials.map((c) => head + c), ...[...rest].map((c) => head + c), ...pairs.map((p) => head + p)];
+  return [...new Set(all)];
 }
 
 /** Chinese display names have no letters; fall back to the upstream (English) name. */
-function symbolFor(skill: Skill): string {
-  const fromName = elementSymbol(skill.name);
-  return fromName !== "?" ? fromName : elementSymbol(skill.upstream.name.replace(/[-_]+/g, " "));
+function candidatesFor(skill: Skill): string[] {
+  const fromName = symbolCandidates(skill.name);
+  return fromName.length > 0 ? fromName : symbolCandidates(skill.upstream.name.replace(/[-_]+/g, " "));
+}
+
+function uniqueSymbol(skill: Skill, taken: Set<string>): string {
+  const candidates = candidatesFor(skill);
+  const base = candidates[0] ?? "?";
+  const symbol = candidates.find((c) => !taken.has(c)) ?? findNumbered(base, taken);
+  taken.add(symbol);
+  return symbol;
+}
+
+function findNumbered(base: string, taken: Set<string>): string {
+  let n = 2;
+  while (taken.has(`${base}${n}`)) n++;
+  return `${base}${n}`;
 }
 
 export function formatNumber(n: number): string {
@@ -29,15 +56,17 @@ export function formatNumber(n: number): string {
 /**
  * Number skills group by group in category order, keeping each group's
  * incoming order (the catalog is sorted by slug), like periods in a table.
+ * Symbols are unique; earlier elements keep the plain two-letter form.
  */
 export function buildElements(skills: Skill[], categories: Category[]): SkillElement[] {
   let next = 0;
+  const taken = new Set<string>();
   return categories.flatMap((category) =>
     skills
       .filter((s) => s.category === category.id)
       .map((skill) => ({
         number: ++next,
-        symbol: symbolFor(skill),
+        symbol: uniqueSymbol(skill, taken),
         skill,
         category,
       })),

@@ -1,11 +1,12 @@
 import AxeBuilder from "@axe-core/playwright";
 import { expect, test, type Page } from "@playwright/test";
 
-// Representative pages: home (plain + filtered), mirrored guide, license-withheld,
+// Representative pages: home (plain + filtered, table + list view), mirrored guide, license-withheld,
 // the longest guide, a renamed target, and the 404 page.
 const PAGES = [
   "/",
   "/?q=rna&source=k-dense",
+  "/?view=list&q=rna",
   "/skills/scanpy",
   "/skills/document-skills--pdf",
   "/skills/claude-api",
@@ -82,3 +83,14 @@ for (const path of PAGES) {
     }
   });
 }
+
+test("list view toggle shows full names and syncs the URL", async ({ page }) => {
+  await page.goto("/");
+  await page.getByRole("button", { name: "清單" }).click();
+  await expect(page).toHaveURL(/[?&]view=list\b/);
+  await expect(page.getByRole("link", { name: /Algorithmic Art/ })).toBeVisible();
+  await page.getByRole("searchbox").fill("scanpy");
+  await expect(page.locator("#table li")).toHaveCount(1);
+  await page.getByRole("button", { name: "週期表" }).click();
+  await expect(page).not.toHaveURL(/view=list/);
+});

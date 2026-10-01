@@ -9,16 +9,8 @@ import CopyButton from "@/components/shared/CopyButton";
 
 const REPOS = Object.fromEntries(SOURCES.map((s) => [s.id, s.repo])) as Record<SourceId, string>;
 
-/** Desktop side panel describing the hovered/focused element. */
-export default function PreviewPanel({ element }: { element: SkillElement | null }) {
-  if (!element) {
-    return (
-      <div className="border-2 border-dashed border-ink/40 p-6 text-sm leading-relaxed text-ink-muted">
-        將游標移到元素上，或用 Tab 鍵瀏覽，這裡會顯示用途與安裝指令。點一下元素開啟完整說明。
-      </div>
-    );
-  }
-
+/** Desktop side panel describing the hovered/focused element (or a featured one). */
+export default function PreviewPanel({ element, featured = false }: { element: SkillElement; featured?: boolean }) {
   const { skill, category, number, symbol } = element;
   const supported = declaredAgents(skill.upstream);
   // Preview the first platform the source documents; plugin skills have no CLI command.
@@ -27,6 +19,9 @@ export default function PreviewPanel({ element }: { element: SkillElement | null
 
   return (
     <div className="border-2 border-ink bg-white">
+      <p className="border-b-2 border-ink px-5 py-2 font-mono text-xs text-ink-muted">
+        {featured ? "精選元素 · 移到其他元素上或用 Tab 鍵即可切換" : "元素預覽"}
+      </p>
       <div className="flex gap-4 p-5">
         <div aria-hidden className="flex h-[112px] w-[100px] flex-none flex-col justify-between p-2.5" style={{ backgroundColor: category.color }}>
           <span className="font-mono text-xs">{formatNumber(number)}</span>
