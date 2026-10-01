@@ -2,12 +2,11 @@ import type { Skill } from "@/data/types";
 import { declaredAgents, getSource, skillFileUrl, SYNCED_AT } from "@/data/sources";
 import { AGENTS } from "@/lib/installCommands";
 
-/** Why this skill is listed, what it is for, and what to check first. */
+/** Why this skill is listed, where it comes from and which platforms it declares. */
 export default function SkillEvidence({ skill }: { skill: Skill }) {
   const source = getSource(skill.upstream.source);
   const supported = declaredAgents(skill.upstream);
   const skillUrl = skillFileUrl(source.repo, source.sha, skill.upstream.dir, skill.upstream.path);
-  const needsReview = skill.reviewedHash && skill.upstream.contentHash && skill.reviewedHash !== skill.upstream.contentHash;
 
   const rows: { term: string; body: React.ReactNode; wide?: boolean }[] = [
     {
@@ -30,8 +29,7 @@ export default function SkillEvidence({ skill }: { skill: Skill }) {
         </>
       ),
     },
-    { term: "適合的任務", body: skill.useCase ?? skill.description },
-    { term: "使用前確認", body: skill.limitations ?? "請確認原始文件中的工具、套件、帳號與環境需求。本站未逐一驗證安裝及任務結果。" },
+    // Use case and prerequisites moved to SkillIntro above the install panel.
   ];
   if (skill.upstream.compatibility) rows.push({ term: "作者標示的環境需求", body: skill.upstream.compatibility, wide: true });
 
@@ -41,9 +39,6 @@ export default function SkillEvidence({ skill }: { skill: Skill }) {
         <h2 id="evidence-heading" className="font-wide text-2xl font-black">收錄依據與使用條件</h2>
         <span className="border-2 border-ink px-3 py-1 font-mono text-xs">尚未進行任務實測</span>
       </div>
-      {needsReview && (
-        <p className="mb-4 border-2 border-ink bg-[#F4D35E] p-3 text-sm">原始內容已更新，以下中文介紹待複核。請同時查看最新收錄版本。</p>
-      )}
       <dl className="cell-grid grid-cols-[repeat(auto-fit,minmax(min(320px,100%),1fr))]">
         {rows.map((r) => (
           <div key={r.term} className={`bg-white px-5 py-4 ${r.wide ? "col-span-full" : ""}`}>
