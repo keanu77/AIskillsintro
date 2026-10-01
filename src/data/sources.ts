@@ -5,7 +5,6 @@ export interface Source {
   id: SourceId;
   label: string;
   repo: string;
-  icon: string;
   blurb: string;
   /** Commit the catalog was last synced from. */
   sha: string;
@@ -14,12 +13,10 @@ export interface Source {
 const PRESENTATION: Record<SourceId, Omit<Source, "id" | "repo" | "sha">> = {
   anthropic: {
     label: "Anthropic Official Skills",
-    icon: "⭐",
     blurb: "Anthropic 官方的文件處理、設計與開發 Skills",
   },
   "k-dense": {
     label: "Scientific Agent Skills",
-    icon: "🔬",
     blurb: "K-Dense 維護的科學研究與資料分析 Skills",
   },
 };

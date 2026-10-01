@@ -5,55 +5,37 @@ import remarkGfm from "remark-gfm";
 // tabIndex lets keyboard users scroll them (axe: scrollable-region-focusable).
 const MARKDOWN_COMPONENTS: Components = {
   table: ({ node, ...props }) => (
-    <div role="group" aria-label="可水平捲動的表格" tabIndex={0} className="not-prose my-6 overflow-x-auto rounded-xl ring-1 ring-slate-200">
-      <table {...props} className="w-full text-left text-sm [&_td]:border-t [&_td]:border-slate-100 [&_td]:px-3 [&_td]:py-2 [&_td]:align-top [&_th]:bg-slate-50 [&_th]:px-3 [&_th]:py-2 [&_th]:font-semibold [&_th]:text-slate-800" />
+    <div role="group" aria-label="可水平捲動的表格" tabIndex={0} className="not-prose my-6 overflow-x-auto border-2 border-ink bg-white">
+      <table {...props} className="w-full text-left text-sm [&_td]:border-t [&_td]:border-ink/15 [&_td]:px-3 [&_td]:py-2 [&_td]:align-top [&_th]:bg-paper [&_th]:px-3 [&_th]:py-2 [&_th]:font-bold" />
     </div>
   ),
   pre: ({ node, ...props }) => <pre {...props} tabIndex={0} />,
 };
 
-interface SkillGuideProps {
-  content: string;
-}
+const PROSE = [
+  "prose prose-neutral prose-lg max-w-none break-words text-ink-soft",
+  "prose-headings:scroll-mt-20 prose-headings:text-ink prose-h1:text-2xl prose-h1:font-black",
+  "prose-h2:text-xl prose-h2:font-bold prose-h2:border-b-2 prose-h2:border-ink prose-h2:pb-2 prose-h3:text-lg",
+  "prose-code:before:content-none prose-code:after:content-none prose-code:bg-white prose-code:px-1.5 prose-code:py-0.5",
+  "prose-code:text-sm prose-code:font-normal prose-code:text-ink prose-code:outline prose-code:outline-1 prose-code:outline-ink/20",
+  "prose-pre:rounded-none prose-pre:bg-white prose-pre:text-ink prose-pre:border-2 prose-pre:border-ink",
+  "[&_pre_code]:bg-transparent [&_pre_code]:p-0 [&_pre_code]:outline-0",
+  "prose-a:text-accent prose-a:underline-offset-2 hover:prose-a:text-accent-strong prose-strong:text-ink",
+].join(" ");
 
-export default function SkillGuide({ content }: SkillGuideProps) {
+export default function SkillGuide({ content }: { content: string }) {
   return (
-    <section className="bg-white px-6 py-16 sm:py-20">
-      <div className="mx-auto max-w-4xl">
-        <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl mb-10">
-          使用教學
-        </h2>
-        <article className="break-words prose prose-slate prose-lg max-w-none prose-headings:scroll-mt-20 prose-h1:text-2xl prose-h1:font-bold prose-h2:text-xl prose-h2:font-semibold prose-h2:border-b prose-h2:border-slate-200 prose-h2:pb-2 prose-h3:text-lg prose-code:before:content-none prose-code:after:content-none prose-code:rounded prose-code:bg-slate-100 prose-code:px-1.5 prose-code:py-0.5 prose-code:text-sm prose-code:font-normal prose-code:text-pink-700 prose-pre:bg-slate-900 [&_pre_code]:bg-transparent [&_pre_code]:p-0 [&_pre_code]:text-inherit prose-pre:text-slate-200 prose-pre:rounded-xl prose-pre:shadow-lg prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline prose-table:text-sm prose-th:bg-slate-50 prose-img:rounded-xl">
-          <ReactMarkdown remarkPlugins={[remarkGfm]} components={MARKDOWN_COMPONENTS}>
-            {content}
-          </ReactMarkdown>
-        </article>
-
-        {/* 回到頁首 */}
-        <div className="mt-12 text-center">
-          {/* Plain "#" scrolls to the top natively; html's scroll-behavior handles smoothing. */}
-          <a
-            href="#"
-            className="group inline-flex items-center gap-2 rounded-full bg-slate-100 px-5 py-2.5 text-sm font-medium text-slate-600 transition-all hover:bg-blue-50 hover:text-blue-600"
-          >
-            <svg
-              aria-hidden
-              className="h-4 w-4 transition-transform group-hover:-translate-y-0.5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M5 15l7-7 7 7"
-              />
-            </svg>
-            回到頁首
-          </a>
-        </div>
-      </div>
+    <section aria-labelledby="guide-heading" className="max-w-[820px]">
+      <h2 id="guide-heading" className="font-wide mb-6 text-[28px] font-black">使用教學</h2>
+      <article className={PROSE}>
+        <ReactMarkdown remarkPlugins={[remarkGfm]} components={MARKDOWN_COMPONENTS}>
+          {content}
+        </ReactMarkdown>
+      </article>
+      {/* Plain "#" scrolls to the top natively; html's scroll-behavior handles smoothing. */}
+      <a href="#" className="mt-12 inline-flex min-h-11 items-center gap-2 border-2 border-ink px-5 text-sm font-bold hover:bg-ink hover:text-paper">
+        ↑ 回到頁首
+      </a>
     </section>
   );
 }

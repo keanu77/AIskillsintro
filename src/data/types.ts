@@ -11,9 +11,14 @@ export type CategoryId =
 
 export interface Category {
   id: CategoryId;
+  /** Short group code shown on tiles and in element IDs, e.g. "BIO". */
+  code: string;
   label: string;
+  /** Compact label for the legend. */
+  shortLabel: string;
   description: string;
-  icon: string;
+  /** Tile tint; always paired with text, never the only signal. */
+  color: string;
 }
 
 export type SourceId = "anthropic" | "k-dense";
@@ -22,7 +27,6 @@ export type SourceId = "anthropic" | "k-dense";
 export interface SkillOverlay {
   slug: string;
   name: string;
-  icon: string;
   description: string;
 }
 
@@ -45,7 +49,6 @@ export interface Skill {
   slug: string;
   name: string;
   description: string;
-  icon: string;
   category: CategoryId;
   upstream: UpstreamSkill;
 }

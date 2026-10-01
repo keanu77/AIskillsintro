@@ -12,7 +12,7 @@
 | K-Dense | [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills) |
 
 - `npm run sync` 從上游抓 SKILL.md → `content/skills/*.md`（授權為 proprietary / all rights reserved 的只列摘要、不轉載全文），並寫入 `src/data/upstream.json`（commit SHA、授權、plugin）。
-- 中文名稱、描述、分類、icon 寫在 `src/data/overlay/<分類>.ts`。
+- 中文名稱、描述、分類 寫在 `src/data/overlay/<分類>.ts`。
 - 上游新增 skill 後，`npm test` 會列出缺中文 overlay 的 slug；英文原文在 `content/upstream-descriptions.json`。
 - 上游刪除或合併的 skill，舊網址在 `public/_redirects` 轉址。
 
