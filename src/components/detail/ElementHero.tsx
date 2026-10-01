@@ -6,7 +6,8 @@ import { formatNumber, type SkillElement } from "@/lib/elements";
 export default function ElementHero({ element }: { element: SkillElement }) {
   const { skill, category, number } = element;
   const source = getSource(skill.upstream.source);
-  const fileUrl = skillFileUrl(source.repo, source.sha, skill.upstream.dir);
+  const skillPath = skill.upstream.path ?? `skills/${skill.upstream.dir}`;
+  const fileUrl = skillFileUrl(source.repo, source.sha, skill.upstream.dir, skill.upstream.path);
 
   const props: { term: string; value: React.ReactNode; mono?: boolean }[] = [
     {
@@ -18,7 +19,7 @@ export default function ElementHero({ element }: { element: SkillElement }) {
       ),
     },
     { term: "授權", value: skill.upstream.license ?? "未標示" },
-    { term: "上游路徑", value: `skills/${skill.upstream.dir}`, mono: true },
+    { term: "上游路徑", value: skillPath, mono: true },
     { term: "同步", value: source.sha.slice(0, 7), mono: true },
   ];
 
@@ -43,7 +44,7 @@ export default function ElementHero({ element }: { element: SkillElement }) {
             </a>
           </div>
         </div>
-        <dl className="grid grid-cols-[repeat(auto-fit,minmax(140px,1fr))] gap-0.5 border-2 border-ink bg-ink">
+        <dl className="cell-grid grid-cols-[repeat(auto-fit,minmax(140px,1fr))]">
           {props.map((p) => (
             <div key={p.term} className="bg-white px-4 py-3.5">
               <dt className="font-mono text-[11px] text-ink-muted">{p.term}</dt>

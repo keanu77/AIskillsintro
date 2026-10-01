@@ -40,10 +40,12 @@ export default function ElementTile({ element, size = "sm", dimmed = false, asFi
     </>
   );
 
-  // Dimmed tiles lose their group color but keep AA text contrast (#4D4D4D on
-  // #E9E9E5 ≈ 6.4:1), so filtering never produces unreadable text.
-  const style = { backgroundColor: dimmed ? "#E9E9E5" : category.color };
-  const base = `flex flex-col justify-between ${dimmed ? "text-ink-muted" : "text-ink"} ${s.box}`;
+  // Dimmed tiles drop their fill (so they can't be mistaken for the grey
+  // productivity group) and keep AA text contrast: #4D4D4D on paper ≈ 8:1.
+  const style = dimmed ? undefined : { backgroundColor: category.color };
+  const base = `flex flex-col justify-between ${
+    dimmed ? "text-ink-muted outline outline-1 -outline-offset-1 outline-ink/25" : "text-ink"
+  } ${s.box}`;
 
   if (asFigure) {
     return (

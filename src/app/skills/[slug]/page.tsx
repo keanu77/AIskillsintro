@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 
 import ElementHero from "@/components/detail/ElementHero";
 import FamilyRow from "@/components/detail/FamilyRow";
+import SkillEvidence from "@/components/detail/SkillEvidence";
 import SkillGuide from "@/components/detail/SkillGuide";
 import SiteHeader from "@/components/periodic/SiteHeader";
 import Footer from "@/components/shared/Footer";
@@ -12,7 +13,7 @@ import { CATEGORIES, SKILLS, getAllSlugs, getSkillBySlug } from "@/data/skills";
 import { SOURCES, getSource, skillFileUrl } from "@/data/sources";
 import type { SourceId } from "@/data/types";
 import { buildElements } from "@/lib/elements";
-import { getSkillContent } from "@/lib/getSkillContent";
+import { getSkillAttribution, getSkillContent } from "@/lib/getSkillContent";
 import { translateContent } from "@/lib/translateContent";
 
 interface PageProps {
@@ -50,9 +51,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 function WithheldNotice({ href }: { href: string }) {
   return (
     <section aria-labelledby="withheld-heading" className="max-w-[820px] border-2 border-ink bg-white p-6">
-      <h2 id="withheld-heading" className="font-bold">此 Skill 的授權不允許轉載全文</h2>
+      <h2 id="withheld-heading" className="font-bold">此 Skill 僅提供介紹與來源連結</h2>
       <p className="mt-2 text-ink-soft">
-        請至{" "}
+        尚未確認全文轉載條件，或來源授權有限制。請至{" "}
         <a href={href} target="_blank" rel="noopener noreferrer" className="font-bold text-accent underline">
           原始 SKILL.md
         </a>{" "}
@@ -70,7 +71,9 @@ export default async function SkillDetailPage({ params }: PageProps) {
   const { skill } = element;
   const raw = getSkillContent(skill.slug);
   const content = raw ? translateContent(raw) : null;
+  const attribution = getSkillAttribution(skill.slug);
   const source = getSource(skill.upstream.source);
+  const fileUrl = skillFileUrl(source.repo, source.sha, skill.upstream.dir, skill.upstream.path);
 
   return (
     <>
@@ -82,11 +85,16 @@ export default async function SkillDetailPage({ params }: PageProps) {
       <main className="mx-auto flex max-w-[1240px] flex-col gap-12 px-5 pt-6 pb-20 sm:px-10">
         <ElementHero element={element} />
         <Installation skill={skill.upstream} repos={REPOS} />
+        <SkillEvidence skill={skill} />
         <FamilyRow element={element} all={ELEMENTS} />
-        {content ? (
-          <SkillGuide content={content} />
-        ) : (
-          <WithheldNotice href={skillFileUrl(source.repo, source.sha, skill.upstream.dir)} />
+        {content ? <SkillGuide content={content} sourceUrl={fileUrl} /> : <WithheldNotice href={fileUrl} />}
+        {attribution && (
+          <details className="max-w-[820px] border-2 border-ink bg-white">
+            <summary className="cursor-pointer px-5 py-3 text-sm font-bold">來源與授權資訊</summary>
+            <pre tabIndex={0} className="max-h-80 overflow-auto whitespace-pre-wrap break-words border-t-2 border-ink px-5 py-4 font-mono text-xs leading-6 text-ink-soft">
+              {attribution}
+            </pre>
+          </details>
         )}
       </main>
       <Footer />

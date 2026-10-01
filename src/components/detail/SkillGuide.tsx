@@ -1,5 +1,6 @@
-import ReactMarkdown, { type Components } from "react-markdown";
+import ReactMarkdown, { defaultUrlTransform, type Components } from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { skillResourceUrl } from "@/lib/skillResourceUrl";
 
 // Wide tables and code blocks scroll inside their own box instead of the page;
 // tabIndex lets keyboard users scroll them (axe: scrollable-region-focusable).
@@ -23,12 +24,22 @@ const PROSE = [
   "prose-a:text-accent prose-a:underline-offset-2 hover:prose-a:text-accent-strong prose-strong:text-ink",
 ].join(" ");
 
-export default function SkillGuide({ content }: { content: string }) {
+interface SkillGuideProps {
+  content: string;
+  /** Pinned upstream SKILL.md URL; relative links in the guide resolve against it. */
+  sourceUrl: string;
+}
+
+export default function SkillGuide({ content, sourceUrl }: SkillGuideProps) {
   return (
     <section aria-labelledby="guide-heading" className="max-w-[820px]">
       <h2 id="guide-heading" className="font-wide mb-6 text-[28px] font-black">使用教學</h2>
       <article className={PROSE}>
-        <ReactMarkdown remarkPlugins={[remarkGfm]} components={MARKDOWN_COMPONENTS}>
+        <ReactMarkdown
+          remarkPlugins={[remarkGfm]}
+          components={MARKDOWN_COMPONENTS}
+          urlTransform={(url, key) => skillResourceUrl(defaultUrlTransform(url), sourceUrl, key === "src")}
+        >
           {content}
         </ReactMarkdown>
       </article>

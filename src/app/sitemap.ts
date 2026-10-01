@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date(SYNCED_AT);
   return [
     { url: `${SITE_URL}/`, lastModified, changeFrequency: "weekly", priority: 1 },
+    { url: `${SITE_URL}/updates`, lastModified, changeFrequency: "weekly", priority: 0.8 },
     ...getAllSlugs().map((slug) => ({
       url: `${SITE_URL}/skills/${slug}`,
       lastModified,

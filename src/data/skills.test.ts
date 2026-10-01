@@ -7,10 +7,12 @@ import type { UpstreamSkill } from "./types";
 const CONTENT_DIR = path.join(process.cwd(), "content/skills");
 
 describe("catalog integrity", () => {
-  it("has a zh-TW overlay for every synced upstream skill", () => {
-    const listed = new Set(SKILLS.map((s) => s.slug));
-    const untranslated = UPSTREAM_SKILLS.map((u) => u.slug).filter((s) => !listed.has(s));
-    expect(untranslated).toEqual([]);
+  it("only publishes skills with both source metadata and a Chinese overlay", () => {
+    const upstream = new Set(UPSTREAM_SKILLS.map((s) => s.slug));
+    const translated = new Set(Object.values(OVERLAYS).flat().map((s) => s.slug));
+    for (const skill of SKILLS) {
+      expect(upstream.has(skill.slug) && translated.has(skill.slug)).toBe(true);
+    }
   });
 
   it("lists each overlay slug exactly once", () => {
@@ -38,6 +40,10 @@ describe("catalog integrity", () => {
 });
 
 describe("buildSkills", () => {
+  it("keeps newly discovered untranslated skills out of the public catalog", () => {
+    const candidate = { slug: "new-unreviewed", source: "k-dense", dir: "new-unreviewed", name: "New", license: null, plugin: null, mirrored: false } as UpstreamSkill;
+    expect(buildSkills([candidate], OVERLAYS)).toEqual([]);
+  });
   it("drops overlays whose skill disappeared upstream", () => {
     const upstream: UpstreamSkill[] = [
       { slug: "a", source: "k-dense", dir: "a", name: "a", license: null, plugin: null, mirrored: true },

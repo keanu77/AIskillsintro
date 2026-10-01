@@ -4,1778 +4,4568 @@
     {
       "id": "anthropic",
       "repo": "anthropics/skills",
-      "sha": "8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4"
+      "sha": "8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4",
+      "stars": 179213,
+      "pushedAt": "2026-09-29T02:20:07Z",
+      "observedAt": "2026-10-01T05:27:42.397Z"
     },
     {
       "id": "k-dense",
       "repo": "K-Dense-AI/scientific-agent-skills",
-      "sha": "91497e335489dcb544ec8ddc8f6b7ce5fd6d1121"
+      "sha": "91497e335489dcb544ec8ddc8f6b7ce5fd6d1121",
+      "stars": 47238,
+      "pushedAt": "2026-10-01T00:14:57Z",
+      "observedAt": "2026-10-01T05:27:42.397Z"
+    },
+    {
+      "id": "openai",
+      "repo": "openai/plugins",
+      "sha": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "stars": 7248,
+      "pushedAt": "2026-09-28T17:08:10Z",
+      "observedAt": "2026-10-01T05:27:42.397Z"
+    },
+    {
+      "id": "vercel",
+      "repo": "vercel-labs/agent-skills",
+      "sha": "063bee94c3f4df8453406c830b0a7df0f2860278",
+      "stars": 31774,
+      "pushedAt": "2026-08-28T13:36:31Z",
+      "observedAt": "2026-10-01T05:27:42.397Z"
+    },
+    {
+      "id": "huggingface",
+      "repo": "huggingface/skills",
+      "sha": "80f9fa530e46f4ae642fcb9e1725bad0e1979395",
+      "stars": 11117,
+      "pushedAt": "2026-09-29T13:27:57Z",
+      "observedAt": "2026-10-01T05:27:42.397Z"
     }
   ],
   "skills": [
     {
-      "slug": "academy-guide",
-      "source": "anthropic",
-      "dir": "academy-guide",
-      "name": "academy-guide",
-      "license": "Complete terms in LICENSE.txt",
-      "plugin": "academy-guide",
-      "mirrored": true
-    },
-    {
-      "slug": "algorithmic-art",
-      "source": "anthropic",
-      "dir": "algorithmic-art",
-      "name": "algorithmic-art",
-      "license": "Complete terms in LICENSE.txt",
-      "plugin": "example-skills",
-      "mirrored": true
-    },
-    {
-      "slug": "brand-guidelines",
-      "source": "anthropic",
-      "dir": "brand-guidelines",
-      "name": "brand-guidelines",
-      "license": "Complete terms in LICENSE.txt",
-      "plugin": "example-skills",
-      "mirrored": true
-    },
-    {
-      "slug": "canvas-design",
-      "source": "anthropic",
-      "dir": "canvas-design",
-      "name": "canvas-design",
-      "license": "Complete terms in LICENSE.txt",
-      "plugin": "example-skills",
-      "mirrored": true
-    },
-    {
-      "slug": "claude-api",
-      "source": "anthropic",
-      "dir": "claude-api",
-      "name": "claude-api",
-      "license": "Complete terms in LICENSE.txt",
-      "plugin": "claude-api",
-      "mirrored": true
-    },
-    {
-      "slug": "discernment-nudge",
-      "source": "anthropic",
-      "dir": "discernment-nudge",
-      "name": "discernment-nudge",
-      "license": "Complete terms in LICENSE.txt",
-      "plugin": "discernment-nudge",
-      "mirrored": true
-    },
-    {
-      "slug": "doc-coauthoring",
-      "source": "anthropic",
-      "dir": "doc-coauthoring",
-      "name": "doc-coauthoring",
-      "license": null,
-      "plugin": "example-skills",
-      "mirrored": true
-    },
-    {
-      "slug": "document-skills--docx",
-      "source": "anthropic",
-      "dir": "docx",
-      "name": "docx",
-      "license": "Proprietary. LICENSE.txt has complete terms",
-      "plugin": "document-skills",
-      "mirrored": false
-    },
-    {
-      "slug": "frontend-design",
-      "source": "anthropic",
-      "dir": "frontend-design",
-      "name": "frontend-design",
-      "license": "Complete terms in LICENSE.txt",
-      "plugin": "example-skills",
-      "mirrored": true
-    },
-    {
-      "slug": "internal-comms",
-      "source": "anthropic",
-      "dir": "internal-comms",
-      "name": "internal-comms",
-      "license": "Complete terms in LICENSE.txt",
-      "plugin": "example-skills",
-      "mirrored": true
-    },
-    {
-      "slug": "mcp-builder",
-      "source": "anthropic",
-      "dir": "mcp-builder",
-      "name": "mcp-builder",
-      "license": "Complete terms in LICENSE.txt",
-      "plugin": "example-skills",
-      "mirrored": true
-    },
-    {
-      "slug": "document-skills--pdf",
-      "source": "anthropic",
-      "dir": "pdf",
-      "name": "pdf",
-      "license": "Proprietary. LICENSE.txt has complete terms",
-      "plugin": "document-skills",
-      "mirrored": false
-    },
-    {
-      "slug": "document-skills--pptx",
-      "source": "anthropic",
-      "dir": "pptx",
-      "name": "pptx",
-      "license": "Proprietary. LICENSE.txt has complete terms",
-      "plugin": "document-skills",
-      "mirrored": false
-    },
-    {
-      "slug": "skill-creator",
-      "source": "anthropic",
-      "dir": "skill-creator",
-      "name": "skill-creator",
-      "license": null,
-      "plugin": "example-skills",
-      "mirrored": true
-    },
-    {
-      "slug": "slack-gif-creator",
-      "source": "anthropic",
-      "dir": "slack-gif-creator",
-      "name": "slack-gif-creator",
-      "license": "Complete terms in LICENSE.txt",
-      "plugin": "example-skills",
-      "mirrored": true
-    },
-    {
-      "slug": "theme-factory",
-      "source": "anthropic",
-      "dir": "theme-factory",
-      "name": "theme-factory",
-      "license": "Complete terms in LICENSE.txt",
-      "plugin": "example-skills",
-      "mirrored": true
-    },
-    {
-      "slug": "web-artifacts-builder",
-      "source": "anthropic",
-      "dir": "web-artifacts-builder",
-      "name": "web-artifacts-builder",
-      "license": "Complete terms in LICENSE.txt",
-      "plugin": "example-skills",
-      "mirrored": true
-    },
-    {
-      "slug": "webapp-testing",
-      "source": "anthropic",
-      "dir": "webapp-testing",
-      "name": "webapp-testing",
-      "license": "Complete terms in LICENSE.txt",
-      "plugin": "example-skills",
-      "mirrored": true
-    },
-    {
-      "slug": "document-skills--xlsx",
-      "source": "anthropic",
-      "dir": "xlsx",
-      "name": "xlsx",
-      "license": "Proprietary. LICENSE.txt has complete terms",
-      "plugin": "document-skills",
-      "mirrored": false
-    },
-    {
       "slug": "13c-metabolic-flux",
       "source": "k-dense",
       "dir": "13c-metabolic-flux",
+      "path": "skills/13c-metabolic-flux",
       "name": "13c-metabolic-flux",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Python 3.11 with uv and Git for installation. Tested with mfapy 0.6.3 at a10433af16682386548b360297e2476152d46ede, NumPy 2.4.6, SciPy 1.17.1, and NLopt 2.11.0. Network access is needed only to install public dependencies. Inference runs locally without credentials; inputs are JSON.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "42f4dea8fe4b13667454c9871e63e83ef25ae9e84d07710e82c871c06c9325ed"
+    },
+    {
+      "slug": "academy-guide",
+      "source": "anthropic",
+      "dir": "academy-guide",
+      "path": "skills/academy-guide",
+      "name": "academy-guide",
+      "license": "Apache-2.0",
+      "plugin": "academy-guide",
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code"
+      ],
+      "installMode": "skill",
+      "contentHash": "a7c2bd03d47eb660cb36dde5e5abc26d5bdcb28581d74dfca953ca09f525d595"
     },
     {
       "slug": "adaptyv",
       "source": "k-dense",
       "dir": "adaptyv",
+      "path": "skills/adaptyv",
       "name": "adaptyv",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.10+, an Adaptyv Foundry account, and an API key from foundry.adaptyvbio.com. Install adaptyv-sdk from GitHub with uv pip install.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "62bb1a8097e98534288143a397f45cd404a30217a99077092e7e2fca1c9e00f2"
     },
     {
       "slug": "aeon",
       "source": "k-dense",
       "dir": "aeon",
+      "path": "skills/aeon",
       "name": "aeon",
-      "license": "BSD-3-Clause license",
+      "license": "BSD-3-Clause",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.10+ and the aeon package (uv pip install). Optional aeon[all_extras] for deep learning and extended dependencies.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "0ffcca71f759f428a743bfe5fa36260015798c5c550bcef3df321ca37670f251"
+    },
+    {
+      "slug": "algorithmic-art",
+      "source": "anthropic",
+      "dir": "algorithmic-art",
+      "path": "skills/algorithmic-art",
+      "name": "algorithmic-art",
+      "license": "Apache-2.0",
+      "plugin": "example-skills",
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code"
+      ],
+      "installMode": "skill",
+      "contentHash": "5a8e1e2386ce5e1769327a5129217e5eebf4682fc07bffcc727ae0bbcb7ddc44"
     },
     {
       "slug": "alphagenome",
       "source": "k-dense",
       "dir": "alphagenome",
+      "path": "skills/alphagenome",
       "name": "alphagenome",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Python 3.10+ with the alphagenome package (0.9.0 or later for the Atlas client; brings numpy, pandas, anndata, grpcio). Network access to gdmscience.googleapis.com:443 and a free non-commercial AlphaGenome API key in ALPHAGENOME_API_KEY (ALPHA_GENOME_API_KEY also read). Human data is GRCh38 only; mouse is mm10 (model only).",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "6faacc083dcb812e7edbccf9a08ed00b8efef5f5b2f60073b9eb4ccbdc1eefbb"
     },
     {
       "slug": "analytical-method-validation",
       "source": "k-dense",
       "dir": "analytical-method-validation",
+      "path": "skills/analytical-method-validation",
       "name": "analytical-method-validation",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.11+. Scripts use only the standard library - no numpy, scipy, or network access. Statistical distributions are computed from first principles so results are reproducible in any conforming interpreter.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "a78c3b7736873547a34b3d9cc8d7dbcace55014fa7898496f9bb62484509bb46"
     },
     {
       "slug": "anndata",
       "source": "k-dense",
       "dir": "anndata",
+      "path": "skills/anndata",
       "name": "anndata",
-      "license": "BSD-3-Clause license",
+      "license": "BSD-3-Clause",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.11+ and uv. Examples target AnnData 0.12.16, with experimental APIs clearly marked where used.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "567ac2d510a628fa5f0d3b88cb12e5b6c40d60cce1b53cba7001f92ebf6777bf"
     },
     {
       "slug": "arbor",
       "source": "k-dense",
       "dir": "arbor",
+      "path": "skills/arbor",
       "name": "arbor",
-      "license": "MIT license",
+      "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "2fbd648c8c2c77bb75d7762a659f49a8d342d5f8814f6e21dfa0e41b48e0d7ae"
     },
     {
       "slug": "arboreto",
       "source": "k-dense",
       "dir": "arboreto",
+      "path": "skills/arboreto",
       "name": "arboreto",
-      "license": "BSD-3-Clause license",
+      "license": "BSD-3-Clause",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "139a4a01d4d6616f0007952ae43d347f5436c63ebdfd45421b4f37f5e6327207"
     },
     {
       "slug": "astropy",
       "source": "k-dense",
       "dir": "astropy",
+      "path": "skills/astropy",
       "name": "astropy",
-      "license": "BSD-3-Clause license",
+      "license": "BSD-3-Clause",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.11+ with astropy installed (uv for package installation). Some features (object name resolution, site lookups, remote FITS reads, IERS updates) need network access.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "cdc5414fcefcd032124406030fb61ac069a4a65e6445584ad335af33fe6d7f90"
     },
     {
       "slug": "autoskill",
       "source": "k-dense",
       "dir": "autoskill",
+      "path": "skills/autoskill",
       "name": "autoskill",
-      "license": "MIT license",
+      "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "387657cf770e5bacf7dc24196aef493d0731897db5de21a8cf61591666a6eb39"
     },
     {
       "slug": "benchling-integration",
       "source": "k-dense",
       "dir": "benchling-integration",
+      "path": "skills/benchling-integration",
       "name": "benchling-integration",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires a Benchling account, tenant URL, and API key or OAuth app credentials. Install benchling-sdk with uv pip install.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "a7e8b950fd50f17ffe1c032c6af9f60810690b060005ba3a5351e8f4972a2a0e"
     },
     {
       "slug": "bgpt-paper-search",
       "source": "k-dense",
       "dir": "bgpt-paper-search",
+      "path": "skills/bgpt-paper-search",
       "name": "bgpt-paper-search",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires the BGPT MCP server configured in the agent host (npx mcp-remote or npx bgpt-mcp), internet access to bgpt.pro, and an optional BGPT API key for paid usage.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "35d97c27a54cdadfc671428f4acec5c088ecb081f6ef4b3a49003f1bd4414eaf"
     },
     {
       "slug": "bids",
       "source": "k-dense",
       "dir": "bids",
+      "path": "skills/bids",
       "name": "bids",
       "license": "https://creativecommons.org/licenses/by/4.0/",
       "plugin": null,
-      "mirrored": true
+      "mirrored": false,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "4c7567c9017a61a7a3a709d5d3cf6b9c1779482dd4bc35a5124e91cc16665aa4"
     },
     {
       "slug": "biopython",
       "source": "k-dense",
       "dir": "biopython",
+      "path": "skills/biopython",
       "name": "biopython",
       "license": "Biopython License Agreement",
       "plugin": null,
-      "mirrored": true
+      "mirrored": false,
+      "compatibility": "Requires Python 3.10+, NumPy, and Biopython. Entrez and web BLAST examples require network access; local BLAST/MUSCLE examples require those command-line tools installed separately.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "7236f6235c7df2138f4268826a37237f9082cc00e61a51b9139e3be68f105bff"
     },
     {
       "slug": "bioservices",
       "source": "k-dense",
       "dir": "bioservices",
+      "path": "skills/bioservices",
       "name": "bioservices",
       "license": "GPLv3 license",
       "plugin": null,
-      "mirrored": true
+      "mirrored": false,
+      "compatibility": "Requires Python 3.9–3.12 and internet access to 40+ bioinformatics web APIs. NCBI BLAST requires a contact email (`NCBI_EMAIL` env var or explicit parameter).",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "97ed396980008336d1c2800e65ad2e5dfcc933ff5714d7648488d01ede7a42b8"
+    },
+    {
+      "slug": "brand-guidelines",
+      "source": "anthropic",
+      "dir": "brand-guidelines",
+      "path": "skills/brand-guidelines",
+      "name": "brand-guidelines",
+      "license": "Apache-2.0",
+      "plugin": "example-skills",
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code"
+      ],
+      "installMode": "skill",
+      "contentHash": "f2f1e76f365767ef71dd3bdc6b8d0df50c79158915e1668326a8fbd13334b4cd"
     },
     {
       "slug": "bulk-rnaseq",
       "source": "k-dense",
       "dir": "bulk-rnaseq",
+      "path": "skills/bulk-rnaseq",
       "name": "bulk-rnaseq",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "7535c83433756ebe2cb358637d28f868372f69b0af057af952dec88b8af20a81"
     },
     {
       "slug": "cantera",
       "source": "k-dense",
       "dir": "cantera",
+      "path": "skills/cantera",
       "name": "cantera",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.12+, Cantera 3.2.0, and NumPy. Installation needs network access; simulations run locally without credentials. Custom mechanisms must be available as Cantera YAML files.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "e6f0bb3fbfcc2227c058eab7b864a83c910549dfab4b2eefe9dd5ffd98115ae2"
+    },
+    {
+      "slug": "canvas-design",
+      "source": "anthropic",
+      "dir": "canvas-design",
+      "path": "skills/canvas-design",
+      "name": "canvas-design",
+      "license": "Apache-2.0",
+      "plugin": "example-skills",
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code"
+      ],
+      "installMode": "skill",
+      "contentHash": "d68fb6de56abfac230e6408cb2e201395cd41eaae9c7846b902ee115fb1a12f3"
     },
     {
       "slug": "cellprofiler",
       "source": "k-dense",
       "dir": "cellprofiler",
+      "path": "skills/cellprofiler",
       "name": "cellprofiler",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Python 3.10+ with numpy and tifffile for bundled helpers; CellProfiler 4.2.8 executable or its Linux container for segmentation. Network access is needed for installation only. No credentials required.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "24c8d2170d32cb170c4717dc557aa68f5a46c22660b614b953417a31876ec2b9"
     },
     {
       "slug": "cellxgene-census",
       "source": "k-dense",
       "dir": "cellxgene-census",
+      "path": "skills/cellxgene-census",
       "name": "cellxgene-census",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python >=3.10,<3.13. Examples target cellxgene-census 1.17.x and the 2025-11-08 stable LTS Census; spatial workflows need the spatial extra and TileDB-SOMA >=1.15.5. No authentication is required for public Census data.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "264f5d857af91b4bf2351ada18d008e2e4b29abe8bd38fe21cb7fd2a4f6d38e8"
     },
     {
       "slug": "cirq",
       "source": "k-dense",
       "dir": "cirq",
+      "path": "skills/cirq",
       "name": "cirq",
-      "license": "Apache-2.0 license",
+      "license": "Apache-2.0",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "6a4d890de3a5c6de0475cd9360eca3be89e82cf48de748ff68840e2c8715a540"
     },
     {
       "slug": "citation-management",
       "source": "k-dense",
       "dir": "citation-management",
+      "path": "skills/citation-management",
       "name": "citation-management",
-      "license": "MIT License",
+      "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.9+ with requests. Google Scholar search additionally needs scholarly. Needs network access to api.openalex.org, api.crossref.org, eutils.ncbi.nlm.nih.gov, export.arxiv.org, and api.datacite.org.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "54e1676b707c66b3dd04aa0d28d5206a4a0f90115e7056bdb81634f4a554461b"
+    },
+    {
+      "slug": "claude-api",
+      "source": "anthropic",
+      "dir": "claude-api",
+      "path": "skills/claude-api",
+      "name": "claude-api",
+      "license": "Apache-2.0",
+      "plugin": "claude-api",
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code"
+      ],
+      "installMode": "skill",
+      "contentHash": "78fd06911ad7cdeec6c0a269db3c722222f373b52e43a8ee408c272a45b731c7"
     },
     {
       "slug": "clinical-decision-support",
       "source": "k-dense",
       "dir": "clinical-decision-support",
+      "path": "skills/clinical-decision-support",
       "name": "clinical-decision-support",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Python 3.11+; local files only; bundled scripts use the standard library and require no network, credentials, API keys, LLMs, or image services.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "cff3236fc259b566649ab687e14da75d2eb1730ffc40adc4bf9772b44c464830"
     },
     {
       "slug": "clinical-reports",
       "source": "k-dense",
       "dir": "clinical-reports",
+      "path": "skills/clinical-reports",
       "name": "clinical-reports",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.11+ only for optional dependency-free local scripts; no network access, credentials, external models, or image services.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "fb6db4db1cfa3a5eba550cfcc7f9ea527965099a2acbf68779eb39317d527eea"
     },
     {
       "slug": "cobrapy",
       "source": "k-dense",
       "dir": "cobrapy",
+      "path": "skills/cobrapy",
       "name": "cobrapy",
       "license": "GPL-2.0 license",
       "plugin": null,
-      "mirrored": true
+      "mirrored": false,
+      "compatibility": "Requires Python 3.9+ (cobra 0.30+ dropped 3.8). Install with uv pip install. GLPK (swiglpk) is the default solver; CPLEX/Gurobi optional. load_model fetches from bundled data, BiGG, or BioModels (network required for remote models).",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "17a7d37c378a7cc3751e008428e7a32975fa29a2d6e771a43bba64af33510ae8"
     },
     {
       "slug": "consciousness-council",
       "source": "k-dense",
       "dir": "consciousness-council",
+      "path": "skills/consciousness-council",
       "name": "consciousness-council",
-      "license": "MIT license",
+      "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "2fc2fb5ebed87bd227194a63e397c75c37ab0b857a9915e186a610546b5a1dda"
     },
     {
       "slug": "dask",
       "source": "k-dense",
       "dir": "dask",
+      "path": "skills/dask",
       "name": "dask",
-      "license": "BSD-3-Clause license",
+      "license": "BSD-3-Clause",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.10+ and dask 2025.1+. DataFrame workflows need pandas 2+ and PyArrow 16+. Cloud paths (s3://, gcs://) need s3fs or gcsfs. Cluster deployment uses dask.distributed (included with dask[complete]).",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "932b0f80014b79bf85cf41ff489a5def8d641521946266f4b53867ad99a0d2d8"
     },
     {
       "slug": "database-lookup",
       "source": "k-dense",
       "dir": "database-lookup",
+      "path": "skills/database-lookup",
       "name": "database-lookup",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "6c4a219ef68af6ffc5bc9fe9a4a338b1c9f6e77dd496d65f2656e45c01b6d5f3"
     },
     {
       "slug": "datalad",
       "source": "k-dense",
       "dir": "datalad",
+      "path": "skills/datalad",
       "name": "datalad",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Needs datalad 1.6.x on Python 3.10+, plus git and git-annex 10.x. git-annex is not written in Python but installs as a prebuilt wheel from PyPI (`uv pip install git-annex`), from a system package manager, or from conda-forge. Container-based provenance also needs datalad-container (1.2.x) and Singularity/Apptainer or Docker. clone, get, and push need network access; credentialed remotes read secrets from the system keyring or from DATALAD_CREDENTIAL_<NAME>_<COMPONENT> environment variables.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "cb87b3e779d4fb325d156bad20b6187d15f49255f3938e993b083d354df6f373"
     },
     {
       "slug": "datamol",
       "source": "k-dense",
       "dir": "datamol",
+      "path": "skills/datamol",
       "name": "datamol",
-      "license": "Apache-2.0 license",
+      "license": "Apache-2.0",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.8+ and datamol (uv pip install). RDKit is installed automatically as a datamol dependency (since 0.12.2). Optional s3fs/gcsfs for cloud I/O via fsspec.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "f5a16d874cb9047f0452d00aee946a58c53609c0c22e86502ca905f49e76080f"
     },
     {
       "slug": "deepchem",
       "source": "k-dense",
       "dir": "deepchem",
+      "path": "skills/deepchem",
       "name": "deepchem",
-      "license": "MIT license",
+      "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.7–3.11 (PyPI 2.8.0 caps at <3.12). Install PyTorch, TensorFlow, or JAX before the matching deepchem extra. RDKit is a core dependency.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "736cdb7548788457274019e240bbd953d38b22a16b42abbeed3ec6b28d68c5a1"
     },
     {
       "slug": "deepspot-m",
       "source": "k-dense",
       "dir": "deepspot-m",
+      "path": "skills/deepspot-m",
       "name": "deepspot-m",
       "license": "PolyForm-Noncommercial-1.0.0",
       "plugin": null,
-      "mirrored": true
+      "mirrored": false,
+      "compatibility": "Needs deepspotm 1.0.0 from PyPI (Python 3.10 to 3.13) plus PyTorch. Weights at ratschlab/DeepSpotM on Hugging Face are gated and licensed CC-BY-NC-SA-4.0, so request access on the model page and then run huggingface-cli login. A CUDA GPU speeds up batched inference.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "8b4cf7fd264d54acb10c90fa9c87d8f7410a815979d89cb96d930cb31c9eec30"
     },
     {
       "slug": "deeptools",
       "source": "k-dense",
       "dir": "deeptools",
+      "path": "skills/deeptools",
       "name": "deeptools",
       "license": "BSD license",
       "plugin": null,
-      "mirrored": true
+      "mirrored": false,
+      "compatibility": "Requires Python >3.8 and deepTools 3.5.6-compatible dependencies. The upstream project recommends conda/bioconda for full dependency resolution; repo examples use uv with pinned PyPI installs for reproducible command-line workflows.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "7f310800406f09db8f32c6404de8237886ae1bd02dd7592d18ec135c5378ec09"
     },
     {
       "slug": "depmap",
       "source": "k-dense",
       "dir": "depmap",
+      "path": "skills/depmap",
       "name": "depmap",
       "license": "CC-BY-4.0",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "951364c773c69ba97d39a0966c65d5dcc32f27c646fc9f9eaf2e8f5717dea779"
     },
     {
       "slug": "dhdna-profiler",
       "source": "k-dense",
       "dir": "dhdna-profiler",
+      "path": "skills/dhdna-profiler",
       "name": "dhdna-profiler",
-      "license": "MIT license",
+      "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "a4867216be77305a212e9cb52fdf891bb18bfb84414a102479181a5cb92acf66"
     },
     {
       "slug": "diffdock",
       "source": "k-dense",
       "dir": "diffdock",
+      "path": "skills/diffdock",
       "name": "diffdock",
-      "license": "MIT license",
+      "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires the DiffDock repository, Python 3.9 environment from upstream environment.yml or the official Docker image, RDKit, PyTorch/PyG, and optional CUDA GPU acceleration. Current guidance targets DiffDock v1.1.3 / DiffDock-L.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "e09d8410ae546f43bd15d0f45e22d8640d9010b5d1e47271fc0036e80dafb687"
+    },
+    {
+      "slug": "discernment-nudge",
+      "source": "anthropic",
+      "dir": "discernment-nudge",
+      "path": "skills/discernment-nudge",
+      "name": "discernment-nudge",
+      "license": "Apache-2.0",
+      "plugin": "discernment-nudge",
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code"
+      ],
+      "installMode": "skill",
+      "contentHash": "b83c19f1456d863348df3a9a72ae18a4cc2fbeb8ffff5b5f9352dbc5568aaa35"
     },
     {
       "slug": "dnanexus-integration",
       "source": "k-dense",
       "dir": "dnanexus-integration",
+      "path": "skills/dnanexus-integration",
       "name": "dnanexus-integration",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires a DNAnexus account, network access, Python 3.11+, and dx-toolkit/dxpy; some workflow and infrastructure features require organization licenses or policies.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "cfdffa2f805fe79a9ba38454ebdbcb14fd8499128919435d7ff9f1e3e3d7876e"
+    },
+    {
+      "slug": "doc-coauthoring",
+      "source": "anthropic",
+      "dir": "doc-coauthoring",
+      "path": "skills/doc-coauthoring",
+      "name": "doc-coauthoring",
+      "license": null,
+      "plugin": "example-skills",
+      "mirrored": false,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code"
+      ],
+      "installMode": "skill",
+      "contentHash": "a72bd7f65014e9f874c3859f24d9851df76090cdecd425fc2da870f00b668c03"
+    },
+    {
+      "slug": "document-skills--docx",
+      "source": "anthropic",
+      "dir": "docx",
+      "path": "skills/docx",
+      "name": "docx",
+      "license": "Proprietary. LICENSE.txt has complete terms",
+      "plugin": "document-skills",
+      "mirrored": false,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code"
+      ],
+      "installMode": "skill",
+      "contentHash": "8c3b0f4e89397b54d4578dc62166e7272953396f29e6896818ebc03ca1dd90cd"
+    },
+    {
+      "slug": "document-skills--pdf",
+      "source": "anthropic",
+      "dir": "pdf",
+      "path": "skills/pdf",
+      "name": "pdf",
+      "license": "Proprietary. LICENSE.txt has complete terms",
+      "plugin": "document-skills",
+      "mirrored": false,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code"
+      ],
+      "installMode": "skill",
+      "contentHash": "31337d87546ef6738bb85a7297bcf52c0c598daf628c806299f98db0e106c08e"
+    },
+    {
+      "slug": "document-skills--pptx",
+      "source": "anthropic",
+      "dir": "pptx",
+      "path": "skills/pptx",
+      "name": "pptx",
+      "license": "Proprietary. LICENSE.txt has complete terms",
+      "plugin": "document-skills",
+      "mirrored": false,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code"
+      ],
+      "installMode": "skill",
+      "contentHash": "89f9a583e0074d9e9e30f820e3fa047de7a3da754c45214e85c7bd5bf3a08382"
+    },
+    {
+      "slug": "document-skills--xlsx",
+      "source": "anthropic",
+      "dir": "xlsx",
+      "path": "skills/xlsx",
+      "name": "xlsx",
+      "license": "Proprietary. LICENSE.txt has complete terms",
+      "plugin": "document-skills",
+      "mirrored": false,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code"
+      ],
+      "installMode": "skill",
+      "contentHash": "eabb152c9cb4a9ecd58ca047ae2ea4e86cbeba994e9b6b9a5cbb6a901dc11054"
     },
     {
       "slug": "esm",
       "source": "k-dense",
       "dir": "esm",
+      "path": "skills/esm",
       "name": "esm",
-      "license": "MIT license",
+      "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "1038da896f2db788bb7779682c25a3674480a0f53c2f95110b06cc5f7a365cf1"
     },
     {
       "slug": "etetoolkit",
       "source": "k-dense",
       "dir": "etetoolkit",
+      "path": "skills/etetoolkit",
       "name": "etetoolkit",
       "license": "GPL-3.0-or-later",
       "plugin": null,
-      "mirrored": true
+      "mirrored": false,
+      "compatibility": "Bundled scripts require Python 3.10+ and ete4 4.4.0 (upstream ete4 supports Python >=3.7). Taxonomy setup and SmartView exploration need network access; static SmartView PNG rendering needs ete4[render-sm], and Qt PDF/SVG rendering needs ete4[treeview].",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "dbc8e56cbe7fc10c95f66858a48cb95ed84ffa2ffe6f59c5201ec2ec841b80b2"
     },
     {
       "slug": "exa-search",
       "source": "k-dense",
       "dir": "exa-search",
+      "path": "skills/exa-search",
       "name": "exa-search",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires exa-py Python SDK, an EXA_API_KEY, and internet access.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "29b589e342f00f9dbecc5c35dbde4469d8d5b14689eb37dc65c6481e7e311244"
     },
     {
       "slug": "experimental-design",
       "source": "k-dense",
       "dir": "experimental-design",
+      "path": "skills/experimental-design",
       "name": "experimental-design",
-      "license": "MIT license",
+      "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python >=3.10. Scripts use numpy, pandas, and pyDOE3 (DOE matrices). Install with uv as shown below.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "5f43225b8649d71b23ac554dfec20f4c01eaaf0b2f16bbefac471eed92f1ece7"
     },
     {
       "slug": "exploratory-data-analysis",
       "source": "k-dense",
       "dir": "exploratory-data-analysis",
+      "path": "skills/exploratory-data-analysis",
       "name": "exploratory-data-analysis",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Bundled core CLIs require Python 3.11+ and are local/network-free; the complete pinned optional snapshot requires Python 3.12+, uv, and format-specific libraries listed below.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "6ec3e7e5bab1fd4eccfd714d9129be7cfdd6c48aa80ec95bb97ffc2efb295688"
     },
     {
       "slug": "fictiv",
       "source": "k-dense",
       "dir": "fictiv",
+      "path": "skills/fictiv",
       "name": "fictiv",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Needs a browser-automation tool with JavaScript execution (e.g. Claude in Chrome) and the user's logged-in Fictiv account at app.fictiv.com; there is no public API. The CAD pre-flight script needs Python 3.10+ (standard library only). UI mapped live in September 2026.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "0b05c228d858013d182627dbf543a7db1f6e6d84484a2387650e336b993f8c69"
     },
     {
       "slug": "flowio",
       "source": "k-dense",
       "dir": "flowio",
+      "path": "skills/flowio",
       "name": "flowio",
-      "license": "BSD-3-Clause license",
+      "license": "BSD-3-Clause",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.9-3.13, uv, and FlowIO 1.4.0. NumPy is installed with FlowIO; pandas is optional for DataFrame workflows. Runtime parsing is local and needs no credentials or network access.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "70d33de3168b830e48565ce5ba9dd788e8c228a255cb78127e1cb61392a25063"
     },
     {
       "slug": "flowkit",
       "source": "k-dense",
       "dir": "flowkit",
+      "path": "skills/flowkit",
       "name": "flowkit",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.13 with flowkit==1.3.2 for the tested environment. Dependencies include FlowIO, FlowUtils, NumPy, pandas, SciPy, lxml, and Bokeh. Installation needs network access; analysis uses local FCS/XML/WSP files without credentials. FlowUtils needs a C compiler if a compatible wheel is unavailable.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "29ab9588506d58fc1a2c5f6aadf44cace224bcbf9f180a6b3731fd4c8de15395"
     },
     {
       "slug": "fluidsim",
       "source": "k-dense",
       "dir": "fluidsim",
+      "path": "skills/fluidsim",
       "name": "fluidsim",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Bundled CLIs require Python 3.11+ and use the standard library; HDF5/netCDF4 metadata tools lazily use h5py when available. Simulation examples target fluidsim 0.9.0, fluidfft 0.4.5, and pyFFTW 0.15.1. MPI/native FFT use requires a site-compatible MPI implementation, development headers, FFTW/PFFT/P3DFFT libraries, compilers, and an approved scheduler workflow. No GPU backend is assumed.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "578364280bf21953e90a1230f04f7d68d9d836f28ead9d13d582765df1f7593c"
     },
     {
       "slug": "folklore-variant-evidence",
       "source": "k-dense",
       "dir": "folklore-variant-evidence",
+      "path": "skills/folklore-variant-evidence",
       "name": "folklore-variant-evidence",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires network access to api.helena.bio (stateless Streamable HTTP MCP, no credentials); works from any MCP-capable host or via JSON-RPC POST with curl.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "33cf984fadc7ca75ad2b312c6e19286dc290a6866624277f746bfc4b403f33dc"
+    },
+    {
+      "slug": "frontend-design",
+      "source": "anthropic",
+      "dir": "frontend-design",
+      "path": "skills/frontend-design",
+      "name": "frontend-design",
+      "license": "Apache-2.0",
+      "plugin": "example-skills",
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code"
+      ],
+      "installMode": "skill",
+      "contentHash": "a3cfe42efd8abe76cf163c0b99d9938c8b458e88688f75dcf950ae2c99d273c5"
     },
     {
       "slug": "generate-image",
       "source": "k-dense",
       "dir": "generate-image",
+      "path": "skills/generate-image",
       "name": "generate-image",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.9+ and network access to openrouter.ai. The bundled script uses only the standard library. Image generation requires the OPENROUTER_API_KEY credential and bills per request; listing models, inspecting a model, and --dry-run do not. Targets the OpenRouter Image API (POST /api/v1/images) as verified on 2026-07-31.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "3b8ecd617f5b7ee9c44a32309908bb5e87ef444863b8a040c8eea35e3ef0c12c"
     },
     {
       "slug": "geniml",
       "source": "k-dense",
       "dir": "geniml",
+      "path": "skills/geniml",
       "name": "geniml",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.10+ and uv. Guidance targets geniml 0.8.4 with gtars 0.9.2; ML workflows need the pinned ml extra and compatible native wheels. Bundled planners and inspectors are dependency-free, local-only, and make no network requests.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "1a1a8b3b361385eb31d364e302164ca442d9ebcac376a0835cdfa1aa276bb291"
     },
     {
       "slug": "genomic-coordinates",
       "source": "k-dense",
       "dir": "genomic-coordinates",
+      "path": "skills/genomic-coordinates",
       "name": "genomic-coordinates",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.11+. Scripts use only the standard library - no third-party packages and no network access. Variant normalisation needs a reference FASTA, and uses its .fai index when one is present.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "4f0b205dcb4e0b3243540eedbfd71d05956e9e53053ac807bd081ca7e9d8c66f"
     },
     {
       "slug": "genomic-intelligence",
       "source": "k-dense",
       "dir": "genomic-intelligence",
+      "path": "skills/genomic-intelligence",
       "name": "genomic-intelligence",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Python 3.10+ with the `requests` library for the REST path (no dedicated SDK). Network access required. The REST `/v1` API needs a `GI_API_KEY` (a `gi_` bearer); the hosted MCP server at mcp.genomicintelligence.ai/mcp works keyless against a rate- and concurrency-limited public demo tier, key optional.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "799925d65cac56ec2f8f8400cc6e1ce13ac8db40b1c3fc27da722c8ad34764bd"
     },
     {
       "slug": "geomaster",
       "source": "k-dense",
       "dir": "geomaster",
+      "path": "skills/geomaster",
       "name": "geomaster",
-      "license": "MIT License",
+      "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "4fcb29cbbe86f5ee6340fcfb5dce5fa254297135814d28911a8e365898b4ecd0"
     },
     {
       "slug": "geopandas",
       "source": "k-dense",
       "dir": "geopandas",
+      "path": "skills/geopandas",
       "name": "geopandas",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.10+ and uv. Bundled CLIs are local-only; runtime analysis requires the pinned GeoPandas stack below.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "e2a413d76cd71775ac0ce8264116b61461819fb9b54017df6b4b54a3227bb95a"
     },
     {
       "slug": "get-available-resources",
       "source": "k-dense",
       "dir": "get-available-resources",
+      "path": "skills/get-available-resources",
       "name": "get-available-resources",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Python 3.11+ on Linux, macOS, or Windows; standard library by default, optional psutil 7.2.2; accelerator and scheduler CLIs are optional read-only probes.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "72a1cc3c50978b5ad7b7e3798c119c6dfe30f00c99e66a5aa96d4811b0220c43"
     },
     {
       "slug": "gget",
       "source": "k-dense",
       "dir": "gget",
+      "path": "skills/gget",
       "name": "gget",
-      "license": "BSD-2-Clause license",
+      "license": "BSD-2-Clause",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python >=3.8 and gget 0.30.5-compatible APIs. Optional setup modules may install scientific dependencies that lag the newest Python releases; use Python 3.9 or 3.10 if `gget setup cellxgene` or `gget setup alphafold` fails.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "b54efcbb57547d54bb6afc6f6a8a3f1e1c42f47f48dd4b252500fafe920b27ff"
     },
     {
       "slug": "ginkgo-cloud-lab",
       "source": "k-dense",
       "dir": "ginkgo-cloud-lab",
+      "path": "skills/ginkgo-cloud-lab",
       "name": "ginkgo-cloud-lab",
-      "license": "MIT license",
+      "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "bbf3a2058fdc39247c1a3dee282177d8d3b0e04de42c4773e10e06424692d08c"
     },
     {
       "slug": "glycoengineering",
       "source": "k-dense",
       "dir": "glycoengineering",
+      "path": "skills/glycoengineering",
       "name": "glycoengineering",
       "license": "Unknown",
       "plugin": null,
-      "mirrored": true
+      "mirrored": false,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "7ba7467691897796347b5c2a7307a7a1f924e5adc51d1142c76afd189b1c201c"
     },
     {
       "slug": "gtars",
       "source": "k-dense",
       "dir": "gtars",
+      "path": "skills/gtars",
       "name": "gtars",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Python bindings require Python 3.10+ and gtars 0.9.2. The Rust meta-crate and gtars-cli are 0.9.0 and require a Rust toolchain supporting Edition 2024; upstream declares no rust-version. Bundled audit CLIs use only Python 3.10+ standard library and are local/network-free. Remote constructors, pretrained tokenizers, refget, and BEDbase caching require explicit network and storage approval.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "8d3776c1e04d698b32a1c6af7c51202e348242119184da30f14dc524f4ac7282"
     },
     {
       "slug": "histolab",
       "source": "k-dense",
       "dir": "histolab",
+      "path": "skills/histolab",
       "name": "histolab",
-      "license": "Apache-2.0 license",
+      "license": "Apache-2.0",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.8–3.11 (histolab 0.7.0), OpenSlide system libraries, and Linux or macOS. Sample data via histolab.data requires pooch.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "18cd944b9e7dc27ebf3512c16c6db150c79d8b2eae2fc2e6bffeff4b5ccc8582"
     },
     {
       "slug": "hugging-science",
       "source": "k-dense",
       "dir": "hugging-science",
+      "path": "skills/hugging-science",
       "name": "hugging-science",
-      "license": null,
+      "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "9b560e160f106472b5b0fe3ce683a9baadb44a5f2b892ec33af127c39d224a7b"
+    },
+    {
+      "slug": "huggingface--hf-cli",
+      "source": "huggingface",
+      "dir": "hf-cli",
+      "path": "skills/hf-cli",
+      "name": "hf-cli",
+      "license": "Apache-2.0",
+      "plugin": null,
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "2339e14590306fbe82a64a3ffdee25a0c63e0c935ef9947072a3bc5eeb4ed251"
+    },
+    {
+      "slug": "huggingface--hf-cloud-aws-context-discovery",
+      "source": "huggingface",
+      "dir": "hf-cloud-aws-context-discovery",
+      "path": "skills/hf-cloud-aws-context-discovery",
+      "name": "hf-cloud-aws-context-discovery",
+      "license": "Apache-2.0",
+      "plugin": null,
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "b692be0c18f50c30f15578f011a3abb8015a99b7149b144eab106b867f94eb84"
+    },
+    {
+      "slug": "huggingface--hf-cloud-python-env-setup",
+      "source": "huggingface",
+      "dir": "hf-cloud-python-env-setup",
+      "path": "skills/hf-cloud-python-env-setup",
+      "name": "hf-cloud-python-env-setup",
+      "license": "Apache-2.0",
+      "plugin": null,
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "93dc848a0b476dd049adb14bcbcdc62e118c53282a21bc420cc5c612070c1c46"
+    },
+    {
+      "slug": "huggingface--hf-cloud-sagemaker-deployment-planner",
+      "source": "huggingface",
+      "dir": "hf-cloud-sagemaker-deployment-planner",
+      "path": "skills/hf-cloud-sagemaker-deployment-planner",
+      "name": "hf-cloud-sagemaker-deployment-planner",
+      "license": "Apache-2.0",
+      "plugin": null,
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "878388396df70f5f7fe0f93b11e467726886181fd1975be0b713686b9f639215"
+    },
+    {
+      "slug": "huggingface--hf-cloud-sagemaker-iam-preflight",
+      "source": "huggingface",
+      "dir": "hf-cloud-sagemaker-iam-preflight",
+      "path": "skills/hf-cloud-sagemaker-iam-preflight",
+      "name": "hf-cloud-sagemaker-iam-preflight",
+      "license": "Apache-2.0",
+      "plugin": null,
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "892489dc474b81be642635a99cae0b52cb67a8248e495f03b6ed8f4912132e90"
+    },
+    {
+      "slug": "huggingface--hf-cloud-sagemaker-production-defaults",
+      "source": "huggingface",
+      "dir": "hf-cloud-sagemaker-production-defaults",
+      "path": "skills/hf-cloud-sagemaker-production-defaults",
+      "name": "hf-cloud-sagemaker-production-defaults",
+      "license": "Apache-2.0",
+      "plugin": null,
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "2317c0fe2ee02d78d5c78bc4c0c2b790c7fc4737cd016e2bc7cb8be05d470a4e"
+    },
+    {
+      "slug": "huggingface--hf-cloud-serving-image-selection",
+      "source": "huggingface",
+      "dir": "hf-cloud-serving-image-selection",
+      "path": "skills/hf-cloud-serving-image-selection",
+      "name": "hf-cloud-serving-image-selection",
+      "license": "Apache-2.0",
+      "plugin": null,
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "c3c24e5f6c10e274d2b35c543b6516933998a9e1d553505b3f1f27602dc2200c"
+    },
+    {
+      "slug": "huggingface--hf-mem",
+      "source": "huggingface",
+      "dir": "hf-mem",
+      "path": "skills/hf-mem",
+      "name": "hf-mem",
+      "license": "Apache-2.0",
+      "plugin": null,
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "11c679d5eb067a0d2519166215dab6a1b739d37a55291a62401dd74f32451649"
+    },
+    {
+      "slug": "huggingface--huggingface-best",
+      "source": "huggingface",
+      "dir": "huggingface-best",
+      "path": "skills/huggingface-best",
+      "name": "huggingface-best",
+      "license": "Apache-2.0",
+      "plugin": null,
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "c194d33c8cfef09f9931377ac7ff1f132eeeead1fb42d6be8be351b557988f9f"
+    },
+    {
+      "slug": "huggingface--huggingface-community-evals",
+      "source": "huggingface",
+      "dir": "huggingface-community-evals",
+      "path": "skills/huggingface-community-evals",
+      "name": "huggingface-community-evals",
+      "license": "Apache-2.0",
+      "plugin": null,
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "a55a43b9b741f974b10a5f1ea36f59c33536099bbebd17224b5d06233c6af506"
+    },
+    {
+      "slug": "huggingface--huggingface-datasets",
+      "source": "huggingface",
+      "dir": "huggingface-datasets",
+      "path": "skills/huggingface-datasets",
+      "name": "huggingface-datasets",
+      "license": "Apache-2.0",
+      "plugin": null,
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "546a3d87ea9451830eb14694da82709da1d27a8120ed8d0ff7c1be1ccd83cb4c"
+    },
+    {
+      "slug": "huggingface--huggingface-gradio",
+      "source": "huggingface",
+      "dir": "huggingface-gradio",
+      "path": "skills/huggingface-gradio",
+      "name": "huggingface-gradio",
+      "license": "Apache-2.0",
+      "plugin": null,
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "e77156518143fa0f69261063523a255a27e91d767e6a839ea1dd0f7ded62f93e"
+    },
+    {
+      "slug": "huggingface--huggingface-llm-trainer",
+      "source": "huggingface",
+      "dir": "huggingface-llm-trainer",
+      "path": "skills/huggingface-llm-trainer",
+      "name": "huggingface-llm-trainer",
+      "license": "Apache-2.0",
+      "plugin": null,
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "c1aa278577c80ce9fb7c887236e09358bac438448dc3585525446740a87c7660"
+    },
+    {
+      "slug": "huggingface--huggingface-local-models",
+      "source": "huggingface",
+      "dir": "huggingface-local-models",
+      "path": "skills/huggingface-local-models",
+      "name": "huggingface-local-models",
+      "license": "Apache-2.0",
+      "plugin": null,
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "ce268577c79e0c5a6023790c5c34b569dbe3f108156dc95b51b4d72a7fc62b5c"
+    },
+    {
+      "slug": "huggingface--huggingface-lora-space-builder",
+      "source": "huggingface",
+      "dir": "huggingface-lora-space-builder",
+      "path": "skills/huggingface-lora-space-builder",
+      "name": "huggingface-lora-space-builder",
+      "license": "Apache-2.0",
+      "plugin": null,
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "88ddae101d0c233d8d8a6423c0d95379f7ba3b012f1e9a4c79cbe5d7593a0c13"
+    },
+    {
+      "slug": "huggingface--huggingface-paper-publisher",
+      "source": "huggingface",
+      "dir": "huggingface-paper-publisher",
+      "path": "skills/huggingface-paper-publisher",
+      "name": "huggingface-paper-publisher",
+      "license": "Apache-2.0",
+      "plugin": null,
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "8afc4704ec3b54f1ec30be9db4d249df701d878eab6897eb3d9184a1e3c07489"
+    },
+    {
+      "slug": "huggingface--huggingface-papers",
+      "source": "huggingface",
+      "dir": "huggingface-papers",
+      "path": "skills/huggingface-papers",
+      "name": "huggingface-papers",
+      "license": "Apache-2.0",
+      "plugin": null,
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "4cb05c1b86a6c461eefcf429b49edc4fc918ff56bd4b70408c658e512cd5a499"
+    },
+    {
+      "slug": "huggingface--huggingface-spaces",
+      "source": "huggingface",
+      "dir": "huggingface-spaces",
+      "path": "skills/huggingface-spaces",
+      "name": "huggingface-spaces",
+      "license": "Apache-2.0",
+      "plugin": null,
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "60fbac8b2234bcbffd0ba567ae996c2db144ae42eb0783e9706520b002f3df61"
+    },
+    {
+      "slug": "huggingface--huggingface-tool-builder",
+      "source": "huggingface",
+      "dir": "huggingface-tool-builder",
+      "path": "skills/huggingface-tool-builder",
+      "name": "huggingface-tool-builder",
+      "license": "Apache-2.0",
+      "plugin": null,
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "0d7032e4fcf7ea9c423feca4a856e5f3aff36196f78b540047930fbb648cce75"
+    },
+    {
+      "slug": "huggingface--huggingface-trackio",
+      "source": "huggingface",
+      "dir": "huggingface-trackio",
+      "path": "skills/huggingface-trackio",
+      "name": "huggingface-trackio",
+      "license": "Apache-2.0",
+      "plugin": null,
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "9cb7db30db1618fe3a268e64cfa99b6f9b23969238d28b91f7a4c41c0a1737f5"
+    },
+    {
+      "slug": "huggingface--huggingface-vision-trainer",
+      "source": "huggingface",
+      "dir": "huggingface-vision-trainer",
+      "path": "skills/huggingface-vision-trainer",
+      "name": "huggingface-vision-trainer",
+      "license": "Apache-2.0",
+      "plugin": null,
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "d450ec5d66be2240c18d4a14cb6fe08e1cec081db4cdde3e657ad4f3c8733869"
+    },
+    {
+      "slug": "huggingface--huggingface-zerogpu",
+      "source": "huggingface",
+      "dir": "huggingface-zerogpu",
+      "path": "skills/huggingface-zerogpu",
+      "name": "huggingface-zerogpu",
+      "license": "Apache-2.0",
+      "plugin": null,
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "8f9ef020830a0a8133bb63b1a699f936c24ff01ed5391b0108b27cbeab8efad4"
+    },
+    {
+      "slug": "huggingface--train-sentence-transformers",
+      "source": "huggingface",
+      "dir": "train-sentence-transformers",
+      "path": "skills/train-sentence-transformers",
+      "name": "train-sentence-transformers",
+      "license": "Apache-2.0",
+      "plugin": null,
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "0f1a83eb19aaff08daf02c1b86c7371e8546ed0abe8352f065cf005d5e0b6336"
+    },
+    {
+      "slug": "huggingface--transformers-js",
+      "source": "huggingface",
+      "dir": "transformers-js",
+      "path": "skills/transformers-js",
+      "name": "transformers-js",
+      "license": "Apache-2.0",
+      "plugin": null,
+      "mirrored": true,
+      "compatibility": "Requires Node.js 18+ (or compatible Bun/Deno runtime) or modern browser with ES modules support. WebGPU requires runtime and hardware support; WASM is the broad fallback. Internet access is needed for downloading models from Hugging Face Hub (optional if using local models).",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "6f83be4d2377bf868296152e0a19374421aad400b6d3e8978a1d06fb6e79581d"
+    },
+    {
+      "slug": "huggingface--trl-training",
+      "source": "huggingface",
+      "dir": "trl-training",
+      "path": "skills/trl-training",
+      "name": "trl-training",
+      "license": "Apache-2.0",
+      "plugin": null,
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "bd79f1a458ae0bb5f696a9abec24261a55d3f62cfd5631fc0c9bb868c845041b"
     },
     {
       "slug": "hypogenic",
       "source": "k-dense",
       "dir": "hypogenic",
+      "path": "skills/hypogenic",
       "name": "hypogenic",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.10+ and uv for the pinned upstream package. Bundled local audit tools use only the Python standard library for JSON; YAML input requires exactly PyYAML 6.0.2. Actual HypoGeniC runs may require a separately approved LLM provider, credentials, Redis, local model resources, and network access.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "ec93d5ebabf9cb426f94574a4afbebbe36643cf0df16579e3b816ca32bc89473"
     },
     {
       "slug": "hypothesis-generation",
       "source": "k-dense",
       "dir": "hypothesis-generation",
+      "path": "skills/hypothesis-generation",
       "name": "hypothesis-generation",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Python 3.11+ standard library. Bundled CLIs are deterministic and local-only; they accept bounded JSON, CSV, or Markdown and require no network, credentials, models, image services, or external packages.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "cf781ec27862ddb2252d2ca27309056f4311c23e079d142e2ec92758f2b61eed"
     },
     {
       "slug": "imaging-data-commons",
       "source": "k-dense",
       "dir": "imaging-data-commons",
+      "path": "skills/imaging-data-commons",
       "name": "imaging-data-commons",
       "license": "This skill is provided under the MIT License. IDC data itself has individual licensing (mostly CC-BY, some CC-NC) that must be respected when using the data.",
       "plugin": null,
-      "mirrored": true
+      "mirrored": false,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "c72839af157486d01d07303544202bd02b772150b9ef49ba873512100f3378e5"
     },
     {
       "slug": "infographics",
       "source": "k-dense",
       "dir": "infographics",
+      "path": "skills/infographics",
       "name": "infographics",
-      "license": null,
+      "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "7de114942c62b9429975f815a0d517c6105a983d9ecc86f7fa22d3b27be311c5"
+    },
+    {
+      "slug": "internal-comms",
+      "source": "anthropic",
+      "dir": "internal-comms",
+      "path": "skills/internal-comms",
+      "name": "internal-comms",
+      "license": "Apache-2.0",
+      "plugin": "example-skills",
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code"
+      ],
+      "installMode": "skill",
+      "contentHash": "c24b17b9f30e1ea4bbfa1cb72de1b9595e031f1929df348db8ac4f32d0c8788f"
     },
     {
       "slug": "iso-standards-readiness",
       "source": "k-dense",
       "dir": "iso-standards-readiness",
+      "path": "skills/iso-standards-readiness",
       "name": "iso-standards-readiness",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Python 3.11+; bundled CLIs use only the standard library and bounded local JSON/Markdown files, with no network access or credentials.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "e413572fce4c66c5eb7367907a400e0ed4567b9bca69fc6d4d70983397b924c6"
     },
     {
       "slug": "lab-hardware-cad",
       "source": "k-dense",
       "dir": "lab-hardware-cad",
+      "path": "skills/lab-hardware-cad",
       "name": "lab-hardware-cad",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Python 3.10-3.14 with build123d 0.11.1 and matplotlib for snapshots. Geometry commands require build123d; the standards lookup and the interface check run on the standard library alone. No network access needed.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "0b0a671a675905e04fb7eb2f4f7f3503d3cc545c73480e5266f7ee365eb5b898"
     },
     {
       "slug": "labarchive-integration",
       "source": "k-dense",
       "dir": "labarchive-integration",
+      "path": "skills/labarchive-integration",
       "name": "labarchive-integration",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.11+ and uv for bundled local tools, plus network access for official documentation or remote API calls. LabArchives issues an Access Key ID and Access Password; user-scoped calls also need a UID, and Inventory calls require Inventory API permission and a Lab ID. Bundled scripts read only named LABARCHIVES_* environment variables and never load .env files.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "fd5de892b83f1d09e9dff6fd502bdf8da4c914817d35408e042ac867905281fc"
     },
     {
       "slug": "lamindb",
       "source": "k-dense",
       "dir": "lamindb",
+      "path": "skills/lamindb",
       "name": "lamindb",
-      "license": "Apache-2.0 license",
+      "license": "Apache-2.0",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "b0c50487377ba818a7784731c6df068b424e395f708bde104126a142bba522a5"
     },
     {
       "slug": "latchbio-integration",
       "source": "k-dense",
       "dir": "latchbio-integration",
+      "path": "skills/latchbio-integration",
       "name": "latchbio-integration",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires network access and a Latch account. The current stable SDK requires Python 3.9+; Python 3.12 is recommended. Uses uv for installation. Docker is needed for local image builds, while remote registration is the CLI default.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "2328898a3637a95bdb0df95626587fa6303c8d9c347c7f49ceb68dc3d94020d0"
     },
     {
       "slug": "latex-posters",
       "source": "k-dense",
       "dir": "latex-posters",
+      "path": "skills/latex-posters",
       "name": "latex-posters",
-      "license": null,
+      "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "9bfcb919e0797351689296fcc7e67a5b66f9e6611dac21d17abfb73492c9b74c"
     },
     {
       "slug": "liteparse",
       "source": "k-dense",
       "dir": "liteparse",
+      "path": "skills/liteparse",
       "name": "liteparse",
       "license": "Apache-2.0",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Python 3.10+. Optional LibreOffice (Office formats) and ImageMagick (images). Bundled Tesseract for OCR. All processing is local — no cloud API required.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "728ea755fa4dd8e7effdc612ff3b7f5b9947586c8bd14f5aa2839a346e466ba0"
     },
     {
       "slug": "literature-review",
       "source": "k-dense",
       "dir": "literature-review",
+      "path": "skills/literature-review",
       "name": "literature-review",
-      "license": "MIT license",
+      "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "3f045310d62c3cc42fee830994a3d71fa7769c328230618461b13989f7facd26"
     },
     {
       "slug": "mageck",
       "source": "k-dense",
       "dir": "mageck",
+      "path": "skills/mageck",
       "name": "mageck",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.10+ for the helper and MAGeCK 0.5.9.5 with its compiled RRA executable for analysis. Tested runtime uses Python 3.11, NumPy 1.26.4 and SciPy 1.13.1. Source installation needs a C++ compiler; network is needed only for installation. No credentials.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "f789685b73ef9a8518549c5e69f816fcdefc8a0b58b022429e07af2333756bbc"
     },
     {
       "slug": "marine-carbonate-chemistry",
       "source": "k-dense",
       "dir": "marine-carbonate-chemistry",
+      "path": "skills/marine-carbonate-chemistry",
       "name": "marine-carbonate-chemistry",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.13 with PyCO2SYS 1.8.3.4 and NumPy. Network access is needed only to install packages or obtain external data; bundled calculations run locally without credentials.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "9652979ba54c299e4f693a747cd6bc5dddce665d50ef378a3f185c11e1486d5e"
     },
     {
       "slug": "markdown-mermaid-writing",
       "source": "k-dense",
       "dir": "markdown-mermaid-writing",
+      "path": "skills/markdown-mermaid-writing",
       "name": "markdown-mermaid-writing",
       "license": "Apache-2.0",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "33e49ca492c408c4f2abe6a3d4a265fbcbe4321a9db7ea59de855a20c369ddea"
     },
     {
       "slug": "market-research-reports",
       "source": "k-dense",
       "dir": "market-research-reports",
+      "path": "skills/market-research-reports",
       "name": "market-research-reports",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Python 3.11+ standard library for optional offline CLIs. The optional LaTeX template uses XeLaTeX or LuaLaTeX. Online research requires user-approved network access and source-specific terms; bundled scripts make no network, LLM, or image calls.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "e9b86cd9e7e858329c0d07d0e74a6a6b20a5c16909d9cbb488f6ec8a796b3222"
     },
     {
       "slug": "markitdown",
       "source": "k-dense",
       "dir": "markitdown",
+      "path": "skills/markitdown",
       "name": "markitdown",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Python 3.10+ and uv. Examples target MarkItDown 0.1.6. Core local conversion can run offline; URL, YouTube, audio transcription, LLM, Azure, and MCP workflows may use network or external services.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "6b9ee071292776323fb20c24f77a11a612e387d72617120876a39d314f850adf"
     },
     {
       "slug": "matchms",
       "source": "k-dense",
       "dir": "matchms",
+      "path": "skills/matchms",
       "name": "matchms",
       "license": "Apache-2.0",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python >=3.10,<3.15, uv, and matchms 0.33.1. Local file workflows need no credentials; metabolomics-USI loading requires network access.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "729d0cf5fc2162e9fb528f5b42917f3aca98d8a884d1556d1c7e9f77b11b8d29"
     },
     {
       "slug": "matlab",
       "source": "k-dense",
       "dir": "matlab",
+      "path": "skills/matlab",
       "name": "matlab",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Documentation is pinned where noted to proprietary MATLAB R2026a and free GNU Octave 11.3.0. Bundled Python CLIs require Python 3.11+ and run locally without MATLAB or Octave; optional MAT inventory uses scipy and/or h5py.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "b1399d87827fc9eff8dfe7f30889cc0481d01f1ea2a572e84e3f551f0e4df7c4"
     },
     {
       "slug": "matplotlib",
       "source": "k-dense",
       "dir": "matplotlib",
+      "path": "skills/matplotlib",
       "name": "matplotlib",
       "license": "https://github.com/matplotlib/matplotlib/tree/main/LICENSE",
       "plugin": null,
-      "mirrored": true
+      "mirrored": false,
+      "compatibility": "Requires Python 3.10+ and Matplotlib 3.10.x. Use `uv add matplotlib` in projects; interactive Jupyter widgets require `ipympl`.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "358758d8550effbb2174ac8e78106106343e93ffdf2c5694de202fab56c40e39"
+    },
+    {
+      "slug": "mcp-builder",
+      "source": "anthropic",
+      "dir": "mcp-builder",
+      "path": "skills/mcp-builder",
+      "name": "mcp-builder",
+      "license": "Apache-2.0",
+      "plugin": "example-skills",
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code"
+      ],
+      "installMode": "skill",
+      "contentHash": "fd98a5fdf583aa59b6f50eaf9f1de6801c430a9d0f0f301bfdf623a099a4303c"
     },
     {
       "slug": "medchem",
       "source": "k-dense",
       "dir": "medchem",
+      "path": "skills/medchem",
       "name": "medchem",
-      "license": "Apache-2.0 license",
+      "license": "Apache-2.0",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.9+ and datamol (installed with medchem). Optional Lilly demerit filter requires separate `lilly-medchem-rules` conda package.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "24180ac4622a400fe9a490bd05ff0fe38cc9f788a2e713b62e13754bb1c46801"
     },
     {
       "slug": "modal",
       "source": "k-dense",
       "dir": "modal",
+      "path": "skills/modal",
       "name": "modal",
       "license": "Apache-2.0",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "bbffb551304e7d8602416ed2c9a2279eb41623a5f2f65716e4bb2c57484ab93f"
     },
     {
       "slug": "molecular-dynamics",
       "source": "k-dense",
       "dir": "molecular-dynamics",
+      "path": "skills/molecular-dynamics",
       "name": "molecular-dynamics",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "698fc2208e45a05421de581754de5239fde6d9ffffb9b6aee766d7677fcd94eb"
     },
     {
       "slug": "molfeat",
       "source": "k-dense",
       "dir": "molfeat",
+      "path": "skills/molfeat",
       "name": "molfeat",
-      "license": "Apache-2.0 license",
+      "license": "Apache-2.0",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.9–3.10 (molfeat 0.11.0 does not support 3.11+). Requires datamol, PyTorch, and optional extras for GNN/transformer models.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "3e662bf2dfe2917bf1b9b94ff9e8181be604cf3ab0bddc15e35d65ed5d5b8d9e"
     },
     {
       "slug": "ncats-arax",
       "source": "k-dense",
       "dir": "ncats-arax",
+      "path": "skills/ncats-arax",
       "name": "ncats-arax",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.10+ and outbound HTTPS access to arax.transltr.io. The client uses only the Python standard library and needs no API key. Queries and caller metadata may be publicly visible; never submit sensitive or patient-specific content.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "337dd5db5d4d0661726bee40922824874f0d3afe25f262db2a455946539510d3"
     },
     {
       "slug": "networkx",
       "source": "k-dense",
       "dir": "networkx",
+      "path": "skills/networkx",
       "name": "networkx",
       "license": "3-clause BSD license",
       "plugin": null,
-      "mirrored": true
+      "mirrored": false,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "e9ee15f8e4f3ba85d5faecf36340f2ac630ddd540c34d41bddfe2544e0557bde"
     },
     {
       "slug": "neurokit2",
       "source": "k-dense",
       "dir": "neurokit2",
+      "path": "skills/neurokit2",
       "name": "neurokit2",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Python 3.10+ and uv; pinned workflows use NeuroKit2 0.2.13. Core processing needs NumPy, SciPy, pandas, scikit-learn, matplotlib, PyWavelets, requests, and setuptools; selected EEG, cvxEDA, plotting, file-format, and RQA features need separately locked optional packages.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "6883caf1c67e73944c32d93ead72b7c34cc3951fda739c4a90693d7014d21f4a"
     },
     {
       "slug": "neuropixels-analysis",
       "source": "k-dense",
       "dir": "neuropixels-analysis",
+      "path": "skills/neuropixels-analysis",
       "name": "neuropixels-analysis",
-      "license": "MIT license",
+      "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "146178a6c09dd8371611f226050b2297a5bfc3b7f031b20fa3347dbf3597b3ac"
     },
     {
       "slug": "nextflow",
       "source": "k-dense",
       "dir": "nextflow",
+      "path": "skills/nextflow",
       "name": "nextflow",
       "license": "Apache-2.0",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "e85e4a8c5dcef44251ad71a2ef34b72f36a95b7dbfea66705880c3e7c345e519"
     },
     {
       "slug": "nmrglue",
       "source": "k-dense",
       "dir": "nmrglue",
+      "path": "skills/nmrglue",
       "name": "nmrglue",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.12+, nmrglue, NumPy, and SciPy. Installation needs network access; processing is local and needs no credentials.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "393fcf0efa519c24ec9ac764fdffda7b55e87b365ae78f614543d498bcd51711"
     },
     {
       "slug": "nwb-conversion",
       "source": "k-dense",
       "dir": "nwb-conversion",
+      "path": "skills/nwb-conversion",
       "name": "nwb-conversion",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.12 with neuroconv[tiff] 0.10.2, PyNWB 4.2.0, NWB Inspector 0.7.2, roiextractors 0.10.0, tifffile 2026.9.20, zarr 2.18.7 and hdmf-zarr 0.11.3. Local HDF5 file access is required. Network is needed only for installation; no credentials.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "1663c2082c6c713b9c61ee8211462592f7ea7c0bf52804eeec30c081ef765741"
     },
     {
       "slug": "omero-integration",
       "source": "k-dense",
       "dir": "omero-integration",
+      "path": "skills/omero-integration",
       "name": "omero-integration",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires network access to a user-selected OMERO.server for remote operations. The 2026-07-23 snapshot uses OMERO.py 5.22.1 with ZeroC IcePy 3.6.5; OMERO supports Python 3.10-3.12 (3.12 recommended) while 3.13-3.14 remain upcoming in its support matrix. Bundled local planners require Python 3.10+ and read only named OMERO_* variables; they never load .env files.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "5b81698259adea29beef39b99ef32fbcaacff1e6b0f89ff38bc5a307414bcf6d"
     },
     {
       "slug": "onekgpd",
       "source": "k-dense",
       "dir": "onekgpd",
+      "path": "skills/onekgpd",
       "name": "onekgpd",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python >=3.11. Variant and sample queries require outbound network access to the public 1000 Genomes query endpoint over TLS; the sample/population metadata commands run fully offline over a data file bundled in the skill. No credentials, API keys, or environment variables are used.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "2e48a3c9033b2883cfaba39badc839502516144b8fb9f9fd7c0a4b77afffff71"
     },
     {
       "slug": "ontology-term-resolution",
       "source": "k-dense",
       "dir": "ontology-term-resolution",
+      "path": "skills/ontology-term-resolution",
       "name": "ontology-term-resolution",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.11+. Scripts use only the standard library - no third-party packages. Needs network access to https://www.ebi.ac.uk/ols4, https://bioregistry.io, https://resolver.api.identifiers.org, and https://www.ebi.ac.uk/spot/zooma (all public, no API key).",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "3b5b6988fdb1d8261add6727e7a025dd691e95c66200d804e3003a4c14301306"
     },
     {
       "slug": "open-notebook",
       "source": "k-dense",
       "dir": "open-notebook",
+      "path": "skills/open-notebook",
       "name": "open-notebook",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "ed376c341bd3fed5a49aa0a048348fc4cccc17ae02ebc2fd1fd4af424dfcbba6"
+    },
+    {
+      "slug": "openai--figma--figma-code-connect",
+      "source": "openai",
+      "dir": "figma-code-connect",
+      "path": "plugins/figma/skills/figma-code-connect",
+      "name": "figma-code-connect",
+      "license": null,
+      "plugin": "figma",
+      "mirrored": false,
+      "compatibility": null,
+      "declaredAgents": [
+        "codex"
+      ],
+      "installMode": "plugin",
+      "contentHash": "2b9dada16efafe8709c438caeed326ae42c85857ddd6b2f6de9d83b2313015f3"
+    },
+    {
+      "slug": "openai--figma--figma-create-new-file",
+      "source": "openai",
+      "dir": "figma-create-new-file",
+      "path": "plugins/figma/skills/figma-create-new-file",
+      "name": "figma-create-new-file",
+      "license": null,
+      "plugin": "figma",
+      "mirrored": false,
+      "compatibility": null,
+      "declaredAgents": [
+        "codex"
+      ],
+      "installMode": "plugin",
+      "contentHash": "9c8fde477082aba42eaf7bb9cc51463ea1eb7bd9d78efefd79d6597cd4cd8de6"
+    },
+    {
+      "slug": "openai--figma--figma-design-to-code",
+      "source": "openai",
+      "dir": "figma-design-to-code",
+      "path": "plugins/figma/skills/figma-design-to-code",
+      "name": "figma-design-to-code",
+      "license": null,
+      "plugin": "figma",
+      "mirrored": false,
+      "compatibility": null,
+      "declaredAgents": [
+        "codex"
+      ],
+      "installMode": "plugin",
+      "contentHash": "1b242a58c431695414e557fde5b6103c3641e572b2ec0e9cb5d05d13a98dd40a"
+    },
+    {
+      "slug": "openai--figma--figma-generate-design",
+      "source": "openai",
+      "dir": "figma-generate-design",
+      "path": "plugins/figma/skills/figma-generate-design",
+      "name": "figma-generate-design",
+      "license": null,
+      "plugin": "figma",
+      "mirrored": false,
+      "compatibility": null,
+      "declaredAgents": [
+        "codex"
+      ],
+      "installMode": "plugin",
+      "contentHash": "e6f9dda2d9ca6034119e901909dcca48475347b0f99bd6027018991c93c699bf"
+    },
+    {
+      "slug": "openai--figma--figma-generate-diagram",
+      "source": "openai",
+      "dir": "figma-generate-diagram",
+      "path": "plugins/figma/skills/figma-generate-diagram",
+      "name": "figma-generate-diagram",
+      "license": null,
+      "plugin": "figma",
+      "mirrored": false,
+      "compatibility": null,
+      "declaredAgents": [
+        "codex"
+      ],
+      "installMode": "plugin",
+      "contentHash": "8c39c822e52d059fc3e8f0c74e7d5420ba64b47f0c2e7e3a4f29b1e4826cb1f8"
+    },
+    {
+      "slug": "openai--figma--figma-generate-library",
+      "source": "openai",
+      "dir": "figma-generate-library",
+      "path": "plugins/figma/skills/figma-generate-library",
+      "name": "figma-generate-library",
+      "license": null,
+      "plugin": "figma",
+      "mirrored": false,
+      "compatibility": null,
+      "declaredAgents": [
+        "codex"
+      ],
+      "installMode": "plugin",
+      "contentHash": "96a11b2d82e1f8d041fd59489510343b819871c18433fcf86ba5d83272694540"
+    },
+    {
+      "slug": "openai--figma--figma-implement-motion",
+      "source": "openai",
+      "dir": "figma-implement-motion",
+      "path": "plugins/figma/skills/figma-implement-motion",
+      "name": "figma-implement-motion",
+      "license": null,
+      "plugin": "figma",
+      "mirrored": false,
+      "compatibility": null,
+      "declaredAgents": [
+        "codex"
+      ],
+      "installMode": "plugin",
+      "contentHash": "433da311b988b69cb2679a3a7c61a7525f45a224bfbe7b893eb08dfa4190c047"
+    },
+    {
+      "slug": "openai--figma--figma-swiftui",
+      "source": "openai",
+      "dir": "figma-swiftui",
+      "path": "plugins/figma/skills/figma-swiftui",
+      "name": "figma-swiftui",
+      "license": null,
+      "plugin": "figma",
+      "mirrored": false,
+      "compatibility": null,
+      "declaredAgents": [
+        "codex"
+      ],
+      "installMode": "plugin",
+      "contentHash": "22870cf91e4499f9aa263b346238f62c50e569f626eda3fa0b98f96bb28ea149"
+    },
+    {
+      "slug": "openai--figma--figma-use",
+      "source": "openai",
+      "dir": "figma-use",
+      "path": "plugins/figma/skills/figma-use",
+      "name": "figma-use",
+      "license": null,
+      "plugin": "figma",
+      "mirrored": false,
+      "compatibility": null,
+      "declaredAgents": [
+        "codex"
+      ],
+      "installMode": "plugin",
+      "contentHash": "2f47ff30a9c8c7558e2f2e874e9023b32c411ffcaceaa6205dd6de2988c43ab2"
+    },
+    {
+      "slug": "openai--figma--figma-use-figjam",
+      "source": "openai",
+      "dir": "figma-use-figjam",
+      "path": "plugins/figma/skills/figma-use-figjam",
+      "name": "figma-use-figjam",
+      "license": null,
+      "plugin": "figma",
+      "mirrored": false,
+      "compatibility": null,
+      "declaredAgents": [
+        "codex"
+      ],
+      "installMode": "plugin",
+      "contentHash": "b1521e0bcf6d42b1981ff4223930409bbf4e7ca6dee711c2c5378b563ff2f3a4"
+    },
+    {
+      "slug": "openai--figma--figma-use-motion",
+      "source": "openai",
+      "dir": "figma-use-motion",
+      "path": "plugins/figma/skills/figma-use-motion",
+      "name": "figma-use-motion",
+      "license": null,
+      "plugin": "figma",
+      "mirrored": false,
+      "compatibility": null,
+      "declaredAgents": [
+        "codex"
+      ],
+      "installMode": "plugin",
+      "contentHash": "33442e718f1f2734ea1f847fa5067df73daa543d3db1bc2064e7a0d1cd96916f"
+    },
+    {
+      "slug": "openai--figma--figma-use-slides",
+      "source": "openai",
+      "dir": "figma-use-slides",
+      "path": "plugins/figma/skills/figma-use-slides",
+      "name": "figma-use-slides",
+      "license": null,
+      "plugin": "figma",
+      "mirrored": false,
+      "compatibility": null,
+      "declaredAgents": [
+        "codex"
+      ],
+      "installMode": "plugin",
+      "contentHash": "ef824918830ae12d04bbec0234569a4be9b0ac5ab9a981a99d22c7ff5b205e76"
+    },
+    {
+      "slug": "openai--notion--notion-knowledge-capture",
+      "source": "openai",
+      "dir": "notion-knowledge-capture",
+      "path": "plugins/notion/skills/notion-knowledge-capture",
+      "name": "notion-knowledge-capture",
+      "license": "MIT",
+      "plugin": "notion",
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "codex"
+      ],
+      "installMode": "plugin",
+      "contentHash": "3ff3a75bc2f5bafbbb1cf2184982be6958ae5dc759fd9d82ec4d0fabdfe94382"
+    },
+    {
+      "slug": "openai--notion--notion-meeting-intelligence",
+      "source": "openai",
+      "dir": "notion-meeting-intelligence",
+      "path": "plugins/notion/skills/notion-meeting-intelligence",
+      "name": "notion-meeting-intelligence",
+      "license": "MIT",
+      "plugin": "notion",
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "codex"
+      ],
+      "installMode": "plugin",
+      "contentHash": "c53ee53a482eca7b3befdd0ee99dc77ab70cb83b85226e95ae8c3a978c96a117"
+    },
+    {
+      "slug": "openai--notion--notion-research-documentation",
+      "source": "openai",
+      "dir": "notion-research-documentation",
+      "path": "plugins/notion/skills/notion-research-documentation",
+      "name": "notion-research-documentation",
+      "license": "MIT",
+      "plugin": "notion",
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "codex"
+      ],
+      "installMode": "plugin",
+      "contentHash": "6fa6b788a9ac20dfa6f7d901096897e7b4c1f580b49c469df36e56eb0ffcb239"
+    },
+    {
+      "slug": "openai--notion--notion-spec-to-implementation",
+      "source": "openai",
+      "dir": "notion-spec-to-implementation",
+      "path": "plugins/notion/skills/notion-spec-to-implementation",
+      "name": "notion-spec-to-implementation",
+      "license": "MIT",
+      "plugin": "notion",
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "codex"
+      ],
+      "installMode": "plugin",
+      "contentHash": "1819b251eb177863e233ba2b843a64a1e357df2c3663de96927f0f5b12f81c1e"
     },
     {
       "slug": "openpiv",
       "source": "k-dense",
       "dir": "openpiv",
+      "path": "skills/openpiv",
       "name": "openpiv",
       "license": "BSD-3-Clause",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.10+ with openpiv installed (uv pip install openpiv). numpy, scipy, scikit-image, and matplotlib arrive as dependencies. No network access needed after install.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "ce350771a93ba6cbe73e826f9dcebed780bd7a8237e6724d8ef83fb8f5f6de22"
     },
     {
       "slug": "opentrons-integration",
       "source": "k-dense",
       "dir": "opentrons-integration",
+      "path": "skills/opentrons-integration",
       "name": "opentrons-integration",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.10+ and uv for local simulation. Flex examples target opentrons 9.1.1 and API 2.29; the separate OT-2 line targets API 2.28 and uses opentrons 9.0.0 as its local compatibility simulator. Physical execution requires compatible hardware, current robot software, and the appropriate Opentrons App.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "9ada3161a4d876d0b76ecf3871964ad5cfab56735fe65bee3148ce83397905b4"
     },
     {
       "slug": "optimize-for-gpu",
       "source": "k-dense",
       "dir": "optimize-for-gpu",
+      "path": "skills/optimize-for-gpu",
       "name": "optimize-for-gpu",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires an NVIDIA CUDA-capable GPU for GPU execution. RAPIDS 26.06 requires Python 3.11+ on Linux or WSL2 and matching CUDA 12 or 13 wheels. Package installation needs network access.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "726911f3d9b3e3fe65eb5f91973b5f4b6404bd714bee65a68ec5935d351b7279"
     },
     {
       "slug": "pacsomatic",
       "source": "k-dense",
       "dir": "pacsomatic",
+      "path": "skills/pacsomatic",
       "name": "pacsomatic",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "45b7a11ca44ad8f035f73cd02451ac6846fee813ab895232c5e0d6d5b0dc404f"
     },
     {
       "slug": "paper-lookup",
       "source": "k-dense",
       "dir": "paper-lookup",
+      "path": "skills/paper-lookup",
       "name": "paper-lookup",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Needs network access and curl. The bundled scripts require Python 3.11+ and use only the standard library. No credentials are required; NCBI_API_KEY, S2_API_KEY, CORE_API_KEY, and OPENALEX_API_KEY raise rate limits or unlock full text where noted.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "165aaee79b0dde31e976ed2b57d2d5e976bb1be83deb5e43cddbd6d47676a8e3"
     },
     {
       "slug": "paperclip",
       "source": "k-dense",
       "dir": "paperclip",
+      "path": "skills/paperclip",
       "name": "paperclip",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires macOS or Linux with a POSIX shell and network access; the native installer does not support Windows (use the hosted MCP server there). Installs a self-contained CLI under ~/.paperclip — no Python environment of your own is needed. Authenticate with a PAPERCLIP_API_KEY exported from a .env file or the environment; browser OAuth is an interactive fallback the user must run. Verified against paperclip 0.7.14 and 0.7.15.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "bb0b2111d372ab950a51cbf0da74cb7d1e23ec08466171ed557b5e67afc2d7b2"
     },
     {
       "slug": "paperzilla",
       "source": "k-dense",
       "dir": "paperzilla",
+      "path": "skills/paperzilla",
       "name": "paperzilla",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "b4f2ce723d0ddbaefff9e72ee817508934f3d92cbcbd7dca2a4b4cadc85b93a4"
     },
     {
       "slug": "parallel-web",
       "source": "k-dense",
       "dir": "parallel-web",
+      "path": "skills/parallel-web",
       "name": "parallel-web",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires parallel-cli and internet access.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "f07b9c4094bc0106ea5747657b910ec086c201213a17bd97b701142359fbf757"
     },
     {
       "slug": "pathml",
       "source": "k-dense",
       "dir": "pathml",
+      "path": "skills/pathml",
       "name": "pathml",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "PathML 3.0.5 is the latest PyPI release and targets Python 3.10-3.12; installation needs uv plus platform libraries for OpenSlide, BLAS/LAPACK, and Java/Bio-Formats. Bundled Python 3.10+ CLIs are local, bounded, dependency-free, and network-free.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "bbbaadbe36b230ac4a6dfbdbcb6d942fcea25cfabfd9a3f7b1b947019f6e3a36"
     },
     {
       "slug": "pathogen-variant-surveillance",
       "source": "k-dense",
       "dir": "pathogen-variant-surveillance",
+      "path": "skills/pathogen-variant-surveillance",
       "name": "pathogen-variant-surveillance",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.11+. Scripts use only the standard library - no third-party packages. Needs network access to the public GenSpectrum LAPIS instances (lapis.cov-spectrum.org, lapis.genspectrum.org, lapis.pathoplexus.org) and to raw.githubusercontent.com for pango-designation. No API key.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "f37fd9bfd38e03c2ed48987917b67ae0d5141100a66f5a92699378f9fe635864"
     },
     {
       "slug": "pathway-enrichment",
       "source": "k-dense",
       "dir": "pathway-enrichment",
+      "path": "skills/pathway-enrichment",
       "name": "pathway-enrichment",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "363c462482d3356944e7d4c828a2623fd4e6fde741e91254dec7c5faed014141"
     },
     {
       "slug": "peer-review",
       "source": "k-dense",
       "dir": "peer-review",
+      "path": "skills/peer-review",
       "name": "peer-review",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Python 3.11+ standard library. Bundled CLIs are deterministic and local-only; they accept bounded JSON, CSV, or Markdown and make no network, model, image, or external-service calls.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "f1034d910645a5931724fab502f44b2c6ed75d57fc5d4c7a39bd57fac274da2e"
     },
     {
       "slug": "pennylane",
       "source": "k-dense",
       "dir": "pennylane",
+      "path": "skills/pennylane",
       "name": "pennylane",
-      "license": "Apache-2.0 license",
+      "license": "Apache-2.0",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "c806ff5480b9466132544d866e1b7db0fe7709ef30a4fe1a61e1750ae5da758a"
     },
     {
       "slug": "phylogenetics",
       "source": "k-dense",
       "dir": "phylogenetics",
+      "path": "skills/phylogenetics",
       "name": "phylogenetics",
       "license": "Unknown",
       "plugin": null,
-      "mirrored": true
+      "mirrored": false,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "5bba62062e96f60305e71822aeebcfd376dc90cfcafd285c08713ae426400511"
     },
     {
       "slug": "pi-agent",
       "source": "k-dense",
       "dir": "pi-agent",
+      "path": "skills/pi-agent",
       "name": "pi-agent",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Node.js >= 22.19 and npm for Pi CLI and SDK usage. Pi package name is @earendil-works/pi-coding-agent.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "a88dfc6470288ad9fddece919de38bec7a446b47807002cfbed2ea8cbaaf0cdc"
     },
     {
       "slug": "pkpd-modeling",
       "source": "k-dense",
       "dir": "pkpd-modeling",
+      "path": "skills/pkpd-modeling",
       "name": "pkpd-modeling",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.11+ with numpy and scipy. No network access and no proprietary software. The estimation tools this skill orients you towards (NONMEM, Monolix, Phoenix, Simcyp, GastroPlus) are licensed separately and are never invoked by these scripts.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "cf1e3c53eaac6503ba69548b51cd51ebba6b154348d256ba003981995441f69a"
     },
     {
       "slug": "polars",
       "source": "k-dense",
       "dir": "polars",
+      "path": "skills/polars",
       "name": "polars",
       "license": "https://github.com/pola-rs/polars/blob/main/LICENSE",
       "plugin": null,
-      "mirrored": true
+      "mirrored": false,
+      "compatibility": "Requires Python 3.10+ for polars 1.41.x. Install with uv pip install; optional extras enable Excel, database, cloud, pandas/NumPy, and GPU integrations.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "4b049df898f97f0d413a746a676237de429d8d31e9474169e7b5b4c678cd5464"
     },
     {
       "slug": "polars-bio",
       "source": "k-dense",
       "dir": "polars-bio",
+      "path": "skills/polars-bio",
       "name": "polars-bio",
       "license": "Apache-2.0",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.11–3.14 and polars-bio (uv pip install). Cloud I/O uses standard AWS/GCS/Azure SDK env vars when paths use s3://, gs://, or az:// URIs.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "44c9c2f8370743fb3345bb99896fbb47afa913d6b28b7ff229a39cd5ec04b35a"
     },
     {
       "slug": "pptx-posters",
       "source": "k-dense",
       "dir": "pptx-posters",
+      "path": "skills/pptx-posters",
       "name": "pptx-posters",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.10+, uv, and exact generation pins python-pptx 1.0.2, Pillow 12.3.0, and lxml 6.1.1. Validation and PPTX ZIP/XML inspection are local and network-free; final PowerPoint, accessibility, PDF, printer, and author review are manual.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "a2957c239ae9890035716a470aebea78f88e3de16236c05bcadc64fedd1153db"
     },
     {
       "slug": "primekg",
       "source": "k-dense",
       "dir": "primekg",
+      "path": "skills/primekg",
       "name": "primekg",
       "license": "Unknown",
       "plugin": null,
-      "mirrored": true
+      "mirrored": false,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "f9b728fe9c64f8d902503892005b6c64360809e819f82da8b79b81d41d4c054d"
     },
     {
       "slug": "primer-design",
       "source": "k-dense",
       "dir": "primer-design",
+      "path": "skills/primer-design",
       "name": "primer-design",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.11+ and primer3-py 2.3.1 for design and thermodynamics. Local exhaustive screening uses the standard library; BLAST screening additionally needs blastn and makeblastdb on PATH. Network access is needed only for installation, reference retrieval, or external Primer-BLAST.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "57ebdf2991bdbbb45c62a6abf1efe84e7e5f02ab72d00cc96ea84c2651d88e04"
     },
     {
       "slug": "protocolsio-integration",
       "source": "k-dense",
       "dir": "protocolsio-integration",
+      "path": "skills/protocolsio-integration",
       "name": "protocolsio-integration",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Bundled CLIs require Python 3.11+ and use only the standard library. Offline validation and planning need no credentials or network. REST reads require HTTPS access to official protocols.io hosts and usually a named bearer token; network access is disabled unless --execute is supplied. The scripts never load .env files or execute mutations.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "4cc1fc8c4f68e2726d84ed9b2427d56a1d8882f05f331e4ee2fc920af50d6c5f"
     },
     {
       "slug": "pufferlib",
       "source": "k-dense",
       "dir": "pufferlib",
+      "path": "skills/pufferlib",
       "name": "pufferlib",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Bundled CLIs require Python 3.10+ and use only the standard library. Published pufferlib 3.0.0 supports Python >=3.9 but ships as a native-code source archive; the reviewed 4.0 source requires Python >=3.10, Torch >=2.9, and an audited CPU/CUDA toolchain. Network, GPU, native builds, environment plug-ins, assets, checkpoints, and external logging are never required by the bundled CLIs.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "d373bfd854cd5bf18fb5a9bcb70f282bbf5821f742473ace9a4bf2dc6d6466ee"
     },
     {
       "slug": "pybamm",
       "source": "k-dense",
       "dir": "pybamm",
+      "path": "skills/pybamm",
       "name": "pybamm",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.12 with PyBaMM 26.9.0.0 and pybammsolvers 0.10.0 (IDAKLU). NumPy and CasADi are supplied by PyBaMM. Network is needed for installation only; simulations and CSV comparisons run locally without credentials.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "e4e0e501249d85d002929895f3070977022c892a6f61e502b16c165e6524bcf1"
     },
     {
       "slug": "pycalphad",
       "source": "k-dense",
       "dir": "pycalphad",
+      "path": "skills/pycalphad",
       "name": "pycalphad",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.12+, pycalphad 0.11.2, and NumPy. Installation needs network access; calculations run locally without credentials. Real-material predictions require a suitable licensed thermodynamic database.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "5942de6642c2e44d8a3d94cb5c4f8895857069e793922f489c53f44076c69988"
     },
     {
       "slug": "pydeseq2",
       "source": "k-dense",
       "dir": "pydeseq2",
+      "path": "skills/pydeseq2",
       "name": "pydeseq2",
-      "license": "MIT license",
+      "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python >=3.11 and PyDESeq2 0.5.4-compatible dependencies. Examples target PyDESeq2 0.5.x, formulaic design strings, explicit contrasts, and uv-based installs.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "004675a69ee94ee66fcde4a4a29b37f8fc2cbab0287d75f6d2ce2ea3a9059204"
     },
     {
       "slug": "pydicom",
       "source": "k-dense",
       "dir": "pydicom",
+      "path": "skills/pydicom",
       "name": "pydicom",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Python 3.10+ with pydicom 3.0.2; optional pinned NumPy, Pillow, and pixel plugins. Helper CLIs are local-only and require authorized data.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "bc5fffc3f1d558e6b461cd4f705949d23e62fafbd2eed9c71bf0daceb2617005"
     },
     {
       "slug": "pyhealth",
       "source": "k-dense",
       "dir": "pyhealth",
+      "path": "skills/pyhealth",
       "name": "pyhealth",
-      "license": null,
+      "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "718e1a6fc27a4b6787453a4b23919c2c33bf60df13644b6a98bec4bc559dfbf2"
     },
     {
       "slug": "pylabrobot",
       "source": "k-dense",
       "dir": "pylabrobot",
+      "path": "skills/pylabrobot",
       "name": "pylabrobot",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Verified against PyLabRobot 0.2.1 on Python 3.9+. Bundled planning CLIs require only Python 3.11+ and make no serial, USB, or network connections. Physical devices need model-specific extras, configuration, calibration, and trained operator approval.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "6bd2ea257db948a0d1e7669eb701c640a9d99a0a11172e0f5f6889ac9956d270"
     },
     {
       "slug": "pymatgen",
       "source": "k-dense",
       "dir": "pymatgen",
+      "path": "skills/pymatgen",
       "name": "pymatgen",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Python 3.11+ with uv. The verified snapshot uses pymatgen 2026.5.4, pymatgen-core 2026.7.16, and mp-api 0.46.4. Bundled help and planning CLIs use only the standard library; local scientific execution lazily requires the pinned pymatgen packages. Materials Project access additionally requires explicit network approval and the single named secret MP_API_KEY.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "3d40b1c29c2187da89d40316c6adddaffd3240db80c695284c7a148f889207fd"
     },
     {
       "slug": "pymc",
       "source": "k-dense",
       "dir": "pymc",
+      "path": "skills/pymc",
       "name": "pymc",
-      "license": "Apache License, Version 2.0",
+      "license": "Apache-2.0",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.12+ and PyMC 6.0.1-compatible dependencies. Install reproducible environments with `uv pip install \"pymc[nutpie]==6.0.1\"`; optional NumPyro or BlackJAX samplers require separately pinned JAX-compatible dependencies.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "154958d37e085e37de788983b2dab25ae50ebf716dc3d916bed416ab3daf4675"
     },
     {
       "slug": "pymoo",
       "source": "k-dense",
       "dir": "pymoo",
+      "path": "skills/pymoo",
       "name": "pymoo",
-      "license": "Apache-2.0 license",
+      "license": "Apache-2.0",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.10+ and pymoo (uv pip install). Optional matplotlib for visualization plots; optional autograd for gradient-based features; optional joblib for JoblibParallelization.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "2494a6505bc8ca2bfd648489e9b5f36947e0eba76342b4bcb5f93856c307ddc7"
     },
     {
       "slug": "pyopenms",
       "source": "k-dense",
       "dir": "pyopenms",
+      "path": "skills/pyopenms",
       "name": "pyopenms",
       "license": "3 clause BSD license",
       "plugin": null,
-      "mirrored": true
+      "mirrored": false,
+      "compatibility": "Requires Python 3.9+ and uv. Examples and scripts target pyOpenMS 3.5.0.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "3831d7fe932889cb2ed0fe8130844a71dbc83fcced32f850b401635ecba84cf3"
     },
     {
       "slug": "pysam",
       "source": "k-dense",
       "dir": "pysam",
+      "path": "skills/pysam",
       "name": "pysam",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.8–3.14 and pysam 0.24.0. Bundled scripts use local files. CRAM decoding may require the matching reference FASTA or an explicitly configured REF_PATH/REF_CACHE.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "401cd3c407ab8e6ff940d850af5c853c3abb1ca4c26db06496ae5f92340674b7"
     },
     {
       "slug": "pytdc",
       "source": "k-dense",
       "dir": "pytdc",
+      "path": "skills/pytdc",
       "name": "pytdc",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires uv, CPython 3.11, PyTDC 1.1.15, and setuptools 80.9.0 for its legacy pkg_resources runtime import. Dataset, benchmark, checkpoint, and remote-oracle operations require network/storage review and explicit user approval.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "bfb8737320209ee728d3d88c6bf1f5b7f1e31a94e49721f0eecc3038d7af4df1"
     },
     {
       "slug": "pytorch-lightning",
       "source": "k-dense",
       "dir": "pytorch-lightning",
+      "path": "skills/pytorch-lightning",
       "name": "pytorch-lightning",
-      "license": "Apache-2.0 license",
+      "license": "Apache-2.0",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.10+ and lightning 2.6+ (or pytorch-lightning 2.6+). GPU training needs CUDA-capable PyTorch. Optional loggers (wandb, mlflow, comet-ml) and DeepSpeed require separate installs.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "eaf5ad8bb44885058d18de3146403717a8a4920b0ba61a1d9d2b7936f2ce8d95"
     },
     {
       "slug": "pyzotero",
       "source": "k-dense",
       "dir": "pyzotero",
+      "path": "skills/pyzotero",
       "name": "pyzotero",
-      "license": "MIT License",
+      "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.10+ and pyzotero 1.13+. Web API access needs a Zotero API key. Optional CLI and MCP extras require Zotero 7 with local API access enabled.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "bcd3964a43ebecea5a427bed95ba723696cb1631b5f2aa81e2a12efa5d353b15"
     },
     {
       "slug": "qiime2-amplicon",
       "source": "k-dense",
       "dir": "qiime2-amplicon",
+      "path": "skills/qiime2-amplicon",
       "name": "qiime2-amplicon",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Python 3.10+ for the standard-library validation helper; QIIME 2 2026.7 distribution with cutadapt, dada2, feature-table, feature-classifier and taxa plugins for execution. Install through the official conda/container distribution, not PyPI. Requires a matching trained classifier and network for installation/reference downloads.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "98a85dd318d7aa4fae2e71a9929f8b2216c3a065302ea46c0825a45e00edb16a"
     },
     {
       "slug": "qiskit",
       "source": "k-dense",
       "dir": "qiskit",
+      "path": "skills/qiskit",
       "name": "qiskit",
       "license": "Apache-2.0",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Python 3.10+ on a supported 64-bit platform. Local SDK workflows need qiskit; noisy simulation needs qiskit-aer; IBM QPU access needs qiskit-ibm-runtime, network access, an IBM Quantum Platform account, and an API key.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "ca7f7ba45677dc2f7bbb2aca487bcc29738d16c443993d1c244bc1f18197738b"
     },
     {
       "slug": "qutip",
       "source": "k-dense",
       "dir": "qutip",
+      "path": "skills/qutip",
       "name": "qutip",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.11+, uv, and qutip==5.3.0 for executable simulations. Bundled planners and all script help run with the Python standard library; plotting requires the pinned graphics extra. No network service or credentials are used.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "cb257ef25f95b8eecb499592544dba689da28071e53f130c2346509d597c1eef"
     },
     {
       "slug": "rdkit",
       "source": "k-dense",
       "dir": "rdkit",
+      "path": "skills/rdkit",
       "name": "rdkit",
-      "license": "BSD-3-Clause license",
+      "license": "BSD-3-Clause",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Examples target RDKit 2026.03.x. Use conda-forge for the broadest binary support or PyPI package `rdkit` for supported platform wheels; `rdkit-pypi` is the legacy PyPI name.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "c1955e666560ebb3bb17b09083a4632369afbf09f7075fd50ff662b27451ca0f"
     },
     {
       "slug": "relion",
       "source": "k-dense",
       "dir": "relion",
+      "path": "skills/relion",
       "name": "relion",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Python 3.10+ with numpy, mrcfile and starfile for bundled validation; RELION 5.0.1 CPU/MPI executables for refinement and postprocessing. GPU builds require their supported accelerator stack. FFTW, OpenMP and MPI are build/runtime dependencies. Network is needed for installation only.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "b1a9f7dd2b0c6f7f581a9de4785f0ec8c088a9368dd6be1e80ae4fac29a1349e"
     },
     {
       "slug": "relsa-severity-assessment",
       "source": "k-dense",
       "dir": "relsa-severity-assessment",
+      "path": "skills/relsa-severity-assessment",
       "name": "relsa-severity-assessment",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python >=3.10 with numpy, pandas, and scipy; statsmodels >=0.14 for forecasting and matplotlib for figures. Tested with numpy 2.5, pandas 3.0, scipy 1.18, statsmodels 0.14.6. No network access needed.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "df06a255694a4fb91bd2336fe3d24761dd9db3a4ee25058fe57c35d6a98b7a3c"
     },
     {
       "slug": "research-grants",
       "source": "k-dense",
       "dir": "research-grants",
+      "path": "skills/research-grants",
       "name": "research-grants",
-      "license": "MIT license",
+      "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Works in Agent Skills-compatible hosts. Grant-writing guidance needs no network; optional figures via the scientific-schematics skill require OPENROUTER_API_KEY and outbound API access.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "dab1f3bb69113ed5ace1d8bd19f9bd32be69cb4e6dbef403e0bcfc0ed53eb094"
     },
     {
       "slug": "research-lookup",
       "source": "k-dense",
       "dir": "research-lookup",
+      "path": "skills/research-lookup",
       "name": "research-lookup",
-      "license": "MIT license",
+      "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires network access to api.parallel.ai through parallel-cli 0.7.1+ for Search, Extract, and Research; explicit Chat uses api.parallel.ai with PARALLEL_API_KEY; optional Perplexity requests use openrouter.ai and require OPENROUTER_API_KEY.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "db949c72cd657976bd025c961daefd3b80b8c2801fcff330c31c690f474c7d77"
     },
     {
       "slug": "rowan",
       "source": "k-dense",
       "dir": "rowan",
+      "path": "skills/rowan",
       "name": "rowan",
       "license": "Proprietary (API key required)",
       "plugin": null,
-      "mirrored": false
+      "mirrored": false,
+      "compatibility": "Python 3.12+, API key required",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "85571c63dcaf9fab547bb63a5e330def51f2c7606ae37351f664d620c5e9370f"
     },
     {
       "slug": "scanpy",
       "source": "k-dense",
       "dir": "scanpy",
+      "path": "skills/scanpy",
       "name": "scanpy",
       "license": "BSD-3-Clause",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "9135be88ad8fd6a4cd717bf959bdc763467742cccb4de67c52a4a0479e5043e5"
     },
     {
       "slug": "scholar-evaluation",
       "source": "k-dense",
       "dir": "scholar-evaluation",
+      "path": "skills/scholar-evaluation",
       "name": "scholar-evaluation",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.11+ for optional bundled standard-library CLIs. All tooling is local JSON/CSV processing with no network, credentials, external models, or subprocesses.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "b914e36422bc41b659d9e25abfe6f1785a671502eeb150e730c2b2db6a9f69ce"
     },
     {
       "slug": "scientific-brainstorming",
       "source": "k-dense",
       "dir": "scientific-brainstorming",
+      "path": "skills/scientific-brainstorming",
       "name": "scientific-brainstorming",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Core guidance works in any Agent Skills-compatible host. Optional bundled CLIs require Python 3.11+ and use only the standard library; they make no network or LLM calls and require no credentials.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "2181d61e3798a8f32e26ab9e186b3fb54fe0388b752215b2fea97ccbd2d1df84"
     },
     {
       "slug": "scientific-critical-thinking",
       "source": "k-dense",
       "dir": "scientific-critical-thinking",
+      "path": "skills/scientific-critical-thinking",
       "name": "scientific-critical-thinking",
-      "license": "MIT license",
+      "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Analytical guidance needs no network. Optional figures via the scientific-schematics skill require OPENROUTER_API_KEY and outbound API access to OpenRouter.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "efc676f965406ee9452862e3f6c7533312073b09d757ff617a0390863ca9b43e"
     },
     {
       "slug": "scientific-schematics",
       "source": "k-dense",
       "dir": "scientific-schematics",
+      "path": "skills/scientific-schematics",
       "name": "scientific-schematics",
-      "license": "MIT license",
+      "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "e97232bd23199d7e611f3998463b845257640dc767418cbef7e6331393ebf68f"
     },
     {
       "slug": "scientific-slides",
       "source": "k-dense",
       "dir": "scientific-slides",
+      "path": "skills/scientific-slides",
       "name": "scientific-slides",
-      "license": "MIT license",
+      "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "1e4962ad809fb0ca5edf88d83dd535271ed3bf39b720748c694f8b3d8b74f962"
     },
     {
       "slug": "scientific-visualization",
       "source": "k-dense",
       "dir": "scientific-visualization",
+      "path": "skills/scientific-visualization",
       "name": "scientific-visualization",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.11+ and uv for pinned examples. Bundled CLIs are network-free and load Matplotlib, Pillow, or pypdf only when needed. Plotly static export with Kaleido v1 requires a compatible Chrome/Chromium installation.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "58239e220cdceddd4e29c3cf727ee22d94816f194df5dc8dc5a30792fba2b0ac"
     },
     {
       "slug": "scientific-writing",
       "source": "k-dense",
       "dir": "scientific-writing",
+      "path": "skills/scientific-writing",
       "name": "scientific-writing",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.11+ only for optional dependency-free local CLIs; core guidance is platform-neutral. Bundled tools are offline and require no API keys.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "b35dceb34f2c637d8245d5898925209b82ec762e123695e1712e659b028e3168"
     },
     {
       "slug": "scikit-bio",
       "source": "k-dense",
       "dir": "scikit-bio",
+      "path": "skills/scikit-bio",
       "name": "scikit-bio",
-      "license": "BSD-3-Clause license",
+      "license": "BSD-3-Clause",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.10+ and scikit-bio 0.7+ (uv pip install scikit-bio). NumPy 2.0+ is required. Optional matplotlib/seaborn/plotly for plotting; biom-format for BIOM tables; polars/anndata for table interoperability.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "a1408e738008dfad44c39899565670ba718397e9fcde20c768d810f532f6fb18"
     },
     {
       "slug": "scikit-learn",
       "source": "k-dense",
       "dir": "scikit-learn",
+      "path": "skills/scikit-learn",
       "name": "scikit-learn",
-      "license": "BSD-3-Clause license",
+      "license": "BSD-3-Clause",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.11+ and scikit-learn 1.7+. NumPy and SciPy are required dependencies. Optional matplotlib/seaborn for bundled example scripts that save plots.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "004c1a929cd0b4fef1220673df5af29e6550a03e7dfc47f38192b6f7a3be4806"
     },
     {
       "slug": "scikit-survival",
       "source": "k-dense",
       "dir": "scikit-survival",
+      "path": "skills/scikit-survival",
       "name": "scikit-survival",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.11+, uv, and the pinned scikit-survival 0.28.0 stack for executable examples. Bundled CLIs are local and network-free by default.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "74bdaa76f33b1d996e40c9dd77356c616e8791d7de47da7c2be5415a60bda57a"
     },
     {
       "slug": "scvelo",
       "source": "k-dense",
       "dir": "scvelo",
+      "path": "skills/scvelo",
       "name": "scvelo",
       "license": "BSD-3-Clause",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.10+ with scvelo, scanpy, and anndata. Verified against scvelo 0.3.4, whose dynamical model and pl.scatter need pandas<3 and whose stochastic estimator needs numpy<2; the deterministic estimator works on current releases.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "6d1d9993f80ab961f1396e9d024721112543c6476098ad3ab076d6a4d101a752"
     },
     {
       "slug": "scvi-tools",
       "source": "k-dense",
       "dir": "scvi-tools",
+      "path": "skills/scvi-tools",
       "name": "scvi-tools",
-      "license": "BSD-3-Clause license",
+      "license": "BSD-3-Clause",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "39e2753c7cc8df3908ef7fbde631f9469dd29059f04a35c4d1b93f920d0a9458"
     },
     {
       "slug": "seaborn",
       "source": "k-dense",
       "dir": "seaborn",
+      "path": "skills/seaborn",
       "name": "seaborn",
-      "license": "BSD-3-Clause license",
+      "license": "BSD-3-Clause",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.8+ and seaborn 0.13.2-compatible dependencies. Install with uv pip install seaborn==0.13.2; use seaborn[stats]==0.13.2 when advanced regression or clustering examples need scipy/statsmodels.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "88eb1733e7314357142305c9a6d9503266fbc320de978b4ee0d033e0469fcc7a"
     },
     {
       "slug": "shap",
       "source": "k-dense",
       "dir": "shap",
+      "path": "skills/shap",
       "name": "shap",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.12+ and uv for SHAP 0.52.0; model-specific libraries are optional.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "578ef5d71d6a5ce5d22d101d68092c3681ad92f5879f9e721eb95177a9e31bf4"
     },
     {
       "slug": "simpy",
       "source": "k-dense",
       "dir": "simpy",
+      "path": "skills/simpy",
       "name": "simpy",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Upstream SimPy 4.1.2 supports Python 3.8+; bundled CLIs require Python 3.10+, uv, and SimPy 4.1.2. They use only SimPy and the standard library, operate on local bounded inputs, and make no network calls.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "67e5a5b511fbcb5c9de76ad82237b173e88f67477b01eeb332c4c1237be0880a"
+    },
+    {
+      "slug": "skill-creator",
+      "source": "anthropic",
+      "dir": "skill-creator",
+      "path": "skills/skill-creator",
+      "name": "skill-creator",
+      "license": "Apache-2.0",
+      "plugin": "example-skills",
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code"
+      ],
+      "installMode": "skill",
+      "contentHash": "1ea8019c3059e5fad1a935d48521caa098464ac57fe0a730b377ea99c969d76b"
+    },
+    {
+      "slug": "slack-gif-creator",
+      "source": "anthropic",
+      "dir": "slack-gif-creator",
+      "path": "skills/slack-gif-creator",
+      "name": "slack-gif-creator",
+      "license": "Apache-2.0",
+      "plugin": "example-skills",
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code"
+      ],
+      "installMode": "skill",
+      "contentHash": "482a818bbb365dcb03f990c12f8fb75fa0378365824b088bcd6bd43866856ded"
     },
     {
       "slug": "stable-baselines3",
       "source": "k-dense",
       "dir": "stable-baselines3",
+      "path": "skills/stable-baselines3",
       "name": "stable-baselines3",
-      "license": "MIT license",
+      "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.10+, PyTorch >= 2.3, and stable-baselines3 2.8+. Gymnasium environments; optional extras for TensorBoard and Atari (ale-py).",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "b0aa0e59f2b9bb0e2cfd1b8ce5e37c08d3cb7c29d6da5eda6596a70f740338d5"
     },
     {
       "slug": "statistical-analysis",
       "source": "k-dense",
       "dir": "statistical-analysis",
+      "path": "skills/statistical-analysis",
       "name": "statistical-analysis",
-      "license": "MIT license",
+      "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "dc3b369732119fad34ec12ba5367d0a8c93d219a70eb58009e848cd8d3eef9df"
     },
     {
       "slug": "statistical-power",
       "source": "k-dense",
       "dir": "statistical-power",
+      "path": "skills/statistical-power",
       "name": "statistical-power",
-      "license": "MIT license",
+      "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python >=3.10. Examples target statsmodels >=0.14.6, scipy >=1.11, pingouin >=0.6, numpy >=1.26, and matplotlib. Optional extras are statsmodels mixed models and lifelines for simulation-based power.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "851766cf7dd8abf980c063996873bcdbf6705302df73f3af7810ca0fc701d4cc"
     },
     {
       "slug": "statsmodels",
       "source": "k-dense",
       "dir": "statsmodels",
+      "path": "skills/statsmodels",
       "name": "statsmodels",
-      "license": "BSD-3-Clause license",
+      "license": "BSD-3-Clause",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.9+ and statsmodels 0.14.6-compatible dependencies. Use `uv pip install statsmodels==0.14.6`; optional predictive-metric examples also need scikit-learn.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "4311e2a98113fe1391d623b6c26d80db4ac63dbc9ef33b89c26b6bdf1ac80097"
     },
     {
       "slug": "sympy",
       "source": "k-dense",
       "dir": "sympy",
+      "path": "skills/sympy",
       "name": "sympy",
       "license": "https://github.com/sympy/sympy/blob/master/LICENSE",
       "plugin": null,
-      "mirrored": true
+      "mirrored": false,
+      "compatibility": "Requires Python 3.9+ and SymPy 1.14+. Optional NumPy/SciPy/Matplotlib for lambdify examples; C/Fortran compiler for autowrap/codegen.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "4a133101e83b5d6554758faaa327eb00c2a3882dda12c1a8aad4b7e2affca28e"
     },
     {
       "slug": "tamarind",
       "source": "k-dense",
       "dir": "tamarind",
+      "path": "skills/tamarind",
       "name": "tamarind",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.10+, a Tamarind Bio account, and an API key from app.tamarind.bio. Uses the `requests` library against the public REST API (these recipes use HTTP directly). Network access required. Optional MCP server at mcp.tamarind.bio/mcp for agent hosts.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "4dee6f24cd029399b76630d4a6633967f92a6f55e616526fc046e009f44ba758"
     },
     {
       "slug": "tellurium",
       "source": "k-dense",
       "dir": "tellurium",
+      "path": "skills/tellurium",
       "name": "tellurium",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.11 with Tellurium 2.2.13.1, libRoadRunner 2.10.0, Antimony 3.2.0, python-libsbml 5.21.2, python-libsedml 2.0.34 and python-libcombine 0.2.20. Network is needed for installation only. Native wheels were tested on macOS ARM64. No credentials or external services.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "5be983000bf68a95fb0d52cd1e4b02213da9309c36fda3ee5905fdeb591dee56"
+    },
+    {
+      "slug": "theme-factory",
+      "source": "anthropic",
+      "dir": "theme-factory",
+      "path": "skills/theme-factory",
+      "name": "theme-factory",
+      "license": "Apache-2.0",
+      "plugin": "example-skills",
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code"
+      ],
+      "installMode": "skill",
+      "contentHash": "02d8fffc924a4799b1bbcb124ba6f0d7c55333541f5b54719991718ef926d31b"
     },
     {
       "slug": "tiledbvcf",
       "source": "k-dense",
       "dir": "tiledbvcf",
+      "path": "skills/tiledbvcf",
       "name": "tiledbvcf",
-      "license": "MIT license",
+      "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "30eba40325ade1971457377351b757ba654ff733f2dca3d2b1bf2797fbabb9dd"
     },
     {
       "slug": "timesfm-forecasting",
       "source": "k-dense",
       "dir": "timesfm-forecasting",
+      "path": "skills/timesfm-forecasting",
       "name": "timesfm-forecasting",
-      "license": "Apache-2.0 license",
+      "license": "Apache-2.0",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "af21e132b8a74946cb5326d6a38848f785d5ee99656893f658bcd2e7f939540a"
     },
     {
       "slug": "torch-geometric",
       "source": "k-dense",
       "dir": "torch-geometric",
+      "path": "skills/torch-geometric",
       "name": "torch-geometric",
-      "license": "MIT license",
+      "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.10+, PyTorch 2.6+, and torch-geometric 2.7.x. Optional extension wheels (pyg-lib, torch-scatter, torch-sparse, torch-cluster) must match your PyTorch/CUDA build from https://data.pyg.org/whl.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "4549066a9c6b1342271ae44cc0071d208401628d90e097ecc8410864ff5a5da3"
     },
     {
       "slug": "torchdrug",
       "source": "k-dense",
       "dir": "torchdrug",
+      "path": "skills/torchdrug",
       "name": "torchdrug",
-      "license": "Apache-2.0 license",
+      "license": "Apache-2.0",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "TorchDrug 0.2.1 requires Python 3.7-3.10 and supports PyTorch 1.8-2.0. Apple Silicon is CPU-only; MPS is unsupported.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "5fab21223ad95f6e6ffa3693de1a4672bea509c20cf44bd0c1eefe989dc40e07"
     },
     {
       "slug": "transformers",
       "source": "k-dense",
       "dir": "transformers",
+      "path": "skills/transformers",
       "name": "transformers",
-      "license": "Apache-2.0 license",
+      "license": "Apache-2.0",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.10+, PyTorch 2.4+, and transformers 5.x. Gated or private Hub models need an HF token (`hf auth login` or `HF_TOKEN`).",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "4edda9f88cb8231def9567e2ceb4eb15757aadde3792dee98cedd104b49ea400"
     },
     {
       "slug": "treatment-plans",
       "source": "k-dense",
       "dir": "treatment-plans",
+      "path": "skills/treatment-plans",
       "name": "treatment-plans",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Python 3.11+ standard library; local JSON files only. Bundled CLIs require no network, external services, models, images, credentials, environment variables, or third-party packages.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "c032b0e27f7121daff141b8da4a7d21f1c098b458ac4fd852b3538cf63f7d306"
     },
     {
       "slug": "umap-learn",
       "source": "k-dense",
       "dir": "umap-learn",
+      "path": "skills/umap-learn",
       "name": "umap-learn",
-      "license": "BSD-3-Clause license",
+      "license": "BSD-3-Clause",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "0167b93e67b7424171357d201a8a2aa2005aaeab0fcb11066c0a300ce22599ec"
     },
     {
       "slug": "uncertainty-and-units",
       "source": "k-dense",
       "dir": "uncertainty-and-units",
+      "path": "skills/uncertainty-and-units",
       "name": "uncertainty-and-units",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.12+. The numeric CLIs need pint, uncertainties, NumPy, and SciPy; the static auditor is standard-library only. All bundled tooling runs locally with no network access.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "6fd0cf71b74a141b5ea495d14fac4c0cef3d2d71eeb08c61365b15829cb6ee64"
     },
     {
       "slug": "usfiscaldata",
       "source": "k-dense",
       "dir": "usfiscaldata",
+      "path": "skills/usfiscaldata",
       "name": "usfiscaldata",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "9ccecaecbd37e71c6a98ae187d2d8f5231d5dd98d002fd2a961ebb84a45a9230"
     },
     {
       "slug": "vaex",
       "source": "k-dense",
       "dir": "vaex",
+      "path": "skills/vaex",
       "name": "vaex",
-      "license": "MIT license",
+      "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.10+ (3.12+ recommended with vaex 4.19.0). Install with uv pip install vaex. Optional s3fs/gcsfs/adlfs for cloud I/O.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "d96135c5bb17c9c7bb6104bb8be001b4323c22448bf5c3e9d63fab59d838992c"
     },
     {
       "slug": "venue-templates",
       "source": "k-dense",
       "dir": "venue-templates",
+      "path": "skills/venue-templates",
       "name": "venue-templates",
-      "license": "MIT license",
+      "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.11+ for helper scripts; LaTeX and Poppler command-line tools are optional for compilation and PDF inspection.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "be4a15a92f4f0aa50f78a49890468d74f614f8268d06c4b1ee378b3487cbc7f3"
+    },
+    {
+      "slug": "vercel--composition-patterns",
+      "source": "vercel",
+      "dir": "composition-patterns",
+      "path": "skills/composition-patterns",
+      "name": "vercel-composition-patterns",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [],
+      "installMode": "skill",
+      "contentHash": "6ae24777f49e3db192e2916cacd56edca1a8d2c502033753fc3582061ec1819e"
+    },
+    {
+      "slug": "vercel--deploy-to-vercel",
+      "source": "vercel",
+      "dir": "deploy-to-vercel",
+      "path": "skills/deploy-to-vercel",
+      "name": "deploy-to-vercel",
+      "license": null,
+      "plugin": null,
+      "mirrored": false,
+      "compatibility": null,
+      "declaredAgents": [],
+      "installMode": "skill",
+      "contentHash": "3841589fe037dd93c8e099b9d978282a351d13edbf8ab7cd4856021d9fced12c"
+    },
+    {
+      "slug": "vercel--react-best-practices",
+      "source": "vercel",
+      "dir": "react-best-practices",
+      "path": "skills/react-best-practices",
+      "name": "vercel-react-best-practices",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [],
+      "installMode": "skill",
+      "contentHash": "f37f741322e4c7e4affb0ead092fe049d11a4bb818bbacc886d595cf1c2a0ecd"
+    },
+    {
+      "slug": "vercel--react-native-skills",
+      "source": "vercel",
+      "dir": "react-native-skills",
+      "path": "skills/react-native-skills",
+      "name": "vercel-react-native-skills",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [],
+      "installMode": "skill",
+      "contentHash": "81e752eb775c6ca3a1bfb947c4e1e7dfb2a859caeba504fb26fd07393a7e9121"
+    },
+    {
+      "slug": "vercel--react-view-transitions",
+      "source": "vercel",
+      "dir": "react-view-transitions",
+      "path": "skills/react-view-transitions",
+      "name": "vercel-react-view-transitions",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [],
+      "installMode": "skill",
+      "contentHash": "e5e458aa39b6bdddec9ebc16df93d232ca9fdda8dace14cf996912f352799fb8"
+    },
+    {
+      "slug": "vercel--vercel-cli-with-tokens",
+      "source": "vercel",
+      "dir": "vercel-cli-with-tokens",
+      "path": "skills/vercel-cli-with-tokens",
+      "name": "vercel-cli-with-tokens",
+      "license": null,
+      "plugin": null,
+      "mirrored": false,
+      "compatibility": null,
+      "declaredAgents": [],
+      "installMode": "skill",
+      "contentHash": "29bec95d452626f0a960391ba0f10d889a980355a5f6d5c6c52db28a699f4aa5"
+    },
+    {
+      "slug": "vercel--vercel-optimize",
+      "source": "vercel",
+      "dir": "vercel-optimize",
+      "path": "skills/vercel-optimize",
+      "name": "vercel-optimize",
+      "license": null,
+      "plugin": null,
+      "mirrored": false,
+      "compatibility": null,
+      "declaredAgents": [],
+      "installMode": "skill",
+      "contentHash": "5af2aae3b73040eb08a3cba7be18bbeaa9767f744ac5ace416c2dddd1724fc85"
+    },
+    {
+      "slug": "vercel--web-design-guidelines",
+      "source": "vercel",
+      "dir": "web-design-guidelines",
+      "path": "skills/web-design-guidelines",
+      "name": "web-design-guidelines",
+      "license": null,
+      "plugin": null,
+      "mirrored": false,
+      "compatibility": null,
+      "declaredAgents": [],
+      "installMode": "skill",
+      "contentHash": "c5fe651b764793b596c5c266fdab0cd1eb5c3806edbf95d1f80a170a211ae3af"
+    },
+    {
+      "slug": "vercel--writing-guidelines",
+      "source": "vercel",
+      "dir": "writing-guidelines",
+      "path": "skills/writing-guidelines",
+      "name": "writing-guidelines",
+      "license": null,
+      "plugin": null,
+      "mirrored": false,
+      "compatibility": null,
+      "declaredAgents": [],
+      "installMode": "skill",
+      "contentHash": "715dacd67fc93a39c65183d60559335f687196ca922ec4f6a9092da744bdccc7"
     },
     {
       "slug": "waypoint-bio",
       "source": "k-dense",
       "dir": "waypoint-bio",
+      "path": "skills/waypoint-bio",
       "name": "waypoint-bio",
       "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.10+ with `waypoint-bio` (pulls torch, transformers, datasets, peft, scikit-learn). Needs network access and a Hugging Face token with access granted to the gated outpost-bio repos. A GPU is strongly recommended for pretraining and benchmarking.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "394f4263d3ed8f7caf8062ceff55ed2598328151d6744b049f2b22b9ed66d9f1"
+    },
+    {
+      "slug": "web-artifacts-builder",
+      "source": "anthropic",
+      "dir": "web-artifacts-builder",
+      "path": "skills/web-artifacts-builder",
+      "name": "web-artifacts-builder",
+      "license": "Apache-2.0",
+      "plugin": "example-skills",
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code"
+      ],
+      "installMode": "skill",
+      "contentHash": "d7a9bcbdd9865986bc57663eae743434d0e22f88f0e383189f4eee6acd314473"
+    },
+    {
+      "slug": "webapp-testing",
+      "source": "anthropic",
+      "dir": "webapp-testing",
+      "path": "skills/webapp-testing",
+      "name": "webapp-testing",
+      "license": "Apache-2.0",
+      "plugin": "example-skills",
+      "mirrored": true,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code"
+      ],
+      "installMode": "skill",
+      "contentHash": "713464664ce3ff7c02acbf50923d53a13ca2d93ca10da290a6aa2b8f5d3dd3b1"
     },
     {
       "slug": "what-if-oracle",
       "source": "k-dense",
       "dir": "what-if-oracle",
+      "path": "skills/what-if-oracle",
       "name": "what-if-oracle",
       "license": "CC BY-NC-SA 4.0",
       "plugin": null,
-      "mirrored": true
+      "mirrored": false,
+      "compatibility": null,
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "e5fe1c694f71e6755b4dd99612b27a15ceb5b59e5265071472a57acefb9737af"
     },
     {
       "slug": "zarr-python",
       "source": "k-dense",
       "dir": "zarr-python",
+      "path": "skills/zarr-python",
       "name": "zarr-python",
-      "license": "MIT license",
+      "license": "MIT",
       "plugin": null,
-      "mirrored": true
+      "mirrored": true,
+      "compatibility": "Requires Python 3.12+ and zarr 3.x. Cloud I/O needs zarr[remote] plus pinned s3fs or gcsfs. Legacy Zarr v2 workflows need exact 2.x pins on older Python.",
+      "declaredAgents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor"
+      ],
+      "installMode": "skill",
+      "contentHash": "b5ad65f27ec81544bdffda9200a7b5490551105d630818abc5fe9739a31fc8d0"
     }
   ]
 }

@@ -41,6 +41,21 @@ html {
   font-stretch: 125%;
 }
 
+/* Ruled property grid: borders instead of a dark gap, so an incomplete last
+   row leaves paper, not a black block. (`@theme inline` vars are not emitted
+   at runtime, hence the literal ink colour.) */
+.cell-grid {
+  display: grid;
+  border-top: 2px solid #121212;
+  border-left: 2px solid #121212;
+}
+
+.cell-grid > * {
+  border-right: 2px solid #121212;
+  border-bottom: 2px solid #121212;
+  background: #ffffff;
+}
+
 /* Keyboard focus that stays visible on paper, tints and the dark install band */
 :focus-visible {
   outline: 3px solid var(--color-accent);

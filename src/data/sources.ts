@@ -1,5 +1,6 @@
 import manifest from "./upstream.json";
-import type { SourceId } from "./types";
+import registry from "../../content/sources.json";
+import type { AgentId, SourceId, UpstreamSkill } from "./types";
 
 export interface Source {
   id: SourceId;
@@ -8,27 +9,22 @@ export interface Source {
   blurb: string;
   /** Commit the catalog was last synced from. */
   sha: string;
+  kind: "official" | "community";
+  stars?: number;
+  pushedAt?: string;
+  observedAt?: string;
+  declaredAgents: AgentId[];
+  docsUrl: string;
 }
 
-const PRESENTATION: Record<SourceId, Omit<Source, "id" | "repo" | "sha">> = {
-  anthropic: {
-    label: "Anthropic Official Skills",
-    blurb: "Anthropic 官方的文件處理、設計與開發 Skills",
-  },
-  "k-dense": {
-    label: "Scientific Agent Skills",
-    blurb: "K-Dense 維護的科學研究與資料分析 Skills",
-  },
-};
-
 export const SYNCED_AT: string = manifest.syncedAt;
-
-export const SOURCES: Source[] = manifest.sources.map((s) => ({
-  id: s.id as SourceId,
-  repo: s.repo,
-  sha: s.sha,
-  ...PRESENTATION[s.id as SourceId],
-}));
+export const SOURCE_IDS = registry.map((s) => s.id as SourceId);
+export const SOURCES: Source[] = manifest.sources.map((meta) => {
+  const config = registry.find((s) => s.id === meta.id);
+  if (!config) throw new Error(`Unknown source: ${meta.id}`);
+  return { ...config, ...meta, id: config.id as SourceId,
+    kind: config.kind as Source["kind"], declaredAgents: config.declaredAgents as AgentId[] };
+});
 
 export function getSource(id: SourceId): Source {
   const source = SOURCES.find((s) => s.id === id);
@@ -41,6 +37,10 @@ export function repoUrl(repo: string): string {
 }
 
 /** SKILL.md pinned to the synced commit, so the link matches what the site shows. */
-export function skillFileUrl(repo: string, sha: string, dir: string): string {
-  return `${repoUrl(repo)}/blob/${sha}/skills/${dir}/SKILL.md`;
+export function skillFileUrl(repo: string, sha: string, dir: string, skillPath?: string): string {
+  return `${repoUrl(repo)}/blob/${sha}/${skillPath ?? `skills/${dir}`}/SKILL.md`;
+}
+
+export function declaredAgents(skill: UpstreamSkill): AgentId[] {
+  return skill.declaredAgents ?? getSource(skill.source).declaredAgents;
 }

@@ -16,6 +16,12 @@ export function elementSymbol(name: string): string {
   return letters.charAt(0).toUpperCase() + letters.charAt(1).toLowerCase();
 }
 
+/** Chinese display names have no letters; fall back to the upstream (English) name. */
+function symbolFor(skill: Skill): string {
+  const fromName = elementSymbol(skill.name);
+  return fromName !== "?" ? fromName : elementSymbol(skill.upstream.name.replace(/[-_]+/g, " "));
+}
+
 export function formatNumber(n: number): string {
   return String(n).padStart(3, "0");
 }
@@ -31,7 +37,7 @@ export function buildElements(skills: Skill[], categories: Category[]): SkillEle
       .filter((s) => s.category === category.id)
       .map((skill) => ({
         number: ++next,
-        symbol: elementSymbol(skill.name),
+        symbol: symbolFor(skill),
         skill,
         category,
       })),

@@ -44,7 +44,7 @@ export default function Home() {
               <span className="mt-2 block font-sans tracking-normal">週期表</span>
             </h1>
             <p className="mt-6 max-w-[520px] text-lg leading-relaxed text-ink-soft">
-              {SKILLS.length} 個元素、{CATEGORIES.length} 個族。點一格就能看用途，並取得 Claude Code、Codex、Gemini CLI、Grok 的安裝指令。
+              {SKILLS.length} 個元素、{CATEGORIES.length} 個族。點一格就能看用途，並取得 Claude Code、Codex、Gemini CLI、Cursor、Grok 的安裝指令。
             </p>
           </div>
           <form role="search" onSubmit={(e) => e.preventDefault()} className="flex min-w-0 flex-[0_1_380px] flex-col gap-2">

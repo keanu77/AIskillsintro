@@ -1,0 +1,36 @@
+[
+  {
+    "id": "anthropic", "label": "Anthropic", "repo": "anthropics/skills",
+    "blurb": "Anthropic 發布的文件處理、設計與開發 skills。", "kind": "official",
+    "skillsDir": "skills", "layout": "standard", "namespace": false,
+    "marketplace": ".claude-plugin/marketplace.json", "declaredAgents": ["claude-code"],
+    "docsUrl": "https://github.com/anthropics/skills#readme"
+  },
+  {
+    "id": "k-dense", "label": "K-Dense", "repo": "K-Dense-AI/scientific-agent-skills",
+    "blurb": "K-Dense 維護的科學研究與資料分析 skills。", "kind": "community",
+    "skillsDir": "skills", "layout": "standard", "namespace": false,
+    "exclude": ["docx", "pdf", "pptx", "xlsx"], "declaredAgents": ["claude-code", "codex", "gemini-cli", "cursor"],
+    "docsUrl": "https://github.com/K-Dense-AI/scientific-agent-skills#readme"
+  },
+  {
+    "id": "openai", "label": "OpenAI Plugins", "repo": "openai/plugins",
+    "blurb": "OpenAI 官方 plugin 範例集；本期選入 Notion 與 Figma 工作流程，需連同 plugin 使用。", "kind": "official",
+    "skillsDir": "plugins", "layout": "plugins", "namespace": true,
+    "includePlugins": ["notion", "figma"], "declaredAgents": ["codex"],
+    "docsUrl": "https://github.com/openai/plugins#readme"
+  },
+  {
+    "id": "vercel", "label": "Vercel", "repo": "vercel-labs/agent-skills",
+    "blurb": "Vercel 維護的 React、網頁介面、效能與開發工作流程。", "kind": "official",
+    "skillsDir": "skills", "layout": "standard", "namespace": true,
+    "declaredAgents": [], "docsUrl": "https://github.com/vercel-labs/agent-skills#readme"
+  },
+  {
+    "id": "huggingface", "label": "Hugging Face", "repo": "huggingface/skills",
+    "blurb": "Hugging Face 發布的模型、資料集與機器學習工作流程。", "kind": "official",
+    "skillsDir": "skills", "layout": "standard", "namespace": true,
+    "declaredAgents": ["claude-code", "codex", "gemini-cli", "cursor"],
+    "docsUrl": "https://github.com/huggingface/skills#installation"
+  }
+]

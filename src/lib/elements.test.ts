@@ -55,6 +55,17 @@ describe("buildElements", () => {
     expect(els[1].category.code).toBe("BIO");
   });
 
+  it("falls back to the upstream name when the zh name has no Latin letters", () => {
+    const zh = { ...skill("web-design-guidelines", "網頁介面設計準則", "development") };
+    zh.upstream = { ...zh.upstream, name: "web-design-guidelines" };
+    expect(buildElements([zh], CATEGORIES)[0].symbol).toBe("We");
+  });
+
+  it("gives every catalog element a real symbol", () => {
+    const missing = buildElements(SKILLS, CATEGORIES).filter((e) => e.symbol === "?").map((e) => e.skill.slug);
+    expect(missing).toEqual([]);
+  });
+
   it("covers the whole catalog exactly once with unique numbers", () => {
     const els = buildElements(SKILLS, CATEGORIES);
     expect(els).toHaveLength(SKILLS.length);

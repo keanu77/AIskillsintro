@@ -29,7 +29,7 @@ const REPOS = {
 
 describe("AGENTS", () => {
   it("covers Claude Code, Codex, Gemini CLI and Grok with their skills CLI ids", () => {
-    expect(AGENTS.map((a) => a.cliId)).toEqual(["claude-code", "codex", "gemini-cli", "grok"]);
+    expect(AGENTS.map((a) => a.cliId)).toEqual(["claude-code", "codex", "gemini-cli", "cursor", "grok"]);
   });
 });
 
@@ -37,7 +37,7 @@ describe("buildInstallGuide", () => {
   it("uses the upstream repo and frontmatter name in the npx skills command", () => {
     const guide = buildInstallGuide(kdense, "codex", REPOS);
     expect(guide.command).toBe(
-      "npx skills add K-Dense-AI/scientific-agent-skills --skill scanpy -g -a codex -y",
+      "npx skills add K-Dense-AI/scientific-agent-skills --skill scanpy -g -a codex",
     );
   });
 
@@ -46,7 +46,8 @@ describe("buildInstallGuide", () => {
     expect(paths[0]).toContain("~/.claude/skills/scanpy");
     expect(paths[1]).toContain("~/.agents/skills/scanpy");
     expect(paths[2]).toContain("~/.agents/skills/scanpy");
-    expect(paths[3]).toContain("~/.grok/skills/scanpy");
+    expect(paths[3]).toContain("~/.cursor/skills/scanpy");
+    expect(paths[4]).toContain("~/.grok/skills/scanpy");
     expect(paths[0]).toContain("K-Dense-AI/scientific-agent-skills.git");
     expect(paths[0]).toContain("skills/scanpy");
   });
@@ -61,6 +62,28 @@ describe("buildInstallGuide", () => {
 
   it("rejects unknown agents", () => {
     // @ts-expect-error — runtime guard for bad input
-    expect(() => buildInstallGuide(kdense, "cursor", REPOS)).toThrow(/Unknown agent/);
+    expect(() => buildInstallGuide(kdense, "unknown", REPOS)).toThrow(/Unknown agent/);
+  });
+
+  it("keeps plugin dependencies together instead of offering a partial skill copy", () => {
+    const bundled: UpstreamSkill = { ...kdense, source: "openai", installMode: "plugin", plugin: "notion" };
+    const repos = { ...REPOS, openai: "openai/plugins" };
+    expect(buildInstallGuide(bundled, "codex", repos)).toMatchObject({ command: null, manual: null, plugin: "/plugins" });
+    expect(buildInstallGuide(bundled, "claude-code", repos)).toMatchObject({ command: null, manual: null, plugin: null });
+  });
+
+  it("preserves nested paths and quotes remote frontmatter names", () => {
+    const nested = { ...kdense, path: "skills/.curated/scanpy", name: "$(touch /tmp/evil)" };
+    const guide = buildInstallGuide(nested, "codex", REPOS);
+    expect(guide.manual).toContain("skills/.curated/scanpy");
+    expect(guide.command).toContain("--skill '$(touch /tmp/evil)'");
+    expect(() => buildInstallGuide({ ...kdense, path: "../outside" }, "codex", REPOS)).toThrow(/Invalid skill path/);
+  });
+
+  it("isolates manual checkouts and stops copying if clone fails", () => {
+    const guide = buildInstallGuide(kdense, "codex", REPOS);
+    expect(guide.manual).toContain('skill_checkout=$(mktemp -d) &&');
+    expect(guide.manual).toContain('.git "$skill_checkout" &&');
+    expect(guide.manual).toContain('cp -R "$skill_checkout/skills/scanpy/." ~/.agents/skills/scanpy');
   });
 });

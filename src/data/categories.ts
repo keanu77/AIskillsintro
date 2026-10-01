@@ -13,6 +13,14 @@ export const CATEGORIES: Category[] = [
     color: "#F4D35E",
   },
   {
+    id: "development",
+    code: "DEV",
+    label: "跨平台開發與設計",
+    shortLabel: "開發與設計",
+    description: "網頁效能、介面設計、程式架構與設計工具整合",
+    color: "#B9CDF5",
+  },
+  {
     id: "databases",
     code: "DB",
     label: "資料庫存取",
