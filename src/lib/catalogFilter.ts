@@ -3,14 +3,18 @@ import type { AgentId, CategoryId, Skill, SourceId } from "@/data/types";
 import { SOURCE_IDS, declaredAgents } from "@/data/sources";
 import { AGENTS } from "./installCommands";
 
+/** How the catalog is shown; not a filter, but shared in the URL like one. */
+export type CatalogView = "table" | "list";
+
 export interface CatalogFilters {
   query: string;
   category: CategoryId | null;
   source: SourceId | null;
   agent: AgentId | null;
+  view: CatalogView;
 }
 
-export const EMPTY_FILTERS: CatalogFilters = { query: "", category: null, source: null, agent: null };
+export const EMPTY_FILTERS: CatalogFilters = { query: "", category: null, source: null, agent: null, view: "table" };
 
 const CATEGORY_IDS = new Set<string>(CATEGORIES.map((c) => c.id));
 
@@ -56,6 +60,7 @@ export function parseFilters(search: string): CatalogFilters {
     category: category && CATEGORY_IDS.has(category) ? (category as CategoryId) : null,
     source: SOURCE_IDS.find((id) => id === source) ?? null,
     agent: AGENTS.find((agent) => agent.id === params.get("agent"))?.id ?? null,
+    view: params.get("view") === "list" ? "list" : "table",
   };
 }
 
@@ -66,6 +71,7 @@ export function serializeFilters(filters: CatalogFilters): string {
   if (filters.category) params.set("category", filters.category);
   if (filters.source) params.set("source", filters.source);
   if (filters.agent) params.set("agent", filters.agent);
+  if (filters.view === "list") params.set("view", "list");
   const qs = params.toString();
   return qs ? `?${qs}` : "";
 }
