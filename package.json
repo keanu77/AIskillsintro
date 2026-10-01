@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "test": "vitest run",
-    "sync": "node scripts/sync-skills.mjs"
+    "sync": "node scripts/sync-skills.mjs",
+    "e2e": "playwright test"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.19",
@@ -19,6 +20,8 @@
     "remark-gfm": "^4.0.1"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@playwright/test": "^1.63.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^22.20.4",
     "@types/react": "^19",
