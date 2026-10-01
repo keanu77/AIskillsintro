@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { CATEGORIES } from "@/data/categories";
 import { SOURCES } from "@/data/sources";
 import type { AgentId, CategoryId, SourceId } from "@/data/types";
@@ -21,6 +22,9 @@ const small = (active: boolean) => `${pill(active)} !min-h-9 !px-2.5 font-mono !
 
 /** Group legend doubling as the category filter, plus source and platform filters. */
 export default function Legend({ filters, counts, onChange }: LegendProps) {
+  // On phones the filters collapse behind a toggle so the table reaches the first screen.
+  const [open, setOpen] = useState(false);
+  const active = [filters.category, filters.source, filters.agent].filter(Boolean).length;
   const sources: { id: SourceId | null; label: string }[] = [
     { id: null, label: "全部來源" },
     ...SOURCES.map((s) => ({ id: s.id, label: s.label })),
@@ -31,7 +35,19 @@ export default function Legend({ filters, counts, onChange }: LegendProps) {
   ];
 
   return (
-    <div id="groups" className="flex scroll-mt-4 flex-col gap-3">
+    <div id="groups" className="scroll-mt-4">
+      <button
+        type="button"
+        aria-expanded={open}
+        aria-controls="filter-panel"
+        onClick={() => setOpen((v) => !v)}
+        className="inline-flex min-h-11 items-center gap-2 border-2 border-ink px-4 text-sm font-bold sm:hidden"
+      >
+        篩選：族、來源、平台
+        {active > 0 && <span className="bg-ink px-1.5 font-mono text-xs text-paper">{active}</span>}
+        <span aria-hidden>{open ? "▴" : "▾"}</span>
+      </button>
+      <div id="filter-panel" className={`${open ? "flex" : "hidden"} mt-3 flex-col gap-3 sm:mt-0 sm:flex`}>
       <div role="group" aria-label="依族篩選" className="-ml-3 flex flex-wrap gap-1">
         {CATEGORIES.map((c) => {
           const active = filters.category === c.id;
@@ -67,6 +83,7 @@ export default function Legend({ filters, counts, onChange }: LegendProps) {
         </div>
       </div>
       <p className="font-mono text-xs text-ink-muted">平台依來源文件宣告篩選；實際效果仍須依任務確認。</p>
+      </div>
     </div>
   );
 }

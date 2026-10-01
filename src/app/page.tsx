@@ -31,19 +31,19 @@ export default function Home() {
     <>
       <SiteHeader>
         <nav aria-label="主選單" className="flex gap-7 text-[15px]">
-          <a href="#groups" className="hover:text-accent">九大族</a>
+          <a href="#groups" className="hover:text-accent">篩選</a>
           <a href="#table" className="hover:text-accent">元素表</a>
         </nav>
       </SiteHeader>
 
       <main>
-        <section className="mx-auto flex max-w-[1240px] flex-wrap items-end justify-between gap-10 px-5 pt-10 pb-8 sm:px-10 sm:pt-12">
+        <section className="mx-auto flex max-w-[1240px] flex-wrap items-end justify-between gap-6 px-5 sm:gap-10 pt-6 pb-6 sm:px-10 sm:pt-12 sm:pb-8">
           <div className="min-w-0 flex-[1_1_520px]">
-            <h1 className="font-wider text-[clamp(48px,7vw,92px)] font-black leading-none tracking-[-0.02em]">
+            <h1 className="font-wider text-[clamp(40px,7vw,92px)] font-black leading-none tracking-[-0.02em]">
               Agent Skills
               <span className="mt-2 block font-sans tracking-normal">週期表</span>
             </h1>
-            <p className="mt-6 max-w-[520px] text-lg leading-relaxed text-ink-soft">
+            <p className="mt-4 max-w-[520px] text-base leading-relaxed text-ink-soft sm:mt-6 sm:text-lg">
               {SKILLS.length} 個元素、{CATEGORIES.length} 個族。點一格就能看用途，並取得 Claude Code、Codex、Gemini CLI、Cursor、Grok 的安裝指令。
             </p>
           </div>
