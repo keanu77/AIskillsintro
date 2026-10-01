@@ -11,3 +11,8 @@ export function getSkillContent(slug: string): string | null {
   if (!fs.existsSync(filePath)) return null;
   return fs.readFileSync(filePath, "utf-8").trim();
 }
+
+export function getSkillAttribution(slug: string): string | null {
+  const filePath = path.join(process.cwd(), "content/licenses", `${slug}.txt`);
+  return fs.existsSync(filePath) ? fs.readFileSync(filePath, "utf-8").trim() : null;
+}

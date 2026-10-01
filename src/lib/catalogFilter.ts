@@ -1,15 +1,17 @@
 import { CATEGORIES } from "@/data/categories";
-import type { CategoryId, Skill, SourceId } from "@/data/types";
+import type { AgentId, CategoryId, Skill, SourceId } from "@/data/types";
+import { SOURCE_IDS, declaredAgents } from "@/data/sources";
+import { AGENTS } from "./installCommands";
 
 export interface CatalogFilters {
   query: string;
   category: CategoryId | null;
   source: SourceId | null;
+  agent: AgentId | null;
 }
 
-export const EMPTY_FILTERS: CatalogFilters = { query: "", category: null, source: null };
+export const EMPTY_FILTERS: CatalogFilters = { query: "", category: null, source: null, agent: null };
 
-const SOURCE_IDS: readonly SourceId[] = ["anthropic", "k-dense"];
 const CATEGORY_IDS = new Set<string>(CATEGORIES.map((c) => c.id));
 
 function terms(query: string): string[] {
@@ -17,7 +19,7 @@ function terms(query: string): string[] {
 }
 
 export function hasActiveFilters(filters: CatalogFilters): boolean {
-  return terms(filters.query).length > 0 || filters.category !== null || filters.source !== null;
+  return terms(filters.query).length > 0 || filters.category !== null || filters.source !== null || filters.agent !== null;
 }
 
 export function filterSkills(skills: Skill[], filters: CatalogFilters): Skill[] {
@@ -25,6 +27,7 @@ export function filterSkills(skills: Skill[], filters: CatalogFilters): Skill[] 
   return skills.filter((s) => {
     if (filters.category && s.category !== filters.category) return false;
     if (filters.source && s.upstream.source !== filters.source) return false;
+    if (filters.agent && !declaredAgents(s.upstream).includes(filters.agent)) return false;
     const haystack = `${s.name} ${s.slug} ${s.description}`.toLowerCase();
     return wanted.every((t) => haystack.includes(t));
   });
@@ -39,6 +42,7 @@ export function parseFilters(search: string): CatalogFilters {
     query: params.get("q")?.trim() ?? "",
     category: category && CATEGORY_IDS.has(category) ? (category as CategoryId) : null,
     source: SOURCE_IDS.find((id) => id === source) ?? null,
+    agent: AGENTS.find((agent) => agent.id === params.get("agent"))?.id ?? null,
   };
 }
 
@@ -48,6 +52,7 @@ export function serializeFilters(filters: CatalogFilters): string {
   if (query) params.set("q", query);
   if (filters.category) params.set("category", filters.category);
   if (filters.source) params.set("source", filters.source);
+  if (filters.agent) params.set("agent", filters.agent);
   const qs = params.toString();
   return qs ? `?${qs}` : "";
 }

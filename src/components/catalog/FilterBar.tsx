@@ -2,7 +2,8 @@
 
 import { CATEGORIES } from "@/data/categories";
 import { SOURCES } from "@/data/sources";
-import type { CategoryId, SourceId } from "@/data/types";
+import type { AgentId, CategoryId, SourceId } from "@/data/types";
+import { AGENTS } from "@/lib/installCommands";
 import { EMPTY_FILTERS, hasActiveFilters, type CatalogFilters } from "@/lib/catalogFilter";
 
 interface FilterBarProps {
@@ -57,6 +58,20 @@ export default function FilterBar({ filters, onChange }: FilterBarProps) {
             ))}
           </select>
         </label>
+
+        <label className="flex items-center gap-2 text-sm text-slate-600">
+          <span>平台</span>
+          <select
+            aria-label="平台（來源文件宣告支援）"
+            value={filters.agent ?? ""}
+            onChange={(e) => onChange({ ...filters, agent: (e.target.value || null) as AgentId | null })}
+            className="max-w-full rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-sm text-slate-800"
+          >
+            <option value="">全部平台</option>
+            {AGENTS.map((agent) => <option key={agent.id} value={agent.id}>{agent.label}</option>)}
+          </select>
+        </label>
+        <span className="text-xs text-slate-500">依來源文件宣告篩選；實際效果仍須依任務確認。</span>
 
         {hasActiveFilters(filters) && (
           <button

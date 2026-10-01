@@ -9,6 +9,8 @@
     "lint": "eslint",
     "test": "vitest run",
     "sync": "node scripts/sync-skills.mjs",
+    "refresh": "node scripts/weekly-update.mjs",
+    "typecheck": "tsc --noEmit",
     "e2e": "playwright test"
   },
   "dependencies": {

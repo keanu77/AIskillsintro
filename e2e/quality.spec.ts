@@ -10,6 +10,10 @@ const PAGES = [
   "/skills/document-skills--pdf",
   "/skills/claude-api",
   "/skills/database-lookup",
+  "/updates",
+  "/skills/openai--notion--notion-knowledge-capture",
+  "/skills/huggingface--huggingface-gradio",
+  "/skills/vercel--react-best-practices",
   "/skills/does-not-exist",
 ];
 

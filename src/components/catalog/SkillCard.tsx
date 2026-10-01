@@ -1,11 +1,15 @@
 import Link from "next/link";
 import type { Skill } from "@/data/skills";
+import { getSource, declaredAgents } from "@/data/sources";
+import { AGENTS } from "@/lib/installCommands";
 
 interface SkillCardProps {
   skill: Skill;
 }
 
 export default function SkillCard({ skill }: SkillCardProps) {
+  const source = getSource(skill.upstream.source);
+  const supported = declaredAgents(skill.upstream);
   return (
     <Link
       href={`/skills/${skill.slug}`}
@@ -22,9 +26,13 @@ export default function SkillCard({ skill }: SkillCardProps) {
       <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-500 line-clamp-3">
         {skill.description}
       </p>
+      <div className="mt-4 border-t border-slate-100 pt-3 text-xs leading-6 text-slate-500">
+        <p className="font-medium text-slate-700">{source.label}</p>
+        <p>{supported.length > 0 ? AGENTS.filter((a) => supported.includes(a.id)).map((a) => a.label).join(" · ") : "平台相容性待確認"}</p>
+      </div>
 
       {/* Bottom action */}
-      <div className="mt-4 flex items-center gap-1.5 text-sm font-medium text-blue-500 translate-x-0 opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100">
+      <div className="mt-3 flex items-center gap-1.5 text-sm font-medium text-blue-600 transition-all duration-300 group-hover:translate-x-1">
         查看詳情
         <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />

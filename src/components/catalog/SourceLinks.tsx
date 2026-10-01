@@ -8,7 +8,7 @@ export default function SourceLinks() {
         <h2 className="mb-6 text-center text-sm font-semibold uppercase tracking-wider text-slate-500">
           Skills 來源
         </h2>
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {SOURCES.map((source) => {
             const count = SKILLS.filter((s) => s.upstream.source === source.id).length;
             return (
@@ -37,7 +37,7 @@ export default function SourceLinks() {
             );
           })}
         </div>
-        <p className="mt-4 text-center text-xs text-slate-500">資料同步於 {SYNCED_AT}</p>
+        <p className="mt-4 text-center text-xs leading-6 text-slate-500">每週一台灣時間 09:00 檢查來源；審閱更新後發布。本站資料同步於 {SYNCED_AT}。</p>
       </div>
     </section>
   );

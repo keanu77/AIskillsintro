@@ -76,7 +76,7 @@ export default function SkillDetailHero({ skill }: SkillDetailHeroProps) {
             </svg>
           </a>
           <a
-            href={skillFileUrl(source.repo, source.sha, skill.upstream.dir)}
+            href={skillFileUrl(source.repo, source.sha, skill.upstream.dir, skill.upstream.path)}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-base font-semibold text-slate-200 ring-1 ring-white/20 transition hover:bg-white/10 hover:text-white"

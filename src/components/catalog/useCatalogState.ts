@@ -5,6 +5,7 @@ import { CATEGORIES } from "@/data/categories";
 import type { CategoryId } from "@/data/types";
 import {
   EMPTY_FILTERS,
+  hasActiveFilters,
   parseFilters,
   serializeFilters,
   type CatalogFilters,
@@ -32,7 +33,7 @@ export function useCatalogState() {
   const setFilters = useCallback((next: CatalogFilters) => {
     setFiltersState(next);
     const { pathname, hash } = window.location;
-    window.history.replaceState(null, "", `${pathname}${serializeFilters(next)}${hash}`);
+    window.history.replaceState(null, "", `${pathname}${serializeFilters(next)}${hasActiveFilters(next) ? "" : hash}`);
   }, []);
 
   const toggle = useCallback((id: CategoryId) => {
@@ -66,6 +67,7 @@ export function useCatalogState() {
     setFiltersState(fromUrl);
 
     const openFromHash = () => {
+      if (hasActiveFilters(parseFilters(window.location.search))) return;
       const id = categoryFromHash();
       if (id) jumpTo(id);
     };

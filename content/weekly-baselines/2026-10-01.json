@@ -1,0 +1,1960 @@
+{
+  "date": "2026-10-01",
+  "skills": [
+    {
+      "slug": "academy-guide",
+      "source": "anthropic",
+      "dir": "academy-guide",
+      "name": "academy-guide",
+      "license": "Complete terms in LICENSE.txt",
+      "plugin": "academy-guide",
+      "mirrored": true,
+      "bodyHash": "673dc40f0cc3aff5b8df9f0b2534e9bda5ebec7a80946ac22dbcb305b3814e77"
+    },
+    {
+      "slug": "algorithmic-art",
+      "source": "anthropic",
+      "dir": "algorithmic-art",
+      "name": "algorithmic-art",
+      "license": "Complete terms in LICENSE.txt",
+      "plugin": "example-skills",
+      "mirrored": true,
+      "bodyHash": "938afe2a1db40471f400fe006da914e2318d793b17714b24ff8c692522566117"
+    },
+    {
+      "slug": "brand-guidelines",
+      "source": "anthropic",
+      "dir": "brand-guidelines",
+      "name": "brand-guidelines",
+      "license": "Complete terms in LICENSE.txt",
+      "plugin": "example-skills",
+      "mirrored": true,
+      "bodyHash": "e85ae675d065886dd2ed593df03812626fc8a707b99a91ec02e548a037d41c53"
+    },
+    {
+      "slug": "canvas-design",
+      "source": "anthropic",
+      "dir": "canvas-design",
+      "name": "canvas-design",
+      "license": "Complete terms in LICENSE.txt",
+      "plugin": "example-skills",
+      "mirrored": true,
+      "bodyHash": "15d359f5b1bc79ed30d6dd43f8ccdf381912d968f4b8e9703ff369543a998500"
+    },
+    {
+      "slug": "claude-api",
+      "source": "anthropic",
+      "dir": "claude-api",
+      "name": "claude-api",
+      "license": "Complete terms in LICENSE.txt",
+      "plugin": "claude-api",
+      "mirrored": true,
+      "bodyHash": "144689d0fda41466e6e46a242da540d8257f97699afde4290e8707e1390145df"
+    },
+    {
+      "slug": "discernment-nudge",
+      "source": "anthropic",
+      "dir": "discernment-nudge",
+      "name": "discernment-nudge",
+      "license": "Complete terms in LICENSE.txt",
+      "plugin": "discernment-nudge",
+      "mirrored": true,
+      "bodyHash": "ab9ef55f4d41b7d1d672bdb325b74d8f8a698909c11c48ab3c3d6b5cb07d7854"
+    },
+    {
+      "slug": "doc-coauthoring",
+      "source": "anthropic",
+      "dir": "doc-coauthoring",
+      "name": "doc-coauthoring",
+      "license": null,
+      "plugin": "example-skills",
+      "mirrored": true,
+      "bodyHash": "c05d7c35479b03680fd6daa30d3c78abd2156e9d3d25b4bb5b1155258067ab77"
+    },
+    {
+      "slug": "document-skills--docx",
+      "source": "anthropic",
+      "dir": "docx",
+      "name": "docx",
+      "license": "Proprietary. LICENSE.txt has complete terms",
+      "plugin": "document-skills",
+      "mirrored": false
+    },
+    {
+      "slug": "frontend-design",
+      "source": "anthropic",
+      "dir": "frontend-design",
+      "name": "frontend-design",
+      "license": "Complete terms in LICENSE.txt",
+      "plugin": "example-skills",
+      "mirrored": true,
+      "bodyHash": "9a431b51da4772b46331b8b630da283bad07b87c7569f16a54f3e0e16f8784d2"
+    },
+    {
+      "slug": "internal-comms",
+      "source": "anthropic",
+      "dir": "internal-comms",
+      "name": "internal-comms",
+      "license": "Complete terms in LICENSE.txt",
+      "plugin": "example-skills",
+      "mirrored": true,
+      "bodyHash": "fe59c7523c61b77cdd0530c3c756fa95acb8809b903e12576362b6afae002b41"
+    },
+    {
+      "slug": "mcp-builder",
+      "source": "anthropic",
+      "dir": "mcp-builder",
+      "name": "mcp-builder",
+      "license": "Complete terms in LICENSE.txt",
+      "plugin": "example-skills",
+      "mirrored": true,
+      "bodyHash": "6eaabfcf59c08178e7c6a7ac2ec217db2eaeda157962f8f32b7a18ea3ef3d4d9"
+    },
+    {
+      "slug": "document-skills--pdf",
+      "source": "anthropic",
+      "dir": "pdf",
+      "name": "pdf",
+      "license": "Proprietary. LICENSE.txt has complete terms",
+      "plugin": "document-skills",
+      "mirrored": false
+    },
+    {
+      "slug": "document-skills--pptx",
+      "source": "anthropic",
+      "dir": "pptx",
+      "name": "pptx",
+      "license": "Proprietary. LICENSE.txt has complete terms",
+      "plugin": "document-skills",
+      "mirrored": false
+    },
+    {
+      "slug": "skill-creator",
+      "source": "anthropic",
+      "dir": "skill-creator",
+      "name": "skill-creator",
+      "license": null,
+      "plugin": "example-skills",
+      "mirrored": true,
+      "bodyHash": "0b58e93f8aeb0a23fbf9f7a947fdd235dbdd9fc7efc012931eaf6d57e0c70f08"
+    },
+    {
+      "slug": "slack-gif-creator",
+      "source": "anthropic",
+      "dir": "slack-gif-creator",
+      "name": "slack-gif-creator",
+      "license": "Complete terms in LICENSE.txt",
+      "plugin": "example-skills",
+      "mirrored": true,
+      "bodyHash": "4eef4f18aa71b67c1420aa0837cdd0d2d9ad62db4879d1fdf89425bbfde332c2"
+    },
+    {
+      "slug": "theme-factory",
+      "source": "anthropic",
+      "dir": "theme-factory",
+      "name": "theme-factory",
+      "license": "Complete terms in LICENSE.txt",
+      "plugin": "example-skills",
+      "mirrored": true,
+      "bodyHash": "afc4d366cec5f2882dd2163c0f7a938750d76152ac9462c60daeeb0a10e09a09"
+    },
+    {
+      "slug": "web-artifacts-builder",
+      "source": "anthropic",
+      "dir": "web-artifacts-builder",
+      "name": "web-artifacts-builder",
+      "license": "Complete terms in LICENSE.txt",
+      "plugin": "example-skills",
+      "mirrored": true,
+      "bodyHash": "1f3a1d20f94b078693370d9459134fbceaba65b67619c88d04fc85b11fc4f79e"
+    },
+    {
+      "slug": "webapp-testing",
+      "source": "anthropic",
+      "dir": "webapp-testing",
+      "name": "webapp-testing",
+      "license": "Complete terms in LICENSE.txt",
+      "plugin": "example-skills",
+      "mirrored": true,
+      "bodyHash": "674356ed06866ff4b6067b756513c048d8aaec6b3a77c4cf43f18f461e1b7b9b"
+    },
+    {
+      "slug": "document-skills--xlsx",
+      "source": "anthropic",
+      "dir": "xlsx",
+      "name": "xlsx",
+      "license": "Proprietary. LICENSE.txt has complete terms",
+      "plugin": "document-skills",
+      "mirrored": false
+    },
+    {
+      "slug": "13c-metabolic-flux",
+      "source": "k-dense",
+      "dir": "13c-metabolic-flux",
+      "name": "13c-metabolic-flux",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "b1430251d9c6aba1c2d146ce9f51365de5cd3e04813eab892c1578c776af5a33"
+    },
+    {
+      "slug": "adaptyv",
+      "source": "k-dense",
+      "dir": "adaptyv",
+      "name": "adaptyv",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "a82662e777239af704840bdf4baf838200acca5189a7dccc6970a0800d0fd712"
+    },
+    {
+      "slug": "aeon",
+      "source": "k-dense",
+      "dir": "aeon",
+      "name": "aeon",
+      "license": "BSD-3-Clause license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "2aa9257eb41bc7d65eecd4ae03a0aa47342e571f53feb0e5e2c56653e264679f"
+    },
+    {
+      "slug": "alphagenome",
+      "source": "k-dense",
+      "dir": "alphagenome",
+      "name": "alphagenome",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "a1085a28b4f8b83ee73c0597e857f02b21721449a66d2a3a787e73eb4df45ed2"
+    },
+    {
+      "slug": "analytical-method-validation",
+      "source": "k-dense",
+      "dir": "analytical-method-validation",
+      "name": "analytical-method-validation",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "75c02772847484afa2e27eda021c142ed22bf627597d109f358d0baa70a682f5"
+    },
+    {
+      "slug": "anndata",
+      "source": "k-dense",
+      "dir": "anndata",
+      "name": "anndata",
+      "license": "BSD-3-Clause license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "870ffa82cc5579b6980f212ca2ee32f7ca70459ba7365602b9742633096e34fe"
+    },
+    {
+      "slug": "arbor",
+      "source": "k-dense",
+      "dir": "arbor",
+      "name": "arbor",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "912c85d866f0868bfabc4da0bed85f618a0ed7f613e48fdd2d9c2395e1f1ccd0"
+    },
+    {
+      "slug": "arboreto",
+      "source": "k-dense",
+      "dir": "arboreto",
+      "name": "arboreto",
+      "license": "BSD-3-Clause license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "56291d78cddca7ed37d98ad0e066e1be2a43992d5ec6779f5436c39a07cb665b"
+    },
+    {
+      "slug": "astropy",
+      "source": "k-dense",
+      "dir": "astropy",
+      "name": "astropy",
+      "license": "BSD-3-Clause license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "c3682cf8dcc0c13ed5b68fee162c547a942a3278099ed19c8ef2300718b7038a"
+    },
+    {
+      "slug": "autoskill",
+      "source": "k-dense",
+      "dir": "autoskill",
+      "name": "autoskill",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "1634253e27c048ee801af919dc8f5c564ca1270580dccee63dc0bafb6f5bee01"
+    },
+    {
+      "slug": "benchling-integration",
+      "source": "k-dense",
+      "dir": "benchling-integration",
+      "name": "benchling-integration",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "35cec22a5027085b8d882e56111b1871ec3fccfe5dcd54cd7a082101bb385889"
+    },
+    {
+      "slug": "bgpt-paper-search",
+      "source": "k-dense",
+      "dir": "bgpt-paper-search",
+      "name": "bgpt-paper-search",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "987dbc8b5de11152389daa78c285e2266f6f34e91c9201ef63513786f5b8f9e4"
+    },
+    {
+      "slug": "bids",
+      "source": "k-dense",
+      "dir": "bids",
+      "name": "bids",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "3525962ad14982a306f504401fcf524cb4c60a6e093eff5145ea276cedccb13c"
+    },
+    {
+      "slug": "biopython",
+      "source": "k-dense",
+      "dir": "biopython",
+      "name": "biopython",
+      "license": "Biopython License Agreement",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "4423789997ce6373acf66ac902709a43ada781431bf4a76f9cec2254e731d335"
+    },
+    {
+      "slug": "bioservices",
+      "source": "k-dense",
+      "dir": "bioservices",
+      "name": "bioservices",
+      "license": "GPLv3 license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "148ebdc458b458f7261dcddd0fadb1299d689b5e16b5d9473c95419bdb10ff02"
+    },
+    {
+      "slug": "bulk-rnaseq",
+      "source": "k-dense",
+      "dir": "bulk-rnaseq",
+      "name": "bulk-rnaseq",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "ac200257b077f4e879b176a82466cdeb9b5eddf34e5211dc821071fa47da8b52"
+    },
+    {
+      "slug": "cantera",
+      "source": "k-dense",
+      "dir": "cantera",
+      "name": "cantera",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "0e979f2a3cbe40972f958493a39892f85acbde33ff618b45302da3c2b15c4cdf"
+    },
+    {
+      "slug": "cellprofiler",
+      "source": "k-dense",
+      "dir": "cellprofiler",
+      "name": "cellprofiler",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "20f565a6680ab548ff74ccf4d58a5a850a2c9e08839f36425324cb925290431a"
+    },
+    {
+      "slug": "cellxgene-census",
+      "source": "k-dense",
+      "dir": "cellxgene-census",
+      "name": "cellxgene-census",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "8806d0c5b086756e007e14d4f1e771ead71b05f1b834b27dc28f65bb36102d10"
+    },
+    {
+      "slug": "cirq",
+      "source": "k-dense",
+      "dir": "cirq",
+      "name": "cirq",
+      "license": "Apache-2.0 license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "d0451daa40a571884c5ec854df8d5ddbb4e5f91d4b8342af24c5dd102ceb05ac"
+    },
+    {
+      "slug": "citation-management",
+      "source": "k-dense",
+      "dir": "citation-management",
+      "name": "citation-management",
+      "license": "MIT License",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "59eb63a5538e19eef3ea8d42cc193457392dca52be619134014000850b5d3a05"
+    },
+    {
+      "slug": "clinical-decision-support",
+      "source": "k-dense",
+      "dir": "clinical-decision-support",
+      "name": "clinical-decision-support",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "f3098e6e482d32d797b789b6c8a14e7625d89708cf302383d89eb884df2bc7d8"
+    },
+    {
+      "slug": "clinical-reports",
+      "source": "k-dense",
+      "dir": "clinical-reports",
+      "name": "clinical-reports",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "cc47d328e7519271d54b8a9081067cfc54bb875eb19b9739b85eb0c9146bcb26"
+    },
+    {
+      "slug": "cobrapy",
+      "source": "k-dense",
+      "dir": "cobrapy",
+      "name": "cobrapy",
+      "license": "GPL-2.0 license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "687f3b9243d7eb5e2b4e39131a6be735db1ae4449a3f166edb63183c0e77a5b1"
+    },
+    {
+      "slug": "consciousness-council",
+      "source": "k-dense",
+      "dir": "consciousness-council",
+      "name": "consciousness-council",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "a4f5138f0ff45780f991229fe7a98015a55431b131a74629ddb41cc54d721876"
+    },
+    {
+      "slug": "dask",
+      "source": "k-dense",
+      "dir": "dask",
+      "name": "dask",
+      "license": "BSD-3-Clause license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "602314f3c6faa25e0715a6eaf0fc1be80e8a93e7b1b51a0fd104aa6a4bcca5ff"
+    },
+    {
+      "slug": "database-lookup",
+      "source": "k-dense",
+      "dir": "database-lookup",
+      "name": "database-lookup",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "0d904a7224102d66d0ca6858015283a1cd5725625604aa44313230ea508132c2"
+    },
+    {
+      "slug": "datalad",
+      "source": "k-dense",
+      "dir": "datalad",
+      "name": "datalad",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "029d24b52e412c6057fc6b8c3278d61ba18c25a93014f72877bde29ef339d080"
+    },
+    {
+      "slug": "datamol",
+      "source": "k-dense",
+      "dir": "datamol",
+      "name": "datamol",
+      "license": "Apache-2.0 license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "b82b2f371bbcb49e8062c3aa573a0db8a9465d7f1bad344cabade11547a1ab98"
+    },
+    {
+      "slug": "deepchem",
+      "source": "k-dense",
+      "dir": "deepchem",
+      "name": "deepchem",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "119865373279e81f44a6904e2459557ae0dd9cfb4c4e26a394acad3ba319784e"
+    },
+    {
+      "slug": "deepspot-m",
+      "source": "k-dense",
+      "dir": "deepspot-m",
+      "name": "deepspot-m",
+      "license": "PolyForm-Noncommercial-1.0.0",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "35ec9ebb17c53731d8d21f6142732f689364f7a41d1668966e4bbad4dd72e016"
+    },
+    {
+      "slug": "deeptools",
+      "source": "k-dense",
+      "dir": "deeptools",
+      "name": "deeptools",
+      "license": "BSD license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "add15824e45e7924641c17a70aff92ad3deaa881e28643a91c69d7d8189e0fca"
+    },
+    {
+      "slug": "depmap",
+      "source": "k-dense",
+      "dir": "depmap",
+      "name": "depmap",
+      "license": "CC-BY-4.0",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "4e0dba95ecfdfe79aaab63c583b6c968d0945c36f60b672276c13fa9dd6f5ff1"
+    },
+    {
+      "slug": "dhdna-profiler",
+      "source": "k-dense",
+      "dir": "dhdna-profiler",
+      "name": "dhdna-profiler",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "bfa4cd9cc7d71f36f16171db9c761877955c9a122357c6438921c1f17a7347f4"
+    },
+    {
+      "slug": "diffdock",
+      "source": "k-dense",
+      "dir": "diffdock",
+      "name": "diffdock",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "5c71122b6024beb81eccf79c8f76dac070cb3ee8d6c7c30559b387d2376a5af5"
+    },
+    {
+      "slug": "dnanexus-integration",
+      "source": "k-dense",
+      "dir": "dnanexus-integration",
+      "name": "dnanexus-integration",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "2d81d28b5bbef408d1153552e0f350046ffdf61e59c08e95f0d015553609a69c"
+    },
+    {
+      "slug": "esm",
+      "source": "k-dense",
+      "dir": "esm",
+      "name": "esm",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "d414f44b91f154a6f3b2afaa0c90f245ec02d757ade96af7985f2b3737a8a158"
+    },
+    {
+      "slug": "etetoolkit",
+      "source": "k-dense",
+      "dir": "etetoolkit",
+      "name": "etetoolkit",
+      "license": "GPL-3.0-or-later",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "09548aa4ffd75dd5c43716232f51e27ae19a8ae3da4e84a7ea09a3c680e68f4f"
+    },
+    {
+      "slug": "exa-search",
+      "source": "k-dense",
+      "dir": "exa-search",
+      "name": "exa-search",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "fc5b191649375509686a2713abafc0c50208dca21e5e1d053fc64fd4dba92afe"
+    },
+    {
+      "slug": "experimental-design",
+      "source": "k-dense",
+      "dir": "experimental-design",
+      "name": "experimental-design",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "02b180fa5ee2cc0ea20f470b4605fc8eb01ca7d937d5e43b691e8ad57d7f4e3f"
+    },
+    {
+      "slug": "exploratory-data-analysis",
+      "source": "k-dense",
+      "dir": "exploratory-data-analysis",
+      "name": "exploratory-data-analysis",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "a2f3c4c79e03acb71fe062fa10e69e1f82cf3c48a2897794943b662be049304c"
+    },
+    {
+      "slug": "fictiv",
+      "source": "k-dense",
+      "dir": "fictiv",
+      "name": "fictiv",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "78e9cb4a63e039b1117774c7d579d0f5eca2e17084243401f781bd9b19796bcc"
+    },
+    {
+      "slug": "flowio",
+      "source": "k-dense",
+      "dir": "flowio",
+      "name": "flowio",
+      "license": "BSD-3-Clause license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "baaa394a6675de0e84738f3d91ebc24095fc426b0482e8f7ad84a95c1182b727"
+    },
+    {
+      "slug": "flowkit",
+      "source": "k-dense",
+      "dir": "flowkit",
+      "name": "flowkit",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "8d04360ba536ae25ca3bc85136419fde23a7c5b4f845ad11bb45ac9fd9ee2788"
+    },
+    {
+      "slug": "fluidsim",
+      "source": "k-dense",
+      "dir": "fluidsim",
+      "name": "fluidsim",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "e1d2cf9a61cc37cb667ec62aef7ab9a47b0219abe6226de47c82cc4d4e5b466a"
+    },
+    {
+      "slug": "folklore-variant-evidence",
+      "source": "k-dense",
+      "dir": "folklore-variant-evidence",
+      "name": "folklore-variant-evidence",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "3b740c5404e2cb96a6d4f4862c4fd764ceb69c2a4280a50b5bdf0728ebe335ed"
+    },
+    {
+      "slug": "generate-image",
+      "source": "k-dense",
+      "dir": "generate-image",
+      "name": "generate-image",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "5d474629295caaa8c5d2e842a4f4bab6d51760d5bb41a36531e1d5a0e4120c7a"
+    },
+    {
+      "slug": "geniml",
+      "source": "k-dense",
+      "dir": "geniml",
+      "name": "geniml",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "085567d37d0598db2f57a7609efd7cbe980703831784446b1f231633526e0d5d"
+    },
+    {
+      "slug": "genomic-coordinates",
+      "source": "k-dense",
+      "dir": "genomic-coordinates",
+      "name": "genomic-coordinates",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "64a9501d85cdf6311be04b3a4296eeae8e2d3d0d2bec13bcf2d720f6d6e85fab"
+    },
+    {
+      "slug": "genomic-intelligence",
+      "source": "k-dense",
+      "dir": "genomic-intelligence",
+      "name": "genomic-intelligence",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "4e312769fbf46b501d5a9f993c1b0c25d65c181534209fc1c22f3b88910d5e66"
+    },
+    {
+      "slug": "geomaster",
+      "source": "k-dense",
+      "dir": "geomaster",
+      "name": "geomaster",
+      "license": "MIT License",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "648b81c14bb08a56a73fe46a00156e295202847fcaa1d02927eac3a21c83a39b"
+    },
+    {
+      "slug": "geopandas",
+      "source": "k-dense",
+      "dir": "geopandas",
+      "name": "geopandas",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "74d91b934932de2bee86d3b320e2fac3f430ad91c9cc0c966e5cefe9cd26b93d"
+    },
+    {
+      "slug": "get-available-resources",
+      "source": "k-dense",
+      "dir": "get-available-resources",
+      "name": "get-available-resources",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "27b7116517506ab4f7ce310181b6a4c9575efeb336ebb2b05d098ff5986ede1b"
+    },
+    {
+      "slug": "gget",
+      "source": "k-dense",
+      "dir": "gget",
+      "name": "gget",
+      "license": "BSD-2-Clause license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "0dc73e7fb22a445c4ffc66547f64ac6ab3343210d8f391cfc343f3b51fd87188"
+    },
+    {
+      "slug": "ginkgo-cloud-lab",
+      "source": "k-dense",
+      "dir": "ginkgo-cloud-lab",
+      "name": "ginkgo-cloud-lab",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "33a45d9c4243ae033e55930cc4f7752501bd48ba2f3cc210e5639e6ab31ecd9c"
+    },
+    {
+      "slug": "glycoengineering",
+      "source": "k-dense",
+      "dir": "glycoengineering",
+      "name": "glycoengineering",
+      "license": "Unknown",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "e970015cf1122e2f878b87c6bc0d5df0aae146b0cbc6c86b75f7befad4fc2e54"
+    },
+    {
+      "slug": "gtars",
+      "source": "k-dense",
+      "dir": "gtars",
+      "name": "gtars",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "bc38a6313d999f44b42b792dd3508c0f5138d028cc9674c4eb2bbd976be75c46"
+    },
+    {
+      "slug": "histolab",
+      "source": "k-dense",
+      "dir": "histolab",
+      "name": "histolab",
+      "license": "Apache-2.0 license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "7e47a69a1936cfa0970c4024e61c2d1c9f9f49bff14bef5d29d4323fb6a289ef"
+    },
+    {
+      "slug": "hugging-science",
+      "source": "k-dense",
+      "dir": "hugging-science",
+      "name": "hugging-science",
+      "license": null,
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "24952d0d73ce3f7f5e9a92eb2ddf15c4360344bfcd5a4da6c7a4a06578b1ccfa"
+    },
+    {
+      "slug": "hypogenic",
+      "source": "k-dense",
+      "dir": "hypogenic",
+      "name": "hypogenic",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "54c85b8352dfcb4c65abc90fec26192f3a43d4db1b559b1d7c24e3a20e9c60b7"
+    },
+    {
+      "slug": "hypothesis-generation",
+      "source": "k-dense",
+      "dir": "hypothesis-generation",
+      "name": "hypothesis-generation",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "ef92ce4a67023da8dd5f282e2212539d901586d144b49b4041588d7831e5fc2c"
+    },
+    {
+      "slug": "imaging-data-commons",
+      "source": "k-dense",
+      "dir": "imaging-data-commons",
+      "name": "imaging-data-commons",
+      "license": "This skill is provided under the MIT License. IDC data itself has individual licensing (mostly CC-BY, some CC-NC) that must be respected when using the data.",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "ecfaf73bf77c442199ede93fd11b4d273afe094a9f1c8aefe02d6402defdb9e5"
+    },
+    {
+      "slug": "infographics",
+      "source": "k-dense",
+      "dir": "infographics",
+      "name": "infographics",
+      "license": null,
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "dd9b7a851ed3be3e442daba2444bd6942c99a5a709e98bb4c4c98f0f8c89077f"
+    },
+    {
+      "slug": "iso-standards-readiness",
+      "source": "k-dense",
+      "dir": "iso-standards-readiness",
+      "name": "iso-standards-readiness",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "bbd3217c1ff70de047ce89011a092161667079ad672328c56f967e00c15f5144"
+    },
+    {
+      "slug": "lab-hardware-cad",
+      "source": "k-dense",
+      "dir": "lab-hardware-cad",
+      "name": "lab-hardware-cad",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "b5eee2451ba299f115127f59a4364e8eef476d74b0f2de8e978584ddd05519e8"
+    },
+    {
+      "slug": "labarchive-integration",
+      "source": "k-dense",
+      "dir": "labarchive-integration",
+      "name": "labarchive-integration",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "6614d0ff8f247216fd9f4d16bc1f39eacad7dce4a7b897e3f6f2f545d5069039"
+    },
+    {
+      "slug": "lamindb",
+      "source": "k-dense",
+      "dir": "lamindb",
+      "name": "lamindb",
+      "license": "Apache-2.0 license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "0af16cce35d08c9cbaea1e5ab73fa8a186426e4ab6ae82e98a1f3a1cb9ba7906"
+    },
+    {
+      "slug": "latchbio-integration",
+      "source": "k-dense",
+      "dir": "latchbio-integration",
+      "name": "latchbio-integration",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "e5c033fee03b09520def89021d9cc0634bf5f1d10390b44eaaf0c030621fca2a"
+    },
+    {
+      "slug": "latex-posters",
+      "source": "k-dense",
+      "dir": "latex-posters",
+      "name": "latex-posters",
+      "license": null,
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "61015eea3ef5819c3b2ef771572cc0ade4087fa00e235078065f4898d536b30e"
+    },
+    {
+      "slug": "liteparse",
+      "source": "k-dense",
+      "dir": "liteparse",
+      "name": "liteparse",
+      "license": "Apache-2.0",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "8daa381495d4eb5912755e018efbe140414a0f3f9e8c26294c4890062629b66e"
+    },
+    {
+      "slug": "literature-review",
+      "source": "k-dense",
+      "dir": "literature-review",
+      "name": "literature-review",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "f125269107b063c2a0a48c96fd97bc3bb2649d233b487c51ae0dcd9accfb0835"
+    },
+    {
+      "slug": "mageck",
+      "source": "k-dense",
+      "dir": "mageck",
+      "name": "mageck",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "bbcc9fc36491e3ce8bb9e041a99f516c9c40bfe4041365c83e0d8db28b8cdd7d"
+    },
+    {
+      "slug": "marine-carbonate-chemistry",
+      "source": "k-dense",
+      "dir": "marine-carbonate-chemistry",
+      "name": "marine-carbonate-chemistry",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "bc2c73a38e265abaacbe1f8c87e8dc0e811d0170c194bff31102b4ec9837af89"
+    },
+    {
+      "slug": "markdown-mermaid-writing",
+      "source": "k-dense",
+      "dir": "markdown-mermaid-writing",
+      "name": "markdown-mermaid-writing",
+      "license": "Apache-2.0",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "54cf07ac3a4941180a070926de804441624d559ed97c43dd88c75c8702d373f9"
+    },
+    {
+      "slug": "market-research-reports",
+      "source": "k-dense",
+      "dir": "market-research-reports",
+      "name": "market-research-reports",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "914cd430bbe6bca25bebe7ce9bbd54a1a2f0e7ec4724912dafc54dd368df563a"
+    },
+    {
+      "slug": "markitdown",
+      "source": "k-dense",
+      "dir": "markitdown",
+      "name": "markitdown",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "a08700281b41715ef028917bc9cee2eb1287cb808b5ec8d82814dddfef008db3"
+    },
+    {
+      "slug": "matchms",
+      "source": "k-dense",
+      "dir": "matchms",
+      "name": "matchms",
+      "license": "Apache-2.0",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "1b8599218d69c836c3589b699ab659d62af40d03810d95fd90feaafb91b7a5c1"
+    },
+    {
+      "slug": "matlab",
+      "source": "k-dense",
+      "dir": "matlab",
+      "name": "matlab",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "b01f3aa1d4c5c67cf7b99836baba361134a9be8a5bc1c8e59ae1c5f206c43b00"
+    },
+    {
+      "slug": "matplotlib",
+      "source": "k-dense",
+      "dir": "matplotlib",
+      "name": "matplotlib",
+      "license": "https://github.com/matplotlib/matplotlib/tree/main/LICENSE",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "7174d976763fb046653051dfd2d64977cc7ff7d0f5af87c9485c5747c45f6c50"
+    },
+    {
+      "slug": "medchem",
+      "source": "k-dense",
+      "dir": "medchem",
+      "name": "medchem",
+      "license": "Apache-2.0 license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "6b2ac786fb8ac4e85de06938999a397f51d731f2bcbc6e1344878b22681408dc"
+    },
+    {
+      "slug": "modal",
+      "source": "k-dense",
+      "dir": "modal",
+      "name": "modal",
+      "license": "Apache-2.0",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "8bc75feb76e0332b9340369bc9109be065677015ccf7953a16f8f807351e1fd3"
+    },
+    {
+      "slug": "molecular-dynamics",
+      "source": "k-dense",
+      "dir": "molecular-dynamics",
+      "name": "molecular-dynamics",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "903852d1197969dcc4b6cc12c91123d8b83db9891234b74e1d2ef344f42aa627"
+    },
+    {
+      "slug": "molfeat",
+      "source": "k-dense",
+      "dir": "molfeat",
+      "name": "molfeat",
+      "license": "Apache-2.0 license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "e66d68b0ad7c0c0ca6839e5f076424213d3c034468f8950d33e869a6ab1378ae"
+    },
+    {
+      "slug": "ncats-arax",
+      "source": "k-dense",
+      "dir": "ncats-arax",
+      "name": "ncats-arax",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "2624fd1bb71f9f41932baf99d72758358bd34d13dd1b417395a318eb452c79b6"
+    },
+    {
+      "slug": "networkx",
+      "source": "k-dense",
+      "dir": "networkx",
+      "name": "networkx",
+      "license": "3-clause BSD license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "ce1c3ffdbf384c77a01e7f7a631de57a8cb5e9fb52c7fafcd16fea9d62d83a78"
+    },
+    {
+      "slug": "neurokit2",
+      "source": "k-dense",
+      "dir": "neurokit2",
+      "name": "neurokit2",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "49a2a24174c6847d5b0c1ff045a372db54935b3929c0d75c22a40ff1b91ac540"
+    },
+    {
+      "slug": "neuropixels-analysis",
+      "source": "k-dense",
+      "dir": "neuropixels-analysis",
+      "name": "neuropixels-analysis",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "e9ded8a1804dd907c98c841278a2703a7df304d5f39341e42528e7c8e31b7e04"
+    },
+    {
+      "slug": "nextflow",
+      "source": "k-dense",
+      "dir": "nextflow",
+      "name": "nextflow",
+      "license": "Apache-2.0",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "1d465733e405b8553519c048c2f2bc793b4a42b42a198ca9278ea83d0242a252"
+    },
+    {
+      "slug": "nmrglue",
+      "source": "k-dense",
+      "dir": "nmrglue",
+      "name": "nmrglue",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "84d739089b89ef4753bcd818212f377d07936e93afb56429a035c04a00ff687b"
+    },
+    {
+      "slug": "nwb-conversion",
+      "source": "k-dense",
+      "dir": "nwb-conversion",
+      "name": "nwb-conversion",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "2a769c59a5fd4b5439651f224cdb84493cefea42339564741255d182a106257a"
+    },
+    {
+      "slug": "omero-integration",
+      "source": "k-dense",
+      "dir": "omero-integration",
+      "name": "omero-integration",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "279ea00500fadc0f6c20a7b141a2974380b684e2f72d2ed0674b47fcd3b051bd"
+    },
+    {
+      "slug": "onekgpd",
+      "source": "k-dense",
+      "dir": "onekgpd",
+      "name": "onekgpd",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "28f4ccbd15d4745a694c39a96629e262183b35b5fbcfecdceefa5ea7c5341036"
+    },
+    {
+      "slug": "ontology-term-resolution",
+      "source": "k-dense",
+      "dir": "ontology-term-resolution",
+      "name": "ontology-term-resolution",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "82357b0ccc6f608657c7be2bbd2afb16719e7d0f868d94fe356b3fc10761dfe6"
+    },
+    {
+      "slug": "open-notebook",
+      "source": "k-dense",
+      "dir": "open-notebook",
+      "name": "open-notebook",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "d30929fdd7fa67d5da0b6fc6d0926aeea7bdc5a9ead996b56c5cdb19af1a36ad"
+    },
+    {
+      "slug": "openpiv",
+      "source": "k-dense",
+      "dir": "openpiv",
+      "name": "openpiv",
+      "license": "BSD-3-Clause",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "eb8e1de382bf8678e3d4e6090bb2427152d428ad07357e6201bd873eb284729d"
+    },
+    {
+      "slug": "opentrons-integration",
+      "source": "k-dense",
+      "dir": "opentrons-integration",
+      "name": "opentrons-integration",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "696db7b7d85b424aa0959e4f676e8edcce17048b00ce16d4f0e9d05076124f15"
+    },
+    {
+      "slug": "optimize-for-gpu",
+      "source": "k-dense",
+      "dir": "optimize-for-gpu",
+      "name": "optimize-for-gpu",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "d516cc2a40eaca84ba13953902e277573eb22454850ca1b4c3c5f7bc9c356105"
+    },
+    {
+      "slug": "pacsomatic",
+      "source": "k-dense",
+      "dir": "pacsomatic",
+      "name": "pacsomatic",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "050709dbf85931ccea5a5e65b3ac966e311f5ee613194fcc433fb73167d74e0a"
+    },
+    {
+      "slug": "paper-lookup",
+      "source": "k-dense",
+      "dir": "paper-lookup",
+      "name": "paper-lookup",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "165c2fdbaeae792fe837fae5a46359c5f76697c8cfe15e9d5019954029065022"
+    },
+    {
+      "slug": "paperclip",
+      "source": "k-dense",
+      "dir": "paperclip",
+      "name": "paperclip",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "29d41dd5ec6e8542112853e1b440a15f02fcd9678d7450f30885d07afc20c37e"
+    },
+    {
+      "slug": "paperzilla",
+      "source": "k-dense",
+      "dir": "paperzilla",
+      "name": "paperzilla",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "91c59ba29dabe89ecd50c98334165f8d8dbbba4b7547151d8b0982df188c0c58"
+    },
+    {
+      "slug": "parallel-web",
+      "source": "k-dense",
+      "dir": "parallel-web",
+      "name": "parallel-web",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "4f5504ff54abcd068ee291791b003a1cef4102156ea8e3bbb728366a91df7dc3"
+    },
+    {
+      "slug": "pathml",
+      "source": "k-dense",
+      "dir": "pathml",
+      "name": "pathml",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "b210b426baedbe67b91e3b7fc2a7d88216fff811caa16ffd815855a9d67aa27d"
+    },
+    {
+      "slug": "pathogen-variant-surveillance",
+      "source": "k-dense",
+      "dir": "pathogen-variant-surveillance",
+      "name": "pathogen-variant-surveillance",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "84629d84f6b3a0887aefaf82bcc1c230c4c5e9c8a7d12311a2f1b02510f4456a"
+    },
+    {
+      "slug": "pathway-enrichment",
+      "source": "k-dense",
+      "dir": "pathway-enrichment",
+      "name": "pathway-enrichment",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "6b31c9b04ae385695651226b6f342d36c7d1c24882ae7c30d088395fe56fd241"
+    },
+    {
+      "slug": "peer-review",
+      "source": "k-dense",
+      "dir": "peer-review",
+      "name": "peer-review",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "72e4b96921fc8d839739a81be1dbb5f1421e5ccd42d85302c4d70666f3e607b4"
+    },
+    {
+      "slug": "pennylane",
+      "source": "k-dense",
+      "dir": "pennylane",
+      "name": "pennylane",
+      "license": "Apache-2.0 license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "ac95e3eedb36294858bff85d67405f0090ac7840a11ec7af8af9ce84975dc9ba"
+    },
+    {
+      "slug": "phylogenetics",
+      "source": "k-dense",
+      "dir": "phylogenetics",
+      "name": "phylogenetics",
+      "license": "Unknown",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "168186e1bf23a3083562dbd087ad16fd9e29da7335b0871e346cd5ba91c49c6a"
+    },
+    {
+      "slug": "pi-agent",
+      "source": "k-dense",
+      "dir": "pi-agent",
+      "name": "pi-agent",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "923a0232606332f77fa8246c67fba377f242da088ef1a52dc2d8d468c1f11c0c"
+    },
+    {
+      "slug": "pkpd-modeling",
+      "source": "k-dense",
+      "dir": "pkpd-modeling",
+      "name": "pkpd-modeling",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "3cf66581a1a1439a9136a4570699fb76d63f9caa8b7305960273a954971c35a2"
+    },
+    {
+      "slug": "polars",
+      "source": "k-dense",
+      "dir": "polars",
+      "name": "polars",
+      "license": "https://github.com/pola-rs/polars/blob/main/LICENSE",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "2b44a55de4b76c26f4283e8cf196cc9f184c2be382a51aa8515cbd6c4b0e7938"
+    },
+    {
+      "slug": "polars-bio",
+      "source": "k-dense",
+      "dir": "polars-bio",
+      "name": "polars-bio",
+      "license": "Apache-2.0",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "99bbff2a9bea12d9be696e12dd16beab193f29be92dafc967c2c67362976b69f"
+    },
+    {
+      "slug": "pptx-posters",
+      "source": "k-dense",
+      "dir": "pptx-posters",
+      "name": "pptx-posters",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "eea24f72a3da54258c51ede23880657134b0948b8023cc168befe7e61e7fc5d9"
+    },
+    {
+      "slug": "primekg",
+      "source": "k-dense",
+      "dir": "primekg",
+      "name": "primekg",
+      "license": "Unknown",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "d0a7e47d81d5955b749f922ad7c015af835339b996375931b95a70314b5efe80"
+    },
+    {
+      "slug": "primer-design",
+      "source": "k-dense",
+      "dir": "primer-design",
+      "name": "primer-design",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "a5f14c4b722f55f14c9f4f4075d8f97f85b312fd8cec14f8b437ba1fc386f6cd"
+    },
+    {
+      "slug": "protocolsio-integration",
+      "source": "k-dense",
+      "dir": "protocolsio-integration",
+      "name": "protocolsio-integration",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "cc8bf12538210de55dd18c19054b114a463bf96cfc4911227663f7365f51d470"
+    },
+    {
+      "slug": "pufferlib",
+      "source": "k-dense",
+      "dir": "pufferlib",
+      "name": "pufferlib",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "69110f982e74966e8102859166bf693f76344e09cc8e0f4cc3aa9ea69ab60919"
+    },
+    {
+      "slug": "pybamm",
+      "source": "k-dense",
+      "dir": "pybamm",
+      "name": "pybamm",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "254e71c64bfc9f7decb106b096d676d08763851f770279ff83c5f0eee7b706de"
+    },
+    {
+      "slug": "pycalphad",
+      "source": "k-dense",
+      "dir": "pycalphad",
+      "name": "pycalphad",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "d2f04d3b99bfba1f131089afd00f6ee46a0c9a49ef327454925919328d77860f"
+    },
+    {
+      "slug": "pydeseq2",
+      "source": "k-dense",
+      "dir": "pydeseq2",
+      "name": "pydeseq2",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "ba1f94b7d563563c7fe21b49d4f880d676cd2e1c4e18c74cbdb0db194ac25805"
+    },
+    {
+      "slug": "pydicom",
+      "source": "k-dense",
+      "dir": "pydicom",
+      "name": "pydicom",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "8e29df4a1e4e2076c9eeb3b4cf19fbf801c33a4aad6f57e0e41fbe866a581216"
+    },
+    {
+      "slug": "pyhealth",
+      "source": "k-dense",
+      "dir": "pyhealth",
+      "name": "pyhealth",
+      "license": null,
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "b018bbc98305943993e0dd766b94316e6b4e441bab6f5d9583e7bbec83e256f5"
+    },
+    {
+      "slug": "pylabrobot",
+      "source": "k-dense",
+      "dir": "pylabrobot",
+      "name": "pylabrobot",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "4393fe0f7a883bcc751802503d333f0314f5e849251cb87419d3085c73ebf620"
+    },
+    {
+      "slug": "pymatgen",
+      "source": "k-dense",
+      "dir": "pymatgen",
+      "name": "pymatgen",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "d9f37f2d1a8043227cbb30108d14e38138b279130e961714b372f0be0b7314b3"
+    },
+    {
+      "slug": "pymc",
+      "source": "k-dense",
+      "dir": "pymc",
+      "name": "pymc",
+      "license": "Apache License, Version 2.0",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "ed0cb94c91d0533dcdd64b31c515572397f632eb1b86394cbd80ccc049e65742"
+    },
+    {
+      "slug": "pymoo",
+      "source": "k-dense",
+      "dir": "pymoo",
+      "name": "pymoo",
+      "license": "Apache-2.0 license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "774774c3ca107c7a606b7e2bd5ab394beced7303bdfe57c05fd5119969aa5e77"
+    },
+    {
+      "slug": "pyopenms",
+      "source": "k-dense",
+      "dir": "pyopenms",
+      "name": "pyopenms",
+      "license": "3 clause BSD license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "0c7eb7c75bb9557a969c72ab94530c90669d89453d94fba98e5ae55191be45e8"
+    },
+    {
+      "slug": "pysam",
+      "source": "k-dense",
+      "dir": "pysam",
+      "name": "pysam",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "314f188f545bd75d960f52612fc22950bfaa1c988b56b2a48ae0b686e1f95fa4"
+    },
+    {
+      "slug": "pytdc",
+      "source": "k-dense",
+      "dir": "pytdc",
+      "name": "pytdc",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "4f35d1b099cfac901aba23f3bbbdf1f97d0dadd8897e62656641afefc4811609"
+    },
+    {
+      "slug": "pytorch-lightning",
+      "source": "k-dense",
+      "dir": "pytorch-lightning",
+      "name": "pytorch-lightning",
+      "license": "Apache-2.0 license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "72fd2b6cb20c9e1199638ce60762f4da6c7c441054f05c68f37c46c2350a3c6c"
+    },
+    {
+      "slug": "pyzotero",
+      "source": "k-dense",
+      "dir": "pyzotero",
+      "name": "pyzotero",
+      "license": "MIT License",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "6d3279d1f8134557321d54e5b8d237b8256a4a3682a7c8dee63b61dd3b6f1a37"
+    },
+    {
+      "slug": "qiime2-amplicon",
+      "source": "k-dense",
+      "dir": "qiime2-amplicon",
+      "name": "qiime2-amplicon",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "b0eb1b6ecd3eca309dd43c5e86c2b56fafc4d760943df0fc2315a1100ba13fcd"
+    },
+    {
+      "slug": "qiskit",
+      "source": "k-dense",
+      "dir": "qiskit",
+      "name": "qiskit",
+      "license": "Apache-2.0",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "c97ecfddbec7c4c73b949ade9e5bab44eb129c4537fbea4145f15086d0b9826d"
+    },
+    {
+      "slug": "qutip",
+      "source": "k-dense",
+      "dir": "qutip",
+      "name": "qutip",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "84a3f9d57c35cce102e8c85276c1209258f7c8fae6a347b201cba1ee2929acba"
+    },
+    {
+      "slug": "rdkit",
+      "source": "k-dense",
+      "dir": "rdkit",
+      "name": "rdkit",
+      "license": "BSD-3-Clause license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "ac088e3197cd43b80b94c21cdcd1170ac37490006437b3031a4b36b01ed0b04e"
+    },
+    {
+      "slug": "relion",
+      "source": "k-dense",
+      "dir": "relion",
+      "name": "relion",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "7d65b896384e641daec68031610be9da8f1ada6cb82193f9175aa420f6f93a3b"
+    },
+    {
+      "slug": "relsa-severity-assessment",
+      "source": "k-dense",
+      "dir": "relsa-severity-assessment",
+      "name": "relsa-severity-assessment",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "1dcbfe8a334be444cad5e3da4a99b19ffe94adaf16883c6c365d63c2e238f141"
+    },
+    {
+      "slug": "research-grants",
+      "source": "k-dense",
+      "dir": "research-grants",
+      "name": "research-grants",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "efb17cd60ff16b2b14c9adcd2e997d0761ff2a6cf0187053621741d7469d7805"
+    },
+    {
+      "slug": "research-lookup",
+      "source": "k-dense",
+      "dir": "research-lookup",
+      "name": "research-lookup",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "02034eca3f0293c1581b0affedcac26e2429365ba485fc145403af7463de784c"
+    },
+    {
+      "slug": "rowan",
+      "source": "k-dense",
+      "dir": "rowan",
+      "name": "rowan",
+      "license": "Proprietary (API key required)",
+      "plugin": null,
+      "mirrored": false
+    },
+    {
+      "slug": "scanpy",
+      "source": "k-dense",
+      "dir": "scanpy",
+      "name": "scanpy",
+      "license": "BSD-3-Clause",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "cce6dc0e0ef5b3e0a0a9f8ba5e18e3d5c71c924fed139cc84693b53179d65385"
+    },
+    {
+      "slug": "scholar-evaluation",
+      "source": "k-dense",
+      "dir": "scholar-evaluation",
+      "name": "scholar-evaluation",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "37ae342ba2c92bba34afbc0daf797424da09ea3bb36df1faeb499f3c70b8de65"
+    },
+    {
+      "slug": "scientific-brainstorming",
+      "source": "k-dense",
+      "dir": "scientific-brainstorming",
+      "name": "scientific-brainstorming",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "fb62a9699dc04d1629f4d71324e1695e2d735171cd0022114ffe33afb1d3c6bf"
+    },
+    {
+      "slug": "scientific-critical-thinking",
+      "source": "k-dense",
+      "dir": "scientific-critical-thinking",
+      "name": "scientific-critical-thinking",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "cc67eec3f7c6cd0f7407f2f70458bf5570d335a9440c6d6309433215bd37dd14"
+    },
+    {
+      "slug": "scientific-schematics",
+      "source": "k-dense",
+      "dir": "scientific-schematics",
+      "name": "scientific-schematics",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "cefd2d8cbd8a5806db5b331d7249fdb5826eb7dee554815722e04f647d635c64"
+    },
+    {
+      "slug": "scientific-slides",
+      "source": "k-dense",
+      "dir": "scientific-slides",
+      "name": "scientific-slides",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "78c70a22879cf1ac4111e40785f6ba3314ef417d62965bdac33a36a0f09bfd9c"
+    },
+    {
+      "slug": "scientific-visualization",
+      "source": "k-dense",
+      "dir": "scientific-visualization",
+      "name": "scientific-visualization",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "a69342f9bf608e914dd02d5826d52e34bbf10dec8dad1a203ab528b5291abefc"
+    },
+    {
+      "slug": "scientific-writing",
+      "source": "k-dense",
+      "dir": "scientific-writing",
+      "name": "scientific-writing",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "05bda919d69beb9b8d8f0f5e8d5684e6b6e316923c35c18936441b711686ab99"
+    },
+    {
+      "slug": "scikit-bio",
+      "source": "k-dense",
+      "dir": "scikit-bio",
+      "name": "scikit-bio",
+      "license": "BSD-3-Clause license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "16409ea54ddc6fb8dfb8635fd665fc0ab650f90d67884b2f1dd3d7038cab2656"
+    },
+    {
+      "slug": "scikit-learn",
+      "source": "k-dense",
+      "dir": "scikit-learn",
+      "name": "scikit-learn",
+      "license": "BSD-3-Clause license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "6bd0c3aec0ec18274851f73e0d5702a97818161316cfda69d827c40939dfd4dd"
+    },
+    {
+      "slug": "scikit-survival",
+      "source": "k-dense",
+      "dir": "scikit-survival",
+      "name": "scikit-survival",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "ab2dffbd4505db59e1d0a61c9d7a1700299af0f4eefec8ea6e0fa6bba8c451b0"
+    },
+    {
+      "slug": "scvelo",
+      "source": "k-dense",
+      "dir": "scvelo",
+      "name": "scvelo",
+      "license": "BSD-3-Clause",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "abe8112170eef517a8c1fc3d51fe3189f728ecfe70f314e2d5a546e0dca64dd2"
+    },
+    {
+      "slug": "scvi-tools",
+      "source": "k-dense",
+      "dir": "scvi-tools",
+      "name": "scvi-tools",
+      "license": "BSD-3-Clause license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "89cbe495e4ff091e03f5b413717c0ce7a854fe2df293b8b88be167ca24cd8d03"
+    },
+    {
+      "slug": "seaborn",
+      "source": "k-dense",
+      "dir": "seaborn",
+      "name": "seaborn",
+      "license": "BSD-3-Clause license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "7874f515bd0604bfba09a68391df5f37f5dc58579a971fe1e83654e4b7346b01"
+    },
+    {
+      "slug": "shap",
+      "source": "k-dense",
+      "dir": "shap",
+      "name": "shap",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "8fd6ac272c2ce0b4df0e2caa66988cf6faed4bb2f023c296e1e00e8f96e87f9a"
+    },
+    {
+      "slug": "simpy",
+      "source": "k-dense",
+      "dir": "simpy",
+      "name": "simpy",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "4b75bf465ba1533ffe531a9a188acaee1db79bc223777c8ed08cf79470fcbb9f"
+    },
+    {
+      "slug": "stable-baselines3",
+      "source": "k-dense",
+      "dir": "stable-baselines3",
+      "name": "stable-baselines3",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "0cdf542ca0972e0e9fd3264cedd8665c791ad520c06cd0bb09f5f27c5d1db3ee"
+    },
+    {
+      "slug": "statistical-analysis",
+      "source": "k-dense",
+      "dir": "statistical-analysis",
+      "name": "statistical-analysis",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "aea6e96465d30be15bf5f4a380e187046c48d8c6567910f570f773b8acd84caa"
+    },
+    {
+      "slug": "statistical-power",
+      "source": "k-dense",
+      "dir": "statistical-power",
+      "name": "statistical-power",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "c745151e83f8764e19a0de799128c5d80a48173a0a0c8b417c05ad34880bdd5f"
+    },
+    {
+      "slug": "statsmodels",
+      "source": "k-dense",
+      "dir": "statsmodels",
+      "name": "statsmodels",
+      "license": "BSD-3-Clause license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "ba5fa29a895b9d7062eed49aa2db6454089a96658abeb9ad241be52b31202924"
+    },
+    {
+      "slug": "sympy",
+      "source": "k-dense",
+      "dir": "sympy",
+      "name": "sympy",
+      "license": "https://github.com/sympy/sympy/blob/master/LICENSE",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "37a51dbfaf3f4087644ba8c695eabc3cfacdf7fa655b30f09e2cb87a4b7002fc"
+    },
+    {
+      "slug": "tamarind",
+      "source": "k-dense",
+      "dir": "tamarind",
+      "name": "tamarind",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "537cf754bdd7a900866e6a7c279a2cf2c76a66b63286216ca89c934f3ad089ee"
+    },
+    {
+      "slug": "tellurium",
+      "source": "k-dense",
+      "dir": "tellurium",
+      "name": "tellurium",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "d80f5a6bacae48cb3025b53498340ba6934a00d24fb086e055ec0c12195583c0"
+    },
+    {
+      "slug": "tiledbvcf",
+      "source": "k-dense",
+      "dir": "tiledbvcf",
+      "name": "tiledbvcf",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "5b29054815489fa841e912e7cfadf7c4566f33fff8eae18e97e2e5fdd4173560"
+    },
+    {
+      "slug": "timesfm-forecasting",
+      "source": "k-dense",
+      "dir": "timesfm-forecasting",
+      "name": "timesfm-forecasting",
+      "license": "Apache-2.0 license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "bec38d167aecd097be5a851bc05e1aaf0157126c31d4f4973b55486d14bbab01"
+    },
+    {
+      "slug": "torch-geometric",
+      "source": "k-dense",
+      "dir": "torch-geometric",
+      "name": "torch-geometric",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "cf35ae16de93df54af8e8c756756c5ac004815fa879cf9cb36f9a5e7416eeb17"
+    },
+    {
+      "slug": "torchdrug",
+      "source": "k-dense",
+      "dir": "torchdrug",
+      "name": "torchdrug",
+      "license": "Apache-2.0 license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "6ec8cbd5562e707b5f0f0b2155688ca18ad98ef621ee667ae1d9b9d3764b0ae8"
+    },
+    {
+      "slug": "transformers",
+      "source": "k-dense",
+      "dir": "transformers",
+      "name": "transformers",
+      "license": "Apache-2.0 license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "c4a0a885b2830d38ab7b17a48b5485d9a623cac6abd594e218e60e293203e2b7"
+    },
+    {
+      "slug": "treatment-plans",
+      "source": "k-dense",
+      "dir": "treatment-plans",
+      "name": "treatment-plans",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "b8471e4e41968487a960447859cea2969cb79886b3f9ec35c45a3f96bf36f1a2"
+    },
+    {
+      "slug": "umap-learn",
+      "source": "k-dense",
+      "dir": "umap-learn",
+      "name": "umap-learn",
+      "license": "BSD-3-Clause license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "9ab43ccb7ae0f902d8e2980f070c699b3e18b649f5aa389a0c9cbc9ad5c374e6"
+    },
+    {
+      "slug": "uncertainty-and-units",
+      "source": "k-dense",
+      "dir": "uncertainty-and-units",
+      "name": "uncertainty-and-units",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "38350b41802320dd7cbd845e1290c2e58215ae27c5bb729c660e570e3f8ff49e"
+    },
+    {
+      "slug": "usfiscaldata",
+      "source": "k-dense",
+      "dir": "usfiscaldata",
+      "name": "usfiscaldata",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "5b4a7bfc73207de4b411b75c4ddfe313d9f850aaef0c70143f849db9361c2bd5"
+    },
+    {
+      "slug": "vaex",
+      "source": "k-dense",
+      "dir": "vaex",
+      "name": "vaex",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "e24401f3cc981c0f9c5be6ff4c2ee57d1fbb2de66adde3f99e1170299bf849b9"
+    },
+    {
+      "slug": "venue-templates",
+      "source": "k-dense",
+      "dir": "venue-templates",
+      "name": "venue-templates",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "9682270dbfbfaa0c265580cf3b8ce9b5d4960ce8b1ddabd7303301de4ccc643d"
+    },
+    {
+      "slug": "waypoint-bio",
+      "source": "k-dense",
+      "dir": "waypoint-bio",
+      "name": "waypoint-bio",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "965634414cd491c1db27261a5fc3f266ff4e66854f77912890f4f9b000587f4b"
+    },
+    {
+      "slug": "what-if-oracle",
+      "source": "k-dense",
+      "dir": "what-if-oracle",
+      "name": "what-if-oracle",
+      "license": "CC BY-NC-SA 4.0",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "cb3d6524133a9fdb0358625497bd2b7bb537ede043887cd426fa0e06e5a3e07d"
+    },
+    {
+      "slug": "zarr-python",
+      "source": "k-dense",
+      "dir": "zarr-python",
+      "name": "zarr-python",
+      "license": "MIT license",
+      "plugin": null,
+      "mirrored": true,
+      "bodyHash": "785d7ee8ee0fbc276507cce42ac801d27884717c18962029a54bc703eeb66818"
+    }
+  ]
+}

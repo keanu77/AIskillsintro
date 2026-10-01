@@ -1,5 +1,6 @@
-import ReactMarkdown, { type Components } from "react-markdown";
+import ReactMarkdown, { defaultUrlTransform, type Components } from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { skillResourceUrl } from "@/lib/skillResourceUrl";
 
 // Wide tables and code blocks scroll inside their own box instead of the page;
 // tabIndex lets keyboard users scroll them (axe: scrollable-region-focusable).
@@ -14,9 +15,10 @@ const MARKDOWN_COMPONENTS: Components = {
 
 interface SkillGuideProps {
   content: string;
+  sourceUrl: string;
 }
 
-export default function SkillGuide({ content }: SkillGuideProps) {
+export default function SkillGuide({ content, sourceUrl }: SkillGuideProps) {
   return (
     <section className="bg-white px-6 py-16 sm:py-20">
       <div className="mx-auto max-w-4xl">
@@ -24,7 +26,11 @@ export default function SkillGuide({ content }: SkillGuideProps) {
           使用教學
         </h2>
         <article className="break-words prose prose-slate prose-lg max-w-none prose-headings:scroll-mt-20 prose-h1:text-2xl prose-h1:font-bold prose-h2:text-xl prose-h2:font-semibold prose-h2:border-b prose-h2:border-slate-200 prose-h2:pb-2 prose-h3:text-lg prose-code:before:content-none prose-code:after:content-none prose-code:rounded prose-code:bg-slate-100 prose-code:px-1.5 prose-code:py-0.5 prose-code:text-sm prose-code:font-normal prose-code:text-pink-700 prose-pre:bg-slate-900 [&_pre_code]:bg-transparent [&_pre_code]:p-0 [&_pre_code]:text-inherit prose-pre:text-slate-200 prose-pre:rounded-xl prose-pre:shadow-lg prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline prose-table:text-sm prose-th:bg-slate-50 prose-img:rounded-xl">
-          <ReactMarkdown remarkPlugins={[remarkGfm]} components={MARKDOWN_COMPONENTS}>
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
+            components={MARKDOWN_COMPONENTS}
+            urlTransform={(url, key) => skillResourceUrl(defaultUrlTransform(url), sourceUrl, key === "src")}
+          >
             {content}
           </ReactMarkdown>
         </article>
