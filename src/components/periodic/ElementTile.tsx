@@ -11,20 +11,24 @@ interface ElementTileProps {
   /** Render as a static figure instead of a link (e.g. the detail-page hero). */
   asFigure?: boolean;
   onPreview?: (element: SkillElement) => void;
+  className?: string;
 }
 
+const LATIN = /^[\x20-\x7E]+$/;
+
+// sm names wrap to two lines so the table stays readable without hovering.
 const SIZES: Record<Size, { box: string; num: string; sym: string; name: string }> = {
-  sm: { box: "h-[72px] p-[6px_7px] gap-1", num: "text-[10px]", sym: "text-[22px]", name: "text-[9px]" },
-  md: { box: "h-[100px] w-[92px] p-2.5", num: "text-[11px]", sym: "text-[30px]", name: "text-[11px]" },
+  sm: { box: "h-[88px] p-[6px_7px] gap-1", num: "text-[10px]", sym: "text-[22px]", name: "line-clamp-2 break-words text-[11px] leading-[1.2]" },
+  md: { box: "h-[100px] w-[92px] p-2.5", num: "text-[11px]", sym: "text-[30px]", name: "truncate text-[11px] leading-tight" },
   lg: {
     box: "h-[220px] w-full max-w-[200px] p-4 border-2 border-ink sm:h-[360px] sm:max-w-[320px] sm:p-6",
     num: "text-sm sm:text-lg",
     sym: "text-[96px] tracking-[-0.04em] sm:text-[160px]",
-    name: "text-lg sm:text-[26px]",
+    name: "truncate text-lg leading-tight sm:text-[26px]",
   },
 };
 
-export default function ElementTile({ element, size = "sm", dimmed = false, asFigure = false, onPreview }: ElementTileProps) {
+export default function ElementTile({ element, size = "sm", dimmed = false, asFigure = false, onPreview, className = "" }: ElementTileProps) {
   const { skill, category, number, symbol } = element;
   const s = SIZES[size];
   const label = `${skill.name}，${category.label}，元素 ${formatNumber(number)}`;
@@ -36,7 +40,10 @@ export default function ElementTile({ element, size = "sm", dimmed = false, asFi
         {size !== "sm" && <span>{category.code}</span>}
       </span>
       <span className={`font-display font-extrabold leading-[0.85] ${s.sym}`}>{symbol}</span>
-      <span className={`truncate leading-tight ${s.name} ${size === "lg" ? "font-wide font-extrabold" : ""}`}>{skill.name}</span>
+      {/* lang="en" lets long Latin names hyphenate instead of splitting mid-word. */}
+      <span lang={LATIN.test(skill.name) ? "en" : undefined} className={`hyphens-auto ${s.name} ${size === "lg" ? "font-wide font-extrabold" : ""}`}>
+        {skill.name}
+      </span>
     </>
   );
 
@@ -45,7 +52,7 @@ export default function ElementTile({ element, size = "sm", dimmed = false, asFi
   const style = dimmed ? undefined : { backgroundColor: category.color };
   const base = `flex flex-col justify-between ${
     dimmed ? "text-ink-muted outline outline-1 -outline-offset-1 outline-ink/25" : "text-ink"
-  } ${s.box}`;
+  } ${s.box} ${className}`;
 
   if (asFigure) {
     return (

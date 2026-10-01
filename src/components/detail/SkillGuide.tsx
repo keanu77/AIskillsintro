@@ -19,8 +19,9 @@ const PROSE = [
   "prose-h2:text-xl prose-h2:font-bold prose-h2:border-b-2 prose-h2:border-ink prose-h2:pb-2 prose-h3:text-lg",
   "prose-code:before:content-none prose-code:after:content-none prose-code:bg-white prose-code:px-1.5 prose-code:py-0.5",
   "prose-code:text-sm prose-code:font-normal prose-code:text-ink prose-code:outline prose-code:outline-1 prose-code:outline-ink/20",
-  "prose-pre:rounded-none prose-pre:bg-white prose-pre:text-ink prose-pre:border-2 prose-pre:border-ink",
-  "[&_pre_code]:bg-transparent [&_pre_code]:p-0 [&_pre_code]:outline-0",
+  // Code blocks share the dark style of the install panel.
+  "prose-pre:rounded-none prose-pre:bg-ink prose-pre:text-paper",
+  "[&_pre_code]:bg-transparent [&_pre_code]:p-0 [&_pre_code]:text-paper [&_pre_code]:outline-0",
   "prose-a:text-accent prose-a:underline-offset-2 hover:prose-a:text-accent-strong prose-strong:text-ink",
 ].join(" ");
 
@@ -33,7 +34,10 @@ interface SkillGuideProps {
 export default function SkillGuide({ content, sourceUrl }: SkillGuideProps) {
   return (
     <section aria-labelledby="guide-heading" className="max-w-[820px]">
-      <h2 id="guide-heading" className="font-wide mb-6 text-[28px] font-black">使用教學</h2>
+      <h2 id="guide-heading" className="font-wide text-[28px] font-black">使用教學</h2>
+      <p className="mt-3 mb-8 border-l-4 border-ink pl-3 text-sm leading-relaxed text-ink-soft">
+        以下為上游 SKILL.md 原文：常見段落標題譯為中文，其餘保留英文。中文重點請看頁首摘要。
+      </p>
       <article className={PROSE}>
         <ReactMarkdown
           remarkPlugins={[remarkGfm]}

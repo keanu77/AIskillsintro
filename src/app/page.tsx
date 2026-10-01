@@ -16,6 +16,14 @@ const ELEMENTS = buildElements(SKILLS, CATEGORIES);
 const COUNTS = Object.fromEntries(
   CATEGORIES.map((c) => [c.id, SKILLS.filter((s) => s.category === c.id).length]),
 ) as Record<CategoryId, number>;
+// Each family starts its own block, like a column of the real table.
+const FAMILIES = CATEGORIES.map((category) => ({
+  category,
+  elements: ELEMENTS.filter((el) => el.category.id === category.id),
+})).filter((f) => f.elements.length > 0);
+// Shown in the side panel until the visitor hovers or focuses a tile.
+const FEATURED_SLUG = "claude-api";
+const FEATURED = ELEMENTS.find((el) => el.skill.slug === FEATURED_SLUG) ?? ELEMENTS[0];
 
 export default function Home() {
   const { filters, setFilters } = useCatalogFilters();
@@ -74,19 +82,30 @@ export default function Home() {
             </p>
           </div>
           <div className="flex items-start gap-8">
-            <ol className="grid min-w-0 flex-1 grid-cols-[repeat(auto-fill,minmax(62px,1fr))] gap-1">
-              {ELEMENTS.map((el) => {
-                const dimmed = filtering && !matches.has(el.skill.slug);
-                return (
-                  // Non-matching tiles stay visible for context but leave the a11y tree.
-                  <li key={el.skill.slug} aria-hidden={dimmed || undefined}>
-                    <ElementTile element={el} dimmed={dimmed} onPreview={setPreview} />
-                  </li>
-                );
-              })}
-            </ol>
+            <div className="flex min-w-0 flex-1 flex-col gap-6">
+              {FAMILIES.map(({ category, elements }) => (
+                <section key={category.id} aria-labelledby={`family-${category.id}`}>
+                  <h3 id={`family-${category.id}`} className="mb-2 flex items-center gap-2 text-sm font-bold">
+                    <span aria-hidden className="size-3 flex-none border border-ink/40" style={{ backgroundColor: category.color }} />
+                    {category.label}
+                    <span className="font-mono text-xs font-normal text-ink-muted">{COUNTS[category.id]}</span>
+                  </h3>
+                  <ol className="grid grid-cols-[repeat(auto-fill,minmax(62px,1fr))] gap-1">
+                    {elements.map((el) => {
+                      const dimmed = filtering && !matches.has(el.skill.slug);
+                      return (
+                        // Non-matching tiles stay visible for context but leave the a11y tree.
+                        <li key={el.skill.slug} aria-hidden={dimmed || undefined}>
+                          <ElementTile element={el} dimmed={dimmed} onPreview={setPreview} />
+                        </li>
+                      );
+                    })}
+                  </ol>
+                </section>
+              ))}
+            </div>
             <aside aria-label="元素預覽" className="sticky top-6 hidden w-[340px] flex-none lg:block">
-              <PreviewPanel element={preview} />
+              <PreviewPanel element={preview ?? FEATURED} featured={!preview} />
             </aside>
           </div>
           {filtering && matches.size === 0 && (

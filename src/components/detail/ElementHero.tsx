@@ -24,16 +24,22 @@ export default function ElementHero({ element }: { element: SkillElement }) {
   ];
 
   return (
-    <section className="flex flex-wrap items-stretch gap-12">
-      <ElementTile element={element} size="lg" asFigure />
+    <section className="flex flex-wrap items-stretch gap-6 sm:gap-12">
+      {/* Phones get a small tile beside the title so the summary and install link stay in the first screen. */}
+      <ElementTile element={element} size="lg" asFigure className="max-sm:hidden" />
       <div className="flex min-w-0 flex-[1_1_480px] flex-col justify-between gap-7">
         <div>
-          <p className="font-mono text-[13px] tracking-widest text-ink-muted">
-            ELEMENT {formatNumber(number)} · {category.shortLabel}
-          </p>
-          <h1 className="font-wider mt-2 text-[clamp(44px,6vw,72px)] font-black leading-none tracking-[-0.02em] break-words">
-            {skill.name}
-          </h1>
+          <div className="flex items-center gap-4">
+            <ElementTile element={element} size="md" asFigure className="flex-none sm:hidden" />
+            <div className="min-w-0">
+              <p className="font-mono text-[13px] tracking-widest text-ink-muted">
+                ELEMENT {formatNumber(number)} · {category.shortLabel}
+              </p>
+              <h1 className="font-wider mt-2 text-[clamp(32px,6vw,72px)] font-black leading-none tracking-[-0.02em] break-words">
+                {skill.name}
+              </h1>
+            </div>
+          </div>
           <p className="mt-5 max-w-[620px] text-[19px] leading-relaxed text-ink-soft">{skill.description}</p>
           <div className="mt-6 flex flex-wrap gap-3">
             <a href="#installation" className="inline-flex min-h-11 items-center bg-accent px-5 font-bold text-white hover:bg-accent-strong">
