@@ -149,6 +149,13 @@ Assess in this order:
 
 Use `references/common_issues.md` and `references/statistical_reproducibility.md`.
 
+When authors claim "no effect", "equivalent", or "no difference", check whether
+the interval rules out scientifically important effects. A nonsignificant test
+alone does not establish equivalence; an equivalence or non-inferiority claim
+needs its stated margin and corresponding analysis. Request a narrower claim
+when precision is inadequate rather than retrospective observed-power
+calculations. See the [ASA statement on p-values](https://doi.org/10.1080/00031305.2016.1154108).
+
 For a structured local audit:
 
 ```bash

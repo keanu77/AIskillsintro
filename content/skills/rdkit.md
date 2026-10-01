@@ -54,7 +54,7 @@ binary molecule representation avoids generic pickle.
 1. **Forgetting to check for None:** Always validate molecules after parsing
 2. **Sanitization failures:** Use `DetectChemistryProblems()` to debug
 3. **Missing hydrogens:** Use `AddHs()` when calculating properties that depend on hydrogen
-4. **2D vs 3D:** Generate appropriate coordinates before visualization or 3D analysis
+4. **2D vs 3D:** Generate appropriate coordinates before visualization or 3D analysis. Check the conformer ID returned by `EmbedMolecule` before accessing coordinates: `-1` means embedding failed. For difficult molecules, enable `EmbedParameters.trackFailures` and inspect `GetFailureCounts()`; do not send a failed embedding into force-field optimization.
 5. **SMARTS matching rules:** Remember that unspecified properties match anything
 6. **Thread safety with MolSuppliers:** Don't share supplier objects across threads
 

@@ -94,6 +94,8 @@ These are the mistakes that PyHealth code most commonly trips on. Internalize th
 
 6. **For reproducible work, point `cache_dir=` somewhere persistent.** PyHealth caches the parsed dataset; without `cache_dir`, you re-parse every run.
 
+7. **Define the prediction time before extracting features.** Record the observation window and outcome horizon for the chosen task; a full-stay mortality task and an early-warning task answer different questions. Exclude events unavailable at prediction time, including discharge outcomes embedded in codes or notes. Patient-level splitting does not prevent this within-visit temporal leakage. Inspect the task definition, not just its class name; the [upstream mortality-window contract](https://pyhealth.readthedocs.io/en/latest/api/tasks/pyhealth.tasks.InHospitalMortalityMEDS.html) illustrates explicit admission-to-prediction windows.
+
 ## How to use this skill
 
 PyHealth has a large API surface — there's no point loading it all at once. Read the reference file that matches the user's task:

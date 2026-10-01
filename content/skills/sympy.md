@@ -117,6 +117,8 @@ results = f(np.arange(1000))
 - `dsolve`: Differential equations
 - `solve`: General purpose (legacy, but flexible)
 
+Declare the solution domain: `solveset` defaults to complex numbers, so use `domain=S.Reals` for real-only questions. A returned `ConditionSet` means an unresolved solution condition, not that no solutions exist; distinguish it from `EmptySet`. A numerical `nsolve` result is a local root found from a starting point, not proof that every root was found.
+
 ## Reference Files Structure
 
 This skill uses modular reference files for different capabilities:

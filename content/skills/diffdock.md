@@ -203,7 +203,7 @@ The analysis script:
    - Large ligands (>500 Da): Lower confidence expected
    - Multiple protein chains: May decrease confidence
    - Novel protein families: May underperform
-3. **Multiple Samples**: Review top 3-5 predictions, look for consensus
+3. **Multiple Samples**: Review top 3-5 predictions, look for consensus; thresholds are rough and scores across ligands or receptor conformations are not a calibrated affinity ranking
 
 **For detailed guidance:** Read `references/confidence_and_limitations.md` using the Read tool
 
@@ -308,7 +308,7 @@ Use OpenMM + OpenFE or GROMACS for FEP/TI calculations
 **DiffDock IS Designed For:**
 - Small molecule ligands (typically 100-1000 Da)
 - Drug-like organic compounds
-- Small peptides (<20 residues)
+- Small peptides require separate validation; no universal residue-count cutoff establishes reliability
 - Single or multi-chain proteins
 
 **DiffDock IS NOT Designed For:**
@@ -445,7 +445,7 @@ Read this file when users need:
 2. **Validate batch CSVs** with `prepare_batch_csv.py` to catch errors early
 3. **Start with defaults** then tune parameters based on system-specific needs
 4. **Generate multiple samples** (10-40) for robust predictions
-5. **Visual inspection** of top poses before downstream analysis
+5. **Validate pose chemistry and geometry** (atom identity, stereochemistry, bond geometry, clashes) alongside visual inspection; retain raw and refined poses
 6. **Combine with scoring** functions for affinity assessment
 7. **Use confidence scores** for initial ranking, not final decisions
 8. **Pre-compute embeddings** for virtual screening campaigns

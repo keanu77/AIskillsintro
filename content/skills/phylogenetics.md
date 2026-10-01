@@ -229,7 +229,7 @@ def basic_tree_stats(t: Tree) -> dict:
 
     stats = {
         "n_leaves": len(leaves),
-        "n_internal_nodes": len(t) - len(leaves),
+        "n_internal_nodes": sum(not node.is_leaf() for node in t.traverse()),
         "total_branch_length": sum(n.dist for n in t.traverse()),
         "max_leaf_distance": max(distances) if distances else 0,
         "mean_leaf_distance": sum(distances)/len(distances) if distances else 0,

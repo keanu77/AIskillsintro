@@ -200,8 +200,10 @@ python scripts/generate_image.py "A cat astronaut" --resolution 4K --dry-run
 | `--list-models` | Print the catalogue with allowed values, optionally filtered, then exit |
 | `--model-info` | Print one model's allowed values and pricing, then exit |
 
-There is no `--size`: no model in the catalogue accepts a `size` parameter. Shape output with
-`--aspect-ratio` and `--resolution`.
+The bundled CLI has no `--size`; use `--aspect-ratio` and `--resolution` with it.
+The [current Image API](https://openrouter.ai/docs/guides/overview/multimodal/image-generation)
+also documents a `size` shorthand for direct requests. API support does not imply that
+this CLI exposes the parameter; check live model and endpoint capabilities.
 
 ## API shape
 

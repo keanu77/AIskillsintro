@@ -57,7 +57,10 @@ Required:
 
 Optional:
 - profile, resources, scheduler account/queue
-- pipeline version (`-r`)
+- pipeline revision via the helper's `--pipeline-version` option (forwarded to
+  Nextflow as `-r`); choose and record an explicit release tag or commit for
+  reproducible runs, as recommended in the
+  [pipeline usage documentation](https://nf-co.re/pacsomatic/latest/docs/usage/)
 - params file, resume/report/dag flags
 - `--dry-run` and/or `--run`
 
@@ -125,7 +128,7 @@ Use `config.yaml` as the baseline for profile/executor/runtime defaults. Overrid
 
 ## Testing
 
-Run unit tests from skill root:
+Run unit tests from the repository root (the suite is outside the skill):
 
 ```bash
 python -m unittest discover -s tests/pacsomatic -v

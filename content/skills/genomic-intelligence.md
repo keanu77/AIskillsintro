@@ -50,8 +50,11 @@ scripts, or when you need the raw envelope. See [Core REST workflow](#core-rest-
 ## Access and authentication
 
 1. The **hosted MCP demo is keyless** — try it with nothing set.
-2. The **REST `/v1` API needs a key**, sent as `Authorization: Bearer <key>`.
-   Request one at [contact@genomicintelligence.ai](mailto:contact@genomicintelligence.ai).
+2. REST prediction and job operations need a key, sent as `Authorization: Bearer <key>`.
+   Public `GET /v1/tasks/{task}/models` discovery needs no key and is rate-limited
+   by source IP; inspect model windows and bounds before requesting access.
+   See the [current authentication contract](https://docs.genomicintelligence.ai/).
+   Request a prediction key at [contact@genomicintelligence.ai](mailto:contact@genomicintelligence.ai).
 3. **Never hardcode the key.** Read it from the `GI_API_KEY` environment variable
    (or a `.env` via `python-dotenv`). Never commit keys.
 

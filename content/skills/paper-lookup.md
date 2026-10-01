@@ -167,6 +167,14 @@ For exhaustive retrievals or any result that feeds downstream analysis:
 
 For a targeted lookup, still record the endpoint, parameters, and access date so the single result can be repeated.
 
+For retraction or correction checks, distinguish the original article from its notice.
+A Crossref `update-type:retraction` search can return the retraction notice, whose
+`update-to` metadata identifies the affected DOI; inspect that relationship before
+labeling a paper. Check the publisher record when status is material, and report
+"no notice found in the sources checked" when evidence is absent. An empty OA or
+Crossref response does not establish that a paper has never been retracted. See
+[Crossref post-publication updates](https://community.crossref.org/t/ticket-of-the-month-june-2026-post-publication-updates-in-metadata-manager/16253).
+
 ## Bundled Scripts
 
 Standard library only, Python 3.11+. Each exists because the logic is fragile, repetitive, and has a specific way of going quietly wrong. Run with `python3 scripts/<name>.py --help` for full options.

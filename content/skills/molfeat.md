@@ -128,17 +128,19 @@ loaded = MoleculeTransformer.from_state_yaml_file("featurizer_config.yml")
 ### Handle Errors Gracefully
 
 ```python
-# Process dataset with potentially invalid SMILES
-transformer = MoleculeTransformer(
-    calc,
-    n_jobs=-1,
-    ignore_errors=True,  # Continue on failures
-    verbose=True          # Log error details
-)
+from molfeat.calc import FPCalculator
+from molfeat.trans import MoleculeTransformer
 
-features = transformer(smiles_with_errors)
-# Returns None for failed molecules
+smiles_with_errors = ["CCO", "invalid", "CC(=O)O"]
+transformer = MoleculeTransformer(FPCalculator("ecfp"), n_jobs=1)
+features, valid_ids = transformer(smiles_with_errors, ignore_errors=True)
+valid_smiles = [smiles_with_errors[i] for i in valid_ids]
 ```
+
+Pass `ignore_errors` at call time. `__call__` removes failures and returns
+`(features, valid_ids)`; use those original positions to align labels and identifiers.
+For position-preserving output with `None` failures, use
+`transformer.transform(smiles_with_errors, ignore_errors=True)`.
 
 ## Choosing a Featurizer and Common Workflows
 
@@ -235,7 +237,7 @@ else:
 3. **Choose appropriate featurizers**: Fingerprints are faster than deep learning models
 4. **Cache pretrained models**: Leverage built-in caching for repeated use
 5. **Use float32**: Set `dtype=np.float32` when precision allows
-6. **Handle errors efficiently**: Use `ignore_errors=True` for large datasets
+6. **Handle errors efficiently**: Pass `ignore_errors=True` to the call and retain returned input positions
 
 ## Common Featurizers Reference
 
@@ -301,14 +303,8 @@ Practical code examples for common scenarios:
 ## Troubleshooting
 
 ### Invalid Molecules
-Enable error handling to skip invalid SMILES:
-```python
-transformer = MoleculeTransformer(
-    calc,
-    ignore_errors=True,
-    verbose=True
-)
-```
+Use the call-time error handling shown above. Never pair filtered feature rows with
+unfiltered labels: retain `valid_ids` and record rejected input identifiers.
 
 ### Memory Issues with Large Datasets
 Process in chunks or use streaming approaches for datasets > 100K molecules.

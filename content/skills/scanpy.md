@@ -188,7 +188,7 @@ file. See also [references/standard_workflow.md](references/standard_workflow.md
 
 ## Common Pitfalls and Best Practices
 
-1. **Always save raw counts**: `adata.raw = adata` before filtering genes
+1. **Separate counts from `.raw`**: Preserve an independent count matrix in `adata.layers["counts"]` before normalization. In this workflow `.raw` stores the full **log-normalized** matrix before HVG subsetting, as the bundled preprocessing script does; its name does not guarantee raw counts. Confirm the selected layer or `.raw` is log-normalized for `rank_genes_groups`, and use counts for pseudobulk.
 2. **Check QC plots carefully**: Adjust thresholds based on dataset quality
 3. **Use Leiden clustering**: `sc.tl.louvain` is deprecated in scanpy 1.12
 4. **Try multiple clustering resolutions**: Find optimal granularity

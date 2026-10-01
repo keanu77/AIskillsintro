@@ -172,6 +172,12 @@ H.arguments(amplitude=0.1)
 The older `f(t, args)` coefficient signature is deprecated in 5.3 and is
 scheduled for removal in 5.5. See `references/time_evolution.md`.
 
+For narrow pulses, the output `tlist` is not the adaptive integrator’s internal
+step schedule. Bound the solver’s `max_step` below half the narrowest pulse width,
+then reduce it further to check convergence of the pulse response. Tight
+relative/absolute tolerances alone can still miss a pulse sampled only in an
+idle region. See the [QuTiP solver options](https://qutip.readthedocs.io/en/qutip-5.3.x/apidoc/solver.html).
+
 ## Trajectories and stochastic solvers
 
 ```python

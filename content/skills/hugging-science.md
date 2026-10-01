@@ -75,6 +75,13 @@ The mechanics depend on resource type. Read the matching reference file before w
 
 The reference files are short and focused. If you're already fluent in the relevant API, skim; if not, read fully before writing code. The patterns are different from generic HF usage in a few important places (e.g., `trust_remote_code` requirements, scientific-data dtype gotchas).
 
+Before using a selected resource, record its exact Hub repository and immutable
+commit, dataset configuration/split, license, and preprocessing/tokenizer
+revision. [Dataset `revision`](https://huggingface.co/docs/datasets/loading)
+can pin a commit; a moving branch name alone does not freeze the resource.
+Resources from the same organization still need explicit vocabulary, input
+modality, normalization, and split-compatibility checks.
+
 ### 5. Cite the methodology
 
 When the catalog has a blog post matching the task (`Type: blog` or in the Blog Posts section of a topic file), include its URL when you explain your approach to the user. Methodology blogs are written by the dataset/model authors and answer "why this design" questions that model cards usually skip. Treat them like citations — a one-line "see <link> for the methodology behind X" is plenty.

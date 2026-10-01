@@ -189,8 +189,8 @@ regions = ["chr1:1000000-2000000", "chr2:500000-1500000"]
 # Whole chromosome
 regions = ["chr1"]
 
-# BED-style (0-based, half-open converted internally)
-regions = ["chr1:999999-2000000"]  # Equivalent to 1-based chr1:1000000-2000000
+# Convert BED [999999, 2000000) to a 1-based inclusive region explicitly:
+regions = ["chr1:1000000-2000000"]  # start + 1; end unchanged
 ```
 
 ### Memory Management

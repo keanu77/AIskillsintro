@@ -128,17 +128,26 @@ rec_corrected = si.correct_motion(rec, preset="nonrigid_fast_and_accurate", fold
 
 ### 3. Spike sorting
 
+The calls below are illustrative until tested on the target recording and sorter.
+Choose one drift-correction stage: externally corrected input uses
+`do_correction=False` for Kilosort 2.5/3/4, or `apply_motion_correction=False`
+for Spykingcircus2. These flags match SpikeInterface 0.105.0; inspect sorter
+parameters when using another release. Uncorrected input can use sorter defaults.
+A spread of peak depths across neurons is not a temporal drift estimate. The bundled
+pipeline estimates/corrects motion when requested; inspect its saved motion output.
+
+
 ```python
 # Kilosort4 (recommended, requires a CUDA GPU)
-sorting = si.run_sorter("kilosort4", rec_corrected, folder="ks4_output")
+sorting = si.run_sorter("kilosort4", rec_corrected, folder="ks4_output", do_correction=False)
 
 # CPU alternatives (internally developed, no external install)
-sorting = si.run_sorter("spykingcircus2", rec_corrected, folder="sc2_output")
+sorting = si.run_sorter("spykingcircus2", rec_corrected, folder="sc2_output", apply_motion_correction=False)
 sorting = si.run_sorter("tridesclous2", rec_corrected, folder="tdc2_output")
 sorting = si.run_sorter("mountainsort5", rec_corrected, folder="ms5_output")
 
 # External sorters can run in containers without local install
-sorting = si.run_sorter("kilosort2_5", rec_corrected, folder="ks25_output", docker_image=True)
+sorting = si.run_sorter("kilosort2_5", rec_corrected, folder="ks25_output", docker_image=True, do_correction=False)
 
 print(si.installed_sorters())
 ```

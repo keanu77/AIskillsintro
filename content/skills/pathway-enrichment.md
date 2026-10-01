@@ -118,7 +118,13 @@ The background must be the genes that *could* have been detected in your assay (
 Use the Quick Start patterns or the bundled `scripts/run_enrichment.py`. For GSEA always set a `seed` and report `permutation_num`.
 
 ### Step 6 — Filter on adjusted p-values
-Use `Adjusted P-value` (ORA, Benjamini–Hochberg) or `FDR q-val` (GSEA), not raw p-values. Typical cutoff 0.05; also check the overlap/gene count so a "hit" isn't 1 gene out of a 2000-gene set.
+Use the correction returned by the selected method: Enrichr ORA reports BH-adjusted
+p-values, g:Profiler defaults to g:SCS, and GSEA estimates `FDR q-val` from its
+permutation distributions. These are not interchangeable BH outputs. Report the
+method and permutation type with the cutoff; GSEA's exploratory 0.25 convention
+is for phenotype permutations, while its documentation recommends 0.05 for
+gene-set permutations such as preranked analyses. Also inspect overlap and
+gene-set size. See the [GSEA FAQ](https://docs.gsea-msigdb.org/GSEA/GSEA_FAQ/).
 
 ### Step 7 — Visualize
 Dotplots, bar plots, enrichment maps, and GSEA running-score plots are built into gseapy (`gp.dotplot`, `gp.barplot`, `gp.enrichment_map`, `gp.gseaplot`). See `references/gseapy.md`.

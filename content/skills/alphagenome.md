@@ -194,7 +194,9 @@ Always report raw score **and** quantile or Phred, with the scorer, track,
 biosample CURIE, and gene. `raw_score` is the effect size on the scorer's scale
 (RNA_SEQ is log2 fold change: -1 is half); `quantile_score` is the rank against
 common variants and saturates near 0.99999. A quantile above 0.99 with |raw| <
-0.1 is the standard artefact of a quiet region and means **no effect**. Unsigned
+0.1 can reflect a narrow background in a quiet region; inspect REF/ALT tracks and
+report the small predicted change without declaring biological absence of effect.
+Raw-score thresholds are scorer-specific; quantiles are ranks, not p-values. Unsigned
 scorers (`SPLICE_*`, `POLYADENYLATION`, `CONTACT_MAPS`, `*_ACTIVE`) have no
 direction. Most variants are benign; "AlphaGenome predicts no molecular effect"
 is a complete answer, and a variant inside a peak whose REF and ALT tracks are

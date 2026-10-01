@@ -285,8 +285,12 @@ dispatcher arguments by splitting an untrusted shell command.
 - Set `query_sequence` before `query_qualities`.
 - Prefer `pysam.CIGAR_OPS` enum members; top-level constants such as
   `pysam.CMATCH` are compatibility aliases slated for future removal.
-- Validate outputs with `pysam.samtools.quickcheck()` for alignments and reopen
-  variant/sequence outputs before downstream use.
+- Use `pysam.samtools.quickcheck()` as a fast alignment header/EOF preflight;
+  it does not read the middle of the file and cannot rule out internal corruption.
+  When full readability must be established, perform a complete sequential decode
+  with the matching CRAM reference and compare expected counts/checksums. Reopen
+  variant/sequence outputs before downstream use. See the
+  [samtools quickcheck contract](https://www.htslib.org/doc/samtools-quickcheck.html).
 - Use CSI rather than BAI/TBI when references or coordinates exceed legacy
   index limits.
 

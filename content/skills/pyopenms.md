@@ -92,6 +92,10 @@ python scripts/digest_protein.py proteins.fasta --enzyme Trypsin --missed 2 --ou
 python scripts/process_identifications.py search.idXML --fasta db.fasta --fdr 0.01 --out filtered.idXML --csv hits.csv
 ```
 
+## Identification confidence
+
+Before using `process_identifications.py --fdr`, verify target/decoy annotations, score direction, and the search database used to generate the hits. The script applies `FalseDiscoveryRate` to peptide identifications; its threshold does not establish protein-level FDR. Report the tested unit (PSM, unique peptide, or protein), pooling/search settings, decoy strategy, and threshold explicitly. Protein inference and protein-level error control need their own validated workflow; do not label all inferred proteins “1% FDR” from the peptide-hit filter alone. See the [OpenMS FDR API](https://www.openms.org/documentation/html/classOpenMS_1_1FalseDiscoveryRate.html).
+
 ## Key 3.5.0 API notes
 
 These changed from older OpenMS releases—older tutorials and code will break:

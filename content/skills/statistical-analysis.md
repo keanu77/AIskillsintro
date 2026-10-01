@@ -48,7 +48,7 @@ Every sound analysis follows the same arc. Skipping steps is how analyses end up
 2. **Inspect the data.** Per group: n, mean, SD, median, missing values. Plot the raw data (histograms or box plots) before any test. Unequal group sizes, missingness, floor/ceiling effects, and outliers all change what test is appropriate — surface them to the user rather than silently working around them.
 3. **Select the test** using the quick reference below, or `references/test_selection_guide.md` for designs beyond the basics (counts, time-to-event, reliability, factorial).
 4. **Check assumptions** with `scripts/assumption_checks.py`. If an assumption fails, switch to the remedial test (table below) and report both the plan and the change.
-5. **Run the test** and always compute the effect size alongside it — a p-value says an effect exists; the effect size says whether anyone should care.
+5. **Run the test** and always compute the effect size alongside it — a p-value assesses incompatibility with the null model; the effect estimate and its uncertainty support judgments about practical importance.
 6. **Report** using the APA templates below, including descriptives, exact statistics, effect sizes with CIs, and the assumption checks performed.
 
 If the user only needs one step (e.g., "how many participants do I need?"), jump straight to that section — but still confirm the design assumptions the calculation rests on.
@@ -127,7 +127,7 @@ print(result['recommendation'])
 - Severe violation → Transform data or use non-parametric test
 
 **Homogeneity of variance violated:**
-- For t-test → Use Welch's t-test (`pg.ttest` applies it automatically with `correction='auto'`)
+- For independent t-tests → Request Welch's test explicitly with `pg.ttest(..., correction=True)`; `correction='auto'` switches based on unequal sample sizes, not a variance test.
 - For ANOVA → Use Welch's ANOVA (`pg.welch_anova`) or Brown-Forsythe
 - For regression → Use robust standard errors or weighted least squares
 
@@ -151,7 +151,7 @@ Primary libraries:
 ```python
 import pingouin as pg
 
-# correction='auto' applies Welch's correction when variances are unequal
+# correction='auto' applies Welch's correction when sample sizes are unequal
 result = pg.ttest(group_a, group_b, correction='auto')
 
 # Pingouin >= 0.6 column names
@@ -239,7 +239,7 @@ Scale priors to the data (e.g., `sigma=10` suits outcomes with SD near 10; use t
 
 ## Effect Sizes
 
-**Effect sizes quantify magnitude; p-values only indicate existence.** Report one for every test. See `references/effect_sizes_and_power.md` for the full guide.
+**Effect sizes quantify magnitude; p-values measure incompatibility with a specified null model under its assumptions.** A p-value does not prove that an effect exists or measure its practical importance. Report an effect estimate and uncertainty for every test. See `references/effect_sizes_and_power.md` for the full guide.
 
 ### Quick Reference: Common Effect Sizes
 

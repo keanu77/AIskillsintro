@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-09-30",
+  "syncedAt": "2026-10-01",
   "sources": [
     {
       "id": "anthropic",
@@ -9,7 +9,7 @@
     {
       "id": "k-dense",
       "repo": "K-Dense-AI/scientific-agent-skills",
-      "sha": "65d6e786832e2c52832713117bbbf5096b56f77f"
+      "sha": "91497e335489dcb544ec8ddc8f6b7ce5fd6d1121"
     }
   ],
   "skills": [
@@ -329,6 +329,24 @@
       "mirrored": true
     },
     {
+      "slug": "cantera",
+      "source": "k-dense",
+      "dir": "cantera",
+      "name": "cantera",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "cellprofiler",
+      "source": "k-dense",
+      "dir": "cellprofiler",
+      "name": "cellprofiler",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
       "slug": "cellxgene-census",
       "source": "k-dense",
       "dir": "cellxgene-census",
@@ -550,6 +568,15 @@
       "dir": "flowio",
       "name": "flowio",
       "license": "BSD-3-Clause license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "flowkit",
+      "source": "k-dense",
+      "dir": "flowkit",
+      "name": "flowkit",
+      "license": "MIT",
       "plugin": null,
       "mirrored": true
     },
@@ -797,6 +824,24 @@
       "mirrored": true
     },
     {
+      "slug": "mageck",
+      "source": "k-dense",
+      "dir": "mageck",
+      "name": "mageck",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "marine-carbonate-chemistry",
+      "source": "k-dense",
+      "dir": "marine-carbonate-chemistry",
+      "name": "marine-carbonate-chemistry",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
       "slug": "markdown-mermaid-writing",
       "source": "k-dense",
       "dir": "markdown-mermaid-writing",
@@ -928,6 +973,24 @@
       "dir": "nextflow",
       "name": "nextflow",
       "license": "Apache-2.0",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "nmrglue",
+      "source": "k-dense",
+      "dir": "nmrglue",
+      "name": "nmrglue",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "nwb-conversion",
+      "source": "k-dense",
+      "dir": "nwb-conversion",
+      "name": "nwb-conversion",
+      "license": "MIT",
       "plugin": null,
       "mirrored": true
     },
@@ -1148,6 +1211,15 @@
       "mirrored": true
     },
     {
+      "slug": "primer-design",
+      "source": "k-dense",
+      "dir": "primer-design",
+      "name": "primer-design",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
       "slug": "protocolsio-integration",
       "source": "k-dense",
       "dir": "protocolsio-integration",
@@ -1161,6 +1233,24 @@
       "source": "k-dense",
       "dir": "pufferlib",
       "name": "pufferlib",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "pybamm",
+      "source": "k-dense",
+      "dir": "pybamm",
+      "name": "pybamm",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "pycalphad",
+      "source": "k-dense",
+      "dir": "pycalphad",
+      "name": "pycalphad",
       "license": "MIT",
       "plugin": null,
       "mirrored": true
@@ -1274,6 +1364,15 @@
       "mirrored": true
     },
     {
+      "slug": "qiime2-amplicon",
+      "source": "k-dense",
+      "dir": "qiime2-amplicon",
+      "name": "qiime2-amplicon",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
       "slug": "qiskit",
       "source": "k-dense",
       "dir": "qiskit",
@@ -1297,6 +1396,15 @@
       "dir": "rdkit",
       "name": "rdkit",
       "license": "BSD-3-Clause license",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "relion",
+      "source": "k-dense",
+      "dir": "relion",
+      "name": "relion",
+      "license": "MIT",
       "plugin": null,
       "mirrored": true
     },
@@ -1530,6 +1638,15 @@
       "source": "k-dense",
       "dir": "tamarind",
       "name": "tamarind",
+      "license": "MIT",
+      "plugin": null,
+      "mirrored": true
+    },
+    {
+      "slug": "tellurium",
+      "source": "k-dense",
+      "dir": "tellurium",
+      "name": "tellurium",
       "license": "MIT",
       "plugin": null,
       "mirrored": true

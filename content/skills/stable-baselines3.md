@@ -213,6 +213,7 @@ state_dict = model.policy.state_dict()
 ### 6. Evaluation and Recording
 
 **Evaluation:**
+When training uses `VecNormalize`, load its saved training statistics into a separate evaluation environment with the same observation wrappers. Set `training=False` to freeze those statistics and `norm_reward=False` to report rewards in the original units; do not fit normalization on evaluation episodes. Save the normalization state alongside the model checkpoint.
 ```python
 from stable_baselines3.common.evaluation import evaluate_policy
 

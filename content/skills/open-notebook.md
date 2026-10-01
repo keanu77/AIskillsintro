@@ -2,7 +2,7 @@
 
 ## Overview
 
-Open Notebook is an open-source, self-hosted alternative to Google's NotebookLM that enables researchers to organize materials, generate AI-powered insights, create podcasts, and have context-aware conversations with their documents — all while maintaining complete data privacy.
+Open Notebook is an open-source, self-hosted alternative to Google's NotebookLM that enables researchers to organize materials, generate AI-powered insights, create podcasts, and have context-aware conversations with their documents — with self-hosted storage and a choice of local or cloud AI processing.
 
 Unlike Google's Notebook LM, which has no publicly available API outside of the Enterprise version, Open Notebook provides a comprehensive REST API, supports 16+ AI providers, and runs entirely on your own infrastructure.
 
@@ -10,7 +10,7 @@ Unlike Google's Notebook LM, which has no publicly available API outside of the 
 - Full REST API for programmatic access and automation
 - Choice of 16+ AI providers (not locked to Google models)
 - Multi-speaker podcast generation with 1-4 customizable speakers (vs. 2-speaker limit)
-- Complete data sovereignty through self-hosting
+- Control over application storage through self-hosting
 - Open source and fully extensible (MIT license)
 
 **Repository:** https://github.com/lfnovo/open-notebook
@@ -274,7 +274,12 @@ Open Notebook uses a modern stack:
 - At least one AI provider must be configured for AI features to work
 - For free local inference without API costs, use Ollama
 - The `OPEN_NOTEBOOK_ENCRYPTION_KEY` must be set before first launch and kept consistent across restarts
-- All data is stored locally in Docker volumes for complete data sovereignty
+- Self-hosting controls application storage, but configured cloud LLM, embedding,
+  transcription, and speech providers can receive source content. Before ingesting
+  restricted research data, check the provider selected for each operation; a local
+  chat model alone does not make embedding or podcast processing local. Use local
+  providers for every relevant stage when local-only processing is required. See
+  the [upstream provider documentation](https://github.com/lfnovo/open-notebook).
 
 ## Citing Scientific Agent Skills
 

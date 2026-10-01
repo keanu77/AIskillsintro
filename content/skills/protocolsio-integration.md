@@ -104,7 +104,11 @@ python3 -B scripts/protocols_read.py --execute \
 ```
 
 For an intentional signed-out PDF request, add `--anonymous`; the helper never
-falls back to anonymous access silently. JSON output is bounded, redacted, and
+falls back to anonymous access silently. When using a separate REST integration,
+`only_materials`, `only_commands`, and `only_steps` are mutually exclusive PDF
+filters. Record any such filter with the export and label the result as partial;
+a steps-only PDF omits context needed for a complete protocol archive. These
+filters are documented upstream but are not exposed by the bundled read CLI. JSON output is bounded, redacted, and
 marked untrusted. PDF bytes go only to a new private (`0600`) file.
 
 ### Pagination

@@ -443,9 +443,9 @@ result = computation.compute()
 ### Common Issues
 
 **Memory Errors**:
-- Decrease chunk sizes
-- Use `persist()` strategically and delete when done
-- Check for memory leaks in custom functions
+- Check where the result lands: collection `.compute()` and `client.gather()` materialize results in client memory; reduce first or write partitioned output when the full result cannot fit.
+- Distributed `persist()` retains partitions on workers; it does not make a later oversized gather safe. Budget worker memory and release persisted collections when done.
+- Tune chunk sizes for concurrent tasks and temporary arrays, and inspect custom functions for memory growth.
 
 **Slow Start**:
 - Task graph too large (increase chunk sizes)

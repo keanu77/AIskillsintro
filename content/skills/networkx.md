@@ -53,6 +53,12 @@ G.add_edge(1, 4, weight=0.8, relation='interacts')
 NetworkX provides extensive algorithms for network analysis:
 
 **Shortest Paths**:
+
+For weighted paths and betweenness, weights represent distances/costs: larger values
+make a route less favorable. Similarity, correlation, or interaction strength needs an
+explicit scientifically justified conversion before use as distance. Validate the chosen
+attribute on every edge and use strictly positive distances for weighted betweenness.
+
 ```python
 # Find shortest path
 path = nx.shortest_path(G, source=1, target=5)

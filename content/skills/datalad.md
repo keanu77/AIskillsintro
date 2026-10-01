@@ -128,6 +128,8 @@ command before committing to it with `--dry-run basic` or `--dry-run command`.
 
 A run that changes nothing produces no commit, exactly as `datalad save` does.
 
+`run` records the command and dataset state; it does not freeze arbitrary host-installed software or external services. Version an environment lockfile and scripts as declared inputs, or use a tracked container image with `containers-run`. Record random seeds and relevant runtime settings, then test `rerun` from a fresh environment before claiming computational reproducibility.
+
 ### Re-executing
 
 ```bash

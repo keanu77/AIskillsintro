@@ -236,7 +236,11 @@ python3 scripts/evaluate_local.py report \
 
 This evaluator never imports a provider SDK or model package. Report the
 dataset revision, manifest and hypothesis-bank hashes, split, seeds, selection
-procedure, missing predictions, and all deviations. Never describe benchmark
+procedure, missing predictions, and all deviations. Record whether each run used
+[Redis response caching](https://github.com/ChicagoHAI/hypothesis-generation)
+and its cache seed/namespace. Reruns that replay the same cached completions
+are reproducibility checks, not independent model draws; do not use their
+number as the sample size for uncertainty estimates. Never describe benchmark
 metrics or LLM judgments as scientific validation. See
 `references/evaluation.md`.
 

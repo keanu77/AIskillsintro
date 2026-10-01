@@ -207,12 +207,13 @@ samples = sample(model, n=1000, method="optgp", processes=4)
 # Sample using ACHR
 samples = sample(model, n=1000, method="achr")
 
-# Validate samples
+# Validate the returned sample DataFrame (small, reproducible smoke check)
 from cobra.sampling import OptGPSampler
-sampler = OptGPSampler(model, processes=4)
-sampler.sample(1000)
-validation = sampler.validate(sampler.samples)
-print(validation.value_counts())  # Should be all 'v' for valid
+from collections import Counter
+sampler = OptGPSampler(model, processes=1, seed=7)
+flux_samples = sampler.sample(20)
+validation = sampler.validate(flux_samples)
+print(Counter(validation))  # Codes other than 'v' require investigation
 ```
 
 ### 8. Production Envelopes

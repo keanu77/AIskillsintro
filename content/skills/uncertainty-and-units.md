@@ -119,8 +119,7 @@ popt, pcov = curve_fit(f, x, y, sigma=sigma)                        # default
 popt, pcov = curve_fit(f, x, y, sigma=sigma, absolute_sigma=True)
 ```
 
-The default rescales `pcov` by the reduced chi-square, so the parameter uncertainties
-absorb the goodness of fit and match what you would get by passing no `sigma` at all. On
+The default rescales `pcov` by the reduced chi-square. Relative weights from `sigma` still affect the fit and covariance: equality with an unweighted fit holds for constant `sigma`, not generally for heteroscedastic inputs. On
 one synthetic straight-line fit the two give `[0.0364, 0.2154]` and `[0.0477, 0.2820]` —
 a 31% difference. Pass `absolute_sigma=True` whenever `sigma` holds real standard
 uncertainties.
@@ -315,9 +314,7 @@ The estimate and `u_c` are still right; only the interval is too wide.
 
 ## Constants
 
-Never type a constant from memory. The 2019 SI redefinition fixed `c`, `h`, `e`, `k`,
-and `N_A` exactly, so their relative standard uncertainty is zero; everything else is a
-measured value that moves between CODATA releases.
+Never type a constant from memory. The SI has seven exact defining constants, including `c`, `h`, `e`, `k`, and `N_A`; quantities derived solely from exact constants can also be exact (for example, `R = N_A * k`). Other constants may be measured and change between CODATA releases. Check each constant's stated uncertainty rather than assuming every other value is measured.
 
 ```python
 import scipy.constants as constants

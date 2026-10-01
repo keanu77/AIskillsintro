@@ -192,6 +192,10 @@ print(z2.attrs['description'])
 
 **Important**: Attributes must be JSON-serializable (strings, numbers, lists, dicts, booleans, null).
 
+## Parallel write ownership
+
+Partition writers by stored object: disjoint **chunks** for an unsharded array, or disjoint **shards** for a sharded array. Different inner chunks can share one shard, so distinct element slices alone do not establish safe concurrent writes. Assign a single writer per shard or coordinate updates externally, and serialize resize/append and metadata changes. Reopen and verify written regions after workers finish.
+
 ## Chunking, Compression, Storage, and Performance
 
 - [references/chunking_and_compression.md](references/chunking_and_compression.md):

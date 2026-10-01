@@ -126,6 +126,16 @@ precede their selection counterpart.
 -   Dataset totals (sample count, sex split, variant total, assembly) →
     `dataset-info`
 
+## Cohort interpretation
+
+The 3,202-sample cohort includes relatives: the additional 698 high-coverage
+samples extend the original 2,504-sample panel. Carrier counts therefore are
+not counts of independent observations, and cohort AF is not a population
+prevalence estimate. For association or frequency comparisons, document the
+selected populations and relatedness policy; use the bundled pedigree metadata
+and `kinship` when choosing or auditing the analysis set. See the
+[IGSR cohort announcement](https://www.internationalgenome.org/announcements/3202-samples-at-high-coverage-from-NYGC/).
+
 ## Annotation filters (shared across variant and sample selection/counting)
 
 All variant- and sample-selection commands (`count-variants`,

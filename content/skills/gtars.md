@@ -158,6 +158,13 @@ rows = consensus([query, universe])
 # rows: [{"chr": ..., "start": ..., "end": ..., "count": ...}, ...]
 ```
 
+The [0.9.0 consensus algorithm](https://github.com/databio/gtars/blob/v0.9.0/gtars-genomicdist/src/consensus.rs)
+counts input sets touching a merged union component, not support at every base.
+For example, `[0,10)` and `[5,15)` yield `[0,15)` with count 2, although its
+edges have one-set support. Do not describe a count-filtered consensus as
+basewise replicate agreement; use a support-segmenting method when that is the
+scientific requirement.
+
 Signal-track generation is **not** exposed as `gtars.uniwig` in Python 0.9.2;
 use the reviewed CLI or Rust API. `RegionSet.coverage()` is a base-pair set metric,
 not a WIG/bigWig generator.

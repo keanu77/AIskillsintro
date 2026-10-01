@@ -94,6 +94,10 @@ Per-topic detail is in [references/scientific_method.md](references/scientific_m
    - Recognize exploratory vs. confirmatory contexts
    - Account for resource limitations in evaluating studies
 
+### Apply risk-of-bias tools to the right unit
+
+For RoB 2, identify the specific result: outcome, time point, intervention comparison, numerical estimate, and effect of assignment versus adherence. Use the variant for individually randomized, cluster, or crossover trials; record signalling answers and justifications rather than assigning one blanket score to the whole paper. Different outcomes in the same trial can have different bias judgments. See the [Cochrane RoB 2 guidance](https://training.cochrane.org/handbook/current/chapter-08).
+
 ### When Providing Critique
 
 **Structure feedback as:**

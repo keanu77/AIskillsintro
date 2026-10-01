@@ -152,7 +152,7 @@ For every criterion, distinguish:
 - `missing` from `not_applicable`; and
 - uncertainty from absence.
 
-Failure to find prior work does not prove novelty.
+Failure to find prior work does not prove novelty. Freeze the exact work revision and evidence-access date before independent rating so raters assess the same material. For public papers, check publisher correction/retraction notices and [Crossmark](https://www.crossref.org/services/crossmark/) where available; record unresolved status rather than treating absence of a notice as verification. If the work changes materially, issue a new evaluation linked to the prior revision.
 
 ### 5. Rate independently
 

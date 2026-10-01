@@ -42,7 +42,13 @@ Before any separately authorized live run, require a trained human to:
    new or changed.
 
 Tracker state is **bookkeeping**, not sensing. It cannot prove that liquid or a
-tip is physically present. The Visualizer renders resource/tracker events; it
+tip is physically present. After a backend error, tracker rollback describes
+software state; it does not reverse a physical aspiration, dispense, or tip
+movement that partly completed. Preserve the error/channel details and have the
+operator reconcile tips and source/destination volumes before resuming. Do not
+blindly retry the failed operation from the pre-error plan. The
+[0.2.1 liquid-handler implementation](https://github.com/PyLabRobot/pylabrobot/blob/v0.2.1/pylabrobot/liquid_handling/liquid_handler.py)
+commits or rolls back trackers according to reported operation success. The Visualizer renders resource/tracker events; it
 does not model physics. Chatterbox prints planned operations; it does not prove
 calibration, reachability, collision freedom, liquid behavior, or device state.
 

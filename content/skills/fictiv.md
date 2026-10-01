@@ -86,7 +86,12 @@ Resolve blocking items before uploading:
 - **Apply configuration.**
 - Add finish, then color, then **Add requirement**. Note the +days and price shown.
 - Threads tab: pick a size per hole group.
-- Drawing, inspections and certs if needed.
+- Drawing, inspections and certs if needed. Reconcile detected drawing requirements
+  against the final digital configuration: Fictiv manufactures that configuration
+  by default when it conflicts with the PDF. Independently check that CAD and
+  drawing revisions agree, because reconciliation does not detect geometry
+  discrepancies. Recheck the configuration after uploading a revised drawing.
+  See [Drawings Reconciliation](https://www.fictiv.com/help/placing-an-order/how-do-i-use-drawings-reconciliation).
 - **Save and close.**
 - Use **Bulk configure parts** for many identical-spec parts.
 - Check the bounding box in the viewer against the expected size.

@@ -221,6 +221,11 @@ Before interpreting results, require:
   observables.
 - Comparison to an analytical solution, manufactured solution, benchmark, or
   independently reproduced result where appropriate.
+- For temporal averages, record the stationary window and actual saved timestamps.
+  [Spatial-means averaging](https://fluidsim.readthedocs.io/en/latest/generated/fluidsim.base.output.spatial_means.html)
+  averages saved samples; check cadence and duplicate restart times. If spacing
+  is irregular, compute and document a time-weighted average instead of treating
+  every output record as equal elapsed time.
 - Complete provenance and restart lineage.
 
 Never label a run “DNS,” “converged,” “validated,” “steady,” or “physically

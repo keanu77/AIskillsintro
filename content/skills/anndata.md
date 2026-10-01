@@ -17,7 +17,8 @@ Use this skill when:
 
 ## Installation
 
-Requires Python 3.11+. Current stable release: 0.12.16 (released 2026-05-18).
+Requires Python 3.11+. These examples target AnnData 0.12.16; this pin is not a claim
+that it is the newest release.
 
 ```bash
 uv pip install "anndata==0.12.16"
@@ -353,6 +354,12 @@ sc.tl.umap(adata)
 ```
 
 ### Working with large datasets
+
+In H5AD backed mode, `r+` persists changes to `X`, not arbitrary edits to `obs`,
+`var`, or `uns`. Write those edits to a new file and reopen it to verify they
+survived. Close the source with `adata.file.close()` when finished; materialize
+any needed subsets before closing. See the [backed I/O contract](https://anndata.readthedocs.io/en/stable/generated/anndata.io.read_h5ad.html).
+
 ```python
 # Open in backed mode
 adata = ad.read_h5ad('100GB_dataset.h5ad', backed='r')

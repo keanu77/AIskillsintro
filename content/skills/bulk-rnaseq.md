@@ -44,7 +44,10 @@ flowchart TD
 
 ## Two Upstream Paths — Pick One
 
-The reads → counts stage can be run two ways. They produce equivalent gene counts; choose by context, then stay on that path.
+The reads → counts stage can be run two ways. Both produce gene-level counts,
+but STAR/featureCounts and Salmon/tximport do not generally give identical or
+interchangeable values: assignment rules, multimapping, and effective-length
+corrections differ. Choose one quantification route for the entire comparison.
 
 | Use **Path A — `nf-core/rnaseq`** when… | Use **Path B — standalone tools** when… |
 |------------------------------------------|------------------------------------------|
@@ -55,7 +58,9 @@ The reads → counts stage can be run two ways. They produce equivalent gene cou
 
 When unsure, prefer **Path A**: `nf-core/rnaseq` already wires together FastQC → trimming → STAR/Salmon → quantification → tximport → MultiQC with sensible, reviewed defaults, which is the most defensible option. Path B exists for transparency and constrained setups.
 
-Both paths converge on a **gene-level counts matrix**, after which the workflow is identical.
+Both paths converge on a **gene-level counts matrix**. Preserve whether counts are
+raw or length-scaled, the transcript-to-gene mapping release, and any offsets.
+Length-scaled counts must not receive a second transcript-length correction.
 
 ## Setup
 
@@ -133,7 +138,7 @@ Work top to bottom. Each stage names the skill or file that owns the detail. Don
 1. **Design & sample sheet.** Confirm ≥3 biological replicates per group, identify batch/confounders, and choose the comparison(s). Build the samplesheet and validate it with `scripts/validate_samplesheet.py`. Rationale and rules: `references/design-and-qc.md`.
 2. **Raw-read QC.** FastQC per file; aggregate with MultiQC. Check per-base quality, adapter content, duplication, and over-representation. Thresholds: `references/design-and-qc.md`.
 3. **Trimming.** Remove adapters and low-quality tails (via `fastp` or `Trim Galore`). Re-run FastQC to confirm. Recipes: `references/upstream-manual.md` (Path A does this for you).
-4. **Align / quantify.** STAR (genome alignment + `--quantMode GeneCounts`) and/or Salmon (transcript quasi-mapping, decoy-aware). Determine strandedness — it is easy to get wrong and silently halves your counts. Detail: `references/upstream-manual.md`; pipeline params: `references/upstream-nfcore.md`.
+4. **Align / quantify.** STAR (genome alignment + `--quantMode GeneCounts`) and/or Salmon (transcript quasi-mapping, decoy-aware). Determine strandedness — the wrong convention can silently discard most assigned reads. Detail: `references/upstream-manual.md`; pipeline params: `references/upstream-nfcore.md`.
 5. **Build the counts matrix.** Turn quant output into a gene × sample integer matrix and a metadata template (`scripts/build_counts_matrix.py`). The estimated-count and gene-ID-mapping nuances live in `references/counts-and-handoff.md`.
 6. **Differential expression → `pydeseq2` skill.** Load `counts.csv` + `metadata.csv`, set the design (e.g. `~batch + condition`), fit, and test with FDR control. Inspect the PCA and p-value histogram as QC.
 7. **Enrichment → `pathway-enrichment` skill.** For GSEA, rank the *full* gene list by the DESeq2 `stat`; for ORA, pass the thresholded hit list (padj < 0.05, optionally |log2FC| > 1). Map gene IDs to symbols first.
@@ -155,7 +160,7 @@ These cause most wrong or irreproducible bulk RNA-seq results:
 
 1. **Too few replicates.** <3 biological replicates per group gives almost no power and unstable dispersion estimates. More replicates beat deeper sequencing.
 2. **Confounded batch and condition.** If every treated sample was processed on a different day/lane than controls, the effect is unrecoverable. Randomize, and model known batches (`~batch + condition`). See `references/design-and-qc.md`.
-3. **Wrong strandedness.** Choosing the wrong STAR column or featureCounts `-s`/Salmon library type silently discards ~half the reads. Use Salmon `-l A` or infer strandedness, and verify the assigned-reads fraction.
+3. **Wrong strandedness.** Choosing the wrong STAR column or featureCounts `-s`/Salmon library type can discard most assigned reads; there is no universal 50% loss. Use Salmon `-l A` or infer strandedness, and verify the assigned-reads fraction.
 4. **Feeding TPM/FPKM to DESeq2.** DESeq2 needs raw (or length-scaled) **counts**, never TPM/FPKM/normalized values. The bridge handles this.
 5. **Non-integer counts.** PyDESeq2 requires integers; round Salmon estimates (the bridge does this).
 6. **Gene-ID mismatch into enrichment.** DESeq2 output is often Ensembl IDs; Enrichr/MSigDB want symbols. Map IDs before `pathway-enrichment` or "nothing is significant".

@@ -63,6 +63,8 @@ edge_index = edge_pairs.t().contiguous()
 
 For undirected graphs, include both directions: edge (0,1) needs both `[0,1]` and `[1,0]` in edge_index.
 
+If node features are absent, set `data.num_nodes` explicitly from the node table. Inferring it from `edge_index.max() + 1` misses isolated nodes, which can corrupt batching offsets and outputs. Check `data.validate(raise_on_error=True)` after construction, including an edge-free or isolated-node case.
+
 For heterogeneous graphs, use `HeteroData` — see the Heterogeneous Graphs section below.
 
 ### Datasets

@@ -100,7 +100,12 @@ export OMERO_SECURE="true"
 # OMERO_SESSION_KEY as an alternative. Do not echo either value.
 ```
 
-A password-authenticated, exception-safe read pattern is:
+The following password-authenticated read pattern uses the session's current
+group. Before adapting it for a requested group, check that group against the
+session context and set that explicit group as described in
+[`references/connection.md`](references/connection.md). An empty result in the
+current group does not prove that an object is absent from other groups. See
+[OME's group-context documentation](https://omero.readthedocs.io/en/stable/developers/Python.html).
 
 ```python
 import os

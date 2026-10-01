@@ -40,6 +40,14 @@ Prefer the SDK for Node/TypeScript apps that need type safety, direct state acce
 
 Prefer RPC mode when the client is not Node.js, needs process isolation, or wants a language-agnostic JSONL protocol. Start with `pi --mode rpc --no-session` for stateless subprocess integration, then add session flags when persistence matters. Split records on `\n` only — Node `readline` is not protocol-compliant.
 
+For RPC clients, correlate responses by unique request `id`, not arrival order,
+and keep consuming events after a successful `prompt` response. Success means
+accepted, queued, or handled; it is not completion. Subscribe before sending the
+prompt, and wait for `agent_settled` for runs that actually start, because
+`agent_end` may precede retries or queued work. If the response reports
+`disposition: "handled"`, no run started and no settled event is owed. See the
+[upstream RPC lifecycle](https://github.com/earendil-works/pi/blob/main/packages/coding-agent/docs/rpc.md).
+
 Prefer JSON mode for one-shot command-line pipelines that only need streamed events, not bidirectional control: `pi --mode json "prompt"`.
 
 Use extensions for Pi-native behavior: custom tools, command handlers, event hooks, provider registration, custom compaction, path protection, project trust policy, UI prompts, widgets, and TUI components.

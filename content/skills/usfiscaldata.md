@@ -88,6 +88,8 @@ None required. The API is fully open and free.
 | Treasury Reporting Rates of Exchange | `/v1/accounting/od/rates_of_exchange` | Quarterly |
 | Interest Expense on Public Debt | `/v2/accounting/od/interest_expense` | Monthly |
 
+**Exchange-rate interpretation:** Treasury Reporting Rates are foreign-currency units per USD, so divide a foreign-currency amount by the rate to obtain USD (and multiply USD to obtain foreign currency). These are government reporting rates, not live trading quotes. Preserve both `record_date` and `effective_date`, and check amendments before applying a rate to a reporting period.
+
 ### Securities & Auctions
 
 | Dataset | Endpoint | Frequency |

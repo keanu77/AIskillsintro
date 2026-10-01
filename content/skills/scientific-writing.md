@@ -55,6 +55,7 @@ discovery but do not verify a claim. See `references/evidence_workflow.md`.
 - Distinguish confirmatory, exploratory, descriptive, and post hoc work.
 - Keep methods and results consistent.
 - Reconcile units, denominators, sample sizes, populations, time points, and labels.
+- For binary trial outcomes, report group event counts/denominators plus both absolute and relative effects with uncertainty when the reporting guideline requires them. Distinguish risk difference (percentage points), relative risk, and odds ratio; do not rewrite one as another or infer an absolute effect without the baseline risk. See [CONSORT 2025 explanation](https://www.bmj.com/content/389/bmj-2024-081124).
 - Report negative, null, adverse, unexpected, failed, and inconclusive findings when
   they belong to the study record.
 - State concrete limitations and bound generalizability.

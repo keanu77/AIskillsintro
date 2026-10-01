@@ -87,7 +87,13 @@ reference-file preparation for kallisto or alignment — are in
 ### Expression and Disease Data
 - Gene symbols are case-sensitive in cellxgene (e.g., 'PAX7' vs 'Pax7')
 - Run `gget setup` before first use of alphafold, cellxgene, elm, gpt
-- For enrichment analysis, use database shortcuts for convenience
+- For enrichment, record the full library name and release, not only a shortcut:
+  [the adapter](https://github.com/pachterlab/gget/blob/main/gget/gget_enrichr.py)
+  maps shortcuts to specific dated libraries, and non-human/mouse species need
+  full species-specific names. For human/mouse, supply the tested-gene universe
+  through `background_list` when appropriate; custom backgrounds are not
+  supported for the other species. Report mapped/unmapped query and background
+  counts and adjusted p-values, so identifier loss and selection bias are visible.
 - Cache cBioPortal data with `-dd` to avoid repeated downloads
 - For OpenTargets, inspect returned column names before writing filters; gget 0.30.5 follows the newer OpenTargets API schema
 

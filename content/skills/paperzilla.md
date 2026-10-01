@@ -130,6 +130,18 @@ pz feedback <project-paper-id> downvote --reason not_relevant
 pz feedback clear <project-paper-id>
 ```
 
+## Keep paper and recommendation identities separate
+
+A canonical `paper-id` identifies the paper; a `project-paper-id` identifies its
+recommendation within a project. Take both from returned records and retain the
+project association when exporting results. Use the recommendation ID for `rec`
+and feedback operations, even if the same paper appears in several projects.
+Do not infer recommendation IDs from a DOI or canonical paper ID. See the
+[official CLI documentation](https://github.com/paperzilla-ai/pz).
+
+When markdown is still being prepared, report that state and summarize only the
+metadata or abstract actually returned. A retry message is not full-text evidence.
+
 ## Output and automation
 
 - Prefer `--json` for machine parsing.

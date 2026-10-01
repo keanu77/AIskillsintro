@@ -92,6 +92,8 @@ syntax before they reach mfapy's internally generated numerical functions.
 5. **Inspect the evidence.** Check failed starts, residual patterns, mass balance,
    active bounds, local sensitivity rank, and profile status. Report threshold-crossing
    brackets at their actual grid resolution. Refine the grid if they are too coarse.
+   Each requested profile gives a one-flux interval under the stated error model;
+   multiple 95% profiles are not a simultaneous 95% region for the whole network.
    If a profile finds a better solution than the baseline, rerun the fit; do not publish
    the stale intervals. A failed profile point is unknown, not excluded by the data.
 6. **Deliver a bounded scientific result.** Include model and data hashes, package

@@ -121,7 +121,7 @@ requests source-supported:
 
 The default extraction limit equals `--target-references`. Use `--extract-limit N`
 to reduce cost or `--no-extract` only when unverified search results are acceptable.
-The coverage report will not count search-only records as verified.
+The coverage report will not count search-only records as verified. Successful extraction is still only a retrieval check: inspect each excerpt against the proposed claim, confirm bibliographic identity, and verify correction/retraction status at the publisher or authoritative index. For a batched Extract response, inspect per-URL errors as well as returned results; a successful request can leave individual sources unavailable. Record inaccessible sources as gaps rather than assuming every requested URL was reviewed.
 
 ### 4. Review the manuscript research packet
 

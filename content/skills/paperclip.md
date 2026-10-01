@@ -188,8 +188,11 @@ paperclip results m_def456                    # full per-paper output — the te
 ```
 
 Keep `map` to 3–10 papers; it runs an LLM reader per paper. Enumerate every field you want and ask for
-an explicit "not reported", or you cannot tell a gap from a miss. After `map`, answer from
-`paperclip results`; do not loop back and re-read each paper.
+an explicit "not reported", or you cannot tell a gap from a miss. After `map`, use
+`paperclip results` as the extraction table, then verify the source lines for every
+material quantitative claim or direct quotation used in the answer. Revisit only
+the relevant passages or supplements; an LLM extraction is not itself primary
+evidence. This also satisfies the line-citation contract below.
 
 `reduce --strategy table` returns prose, not a table, with or without `--columns` — build any table
 yourself from `paperclip results m_def456`.
