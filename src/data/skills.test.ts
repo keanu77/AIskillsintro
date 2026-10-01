@@ -39,6 +39,36 @@ describe("catalog integrity", () => {
   });
 });
 
+// Editorial guardrails for the zh intro shown above the install panel (#12).
+const INTRO_LIMITS = { useCase: 60, limitations: 120, starterPrompt: 80 } as const;
+// Absolute efficacy wording and 「病歷」 are off-limits in public copy.
+const FORBIDDEN = /保證|完全|百分之百|一定能|徹底|根治|無副作用|病歷|實測有效/;
+
+describe("zh intro", () => {
+  it("gives every skill a use case, prerequisites and a starter prompt", () => {
+    const missing = SKILLS.filter((s) => !s.useCase || !s.limitations || !s.starterPrompt).map((s) => s.slug);
+    expect(missing).toEqual([]);
+  });
+
+  it("keeps intro fields short and free of forbidden wording", () => {
+    for (const skill of SKILLS) {
+      for (const [field, max] of Object.entries(INTRO_LIMITS)) {
+        const text = skill[field as keyof typeof INTRO_LIMITS];
+        if (!text) continue;
+        expect(text.length, `${skill.slug}.${field}`).toBeLessThanOrEqual(max);
+        expect(text, `${skill.slug}.${field}`).not.toMatch(FORBIDDEN);
+      }
+    }
+  });
+
+  it("records which upstream version each intro was written from", () => {
+    for (const skill of SKILLS.filter((s) => s.useCase)) {
+      expect(skill.reviewedHash, skill.slug).toMatch(/^[a-f0-9]{64}$/);
+      expect(skill.reviewedSourceUrl, skill.slug).toMatch(/^https:\/\/github\.com\//);
+    }
+  });
+});
+
 describe("buildSkills", () => {
   it("keeps newly discovered untranslated skills out of the public catalog", () => {
     const candidate = { slug: "new-unreviewed", source: "k-dense", dir: "new-unreviewed", name: "New", license: null, plugin: null, mirrored: false } as UpstreamSkill;

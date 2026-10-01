@@ -33,6 +33,8 @@ export interface SkillOverlay {
   /** Editorial context, not a task-test endorsement. */
   useCase?: string;
   limitations?: string;
+  /** A zh instruction a reader can paste into their agent to try the skill. */
+  starterPrompt?: string;
   reviewedAt?: string;
   reviewedSourceUrl?: string;
   reviewedHash?: string;

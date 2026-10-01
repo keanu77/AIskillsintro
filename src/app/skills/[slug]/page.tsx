@@ -6,6 +6,7 @@ import ElementHero from "@/components/detail/ElementHero";
 import FamilyRow from "@/components/detail/FamilyRow";
 import SkillEvidence from "@/components/detail/SkillEvidence";
 import SkillGuide from "@/components/detail/SkillGuide";
+import SkillIntro from "@/components/detail/SkillIntro";
 import SiteHeader from "@/components/periodic/SiteHeader";
 import Footer from "@/components/shared/Footer";
 import Installation from "@/components/shared/Installation";
@@ -84,6 +85,7 @@ export default async function SkillDetailPage({ params }: PageProps) {
       </SiteHeader>
       <main className="mx-auto flex max-w-[1240px] flex-col gap-12 px-5 pt-6 pb-20 sm:px-10">
         <ElementHero element={element} />
+        <SkillIntro skill={skill} />
         <Installation skill={skill.upstream} repos={REPOS} />
         <SkillEvidence skill={skill} />
         <FamilyRow element={element} all={ELEMENTS} />
