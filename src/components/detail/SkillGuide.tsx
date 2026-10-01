@@ -1,5 +1,3 @@
-"use client";
-
 import ReactMarkdown, { type Components } from "react-markdown";
 import remarkGfm from "remark-gfm";
 
@@ -33,15 +31,13 @@ export default function SkillGuide({ content }: SkillGuideProps) {
 
         {/* 回到頁首 */}
         <div className="mt-12 text-center">
+          {/* Plain "#" scrolls to the top natively; html's scroll-behavior handles smoothing. */}
           <a
             href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              window.scrollTo({ top: 0, behavior: "smooth" });
-            }}
             className="group inline-flex items-center gap-2 rounded-full bg-slate-100 px-5 py-2.5 text-sm font-medium text-slate-600 transition-all hover:bg-blue-50 hover:text-blue-600"
           >
             <svg
+              aria-hidden
               className="h-4 w-4 transition-transform group-hover:-translate-y-0.5"
               fill="none"
               viewBox="0 0 24 24"
