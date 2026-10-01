@@ -9,6 +9,13 @@ export const CHEMISTRY: SkillOverlay[] = [
       "自動化蛋白質測試與驗證的雲端實驗室平台。設計蛋白質時進行實驗驗證，含結合分析、表現測試。",
   },
   {
+    slug: "cantera",
+    name: "Cantera",
+    icon: "🔥",
+    description:
+      "以 Cantera 模擬均相化學反應器並評估點火延遲，含反應機構出處、守恆檢查與數值收斂驗證，用於燃燒動力學。",
+  },
+  {
     slug: "datamol",
     name: "Datamol",
     icon: "⚗️",
@@ -51,6 +58,13 @@ export const CHEMISTRY: SkillOverlay[] = [
       "分析與工程化蛋白質醣基化：掃描 N-醣基化序列、預測 O-醣基化熱點，用於抗體最佳化與疫苗設計。",
   },
   {
+    slug: "marine-carbonate-chemistry",
+    name: "Marine Carbonate Chemistry",
+    icon: "🌊",
+    description:
+      "用 PyCO2SYS 求解海水碳酸鹽系統：總鹼度、DIC、pH、pCO2、霰石/方解石飽和度，用於海洋酸化研究。",
+  },
+  {
     slug: "matchms",
     name: "Matchms",
     icon: "⚗️",
@@ -77,6 +91,27 @@ export const CHEMISTRY: SkillOverlay[] = [
     icon: "⚗️",
     description:
       "分子特徵化（100+ 特徵化器）。ECFP、MACCS、描述子、預訓練模型（ChemBERTa），SMILES 轉特徵，用於 QSAR。",
+  },
+  {
+    slug: "nmrglue",
+    name: "nmrglue",
+    icon: "🧲",
+    description:
+      "用 nmrglue 處理一維 NMR 自由感應衰減訊號：傅立葉轉換、相位校正、基線校正、峰偵測與積分。",
+  },
+  {
+    slug: "pybamm",
+    name: "PyBaMM",
+    icon: "🔋",
+    description:
+      "用 PyBaMM 模擬鋰離子電池充放電（SPM、DFN 模型），檢查網格與求解器敏感度並與實測電壓曲線比較。",
+  },
+  {
+    slug: "pycalphad",
+    name: "pycalphad",
+    icon: "🔩",
+    description:
+      "以 pycalphad 從 TDB 熱力學資料庫計算 CALPHAD 相平衡、相分率與相組成，用於合金相穩定性分析。",
   },
   {
     slug: "pymatgen",
