@@ -11,10 +11,11 @@ export default function Footer() {
             每週更新與收錄方式 →
           </Link>
         </div>
-        <p className="flex flex-wrap gap-x-5 gap-y-1 font-mono text-xs text-ink-muted">
+        {/* Links are ≥24px tall with room around them (WCAG 2.2 target size). */}
+        <p className="flex flex-wrap items-center gap-x-5 gap-y-2 font-mono text-xs text-ink-muted">
           <span>資料來源</span>
           {SOURCES.map((s) => (
-            <a key={s.id} href={repoUrl(s.repo)} target="_blank" rel="noopener noreferrer" className="text-ink underline-offset-2 hover:text-accent">
+            <a key={s.id} href={repoUrl(s.repo)} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-6 items-center text-ink underline-offset-2 hover:text-accent">
               {s.repo}
             </a>
           ))}
