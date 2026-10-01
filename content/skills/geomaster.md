@@ -133,6 +133,15 @@ area_sqm = gdf_metric.geometry.area
 
 ### Spectral Indices
 
+Before using the illustrative snippets, map raster band positions to named
+Sentinel bands and align their grids/resolutions. Convert digital numbers to
+physical reflectance using that product's scale and offset before EVI or SAVI: their
+additive constants do not cancel the scale. The
+[Earth Engine harmonized SR collection](https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S2_SR_HARMONIZED)
+uses a 0.0001 scale and already corrects the processing-baseline offset; do not
+apply that offset twice. Preserve nodata/cloud masks instead of turning invalid
+index pixels into zero, which is a valid vegetation-index value.
+
 ```python
 def calculate_indices(image_path):
     """NDVI, EVI, SAVI, NDWI from Sentinel-2."""

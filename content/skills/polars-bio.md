@@ -88,6 +88,8 @@ result = lf.collect()
 
 polars-bio provides 8 core interval operations for genomic range arithmetic. All operations accept Polars DataFrames with `chrom`, `start`, `end` columns (configurable). All operations return a `LazyFrame` by default (use `output_type="polars.DataFrame"` for eager results).
 
+**Interpret overlap rows correctly:** The default `overlap` result contains interval pairs: one query interval may appear multiple times when it hits several targets. Preserve a stable query ID before joining and choose `count_overlaps` when the requested output is a count per query interval. Do not interpret the number of joined rows as the number of unique covered regions. See the [upstream operations overview](https://biodatageeks.org/polars-bio/features/operations/).
+
 **Operations:**
 - `overlap` / `count_overlaps` - Find or count overlapping intervals between two sets (`overlap_output="left"` returns df1-only hits since 0.30.0)
 - `nearest` - Find nearest intervals (with configurable `k`, `overlap`, `distance` params)

@@ -145,6 +145,9 @@ commands generate. Use `--format json` for the normalized view on standard outpu
   Returned predicates or qualifier aspects may be more specific than the query constraint.
 - Inspect all source objects, including primary, aggregator, supporting-data, upstream-resource,
   and source-record URL fields.
+- Trace aggregator edges to their primary/upstream sources and publications before claiming
+  corroboration. Multiple providers can redistribute the same record; report distinct primary
+  evidence, not provider count as confidence or independent replication.
 - Treat `publication_availability: not_returned` as missing metadata, not evidence that no
   publications exist.
 - Treat missing auxiliary-graph references and provider failures as explicit warnings.

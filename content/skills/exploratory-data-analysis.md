@@ -236,6 +236,14 @@ raw values, paths, and sensitive metadata out of the report.
 ## Output interpretation
 
 - “Not detected” means not detected within the bounded scanned scope.
+- A row cap scans the beginning of a CSV/TSV, not a random sample of the file.
+  Check whether rows are ordered by date, batch, site, outcome, or split before
+  generalizing missingness, leakage, or distribution summaries. A bounded
+  subsample of that prefix cannot recover unseen groups. Record the ordering and
+  covered groups; if broader coverage is needed, inspect a documented stratified
+  sample in a separate derived file within the same resource limits. For ordered
+  measurements, a run-sequence plot can reveal drift hidden by a histogram; see
+  [NIST's run-sequence guidance](https://www.itl.nist.gov/div898/handbook/eda/section3/eda33p.htm).
 - A missingness gap or split overlap is a diagnostic flag, not proof of bias or
   leakage.
 - IQR fences, MAD, trimmed means, winsorized means, and log diagnostics are

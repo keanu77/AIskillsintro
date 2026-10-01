@@ -467,9 +467,9 @@ idc-index equivalent.
 **Issue: Downloaded DICOM files won't open**
 - **Cause:** Corrupted download, or an object type the viewer does not handle — SEG, RTSTRUCT,
   SR, and slide microscopy all need specialized tools
-- **Solution:** Check `Modality` and `SOPClassUID` first, validate with
-  `pydicom.dcmread(file, force=True)`, try another viewer (3D Slicer, QuPath for pathology),
-  then re-download
+- **Solution:** Inspect `Modality`, `SOPClassUID`, and transfer syntax with normal `pydicom.dcmread`;
+  [forced parsing is not validation](https://pydicom.github.io/pydicom/stable/reference/generated/pydicom.filereader.dcmread.html).
+  Check download integrity and decoder/viewer support before re-downloading; reserve `force=True` for diagnosed non-Part-10 inputs.
 
 ## Resources
 

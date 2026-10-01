@@ -195,6 +195,8 @@ model can reach PICP = 100% by making the interval so wide it says nothing, whic
 what the paper's pancreatic cancer row (PICP 100%, MPIW 7.35, i.e. 735% of the RELSA range)
 shows.
 
+For prospective evaluation, freeze the RELSA reference set and any KDE thresholds using a separate development cohort before forecasting held-out animals. Do not estimate normalization maxima or thresholds from their future endpoint observations. Label analyses that reuse endpoint data to define the scale as retrospective; use an animal-level split so repeated observations from one animal do not cross evaluation partitions.
+
 For live monitoring, forecast one step ahead at every time point instead:
 
 ```bash

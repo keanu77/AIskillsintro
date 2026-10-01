@@ -117,7 +117,7 @@ Configure with: `Trainer(strategy="ddp", accelerator="gpu", devices=4)`
 
 - Device agnostic code - Use `self.device` instead of `.cuda()`
 - Hyperparameter saving - Use `self.save_hyperparameters()` in `__init__()`
-- Metric logging - Use `self.log()` for automatic aggregation across devices
+- Metric logging - For scalar tensors, cross-device reduction requires `self.log(..., sync_dist=True)`; the default is `False`. Have all ranks participate in synchronized calls. For non-additive metrics such as AUROC, use a stateful TorchMetrics object with its own distributed synchronization instead of averaging per-rank AUROCs. See the [Lightning logging contract](https://lightning.ai/docs/pytorch/stable/extensions/logging.html) and [TorchMetrics integration](https://lightning.ai/docs/torchmetrics/stable/pages/lightning.html).
 - Reproducibility - Use `seed_everything()` and `Trainer(deterministic=True)`
 - Debugging - Use `Trainer(fast_dev_run=True)` to test with 1 batch
 

@@ -190,6 +190,13 @@ For intervention trials, use the current SPIRIT 2025 protocol guidance and CONSO
 
 Before accessing the target outcomes, timestamp the question, candidates, predictions, outcomes, exclusions, transformations, analysis, multiplicity, missing-data plan, and stopping rule when feasible.
 
+For existing datasets, record exactly what each analyst already saw (raw outcomes,
+summary statistics, or prior exploratory results). A later
+[preregistration](https://www.cos.io/initiatives/prereg) cannot make those
+observations prospective. Name the untouched holdout or new replication that
+will test data-informed predictions, and keep the original exploratory analysis
+clearly identified.
+
 Afterward:
 
 - label data-dependent ideas and analyses exploratory;

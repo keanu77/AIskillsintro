@@ -2,7 +2,7 @@
 
 ## Overview
 
-Biopython is a comprehensive set of freely available Python tools for biological computation. It provides functionality for sequence manipulation, file I/O, database access, structural bioinformatics, phylogenetics, and many other bioinformatics tasks. The current version is **Biopython 1.87** (released 30 March 2026). It supports **Python 3.10-3.14** and PyPy3.10, and requires NumPy. Biopython 1.87 also addresses **CVE-2025-68463** in `Bio.Entrez.Parser` when parsing untrusted files, so prefer 1.87+ for workflows that parse externally supplied Entrez XML.
+Biopython is a comprehensive set of freely available Python tools for biological computation. It provides functionality for sequence manipulation, file I/O, database access, structural bioinformatics, phylogenetics, and many other bioinformatics tasks. These examples target **Biopython 1.87** (released 30 March 2026). It supports **Python 3.10-3.14** and PyPy3.10, and requires NumPy. Biopython 1.87 also addresses **CVE-2025-68463** in `Bio.Entrez.Parser` when parsing untrusted files, so prefer 1.87+ for workflows that parse externally supplied Entrez XML.
 
 ## When to Use This Skill
 
@@ -277,7 +277,8 @@ Follow these principles when writing Biopython code:
 4. **Handle files properly** - Close handles after use or use context managers
    ```python
    with open("file.fasta") as handle:
-       records = SeqIO.parse(handle, "fasta")
+       for record in SeqIO.parse(handle, "fasta"):
+           print(record.id)  # consume the lazy iterator while the handle is open
    ```
 
 5. **Use iterators for large files** - Avoid loading everything into memory
@@ -406,7 +407,7 @@ Phylo.draw_ascii(tree)
 **Solution:** Use local BLAST for large-scale searches, or cache results.
 
 ### Issue: PDB parser warnings
-**Solution:** Use `PDBParser(QUIET=True)` to suppress warnings, or investigate structure quality.
+**Solution:** Inspect warnings for missing or disordered atoms and duplicate residue identifiers before suppressing them. `QUIET=True` only hides warnings; it does not repair or validate a structure.
 
 ### Issue: ImportError for Bio.HMM, Bio.MarkovModel, or Bio.Application
 **Solution:** These modules were removed in Biopython 1.86. Use [hmmlearn](https://pypi.org/project/hmmlearn/) for HMMs and the standard library `subprocess` module instead of `Bio.Application` CLI wrappers.

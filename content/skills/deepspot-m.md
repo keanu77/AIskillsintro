@@ -133,7 +133,13 @@ inference:
    coordinates.
 2. Process and stack tiles into batches with `torch.stack`.
 3. Call `predict_genes` once per batch with the same gene list.
-4. Concatenate the batches into a tiles-by-genes matrix and attach the coordinates.
+4. Concatenate batches in a recorded tile-ID order; join coordinates by those IDs,
+   checking uniqueness and missing tiles rather than assuming file/report row order.
+
+Keep outputs labeled as model predictions, not measured transcript counts. Validate
+on held-out slides/patients with paired assays for the intended tissue and processing
+conditions; tiles from one slide are not independent biological replicates. The
+released base model also differs from cancer-specific fine-tuned TCGA atlas models.
 
 That matrix is the virtual spatial transcriptomics map for the slide, and it drops
 straight into `AnnData` for downstream spatial analysis. `references/whole_slide.md` has a

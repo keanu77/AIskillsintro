@@ -108,6 +108,8 @@ est = simulate_power(gen_and_test, n=200, n_sims=2000, alpha=0.05)
 print(f"Power at n=200: {est.power:.3f} (95% CI {est.ci_low:.3f}-{est.ci_high:.3f})")
 ```
 
+The callback must return a boolean rejection decision using the planned alpha internally. The harness's `alpha` argument does not threshold returned p-values or pass alpha into the callback; returning a raw p-value now raises `TypeError` instead of counting a nonzero float as rejection. The harness rejects nonpositive sample/replicate counts and invalid search bounds; an unmet target at the sample-size cap raises an explicit error. First run the same analysis under a null effect to check Type I error, and report fit failures separately rather than silently excluding them.
+
 Report the **Monte Carlo confidence interval** on the estimate (the harness returns it) so the reader knows whether 0.81 vs. 0.79 is signal or simulation noise. See `references/simulation_based_power.md` for the full patterns, including how to search for the n that hits target power and how to model dropout and clustering.
 
 ---

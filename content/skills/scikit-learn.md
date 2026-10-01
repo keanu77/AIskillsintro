@@ -245,8 +245,8 @@ scaler = StandardScaler()
 X_all_scaled = scaler.fit_transform(np.vstack([X_train, X_test]))
 ```
 
-### Use Stratified Splitting for Classification
-Preserve class distribution:
+### Match the Split to the Independent Unit
+For independent classification rows, preserve class distribution as below. For repeated patients, specimens, sites, or related molecules, keep each group entirely in one partition using `GroupKFold` or `StratifiedGroupKFold`; class stratification alone does not prevent group leakage. For future prediction, use a chronological split and exclude features unavailable at prediction time. Apply the same grouping/time rule to both inner tuning and outer evaluation. See the [cross-validation guide](https://scikit-learn.org/stable/modules/cross_validation.html).
 ```python
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, stratify=y, random_state=42

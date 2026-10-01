@@ -77,6 +77,14 @@ The catalog is organized into **Expression & Purification** (in vitro / cell-fre
 
 ## General Ordering Workflow
 
+Treat the tables above as planning estimates. Recheck the selected protocol's
+[current catalog page](https://cloud.ginkgo.bio/protocols) and configured quote
+for the actual sample count, replicates, readout, and turnaround before ordering.
+Save the protocol URL, downloaded input-template revision, submitted construct
+manifest, replicate/plate map, quote identifier, and access date together. A
+feasibility report or quote is not evidence that execution has started or that
+results passed QC.
+
 1. Select a protocol at https://cloud.ginkgo.bio/protocols
 2. Configure parameters (number of proteins/samples/molecules/targets, replicates, plates)
 3. Download the protocol's input template and upload inputs (FASTA/CSV/XLSX for sequence protocols; Design Tool for pixel art; vendor catalog numbers for onboarding)

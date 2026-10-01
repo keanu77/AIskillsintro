@@ -187,7 +187,14 @@ PYTHONDONTWRITEBYTECODE=1 python3 scripts/check_supplier_controls.py \
   assets/templates/supplier-controls-template.json
 ```
 
-Pending or ineffective CAPA effectiveness evidence blocks closure. Critical supplier
+For a calibration supplier, link the purchased measurand, range, method, and
+location to the provider's dated accreditation scope and applicable calibration
+and measurement capability, using the [ILAC P14 policy basis](https://ilac.org/publications-and-resources/ilac-policy-series/).
+Capture the actual certificate's reported uncertainty separately; a scope CMC is
+not automatically the uncertainty of the delivered calibration. Leave any
+coverage or suitability judgment to the authorized technical owner.
+
+Pending or ineffective CAPA effectiveness evidence blocks closure.
 controls stay blocked until risk-based controls and approvals are evidenced.
 
 Note that `check_traceability.py` concerns design and risk traceability, **not**

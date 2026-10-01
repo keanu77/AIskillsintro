@@ -277,7 +277,7 @@ After running the workflow, the following fields are added:
 | `adata.var` | `fit_alpha` | Transcription rate |
 | `adata.var` | `fit_beta` | Splicing rate |
 | `adata.var` | `fit_gamma` | Degradation rate |
-| `adata.uns` | `velocity_graph` | Cell-cell transition probability matrix |
+| `adata.uns` | `velocity_graph` | Sparse cosine similarities between velocities and candidate cell-state changes; not a normalized transition matrix |
 
 ## Velocity Models Comparison
 

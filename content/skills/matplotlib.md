@@ -278,6 +278,12 @@ ax.set_zlabel('Z Label')
 - **Diverging** (coolwarm, RdBu): Data with meaningful center point (e.g., zero)
 - **Qualitative** (tab10, Set3): Categorical/nominal data
 - Avoid rainbow colormaps (jet) - they are not perceptually uniform
+- For comparable heatmaps/images, use the **same normalization and explicit limits**
+  across panels; sharing `cmap` alone does not give colors the same numeric meaning.
+  Label the colorbar with units and disclose clipping. Use a meaningful center for
+  diverging data (`TwoSlopeNorm` when appropriate); `LogNorm` needs positive values,
+  so handle zero/negative/missing values explicitly rather than replacing them
+  silently. See [colormap normalization](https://matplotlib.org/stable/users/explain/colors/colormapnorms.html).
 
 ### 5. Accessibility
 - Use colorblind-friendly colormaps (viridis, cividis)

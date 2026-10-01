@@ -284,7 +284,7 @@ print(f"Test accuracy: {accuracy:.3f}")
 
 ### Important Considerations
 
-**Data consistency:** The transform method assumes the overall distribution in the higher-dimensional space is consistent between training and test data. When this assumption fails, consider using Parametric UMAP instead.
+**Data consistency:** Validate transforms on held-out data representative of deployment. Inspect out-of-distribution inputs and neighborhood support before interpreting their locations; neither standard nor Parametric UMAP guarantees meaningful extrapolation under distribution shift. Retraining on representative data requires a new downstream validation.
 
 **Performance:** Transform operations are efficient (typically <1 second), though initial calls may be slower due to Numba JIT compilation.
 
@@ -432,7 +432,7 @@ Setting `random_state` prioritizes deterministic output. Leave it unset when thr
 - **Solution:** Use clustering-specific parameters (n_neighbors=30, min_dist=0.0, n_components=5-10)
 
 **Issue:** Transform results differ significantly from training
-- **Solution:** Ensure test data distribution matches training, or use Parametric UMAP
+- **Solution:** Check preprocessing and distribution shift; validate neighborhood support and downstream performance before reusing either UMAP variant.
 
 **Issue:** Slow performance on large datasets
 - **Solution:** Set `low_memory=True` (default), or consider dimensionality reduction with PCA first

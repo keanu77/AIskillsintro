@@ -128,6 +128,8 @@ Require the accountable authorized team to:
 
 The final handoff must retain provenance and unresolved-item routing. A script pass is not authorization to use the package for care.
 
+For a correction after sign-off, preserve the prior authorized version, identify the amendment and its author/date in the local records workflow, update source verification, and repeat checks and sign-off. Do not silently overwrite the prior record or carry its release approval forward. Apply jurisdiction-specific amendment rules only after the authorized records team confirms their applicability.
+
 ## Source boundaries
 
 - Use FDA labeling databases, current Medication Guides, and REMS materials as authoritative source records only when an authorized clinician or pharmacist verifies applicability. This skill does not interpret them.

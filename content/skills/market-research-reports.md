@@ -216,6 +216,12 @@ For interviews/focus groups, disclose recruitment, consent, role coverage,
 dates/mode, guide, coding, divergent evidence, privacy controls, and limits to
 generalization.
 
+Before reporting a trend across survey waves, compare the exact wording, response
+options, question order, target population, recruitment, mode, and weighting.
+A changed instrument or sample can create an apparent demand shift. Mark the break,
+use an overlap/bridge study when available, or report the waves separately rather
+than feeding the difference into a growth forecast. See [AAPOR best practices](https://aapor.org/standards-and-ethics/best-practices/).
+
 Never:
 
 - collect more personal data than necessary;

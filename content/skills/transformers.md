@@ -114,6 +114,8 @@ Generate text with LLMs using various decoding strategies (greedy, beam search, 
 
 **When to use**: Creative text generation, code generation, conversational AI, text completion.
 
+For chat or instruction-tuned checkpoints, format messages with that checkpoint's `tokenizer.apply_chat_template` rather than hand-written role delimiters. Prefer `tokenize=True`; if formatting with `tokenize=False` and tokenizing afterward, set `add_special_tokens=False` to avoid duplicated BOS/EOS tokens. Use `add_generation_prompt=True` to start a new assistant reply, and preserve the same template when preparing fine-tuning data.
+
 See `references/generation.md` for generation strategies and parameters.
 
 ### 4. Training and Fine-Tuning

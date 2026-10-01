@@ -68,8 +68,8 @@ python skills/scientific-schematics/scripts/generate_schematic.py "project timel
 - Significance, Innovation, Approach as core review criteria
 - Preliminary data typically required for R01s
 - Emphasis on rigor, reproducibility, and clinical relevance
-- Modular budgets ($250K increments) for most R01s
-- Multiple resubmission opportunities
+- For eligible applications, modular budgets use **$25,000 increments**, up to **$250,000 in direct costs per budget period**, excluding consortium F&A; verify the NOFO and organization eligibility. See [NIH budget guidance](https://grants.nih.gov/grants/developing_budget.htm).
+- NIH permits **one resubmission (A1)** of an unfunded application, within 37 months of the initial application due date when the NOFO permits resubmissions; see [resubmission policy](https://grants.nih.gov/grants-process/submit/submission-policies/resubmission-applications).
 
 ### DOE (Department of Energy)
 **Mission**: Ensure America's security and prosperity through energy, environmental, and nuclear challenges

@@ -138,6 +138,8 @@ Output is indexed by sample ID with columns `dim_0 … dim_{H-1}` (`H` = 256 for
 768 for 170m). Defaults: `--pooling last_token`, `--batch_size 32`, `--max_length 512`, device
 auto-detected (`cuda` → `mps` → `cpu`).
 
+Record the fraction of samples truncated at the chosen `max_length`, separately from vocabulary coverage. Samples can have excellent vocabulary coverage and still lose lower-ranked taxa after abundance/z-score sorting. Keep this limit consistent across embedding comparisons and report any sensitivity analysis.
+
 Keep `--pooling last_token` unless you have a reason to change it: it matches how the checkpoints
 were pretrained and how `benchmark` and `finetune` pool. `mean` is a reasonable alternative for
 unsupervised use; `first_token`/`cls_token` return the BOS position and carry little signal in a

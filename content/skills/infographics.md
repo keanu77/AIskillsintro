@@ -294,6 +294,11 @@ Before generating:
 After generating:
 - [ ] Review the generated image
 - [ ] Check the review log for scores
+- [ ] Compare every number, unit, label, and source in the image against the
+  verified input; an AI quality score is not a factual check
+- [ ] Supply a short alt description plus a readable data table or long
+  description covering the key values and relationships, following
+  [W3C guidance for complex images](https://www.w3.org/WAI/tutorials/images/complex/)
 - [ ] Regenerate with more specific prompt if needed
 
 ---

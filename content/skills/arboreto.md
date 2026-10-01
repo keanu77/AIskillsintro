@@ -188,6 +188,12 @@ Arboreto returns a DataFrame with regulatory links:
 | `target` | Target gene |
 | `importance` | Regulatory importance score (higher = stronger) |
 
+`importance` ranks predictive contributions in the fitted regressions; it is not
+a binding probability, p-value, or proof of direct causal regulation. The example
+cutoff of 0.5 is illustrative, not a calibrated high-confidence threshold. Compare
+matched preprocessing, sample sizes, gene sets, and seed stability before calling
+a link condition-specific; validate candidate edges with motif or perturbation evidence.
+
 **Filtering strategy**:
 - `limit=N` at inference time (return top N links globally)
 - Post-hoc importance threshold (e.g., > 0.5)

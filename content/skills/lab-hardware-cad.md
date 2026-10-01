@@ -235,6 +235,8 @@ from the same constants it is checked against passes with zero headroom by const
 cite it as evidence the geometry is right; `facts` and the snapshot are the geometry checks.
 An empty declaration list passes: a part that mates with nothing in the bundled database has
 nothing to declare, and its interface dimensions are instead named as unchecked in the report.
+A manifest must contain an explicit `interfaces` list; a missing field or `null` is a malformed
+manifest, not evidence that interfaces were reviewed and none applied.
 
 Use `interfaces` rather than `check.py fit` for anything internal — a pocket, bore, or slot does
 not appear in the part's outer bounding box, which is what `fit` measures. Reach for `fit` only

@@ -375,7 +375,7 @@ bdiv = beta_diversity('braycurtis', df)         # no manual conversion needed
 
 **Important notes:**
 - BIOM tables are standard in QIIME 2 workflows
-- Rows typically represent samples, columns represent features (OTUs/ASVs)
+- Table-like NumPy/DataFrame inputs use samples × features. A native BIOM `Table.matrix_data` uses **features (observations) × samples**; transpose only when manually extracting it for a samples-by-features API, and align both ID vectors. Passing the `Table` directly lets scikit-bio's dispatch handle orientation. See [table conventions](https://scikit.bio/docs/latest/table.html).
 - Supports sparse and dense representations
 - With the dispatch system, functions return the same format as their input, or a user-specified output format
 

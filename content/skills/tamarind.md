@@ -47,7 +47,7 @@ curl https://app.tamarind.bio/api/tools \
 
 **Base URL:** `https://app.tamarind.bio/api/`
 
-There is **no official Python SDK** — the PyPI package named `tamarind` is an unrelated Neo4j tool. Do not `uv pip install tamarind`. Write plain `requests` calls against the REST API (the endpoint shapes are in `openapi.yaml`), or use the MCP server for agent hosts.
+These recipes use plain `requests` against the REST API, or the MCP server for agent hosts. Tamarind now documents an official Python client in the **`tamarind-cli`** distribution for Custom Tools (imported as `tamarind`); follow its [SDK reference](https://app.tamarind.bio/api-docs/custom-tools-sdk-reference) when using that surface. Do not substitute the unrelated PyPI distribution named `tamarind`.
 
 ## Two ways to call Tamarind
 
@@ -159,7 +159,7 @@ Each tool has its own `settings` schema. Fetch it before submitting:
 - **REST** `/tools` entry: each `settings` param is a **trimmed** dict. Only `name` and `required` are always present; `type`, `default`, `description`, `options` appear only when relevant (≈60% have `type`) — so use `param.get("type")`, not `param["type"]`. The advanced gating keys (`exclude`, `conditionals`) are **NOT in the REST response** at all.
 - **MCP** `getJobSchema(jobType)`: the **full** schema, including `exclude`, `conditionals`, and bounds. Use MCP when you need to reason about those gating keys. (`restrictOrgs` is stripped on both surfaces — an org-gated param you can't use is simply omitted; see `references/api_reference.md`.)
 
-**Always `validateJob` (MCP) before submitting** — it's the reliable guard. It runs the same validation as `/submit-job` without submitting, and surfaces the first missing/invalid field. Don't try to hand-derive which fields to strip from the schema keys (over REST you can't see them anyway) — let `validateJob` tell you. (The response may include a `source` field, e.g. `"static-fallback"` — an internal note on which schema source validated; `valid: true/false` is the signal you act on.)
+**Validate before submitting:** use `validateJob` (MCP) or `POST /api/validate-job` (REST) with `type`, `settings`, and the planned `jobName`. Check the JSON `valid` flag and errors even on HTTP 200; this endpoint does not queue a job. It runs the same validation as `/submit-job` without submitting, and surfaces the first missing/invalid field. Don't try to hand-derive which fields to strip from the schema keys (over REST you can't see them anyway) — let `validateJob` tell you. (The response may include a `source` field, e.g. `"static-fallback"` — an internal note on which schema source validated; `valid: true/false` is the signal you act on.)
 
 `validateJob` echoes a `normalized` view of your settings with defaults filled in. Submit the same clean `settings` you validated; treat `normalized` as informational (it can carry defaults you didn't set, and for some tools platform-managed fields), so build your submit from your own settings rather than the normalized blob.
 
@@ -256,7 +256,7 @@ Completed jobs carry a `Score` (tool-specific metrics, e.g. pLDDT/pTM/ipTM for f
 | 401 | Unauthorized | Check `x-api-key` |
 | 403 | Budget exceeded (org/team) | Lower scope or raise the budget |
 | 429 | Rate limited | Back off and retry |
-| 500 | Server error | Retry; if persistent, contact support |
+| 500 | Server error | For submission errors/timeouts, inspect the persisted job name with `/jobs` or `/jobs/search` before retrying; a lost response does not prove the job was not queued. Back off for safe reads. |
 
 ## Reference files
 

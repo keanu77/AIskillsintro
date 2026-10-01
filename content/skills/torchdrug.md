@@ -59,7 +59,7 @@ revisions and expect CPU execution.
 
 ## Canonical property-prediction workflow
 
-Use the documented ClinTox → GIN → `PropertyPrediction` → `Engine` pattern:
+Use the documented ClinTox → GIN → `PropertyPrediction` → `Engine` pattern. The random split below is a tutorial baseline. For generalization to new molecular scaffolds, use `data.scaffold_split` or the benchmark's specified split, keep duplicate molecules in one partition, and record the actual split sizes and class counts. Scaffold-group allocation may not match the requested lengths exactly.
 
 ```python
 import torch

@@ -175,6 +175,8 @@ sns.scatterplot(x=x_array, y=y_array)  # Loses axis labels
 **Correlations/matrices:** `heatmap`, `clustermap`
 **Pairwise relationships:** `pairplot`, `jointplot`
 
+For bounded or discrete measurements, inspect the support before choosing KDE or a violin plot. Gaussian kernels can imply negative concentrations or values outside a valid range. `cut=0` and `clip` limit where the curve is drawn but do not remove boundary bias; use `ecdfplot` or a suitably binned histogram when that distortion matters. Compare plausible `bw_adjust` settings before interpreting apparent modes. See [KDE limitations](https://seaborn.pydata.org/generated/seaborn.kdeplot.html).
+
 ### 3. Use Figure-Level Functions for Faceting
 
 ```python

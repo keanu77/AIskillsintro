@@ -129,6 +129,13 @@ Use `%gpu_timeit` in notebooks, Nsight Systems (`nsys`) for end-to-end timelines
 Compute (`ncu`) for kernel analysis. Report both synchronized kernel/region time and realistic
 end-to-end latency; include transfer and conversion costs when production pays them.
 
+Measure peak device memory as well as time. For CuPy, distinguish live allocations
+from memory retained by its pool; a high `nvidia-smi` reading after arrays are
+released is not by itself a leak. Record the allocator and pooling policy, include
+temporary buffers and FFT caches, and leave headroom for CUDA context/library
+allocations outside the pool limit. Avoid clearing the pool inside timed repeats
+unless production does so. See [CuPy memory management](https://docs.cupy.dev/en/stable/user_guide/memory.html).
+
 ### 7. Keep, revise, or reject the port
 
 Retain the GPU path only when it passes correctness checks and improves the metric the user cares

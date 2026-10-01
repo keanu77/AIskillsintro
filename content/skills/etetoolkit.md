@@ -185,6 +185,10 @@ reconciliation, use a curated species tree and
 
 ### Query taxonomy
 
+Name lookups can return several TaxIDs. Resolve ambiguity using rank and lineage
+before selecting a match. The guard below was checked with synthetic mappings;
+the database-dependent workflow is illustrative until run against your snapshot.
+
 ```python
 from ete4 import NCBITaxa
 
@@ -192,9 +196,12 @@ ncbi = NCBITaxa()
 names = ["Homo sapiens", "Pan troglodytes", "Mus musculus"]
 name_to_taxids = ncbi.get_name_translator(names)
 
-missing = [name for name in names if name not in name_to_taxids]
-if missing:
-    raise ValueError(f"Names not resolved by NCBI taxonomy: {missing}")
+unresolved = {
+    name: name_to_taxids.get(name, [])
+    for name in names if len(name_to_taxids.get(name, [])) != 1
+}
+if unresolved:
+    raise ValueError(f"Names need NCBI taxonomy disambiguation: {unresolved}")
 
 taxids = [name_to_taxids[name][0] for name in names]
 taxonomy_tree = ncbi.get_topology(taxids)

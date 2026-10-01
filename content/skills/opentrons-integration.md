@@ -227,9 +227,13 @@ range. A 100 nL operation is not an Opentrons pipetting task.
 - Use dynamic start/end locations or `dynamic_mix()` only when API 2.27+ and the
   geometry has been reviewed.
 
-Model contamination boundaries before optimizing tips. Never reuse a tip across
-unrelated samples merely to reduce consumables. See
-`references/liquid_handling.md`.
+Model contamination boundaries before optimizing tips. For standard `distribute()`
+and `consolidate()`, `new_tip="always"` still uses one tip for the complex command;
+it does not provide a fresh tip for every destination or source. When independent
+samples require fresh tips, use suitable `transfer()` calls or explicit building
+blocks and inspect the expanded simulation log. Liquid-class commands have their
+own documented tip policies. See the [complex-command parameter reference](https://docs.opentrons.com/python-api/complex-commands/parameters/)
+and `references/liquid_handling.md`.
 
 ### 5. Add setup information and runtime controls
 

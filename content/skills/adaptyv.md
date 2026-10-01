@@ -2,13 +2,13 @@
 
 Adaptyv Bio is a cloud lab that turns protein sequences into experimental data. Users submit amino acid sequences via API or UI; Adaptyv's automated lab runs assays (binding, thermostability, expression, fluorescence) and delivers results in ~21 days.
 
-**Official docs:** [docs.adaptyvbio.com/api-reference](https://docs.adaptyvbio.com/api-reference) · [llms.txt index](https://docs.adaptyvbio.com/llms.txt) · [OpenAPI spec](https://foundry-api-public.adaptyvbio.com/api/v1/openapi.json)
+**Official docs:** [docs.adaptyvbio.com/api-reference](https://docs.adaptyvbio.com/api-reference) · [llms.txt index](https://docs.adaptyvbio.com/llms.txt) · [OpenAPI spec](https://devs.adaptyvbio.com/api/v1/openapi.json)
 
 ## Quick Start
 
-**Base URL:** `https://foundry-api-public.adaptyvbio.com/api/v1`
+**Base URL:** `https://devs.adaptyvbio.com/api/v1`
 
-**Authentication:** Bearer token in the `Authorization` header. Tokens are obtained from [foundry.adaptyvbio.com](https://foundry.adaptyvbio.com/) sidebar.
+**Authentication:** Bearer token in the `Authorization` header. Tokens are created in [the Foundry portal](https://foundry.adaptyvbio.com/) under Organization → Settings → Tokens.
 
 When writing code, always read the API key from the environment variable `ADAPTYV_API_KEY` or from a `.env` file — never hardcode tokens. Check for a `.env` file in the project root first; if one exists, use a library like `python-dotenv` to load it.
 
@@ -16,11 +16,15 @@ The [official API docs](https://docs.adaptyvbio.com/api-reference/api-introducti
 
 ```bash
 export ADAPTYV_API_KEY="abs0_..."
-curl https://foundry-api-public.adaptyvbio.com/api/v1/targets?limit=3 \
+curl https://devs.adaptyvbio.com/api/v1/targets?limit=3 \
   -H "Authorization: Bearer $ADAPTYV_API_KEY"
 ```
 
 Every request except `GET /openapi.json` requires authentication. Store tokens in environment variables or `.env` files — never commit them to source control.
+
+The authenticated examples below are illustrative and require real sequences, target IDs,
+and account access. The API base ends at `/api/v1`; do not append `/openapi.json`
+to endpoint requests. The public schema URL is for schema discovery only.
 
 ## Python SDK
 
@@ -40,7 +44,7 @@ uv add "adaptyv-sdk @ git+https://github.com/adaptyvbio/adaptyv-sdk.git"
 
 ```bash
 ADAPTYV_API_KEY=your_api_key
-ADAPTYV_API_URL=https://foundry-api-public.adaptyvbio.com/api/v1
+ADAPTYV_API_URL=https://devs.adaptyvbio.com/api/v1
 ADAPTYV_ORGANIZATION_ID=your_org_id  # optional
 ```
 
@@ -69,7 +73,7 @@ client = FoundryClient(
     api_key=os.environ["ADAPTYV_API_KEY"],
     base_url=os.environ.get(
         "ADAPTYV_API_URL",
-        "https://foundry-api-public.adaptyvbio.com/api/v1",
+        "https://devs.adaptyvbio.com/api/v1",
     ),
 )
 
@@ -176,12 +180,12 @@ exp = client.experiments.create({
     "auto_accept_quote": True,
     "webhook_url": "https://my-server.com/webhook"
 })
-# Webhook fires on each status transition; poll or wait for Done
+# Webhooks report customer-facing updates; poll experiment status for completion
 ```
 
 ### 3. Using Webhooks
 
-Pass `webhook_url` when creating an experiment. Adaptyv POSTs to that URL on every status transition with the experiment ID, previous status, and new status.
+Pass `webhook_url` when creating an experiment. The current [webhook contract](https://docs.adaptyvbio.com/api-reference/api-introduction#webhooks) sends `experiment_update` events for customer-facing updates, not a guaranteed stream of every status transition. Verify `X-Adaptyv-Signature` as HMAC-SHA256 over the unmodified request body using the webhook secret, and make processing idempotent using the update identifier. Acknowledge with `2xx`; network errors and `5xx` responses are retried up to three times. Poll `GET /experiments/{id}` and inspect `results_status` before treating results as complete.
 
 ## Sequences
 

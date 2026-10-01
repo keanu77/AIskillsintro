@@ -130,6 +130,13 @@ bounds, not guarantees.
 non-writing permission check are distinct. Filesystem or project quotas can
 still be stricter. The absolute working path is always redacted.
 
+The disk snapshot covers the working filesystem only, matching
+[psutil's path-specific semantics](https://psutil.readthedocs.io/stable/#psutil.disk_usage).
+If scratch, caches, and final outputs use different filesystems, inspect each
+from its target directory and label the reports by role. Budget temporary and
+final copies that coexist; free space on the input filesystem does not establish
+space on the output filesystem.
+
 ### Scheduler and container
 
 Slurm variables describe allocation scope, but enforcement depends on site

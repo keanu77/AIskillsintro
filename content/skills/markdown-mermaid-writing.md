@@ -7,7 +7,8 @@ using **markdown with embedded Mermaid diagrams as the default and canonical for
 
 The core bet: a relationship expressed as a Mermaid diagram inside a `.md` file is more
 valuable than any image. It is text, so it diffs cleanly in git. It requires no build step.
-It renders natively on GitHub, GitLab, Notion, VS Code, and any markdown viewer. It uses
+It renders where the host has Mermaid support; plain Markdown viewers may show only code,
+and platforms/extensions ship different Mermaid versions. It uses
 fewer tokens than a prose description of the same relationship. And it can always be
 converted to a polished image later — but the text version remains the source of truth.
 
@@ -167,6 +168,13 @@ accDescr: One or two sentences explaining what this diagram shows.
 ### Step 4: Write the document
 
 Start from the template. Apply the markdown style guide. Place diagrams inline with related text — not in a separate "Figures" section.
+
+Render in the **actual destination** before delivery. Check its Mermaid version and
+plugin requirements before choosing newer diagram types; [GitHub documents an `info`
+diagram for this check](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams).
+A successful latest-version local preview does not establish GitHub or another host
+will render it. Where Mermaid is unsupported, supply a rendered SVG/PNG with a text
+description alongside the retained `.md` source.
 
 ### Step 5: Commit as text
 

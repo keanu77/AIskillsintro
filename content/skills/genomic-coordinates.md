@@ -89,9 +89,12 @@ variants and the reference are different assemblies — stop and run
 `check_contigs.py` rather than adjusting coordinates. Multi-allelic records must
 be split with `--split` **before** normalising, never after.
 
-HGVS shifts indels the opposite way, 3'-most along the transcript. For a
-minus-strand gene that is the opposite genomic direction from VCF's
-left-alignment. Details and the full procedure: `references/variant-representation.md`.
+[HGVS applies the 3'-most rule](https://hgvs-nomenclature.org/stable/recommendations/general/)
+to the reference sequence being described. For transcript `c.`/`n.` notation,
+this means increasing genomic coordinates on a plus-strand gene and decreasing
+coordinates on a minus-strand gene. The minus-strand direction can therefore
+agree with VCF left-alignment; genomic `g.` notation shifts toward the contig
+end. Details and exceptions: `references/variant-representation.md`.
 
 ## Check the assembly before trusting a join
 

@@ -108,6 +108,12 @@ Tiles use `(i, j)` = `(row, column)` coordinates at the selected pyramid level.
 For OpenSlide, PathML maps them to level-0 coordinates internally. Record the
 level and downsample; convert to `(x, y)` or micrometres explicitly downstream.
 
+Before comparing tile features, cell distances, or areas across scanners, validate
+level-0 MPP separately for X and Y. Equal pixel tile sizes need not cover equal
+physical areas, and OpenSlide MPP may be absent or inaccurate. Keep results in
+pixel units when calibration is unknown, or document a validated calibration;
+do not infer it from objective magnification alone. See [OpenSlide properties](https://openslide.org/docs/properties/).
+
 ## Research workflow
 
 1. **Inventory locally.** Validate the manifest, reject URLs/symlinks, inspect only

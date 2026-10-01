@@ -126,7 +126,10 @@ Leverage templates, transforms, and compilation. See `references/advanced_featur
 ### Train a Variational Classifier
 
 ```python
-# 1. Define ansatz
+# 1. Define a device with all four wires used by the ansatz.
+dev = qml.device("default.qubit", wires=4)
+
+# 2. Define ansatz
 @qml.qnode(dev)
 def classifier(x, weights):
     # Encode data
@@ -137,7 +140,7 @@ def classifier(x, weights):
 
     return qml.expval(qml.PauliZ(0))
 
-# 2. Train
+# 3. Train
 opt = qml.AdamOptimizer(stepsize=0.01)
 weights = np.random.random((3, 4, 3))  # 3 layers, 4 wires
 
@@ -156,6 +159,7 @@ symbols = ['H', 'H']
 geometry = np.array([[0.0, 0.0, -0.66140414], [0.0, 0.0, 0.66140414]])
 molecule = qchem.Molecule(symbols, geometry)
 H, n_qubits = qchem.molecular_hamiltonian(molecule)
+dev = qml.device("default.qubit", wires=n_qubits)
 hf_state = qchem.hf_state(electrons=2, orbitals=n_qubits)
 singles, doubles = qchem.excitations(electrons=2, orbitals=n_qubits)
 s_wires, d_wires = qchem.excitations_to_wires(singles, doubles)
@@ -163,8 +167,10 @@ s_wires, d_wires = qchem.excitations_to_wires(singles, doubles)
 # 2. Define ansatz
 @qml.qnode(dev)
 def vqe_circuit(params):
-    qml.BasisState(hf_state, wires=range(n_qubits))
-    qml.UCCSD(params, wires=range(n_qubits), s_wires=s_wires, d_wires=d_wires)
+    qml.UCCSD(
+        params, wires=range(n_qubits), s_wires=s_wires, d_wires=d_wires,
+        init_state=hf_state,
+    )
     return qml.expval(H)
 
 # 3. Optimize
