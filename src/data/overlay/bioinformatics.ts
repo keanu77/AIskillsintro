@@ -58,6 +58,13 @@ export const BIOINFORMATICS: SkillOverlay[] = [
       "Bulk RNA-seq 端到端流程：FASTQ 品管與修剪、比對定量、建立計數矩陣，再串接差異表現、富集分析與出版圖表。",
   },
   {
+    slug: "cellprofiler",
+    name: "CellProfiler",
+    icon: "🔬",
+    description:
+      "以可重現的 CellProfiler 流程分析顯微影像：細胞核分割、細胞計數、單一物件螢光量測與批次執行。",
+  },
+  {
     slug: "cellxgene-census",
     name: "Cellxgene Census",
     icon: "🧬",
@@ -105,6 +112,13 @@ export const BIOINFORMATICS: SkillOverlay[] = [
     icon: "🧬",
     description:
       "解析 FCS（流式細胞儀標準）檔案 v2.0-3.1。以 NumPy 陣列擷取事件、讀取元資料/通道。",
+  },
+  {
+    slug: "flowkit",
+    name: "FlowKit",
+    icon: "🩸",
+    description:
+      "用 FlowKit 分析流式細胞儀資料：螢光補償、logicle 轉換、階層式設門與 FlowJo 工作區重現。",
   },
   {
     slug: "geniml",
@@ -156,6 +170,13 @@ export const BIOINFORMATICS: SkillOverlay[] = [
       "LaminDB 生物學資料框架。管理生物資料集（scRNA-seq、影像、基因體學），使資料可查詢、可追蹤、可重現。",
   },
   {
+    slug: "mageck",
+    name: "MAGeCK",
+    icon: "✂️",
+    description:
+      "以 MAGeCK 分析 pooled CRISPR 篩選（knockout、CRISPRi/a）：guide 計數、品管與基因排名、效應量與 FDR。",
+  },
+  {
     slug: "neuropixels-analysis",
     name: "Neuropixels Analysis",
     icon: "🧬",
@@ -168,6 +189,13 @@ export const BIOINFORMATICS: SkillOverlay[] = [
     icon: "🔀",
     description:
       "建立、執行與除錯 Nextflow 與 nf-core 流程，含模組測試、執行器與容器設定。",
+  },
+  {
+    slug: "nwb-conversion",
+    name: "NWB Conversion",
+    icon: "🧠",
+    description:
+      "以 NeuroConv 與 PyNWB 將神經科學實驗資料轉為 NWB 格式，保留中繼資料與時間基準並做結構驗證。",
   },
   {
     slug: "pacsomatic",
@@ -205,6 +233,13 @@ export const BIOINFORMATICS: SkillOverlay[] = [
       "在 Polars DataFrame 上進行高效能基因體區間運算（overlap、nearest、coverage）與 BED/VCF/BAM 檔案讀寫。",
   },
   {
+    slug: "primer-design",
+    name: "Primer Design",
+    icon: "🧬",
+    description:
+      "以 Primer3 設計與檢核 PCR／RT-qPCR 引子：熱力學條件、脫靶擴增搜尋、跨外顯子與異構體專一設計。",
+  },
+  {
     slug: "pydeseq2",
     name: "Pydeseq2",
     icon: "🧬",
@@ -224,6 +259,20 @@ export const BIOINFORMATICS: SkillOverlay[] = [
     icon: "🧬",
     description:
       "基因體檔案工具包。讀寫 SAM/BAM/CRAM 比對、VCF/BCF 變異、FASTA/FASTQ 序列，用於 NGS 資料處理。",
+  },
+  {
+    slug: "qiime2-amplicon",
+    name: "QIIME 2 Amplicon",
+    icon: "🦠",
+    description:
+      "以 QIIME 2 處理雙端 16S 擴增子定序：引子方向、讀段重疊與中繼資料驗證，產出 ASV 與物種分類。",
+  },
+  {
+    slug: "relion",
+    name: "RELION",
+    icon: "🧊",
+    description:
+      "驗證並執行 RELION 單顆粒冷凍電顯（cryo-EM）精修與半圖後處理，含 FSC 診斷與遮罩驗證。",
   },
   {
     slug: "scanpy",
@@ -252,6 +301,13 @@ export const BIOINFORMATICS: SkillOverlay[] = [
     icon: "🧬",
     description:
       "單細胞體學深度生成模型。機率性批次校正（scVI）、遷移學習、帶不確定性的差異表現、多模態整合。",
+  },
+  {
+    slug: "tellurium",
+    name: "Tellurium",
+    icon: "⚙️",
+    description:
+      "以 Tellurium 與 libRoadRunner 模擬 SBML／Antimony 生化動力學模型，並匯出可重現的 SED-ML COMBINE 封存檔。",
   },
   {
     slug: "tiledbvcf",
