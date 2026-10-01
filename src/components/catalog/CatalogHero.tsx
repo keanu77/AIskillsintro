@@ -2,6 +2,7 @@
 
 import { SKILLS, CATEGORIES } from "@/data/skills";
 import type { CategoryId } from "@/data/types";
+import Link from "next/link";
 
 interface CatalogHeroProps {
   query: string;
@@ -38,10 +39,13 @@ export default function CatalogHero({ query, onQueryChange, onCategoryJump }: Ca
         </h1>
 
         <p className="animate-fade-in-up delay-200 mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-300/90 opacity-0">
-          Claude Code / Codex / Gemini CLI / Grok 通用的 Agent Skills 目錄 — 收錄{" "}
+          每週整理跨平台 Agent Skills，附來源依據與安裝說明。收錄{" "}
           <span className="font-semibold text-blue-300">{SKILLS.length}</span>{" "}
-          個 Skills，涵蓋文件處理、資料科學、生物資訊、學術寫作等領域。
+          個 Skills，涵蓋文件處理、開發設計、資料科學與研究；各平台支援狀態依來源文件標示。
         </p>
+        <Link href="/updates" className="mt-6 inline-flex items-center gap-2 rounded-full border border-blue-300/30 px-5 py-2.5 text-sm font-medium text-blue-100 transition hover:bg-white/10">
+          每週更新與新發現 <span aria-hidden>→</span>
+        </Link>
 
         {/* Search bar */}
         <form

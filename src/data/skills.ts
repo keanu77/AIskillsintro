@@ -13,6 +13,7 @@ import { VISUALIZATION } from "./overlay/visualization";
 import { WRITING } from "./overlay/writing";
 import { CLINICAL } from "./overlay/clinical";
 import { PRODUCTIVITY } from "./overlay/productivity";
+import { ECOSYSTEM } from "./overlay/ecosystem";
 
 export type { Category, CategoryId, Skill } from "./types";
 export { CATEGORIES } from "./categories";
@@ -22,11 +23,12 @@ export const OVERLAYS: Record<CategoryId, SkillOverlay[]> = {
   databases: DATABASES,
   bioinformatics: BIOINFORMATICS,
   chemistry: CHEMISTRY,
-  "data-science": DATA_SCIENCE,
+  "data-science": [...DATA_SCIENCE, ...ECOSYSTEM["data-science"]],
   visualization: VISUALIZATION,
-  writing: WRITING,
+  writing: [...WRITING, ...ECOSYSTEM.writing],
   clinical: CLINICAL,
-  productivity: PRODUCTIVITY,
+  productivity: [...PRODUCTIVITY, ...ECOSYSTEM.productivity],
+  development: ECOSYSTEM.development,
 };
 
 export const UPSTREAM_SKILLS = manifest.skills as UpstreamSkill[];
@@ -65,4 +67,3 @@ export function getCategoryById(id: CategoryId): Category | undefined {
 export function getAllSlugs(): string[] {
   return SKILLS.map((s) => s.slug);
 }
-

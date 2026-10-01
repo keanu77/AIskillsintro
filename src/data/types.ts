@@ -7,7 +7,8 @@ export type CategoryId =
   | "visualization"
   | "writing"
   | "clinical"
-  | "productivity";
+  | "productivity"
+  | "development";
 
 export interface Category {
   id: CategoryId;
@@ -16,7 +17,8 @@ export interface Category {
   icon: string;
 }
 
-export type SourceId = "anthropic" | "k-dense";
+export type SourceId = "anthropic" | "k-dense" | "openai" | "vercel" | "huggingface";
+export type AgentId = "claude-code" | "codex" | "gemini-cli" | "cursor" | "grok";
 
 /** Hand-written zh-TW presentation data, keyed by slug (src/data/overlay/). */
 export interface SkillOverlay {
@@ -24,6 +26,12 @@ export interface SkillOverlay {
   name: string;
   icon: string;
   description: string;
+  /** Editorial context, not a task-test endorsement. */
+  useCase?: string;
+  limitations?: string;
+  reviewedAt?: string;
+  reviewedSourceUrl?: string;
+  reviewedHash?: string;
 }
 
 /** One entry of src/data/upstream.json, written by scripts/sync-skills.mjs. */
@@ -39,13 +47,15 @@ export interface UpstreamSkill {
   plugin: string | null;
   /** Whether the SKILL.md body may be mirrored on this site. */
   mirrored: boolean;
+  /** Complete repository-relative directory, including plugin nesting. */
+  path?: string;
+  contentHash?: string;
+  compatibility?: string | null;
+  declaredAgents?: AgentId[];
+  installMode?: "skill" | "plugin";
 }
 
-export interface Skill {
-  slug: string;
-  name: string;
-  description: string;
-  icon: string;
+export interface Skill extends SkillOverlay {
   category: CategoryId;
   upstream: UpstreamSkill;
 }

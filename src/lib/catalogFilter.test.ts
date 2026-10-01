@@ -55,7 +55,7 @@ describe("filterSkills", () => {
     expect(slugs(filterSkills(SKILLS, { ...EMPTY_FILTERS, category: "chemistry" }))).toEqual(["rdkit"]);
     expect(slugs(filterSkills(SKILLS, { ...EMPTY_FILTERS, source: "anthropic" }))).toEqual(["pdf"]);
     expect(
-      slugs(filterSkills(SKILLS, { query: "pdf", category: "official", source: "k-dense" })),
+      slugs(filterSkills(SKILLS, { ...EMPTY_FILTERS, query: "pdf", category: "official", source: "k-dense" })),
     ).toEqual([]);
   });
 });
@@ -66,15 +66,30 @@ describe("URL round trip", () => {
       query: "rna seq",
       category: "chemistry",
       source: "anthropic",
+      agent: null,
     });
     expect(parseFilters("?category=nope&source=evil&q=")).toEqual(EMPTY_FILTERS);
   });
 
   it("serializes only active filters", () => {
     expect(serializeFilters(EMPTY_FILTERS)).toBe("");
-    expect(serializeFilters({ query: " rna ", category: null, source: "k-dense" })).toBe(
+    expect(serializeFilters({ ...EMPTY_FILTERS, query: " rna ", source: "k-dense" })).toBe(
       "?q=rna&source=k-dense",
     );
+  });
+
+  it("round trips platform with other filters and drops unknown agents", () => {
+    const filters = { ...EMPTY_FILTERS, source: "huggingface" as const, agent: "codex" as const };
+    expect(parseFilters(serializeFilters(filters))).toEqual(filters);
+    expect(parseFilters("?agent=chatgpt-web").agent).toBeNull();
+    expect(hasActiveFilters({ ...EMPTY_FILTERS, agent: "codex" })).toBe(true);
+  });
+
+  it("does not equate an install template with declared compatibility", () => {
+    expect(filterSkills(SKILLS, { ...EMPTY_FILTERS, agent: "grok" })).toEqual([]);
+    const declared = skill({ slug: "declared", upstream: { ...SKILLS[0].upstream, declaredAgents: ["codex"] } });
+    expect(filterSkills([declared], { ...EMPTY_FILTERS, agent: "codex" })).toEqual([declared]);
+    expect(filterSkills([declared], { ...EMPTY_FILTERS, agent: "claude-code" })).toEqual([]);
   });
 
   it("detects active filters", () => {

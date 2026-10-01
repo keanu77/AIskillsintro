@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "eslint",
     "test": "vitest run",
-    "sync": "node scripts/sync-skills.mjs"
+    "sync": "node scripts/sync-skills.mjs",
+    "refresh": "node scripts/weekly-update.mjs",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.19",

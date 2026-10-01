@@ -1,4 +1,4 @@
-name: Sync upstream skills
+name: Weekly skills refresh
 
 on:
   schedule:
@@ -16,111 +16,61 @@ permissions:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
         with:
           node-version: "24"
           cache: npm
-      - run: npm ci
+      - name: Install dependencies
+        id: install
+        run: npm ci
 
-      - name: Sync SKILL.md from upstream repos
+      - name: Refresh sources, discovery and weekly history
+        id: refresh
+        continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npm run sync
+        run: npm run refresh
 
-      - name: Detect changes
+      # GITHUB_TOKEN-created PRs do not trigger the ordinary PR workflow.
+      # Run every required check here, and retain its result even on failure.
+      - name: Validate and append results to report
+        id: verify
+        if: always() && steps.install.outcome == 'success'
+        continue-on-error: true
+        env:
+          NO_COLOR: "1"
+          FORCE_COLOR: "0"
+        run: node scripts/validate-refresh.mjs
+
+      - name: Stage snapshots and detect changes including new files
         id: diff
+        if: always() && steps.install.outcome == 'success'
         run: |
-          # syncedAt alone changes every run; ignore it when deciding.
-          if git diff --quiet -I '"syncedAt"' -- content src/data/upstream.json \
-            && [ -z "$(git status --porcelain -- content)" ]; then
+          git add -- content src/data/upstream.json src/data/discovery.json src/data/updates.json
+          if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
 
-      # PRs opened with GITHUB_TOKEN do not trigger ci.yml, so verify here and
-      # report the result in the PR body instead.
-      - name: Verify synced catalog
-        if: steps.diff.outputs.changed == 'true'
-        id: verify
-        env:
-          NO_COLOR: "1"
-          FORCE_COLOR: "0"
-        run: |
-          set +e
-          npm test > test.log 2>&1; test_rc=$?
-          npm run build > build.log 2>&1; build_rc=$?
-          # Slugs listed in the overlay-coverage assertion diff, e.g. +   "cantera",
-          untranslated=$(grep -oE '^\+ +"[^"]+",?$' test.log | grep -oE '"[^"]+"' | tr -d '"' | sort -u)
-          {
-            echo "report<<EOF"
-            if [ $test_rc -eq 0 ] && [ $build_rc -eq 0 ]; then
-              echo "✅ \`npm test\` 與 \`npm run build\` 通過。"
-            else
-              echo "❌ 驗證失敗（test=$test_rc, build=$build_rc）。"
-              if [ -n "$untranslated" ]; then
-                echo
-                echo "**缺中文 overlay 的 skill**（加到 \`src/data/overlay/<分類>.ts\`，英文原文見 \`content/upstream-descriptions.json\`）："
-                echo
-                echo "$untranslated" | sed 's/^/- `/; s/$/`/'
-              fi
-              if [ $test_rc -ne 0 ] && [ -z "$untranslated" ]; then
-                echo
-                echo '```'
-                grep -E 'FAIL|AssertionError|Error:' test.log | head -30
-                echo '```'
-              fi
-              if [ $build_rc -ne 0 ]; then
-                echo
-                echo '```'
-                tail -20 build.log
-                echo '```'
-              fi
-            fi
-            echo "EOF"
-          } >> "$GITHUB_OUTPUT"
-          rm -f test.log build.log
-
-      - name: Summarize changed skills
-        if: steps.diff.outputs.changed == 'true'
-        id: summary
-        run: |
-          git add -N content/skills
-          slugs() { git diff --name-only --diff-filter="$1" -- content/skills | sed 's#content/skills/##; s#\.md$##'; }
-          # Backtick-quoted, space-separated list, or 無 when empty.
-          fmt() { if [ -n "$1" ]; then echo "$1" | sed 's/.*/`&`/' | paste -sd' ' -; else echo "無"; fi; }
-          modified=$(slugs M | wc -l | tr -d ' ')
-          {
-            echo "text<<EOF"
-            echo "- 新增：$(fmt "$(slugs A)")"
-            echo "- 移除：$(fmt "$(slugs D)")"
-            echo "- 內容更新：${modified} 個"
-            echo "EOF"
-          } >> "$GITHUB_OUTPUT"
-
-      - name: Open or update sync PR
-        if: steps.diff.outputs.changed == 'true'
+      - name: Open or update weekly review PR
+        if: always() && steps.diff.outputs.changed == 'true'
         uses: peter-evans/create-pull-request@v8
         with:
           branch: bot/upstream-sync
           delete-branch: true
-          commit-message: "chore: sync upstream skills"
-          title: "chore: 同步上游 Skills"
+          commit-message: "chore: refresh weekly skills catalog"
+          title: "chore: 每週 Skills 來源與候選更新"
           add-paths: |
             content
             src/data/upstream.json
-          body: |
-            每週自動同步 `anthropics/skills` 與 `K-Dense-AI/scientific-agent-skills`。
+            src/data/discovery.json
+            src/data/updates.json
+          body-path: content/sync-report.md
 
-            ### 驗證
-            ${{ steps.verify.outputs.report }}
-
-            ### 變動
-            ${{ steps.summary.outputs.text }}
-
-            ### 合併前檢查
-            - [ ] 新增的 skill 已在 `src/data/overlay/` 補上中文名稱、描述與分類
-            - [ ] 被移除的 skill 已在 `public/_redirects` 加轉址
-            - [ ] PR 上的 CI 通過（此 PR 由 bot 開啟，需推一個 commit 或關閉再開才會觸發 CI）
+      - name: Fail workflow when refresh or validation failed
+        if: always() && (steps.refresh.outcome == 'failure' || steps.verify.outcome == 'failure')
+        run: exit 1

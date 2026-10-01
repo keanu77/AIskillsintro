@@ -3,6 +3,7 @@
 import { useRef, useState, type KeyboardEvent } from "react";
 import type { SourceId, UpstreamSkill } from "@/data/types";
 import { AGENTS, buildInstallGuide, type AgentId } from "@/lib/installCommands";
+import { declaredAgents } from "@/data/sources";
 import CopyButton from "./CopyButton";
 
 interface InstallationProps {
@@ -23,7 +24,8 @@ function CodeBlock({ title, code }: { title: string; code: string }) {
 }
 
 export default function Installation({ skill, repos }: InstallationProps) {
-  const [agentId, setAgentId] = useState<AgentId>("claude-code");
+  const supported = declaredAgents(skill);
+  const [agentId, setAgentId] = useState<AgentId>(supported[0] ?? "claude-code");
   const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
   const guide = buildInstallGuide(skill, agentId, repos);
 
@@ -81,24 +83,28 @@ export default function Installation({ skill, repos }: InstallationProps) {
         </div>
 
         <div id="install-panel" role="tabpanel" aria-labelledby={`tab-${agentId}`} className="space-y-5 rounded-b-2xl rounded-tr-2xl bg-slate-800/40 p-5 ring-1 ring-white/5">
-          <CodeBlock title="一鍵安裝（需要 Node.js）" code={guide.command} />
+          <p className="text-sm leading-7 text-slate-300">
+            {supported.includes(agentId) ? "來源文件宣告支援此平台；本站尚未進行安裝與任務實測。" : "尚未確認此 skill 在此平台的相容性。以下若有指令，僅為通用安裝範本。"}
+          </p>
+          {guide.notice && <p className="text-sm leading-7 text-blue-200">{guide.notice}</p>}
+          {guide.command && <CodeBlock title="安裝指令（需要 Node.js）" code={guide.command} />}
 
           {guide.plugin && (
-            <CodeBlock title="或在 Claude Code 中以 plugin 安裝" code={guide.plugin} />
+            <CodeBlock title={skill.installMode === "plugin" ? "在 Codex 開啟 Plugins" : "或在 Claude Code 中以 plugin 安裝"} code={guide.plugin} />
           )}
 
-          <details className="group rounded-2xl bg-slate-800/60 ring-1 ring-white/5">
+          {guide.manual && <details className="group rounded-2xl bg-slate-800/60 ring-1 ring-white/5">
             <summary className="cursor-pointer select-none px-5 py-3 text-sm font-medium text-slate-300 hover:text-white">
               手動安裝（不使用 npx）
             </summary>
             <div className="px-5 pb-5">
               <CodeBlock title="clone 後複製到 skills 目錄" code={guide.manual} />
             </div>
-          </details>
+          </details>}
         </div>
 
         <p className="mt-6 text-center text-sm text-slate-500">
-          Skills 會以 agent 的完整權限執行，安裝前請先閱讀原始 SKILL.md。安裝後重新啟動 agent 即可使用。
+          安裝會取得來源的當前版本，可能與本站收錄版本不同。請先閱讀原始文件，確認執行權限與依賴需求。
         </p>
       </div>
     </section>
