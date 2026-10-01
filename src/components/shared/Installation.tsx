@@ -51,7 +51,7 @@ export default function Installation({ skill, repos }: InstallationProps) {
   return (
     <section id="installation" aria-labelledby="install-heading" className="scroll-mt-4 bg-ink p-5 text-paper sm:p-7">
       <div className="flex flex-wrap items-center justify-between gap-4">
-        <h2 id="install-heading" className="font-wide text-[28px] font-black">安裝</h2>
+        <h2 id="install-heading" className="font-wide text-[28px] font-black">安裝這個 skill</h2>
         <div role="tablist" aria-label="選擇 AI agent" onKeyDown={handleKeyDown} className="flex flex-wrap gap-1.5">
           {AGENTS.map((agent, index) => {
             const selected = agent.id === agentId;

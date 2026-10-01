@@ -10,7 +10,11 @@ const HEADING_MAP: [RegExp, string][] = [
   [/^(#{1,2})\s+When to Use$/gm, "$1 使用時機"],
   [/^(#{1,2})\s+Quick Start$/gm, "$1 快速開始"],
   [/^(#{1,2})\s+Getting Started$/gm, "$1 快速開始"],
-  [/^(#{1,2})\s+Installation$/gm, "$1 安裝方式"],
+  // Upstream install sections set up the tool itself, not the skill; keep them
+  // distinct from the page's 「安裝這個 skill」 panel (#14).
+  [/^(#{1,3})\s+Install(?:ation)?$/gm, "$1 工具本身的安裝"],
+  [/^(#{1,3})\s+Installation and Setup$/gm, "$1 工具本身的安裝與設定"],
+  [/^(#{1,3})\s+Installation and Authentication$/gm, "$1 工具本身的安裝與驗證"],
   [/^(#{1,2})\s+Setup$/gm, "$1 設定"],
   [/^(#{1,2})\s+Basic Usage$/gm, "$1 基本用法"],
   [/^(#{1,2})\s+Usage$/gm, "$1 用法"],
