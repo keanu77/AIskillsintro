@@ -1,0 +1,62 @@
+name: Lighthouse
+
+# Measures the built site on a local gzip server instead of the Pages preview,
+# whose network noise made scores swing 90–99 for the same build.
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: lighthouse-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+env:
+  NODE_VERSION: "24"
+  LHCI_VERSION: "0.15.1"
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      # 5 runs per URL, median run asserted: performance ≥ 95, accessibility = 100.
+      - name: Lighthouse CI
+        run: npx -y @lhci/cli@${{ env.LHCI_VERSION }} autorun
+      - name: Summarize scores
+        if: always()
+        run: |
+          node -e '
+            const fs = require("fs");
+            const dir = ".lighthouseci/";
+            if (!fs.existsSync(dir)) process.exit(0);
+            const byUrl = {};
+            for (const f of fs.readdirSync(dir).filter((f) => /^lhr-.*\.json$/.test(f))) {
+              const r = JSON.parse(fs.readFileSync(dir + f));
+              (byUrl[new URL(r.requestedUrl).pathname] ??= []).push(r.categories);
+            }
+            const median = (xs) => xs.sort((a, b) => a - b)[Math.floor(xs.length / 2)];
+            const rows = Object.entries(byUrl).map(([path, runs]) => {
+              const perf = runs.map((c) => Math.round(c.performance.score * 100));
+              const a11y = runs.map((c) => Math.round(c.accessibility.score * 100));
+              return `| ${path} | ${median(perf)} (${perf.join("/")}) | ${median(a11y)} |`;
+            });
+            const md = ["| Page | Performance median (runs) | Accessibility |", "|---|---|---|", ...rows].join("\n");
+            fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, md + "\n");
+          '
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: lighthouse-reports
+          path: .lighthouseci
+          include-hidden-files: true
+          retention-days: 7
