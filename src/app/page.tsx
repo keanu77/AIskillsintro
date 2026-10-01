@@ -22,9 +22,8 @@ export default function Home() {
         onCategoryJump={jumpTo}
       />
 
-      <SourceLinks />
-
       <main className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+        <SourceLinks />
         <FilterBar filters={filters} onChange={setFilters} />
         {filtering ? (
           <SearchResults skills={filterSkills(SKILLS, filters)} query={filters.query} />

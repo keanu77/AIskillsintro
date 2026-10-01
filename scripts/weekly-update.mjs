@@ -46,7 +46,7 @@ function renderReport(run, manifest, discovery) {
     `最近成功確認：${discovery.checkedAt ?? "尚未成功"}。`,
     ...(discovery.error ? [`探索錯誤：${discovery.error}。既有候選保留，本次固定來源更新仍可審閱。`] : []), "",
     "新增項目中，尚無中文介紹者維持待整理狀態；中文摘要與人工審閱由維護者處理。程式僅讀取來源資料，未執行上游 Skill。", "",
-    "## 驗證", "", "尚未執行；工作流程將附上 lint、typecheck、test、build 結果。", "",
+    "## 驗證", "", "檢查結果由工作流程附於下方（lint、typecheck、test、build、e2e）。", "",
   ].join("\n");
 }
 

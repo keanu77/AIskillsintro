@@ -18,7 +18,7 @@ function CodeBlock({ title, code }: { title: string; code: string }) {
         <span className="text-sm font-medium text-slate-300">{title}</span>
         <CopyButton text={code} />
       </div>
-      <pre className="overflow-x-auto p-5 font-mono text-sm leading-7 text-slate-200">{code}</pre>
+      <pre tabIndex={0} aria-label={title} className="overflow-x-auto p-5 font-mono text-sm leading-7 text-slate-200">{code}</pre>
     </div>
   );
 }

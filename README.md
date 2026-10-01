@@ -28,7 +28,7 @@
 1. 同步上述五個追蹤來源。任一來源抓取失敗、tree 不完整或查無技能時，中止同步並保留原目錄。
 2. 以 GitHub repository search 搜尋 Agent Skills 主題與關鍵字。篩選至少 50 stars、非 fork、未封存的專案；排除已追蹤來源，最多檢查 10 個專案，確認存在 SKILL.md。這是發掘線索，不是實測推薦或全面網路搜尋。
 3. 寫入 `src/data/discovery.json` 及最近 12 次的 `src/data/updates.json`，並產生 `content/sync-report.md`。候選專案只提供來源連結，不會被自動安裝、執行或加入推薦目錄。
-4. 執行 lint、typecheck、test、build，建立／更新 `bot/upstream-sync` PR。驗證失敗會在 PR 記錄並令 workflow 失敗。
+4. 執行 lint、typecheck、test、build、e2e，建立／更新 `bot/upstream-sync` PR。驗證失敗會在 PR 記錄並令 workflow 失敗。
 5. 維護者審閱後合併，沿用 main CI 發布；**沒有自動合併**。尚未合併的快照不會改變正式站。
 
 搜尋暫時失敗時，保留上次成功結果及原日期，標示 `stale`；不把失敗寫成零候選的成功結果。來源快照本身可以繼續審閱。`content/weekly-baselines/` 保留同日第一次同步前的資料，確保同日重跑的差異一致；`baseline: true` 表示首次啟用紀錄，既有項目不會冒充新增。
@@ -71,7 +71,7 @@ python3 tests/browser-smoke.py
 
 Cloudflare Pages（Direct Upload 專案 `aiskillsintro`）由 `.github/workflows/ci.yml` 部署：
 
-- PR：lint / typecheck / test / build 通過後部署到 `pr-<編號>.aiskillsintro.pages.dev`，並在 PR 留言附網址。
+- PR：lint / typecheck / test / build / e2e 通過後部署到 `pr-<編號>.aiskillsintro.pages.dev`，並在 PR 留言附網址。
 - push 到 `main`：部署正式站。
 - 需要 repo secret `CLOUDFLARE_API_TOKEN`（權限：Account → Cloudflare Pages → Edit）；未設定時只跑檢查、跳過部署。
 

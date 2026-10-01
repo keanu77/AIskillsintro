@@ -54,7 +54,10 @@ export async function generateMetadata({
 
 // ── Page component ─────────────────────────────────────
 
-const REPOS = Object.fromEntries(SOURCES.map((s) => [s.id, s.repo])) as Record<SourceId, string>;
+const REPOS = Object.fromEntries(SOURCES.map((s) => [s.id, s.repo])) as Record<
+  SourceId,
+  string
+>;
 
 function WithheldNotice({ href }: { href: string }) {
   return (
@@ -63,7 +66,12 @@ function WithheldNotice({ href }: { href: string }) {
         <p className="font-semibold">此 Skill 僅提供介紹與來源連結</p>
         <p className="mt-2 text-sm">
           尚未確認全文轉載條件，或來源授權有限制。請至{" "}
-          <a href={href} target="_blank" rel="noopener noreferrer" className="font-medium underline">
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium underline"
+          >
             原始 SKILL.md
           </a>{" "}
           閱讀完整使用說明。
@@ -87,20 +95,22 @@ export default async function SkillDetailPage({ params }: PageProps) {
   return (
     <>
       <BackToCatalog />
-      <SkillDetailHero skill={skill} />
-      <SkillEvidence skill={skill} />
-      <Installation skill={skill.upstream} repos={REPOS} />
-      {content ? (
-        <SkillGuide content={content} sourceUrl={skillFileUrl(source.repo, source.sha, skill.upstream.dir, skill.upstream.path)} />
-      ) : (
-        <WithheldNotice href={skillFileUrl(source.repo, source.sha, skill.upstream.dir, skill.upstream.path)} />
-      )}
-      {attribution && <section className="bg-white px-6 pb-12">
-        <details className="mx-auto max-w-4xl rounded-xl border border-slate-200 p-5">
-          <summary className="cursor-pointer text-sm font-medium text-slate-700">來源與授權資訊</summary>
-          <pre className="mt-4 max-h-80 overflow-auto whitespace-pre-wrap break-words text-xs leading-6 text-slate-500">{attribution}</pre>
-        </details>
-      </section>}
+      <main>
+        <SkillDetailHero skill={skill} />
+        <SkillEvidence skill={skill} />
+        <Installation skill={skill.upstream} repos={REPOS} />
+        {content ? (
+          <SkillGuide content={content} sourceUrl={skillFileUrl(source.repo, source.sha, skill.upstream.dir, skill.upstream.path)} />
+        ) : (
+          <WithheldNotice href={skillFileUrl(source.repo, source.sha, skill.upstream.dir, skill.upstream.path)} />
+        )}
+        {attribution && <section className="bg-white px-6 pb-12">
+          <details className="mx-auto max-w-4xl rounded-xl border border-slate-200 p-5">
+            <summary className="cursor-pointer text-sm font-medium text-slate-700">來源與授權資訊</summary>
+            <pre tabIndex={0} className="mt-4 max-h-80 overflow-auto whitespace-pre-wrap break-words text-xs leading-6 text-slate-500">{attribution}</pre>
+          </details>
+        </section>}
+      </main>
       <Footer title={skill.name} />
     </>
   );

@@ -20,4 +20,4 @@ GitHub 候選探索：ok；保留 10 個候選。
 
 ## 驗證
 
-尚未執行；工作流程將附上 lint、typecheck、test、build 結果。
+檢查結果由工作流程附於下方（lint、typecheck、test、build、e2e）。
