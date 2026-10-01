@@ -45,21 +45,39 @@ jobs:
       - name: Verify synced catalog
         if: steps.diff.outputs.changed == 'true'
         id: verify
+        env:
+          NO_COLOR: "1"
+          FORCE_COLOR: "0"
         run: |
           set +e
           npm test > test.log 2>&1; test_rc=$?
           npm run build > build.log 2>&1; build_rc=$?
+          # Slugs listed in the overlay-coverage assertion diff, e.g. +   "cantera",
+          untranslated=$(grep -oE '^\+ +"[^"]+",?$' test.log | grep -oE '"[^"]+"' | tr -d '"' | sort -u)
           {
             echo "report<<EOF"
             if [ $test_rc -eq 0 ] && [ $build_rc -eq 0 ]; then
               echo "✅ \`npm test\` 與 \`npm run build\` 通過。"
             else
-              echo "❌ 驗證失敗（test=$test_rc, build=$build_rc）。新增的 skill 通常需要在 \`src/data/overlay/<分類>.ts\` 補中文 overlay，英文原文見 \`content/upstream-descriptions.json\`。"
-              echo
-              echo '```'
-              grep -E 'FAIL|AssertionError|expected|untranslated|^\s+[-+] ' test.log | head -40
-              tail -15 build.log
-              echo '```'
+              echo "❌ 驗證失敗（test=$test_rc, build=$build_rc）。"
+              if [ -n "$untranslated" ]; then
+                echo
+                echo "**缺中文 overlay 的 skill**（加到 \`src/data/overlay/<分類>.ts\`，英文原文見 \`content/upstream-descriptions.json\`）："
+                echo
+                echo "$untranslated" | sed 's/^/- `/; s/$/`/'
+              fi
+              if [ $test_rc -ne 0 ] && [ -z "$untranslated" ]; then
+                echo
+                echo '```'
+                grep -E 'FAIL|AssertionError|Error:' test.log | head -30
+                echo '```'
+              fi
+              if [ $build_rc -ne 0 ]; then
+                echo
+                echo '```'
+                tail -20 build.log
+                echo '```'
+              fi
             fi
             echo "EOF"
           } >> "$GITHUB_OUTPUT"
@@ -69,9 +87,16 @@ jobs:
         if: steps.diff.outputs.changed == 'true'
         id: summary
         run: |
+          git add -N content/skills
+          slugs() { git diff --name-only --diff-filter="$1" -- content/skills | sed 's#content/skills/##; s#\.md$##'; }
+          # Backtick-quoted, space-separated list, or 無 when empty.
+          fmt() { if [ -n "$1" ]; then echo "$1" | sed 's/.*/`&`/' | paste -sd' ' -; else echo "無"; fi; }
+          modified=$(slugs M | wc -l | tr -d ' ')
           {
-            echo "files<<EOF"
-            git status --porcelain -- content/skills | awk '{print $1, $2}' | sed 's#content/skills/##; s#\.md$##' | head -60
+            echo "text<<EOF"
+            echo "- 新增：$(fmt "$(slugs A)")"
+            echo "- 移除：$(fmt "$(slugs D)")"
+            echo "- 內容更新：${modified} 個"
             echo "EOF"
           } >> "$GITHUB_OUTPUT"
 
@@ -92,10 +117,8 @@ jobs:
             ### 驗證
             ${{ steps.verify.outputs.report }}
 
-            ### 變動的 skill（`M` 修改、`??`/`A` 新增、`D` 移除）
-            ```
-            ${{ steps.summary.outputs.files }}
-            ```
+            ### 變動
+            ${{ steps.summary.outputs.text }}
 
             ### 合併前檢查
             - [ ] 新增的 skill 已在 `src/data/overlay/` 補上中文名稱、描述與分類
