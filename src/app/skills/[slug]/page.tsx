@@ -35,9 +35,19 @@ export async function generateMetadata({
   const skill = getSkillBySlug(slug);
   if (!skill) return {};
 
+  const path = `/skills/${skill.slug}`;
   return {
     title: skill.name,
     description: skill.description,
+    alternates: { canonical: path },
+    openGraph: {
+      type: "article",
+      url: path,
+      title: `${skill.name} — AI Skills Catalog`,
+      description: skill.description,
+      // Child openGraph replaces the parent's, so re-attach the site card.
+      images: ["/opengraph-image"],
+    },
   };
 }
 
