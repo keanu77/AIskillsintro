@@ -216,6 +216,9 @@ For interviews/focus groups, disclose recruitment, consent, role coverage,
 dates/mode, guide, coding, divergent evidence, privacy controls, and limits to
 generalization.
 
+Label AI-generated responses as simulations, not human survey respondents or
+observed demand. Disclose AI-assisted collection/processing and human validation.
+
 Before reporting a trend across survey waves, compare the exact wording, response
 options, question order, target population, recruitment, mode, and weighting.
 A changed instrument or sample can create an apparent demand shift. Mark the break,
@@ -290,6 +293,12 @@ python3 scripts/generate_report_scaffold.py \
   assets/report_manifest_template.json ./market-report-workspace
 ```
 
+Run these commands from the skill directory, or use absolute paths to the scripts
+and inputs. The annual scaffold requires the forecast period to start immediately
+after the historical period and derives its horizon (1–50 years) from the manifest.
+Label any bridge estimates explicitly; generated empty ledgers and analysis files
+must be populated before their validators can pass.
+
 Or use the optional LaTeX assets:
 
 - `assets/market_report_template.tex`
@@ -327,6 +336,9 @@ Or use the optional LaTeX assets:
 ### Templates and CLIs
 
 Use the templates in `assets/` as synthetic schemas, not real-world evidence.
+Passing a validator establishes input structure and declared consistency, not
+whether a source supports a claim, coverage is truly disjoint, or a market estimate
+is accurate. Review the underlying sources and assumptions separately.
 All scripts in `scripts/` are standard-library, bounded, local-only tools. They
 reject oversized or malformed input, do not follow symlink inputs, do not
 overwrite outputs without explicit permission, and make no network, LLM, image,

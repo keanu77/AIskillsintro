@@ -147,6 +147,8 @@ For every candidate:
 
 Prefer tests where rivals predict meaningfully different outcomes. Add positive, procedural, and negative controls when scientifically appropriate. A negative control must be incapable of operating through the target mechanism while sharing relevant bias pathways; it is not a decorative untreated group.
 
+For observational negative-control outcomes, justify why the exposure cannot cause the control outcome through another pathway either. A non-null control can reflect an invalid control assumption; it does not by itself identify or quantify the bias in the target estimate.
+
 Use `assets/prediction_rival_matrix_template.csv` and `assets/falsification_controls_template.json`.
 
 ### 8. Operationalize and validate measurement
@@ -257,7 +259,7 @@ Exit codes are `0` for structurally valid output, `1` for completed validation w
 - `references/source_ledger.md` — dated authoritative source notes
 - `references/security_validation.md` — baseline findings and validation record
 
-The bundled source ledger is `assets/source_ledger.csv`, verified through **2026-07-23**. Recheck time-sensitive policy and guidance before a later or jurisdiction-specific use.
+The bundled source ledger is `assets/source_ledger.csv`; the **2026-10-01** refresh records new verification dates per source while retaining earlier dates for historical sources. Current policy notes distinguish the issued July 2026 U.S. high-risk life-sciences policy from the August 2026 NIH biosafety draft. Recheck applicable implementation requirements before a later or jurisdiction-specific use.
 
 ## Citing Scientific Agent Skills
 

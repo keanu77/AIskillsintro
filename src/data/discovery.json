@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-10-01T05:27:42.397Z",
+  "checkedAt": "2026-10-02T02:38:57.679Z",
   "status": "ok",
-  "attemptedAt": "2026-10-01T05:27:42.397Z",
+  "attemptedAt": "2026-10-02T02:38:57.679Z",
   "queries": [
     "topic:agent-skills stars:>=50 archived:false fork:false",
     "agent skills in:name,description stars:>=50 archived:false fork:false"
@@ -12,7 +12,7 @@
       "repo": "obra/superpowers",
       "url": "https://github.com/obra/superpowers",
       "description": "An agentic skills framework & software development methodology that works.",
-      "stars": 293540,
+      "stars": 294011,
       "pushedAt": "2026-09-27T02:37:47Z",
       "sha": "8ca22dba9a94f28898bbce59f2537ff4d87c747d",
       "skillPaths": [
@@ -40,7 +40,7 @@
       "repo": "mattpocock/skills",
       "url": "https://github.com/mattpocock/skills",
       "description": "Skills for Real Engineers. Straight from my .agents directory.",
-      "stars": 273158,
+      "stars": 273959,
       "pushedAt": "2026-09-29T12:38:37Z",
       "sha": "d81f3a183412e71a5b1e84ca21bc1a35eea03a60",
       "skillPaths": [
@@ -90,9 +90,9 @@
       "repo": "affaan-m/ecc",
       "url": "https://github.com/affaan-m/ecc",
       "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
-      "stars": 270288,
-      "pushedAt": "2026-09-30T18:45:04Z",
-      "sha": "c70874fae9eb0e5ad0365beb7e2955899fd1d30f",
+      "stars": 270737,
+      "pushedAt": "2026-10-02T02:01:14Z",
+      "sha": "ef648e01899ba3e8dc6371642deaaf64b4477775",
       "skillPaths": [
         ".agents/skills/agent-introspection-debugging/SKILL.md",
         ".agents/skills/agent-sort/SKILL.md",
@@ -112,8 +112,8 @@
         ".agents/skills/dmux-workflows/SKILL.md",
         ".agents/skills/documentation-lookup/SKILL.md",
         ".agents/skills/e2e-testing/SKILL.md",
+        ".agents/skills/ecc-conventions/SKILL.md",
         ".agents/skills/eval-harness/SKILL.md",
-        ".agents/skills/everything-claude-code/SKILL.md",
         ".agents/skills/exa-search/SKILL.md",
         ".agents/skills/fal-ai-media/SKILL.md",
         ".agents/skills/frontend-patterns/SKILL.md",
@@ -143,7 +143,7 @@
       "repo": "dietrichgebert/ponytail",
       "url": "https://github.com/dietrichgebert/ponytail",
       "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
-      "stars": 149389,
+      "stars": 150601,
       "pushedAt": "2026-09-14T14:34:56Z",
       "sha": "e3ba2aa6f1e6f0bc4d69eb09c9f0d0a93af56156",
       "skillPaths": [
@@ -168,7 +168,7 @@
       "repo": "shubhamsaboo/awesome-llm-apps",
       "url": "https://github.com/shubhamsaboo/awesome-llm-apps",
       "description": "100+ AI Agents, Agent Skills and RAG Apps - Free and Open Source.",
-      "stars": 140420,
+      "stars": 140520,
       "pushedAt": "2026-09-30T20:31:22Z",
       "sha": "4bf51ab704fb2c5b3803cd5191b30d7dcdb51dc2",
       "skillPaths": [
@@ -191,9 +191,9 @@
       "repo": "juliusbrussee/caveman",
       "url": "https://github.com/juliusbrussee/caveman",
       "description": "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
-      "stars": 108616,
-      "pushedAt": "2026-10-01T03:43:47Z",
-      "sha": "f5d729488caa8f6a5b6c8086fe2cccd3e8a63f91",
+      "stars": 108751,
+      "pushedAt": "2026-10-01T19:57:24Z",
+      "sha": "b39c90862855ad2f0813ce775b8bf07a9d6d2a50",
       "skillPaths": [
         "plugins/caveman/skills/cavecrew/SKILL.md",
         "plugins/caveman/skills/caveman-compress/SKILL.md",
@@ -228,7 +228,7 @@
       "repo": "addyosmani/agent-skills",
       "url": "https://github.com/addyosmani/agent-skills",
       "description": "Production-grade engineering skills for AI coding agents.",
-      "stars": 100196,
+      "stars": 100358,
       "pushedAt": "2026-09-26T04:19:38Z",
       "sha": "2686b620fc1fed2e8f60c704839c766b8594c6b6",
       "skillPaths": [
@@ -266,8 +266,8 @@
       "repo": "nexu-io/open-design",
       "url": "https://github.com/nexu-io/open-design",
       "description": "🎨 Best DeepSeek Harness Design Plugin. The open-source Claude Design alternative. 🖥️ Local-first desktop app. 🖼️ Your coding agent becomes the design engine: prototypes, landing pages, dashboards, slides, images & video — real files, HTML/PDF/PPTX/MP4 export. 🤖 Claude Code / Codex / Cursor / DeepSeek Harness / OpenCode & 20+ CLIs via BYOK.",
-      "stars": 98963,
-      "pushedAt": "2026-10-01T01:40:16Z",
+      "stars": 99085,
+      "pushedAt": "2026-10-02T01:30:35Z",
       "sha": "53231d40b778d88eba23f35547bf99485d3ae9fc",
       "skillPaths": [
         ".claude/skills/od-contribute/SKILL.md",
@@ -319,7 +319,7 @@
       "repo": "composiohq/awesome-claude-skills",
       "url": "https://github.com/composiohq/awesome-claude-skills",
       "description": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
-      "stars": 76196,
+      "stars": 76321,
       "pushedAt": "2026-09-18T07:16:11Z",
       "sha": "be2a406907dbc61b73e6827ded415c96139d13a2",
       "skillPaths": [
@@ -372,7 +372,7 @@
       "repo": "tt-a1i/archify",
       "url": "https://github.com/tt-a1i/archify",
       "description": "Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.",
-      "stars": 75372,
+      "stars": 75856,
       "pushedAt": "2026-09-30T15:57:42Z",
       "sha": "d5a1333d7447c866a765adac7d4d062f2f02e4d2",
       "skillPaths": [

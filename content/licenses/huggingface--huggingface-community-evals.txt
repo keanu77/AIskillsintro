@@ -1,5 +1,5 @@
-Source: https://github.com/huggingface/skills/tree/80f9fa530e46f4ae642fcb9e1725bad0e1979395/skills/huggingface-community-evals
-Commit: 80f9fa530e46f4ae642fcb9e1725bad0e1979395
+Source: https://github.com/huggingface/skills/tree/ca0325bb20b2d0a1b2efa893670c4c72f79e707b/skills/huggingface-community-evals
+Commit: ca0325bb20b2d0a1b2efa893670c4c72f79e707b
 Declared license: not declared
 Mirror decision: recognized-open-license
 

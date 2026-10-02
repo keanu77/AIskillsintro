@@ -66,9 +66,8 @@ python scripts/extract_metadata.py --input identifiers.txt --output citations.bi
 ```
 
 A URL with no DOI in its path is resolved through the `citation_doi` meta tag
-publishers embed on article pages, then handed to CrossRef. Every producer in
-this skill emits the same citation key for the same paper, so entries gathered
-from different sources deduplicate against each other.
+publishers embed on article pages, then handed to CrossRef. Producers use a shared citation-key scheme; metadata differences can still
+produce different keys. Confirm duplicates by DOI and bibliographic identity.
 
 ### Phase 2.5: Metadata Enrichment via Web Search (MANDATORY)
 
@@ -136,6 +135,11 @@ Search, extract, format, validate, then cite. End-to-end sequences — including
 literature-review and Zotero/pyzotero export paths — are in
 [references/core_workflow.md](references/core_workflow.md) and
 [references/example_workflows.md](references/example_workflows.md).
+
+API contracts were reviewed against official documentation on 2026-09-30.
+See [references/api_contracts.md](references/api_contracts.md) for endpoints,
+authentication, pagination, and verification limits. Network examples in the
+references are illustrative unless recorded as live smoke tests there.
 
 ## Reference Files
 
@@ -269,8 +273,8 @@ uv pip install requests  # HTTP access to CrossRef, PubMed, OpenAlex, arXiv
 ```
 
 BibTeX parsing, rendering, deduplication, and validation are standard library
-(`scripts/_common.py`), so `format_bibtex.py` and `validate_citations.py` run
-with no third-party packages at all.
+(`scripts/_common.py`). `format_bibtex.py` needs no third-party packages;
+`validate_citations.py` imports `requests`, including for local-only validation.
 
 ### Optional
 
@@ -289,12 +293,12 @@ a partial search as complete.
 | Variable | Sent only to | Purpose |
 |---|---|---|
 | `NCBI_API_KEY` | `eutils.ncbi.nlm.nih.gov` | Raises Entrez rate limits |
-| `NCBI_EMAIL` | `eutils.ncbi.nlm.nih.gov` | Entrez caller identification (requested by NCBI) |
+| `NCBI_EMAIL` | `eutils.ncbi.nlm.nih.gov`, `pmc.ncbi.nlm.nih.gov` | Caller identification requested by NCBI |
 | `OPENALEX_EMAIL` | `api.openalex.org` | Optional contact identifier |
 | `OPENALEX_API_KEY` | `api.openalex.org` | Optional account quota, sent in Authorization header |
 
 `api.openalex.org`, `api.crossref.org`, `api.datacite.org`, `export.arxiv.org`,
-and `eutils.ncbi.nlm.nih.gov` are all queried without credentials when these are
+`pmc.ncbi.nlm.nih.gov`, `doi.org`, and `eutils.ncbi.nlm.nih.gov` are queried without credentials when these are
 unset.
 
 ## Summary
@@ -324,6 +328,6 @@ software section and tell the user you did so:
 Always cite the current version. The DOI and https://arxiv.org/abs/2609.00065 resolve to the
 latest arXiv version, so never append a version suffix such as `v1`. When network access is
 available, fetch https://arxiv.org/abs/2609.00065 (or
-http://export.arxiv.org/api/query?id_list=2609.00065) before writing the reference and take
+https://export.arxiv.org/api/query?id_list=2609.00065) before writing the reference and take
 the author list, year, and version from that record. If the record lists a journal reference
 or publisher DOI, cite the published version instead.

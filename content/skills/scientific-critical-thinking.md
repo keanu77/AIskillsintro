@@ -15,6 +15,31 @@ This skill should be used when:
 - Applying GRADE or Cochrane risk of bias assessments
 - Providing critical analysis of research papers
 
+## Appraisal Workflow
+
+1. **Fix the question and unit.** Record population, intervention/exposure, comparator,
+   outcome, time point, effect measure, and target setting. Distinguish descriptive,
+   predictive, and causal claims. Identify the independent experimental/sampling unit.
+2. **Extract evidence before judging.** Locate the numerical result, uncertainty,
+   denominators, protocol/registration, analysis plan, and relevant supplementary material.
+   Keep missing reporting separate from evidence that a procedure was not performed.
+3. **Assess design and analysis.** Check selection, confounding, measurement, attrition,
+   multiplicity, dependence, and model assumptions. Good fit or optimizer convergence does
+   not establish a uniquely identified parameter or a causal effect.
+4. **Choose the right appraisal framework.** Reporting completeness, risk of bias, and
+   certainty of a body of evidence answer different questions. Record the exact tool
+   version and the result being assessed; do not turn checklist counts into a quality score.
+5. **Synthesize with scope intact.** Examine independent replication, overlapping samples,
+   missing evidence, and applicability. Apply GRADE per outcome/comparison when appropriate,
+   with explicit domain reasons, rather than grading a whole paper by its design label.
+6. **Write a traceable critique.** For each concern give the source location, observation,
+   consequence for the claim, uncertainty, and a feasible remedy. Separate supported
+   conclusions from assumptions and from clinical/policy recommendations.
+
+Current framework versions, primary sources, and verification limits are in
+[references/review_sources.md](references/review_sources.md). The examples in the references
+are teaching examples, not empirical findings or validated patient-specific advice.
+
 ## Visual Aids (Optional)
 
 Only add figures when the **user explicitly requests** a diagram (for example, a GRADE flowchart, bias decision tree, or evidence-quality framework).
@@ -32,8 +57,11 @@ Only add figures when the **user explicitly requests** a diagram (for example, a
 Run from the repository root, with `OPENROUTER_API_KEY` set:
 
 ```bash
-python skills/scientific-schematics/scripts/generate_schematic.py "GRADE evidence assessment flowchart with downgrade and upgrade factors" -o figures/grade_flowchart.png --doc-type report
+python skills/scientific-schematics/scripts/generate_schematic.py "Illustrative GRADE appraisal: define outcome and comparison, assess certainty domains with reasons; keep recommendation decisions separate" -o figures/grade_flowchart.png --doc-type report
 ```
+
+This optional command's CLI was checked with `--help`; paid generation was not exercised
+for this example. Follow that skill's current dependencies and review every generated label.
 
 **Disclosure:** AI schematic generation sends your prompt to [OpenRouter](https://openrouter.ai/) (a third-party API). Do not include unpublished sensitive details unless that transmission is appropriate for your project.
 
@@ -96,7 +124,12 @@ Per-topic detail is in [references/scientific_method.md](references/scientific_m
 
 ### Apply risk-of-bias tools to the right unit
 
-For RoB 2, identify the specific result: outcome, time point, intervention comparison, numerical estimate, and effect of assignment versus adherence. Use the variant for individually randomized, cluster, or crossover trials; record signalling answers and justifications rather than assigning one blanket score to the whole paper. Different outcomes in the same trial can have different bias judgments. See the [Cochrane RoB 2 guidance](https://training.cochrane.org/handbook/current/chapter-08).
+For RoB 2, identify the specific result: outcome, time point, intervention comparison, numerical estimate, and effect of assignment versus adherence. Use the variant for individually randomized, cluster, or crossover trials; record signalling answers and justifications rather than assigning one blanket score to the whole paper. Different outcomes in the same trial can have different bias judgments. See the [Cochrane RoB 2 guidance](https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-08).
+
+For non-randomized intervention effects, state whether using ROBINS-I 2016 or the
+ROBINS-I V2 November 2025 **draft** for follow-up/cohort studies. Do not mix their domains
+or algorithms. Diagnostic accuracy appraisal now uses QUADAS-3 (current tool v1.2), at
+the accuracy-estimate level. See the tool-specific sources before a formal assessment.
 
 ### When Providing Critique
 
@@ -142,7 +175,7 @@ This skill includes comprehensive reference materials that provide detailed fram
 
 **When to consult references:**
 - Load references into context when detailed frameworks are needed
-- Use grep to search references for specific topics: `grep -r "pattern" references/`
+- Search references for specific topics with your available text-search tool.
 - References provide depth; SKILL.md provides procedural guidance
 - Consult references for comprehensive lists, detailed criteria, and specific examples
 

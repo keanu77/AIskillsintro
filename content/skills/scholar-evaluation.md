@@ -163,7 +163,8 @@ Use `assets/evaluation_template.json`. Each criterion must be:
 - `missing` with null score/uncertainty and a rationale reference; or
 - `not_applicable` with null score/uncertainty and a rationale reference.
 
-Do not encode missing or not-applicable as zero. Raters should train, calibrate,
+A rated zero requires inspected evidence demonstrating lack of support; unavailable
+evidence is `missing`. Do not encode missing or not-applicable as zero. Raters should train, calibrate,
 disclose conflicts, rate independently, and document disagreement.
 
 ### 6. Run local quality checks
@@ -185,7 +186,8 @@ PYTHONDONTWRITEBYTECODE=1 python3 scripts/check_traceability.py \
   --evidence assets/evidence_manifest_template.json
 ```
 
-Inter-rater agreement:
+Inter-rater agreement (one `evaluation_id` identifies one frozen work and round;
+raters share that ID within the round):
 
 ```bash
 PYTHONDONTWRITEBYTECODE=1 python3 scripts/summarize_agreement.py \
@@ -258,7 +260,9 @@ evidence. Periodically evaluate the evaluation and retire harmful criteria.
 
 ## Interpretation rules
 
-- A score is an ordinal rubric summary, not a natural measurement.
+- A score is an ordinal rubric summary, not a natural measurement. Weighted means
+  additionally assume meaningful numeric spacing and tradeoffs; justify these
+  locally or use criterion-level qualitative findings without a composite.
 - Normalization does not repair incomplete evidence.
 - The bundled uncertainty range is not a confidence interval.
 - Agreement does not establish reliability, validity, fairness, or correctness.
@@ -275,7 +279,7 @@ evidence. Periodically evaluate the evaluation and retire harmful criteria.
 - `references/local_tooling.md` — strict schemas, formulas, commands, and
   output behavior.
 - `references/source_ledger.md` — authoritative sources and publication-status
-  verification dated 2026-07-23.
+  verification refreshed 2026-10-01.
 - `references/security_validation.md` — baseline remediation, validation, and
   residual security-scan record.
 - `assets/rubric_template.json` — bounded rubric template.

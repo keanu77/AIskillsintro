@@ -1,5 +1,5 @@
-Source: https://github.com/K-Dense-AI/scientific-agent-skills/tree/91497e335489dcb544ec8ddc8f6b7ce5fd6d1121/skills/hypogenic
-Commit: 91497e335489dcb544ec8ddc8f6b7ce5fd6d1121
+Source: https://github.com/K-Dense-AI/scientific-agent-skills/tree/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298/skills/hypogenic
+Commit: 154988403bb5a18e9d3c0ce4e6d5e2e4b184a298
 Declared license: MIT
 Mirror decision: recognized-open-license
 

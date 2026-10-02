@@ -17,7 +17,8 @@ comparing experiments, or interpreting unresolved/two-stage ignition.
 1. Identify the mechanism and its validated condition range. Preserve its source, version,
    citation, and any modifications. Check that its phase is `ideal-gas` and that every
    reactant, diluent, and tracked species exists. For custom YAML with imports, retain the
-   original dependency files as well as the generated self-contained phase snapshot.
+   original dependency files as well as the generated phase snapshot. Custom Python rate
+   extensions additionally need their original code and environment for replay.
 2. Choose constant volume or constant pressure from the physical experiment. Supply K,
    Pa, seconds, and mole amounts explicitly. `mole_amounts` is normalized to mole fractions;
    it is not a mass-fraction mapping. The report includes the normalized initial composition.
@@ -60,7 +61,12 @@ a uniform output grid. It is reported only if the maximum temperature rise reach
 boundary. Otherwise `delay_s` is null and a status explains why. No delay beyond the
 simulation horizon is extrapolated.
 
-The helper runs four independent fresh reactors:
+The helper explicitly uses Cantera 3.2's `clone=True` and reads evolving properties from
+`reactor.phase`. The original `Solution` retains the initial state; do not read it as
+the reactor's final state. `ReactorNet.advance(t)` requests an absolute time, and no
+advance limits are configured, so the output grid remains uniform.
+
+It runs four independent fresh reactors:
 
 | Run | Change from configured conditions |
 | --- | --- |
@@ -84,8 +90,11 @@ size, stiffness, and the chosen horizon; integration failures retain Cantera's e
   temperature, pressure, volume, mass, total internal energy, total enthalpy, and requested
   species mole fractions.
 - `mechanism.yaml`: a Cantera-written snapshot of the loaded phase, species, and reactions.
-  The report hashes this exact file and the located original mechanism file. Imported
-  source dependencies are not separately hashed; the snapshot captures the loaded model.
+  The helper requests `write_yaml(precision=17)` and saves the exact UTF-8 bytes it hashes,
+  without platform newline conversion. The report also hashes the located original
+  mechanism file. Imported source dependencies are not separately hashed; the snapshot
+  captures the loaded model. Its generated header includes a date, so the snapshot hash
+  identifies the saved artifact and need not match between otherwise identical reruns.
 
 Closed reactors conserve mass and elemental mass fractions. The constant-volume case
 checks total internal energy; the constant-pressure case checks total enthalpy. Energy
@@ -94,9 +103,10 @@ relative drift <1e-8, elemental absolute drift <1e-8, energy scaled drift <1e-6,
 mass-fraction sum error <1e-8, and species mass fractions >-1e-10. These checks expose
 numerical issues and do not measure kinetic-model uncertainty.
 
-Check `within_thermo_temperature_range` separately: numerical resolution does not mean
-species thermodynamic fits were used within their temperature bounds. The helper cannot
-assess pressure-dependent kinetic validity from these bounds.
+Check `within_thermo_temperature_range` separately: it checks saved output states, not
+every internal integration state. Numerical resolution does not mean species thermodynamic
+fits stayed within their temperature bounds. The helper cannot assess pressure-dependent
+kinetic validity from these bounds.
 
 ## Scope and upstream references
 
@@ -110,4 +120,8 @@ and their own checks; do not relabel this helper's result as one of them.
 - [Reactor model equations](https://cantera.org/stable/reference/reactors/index.html)
 - [Python reactor API](https://cantera.org/stable/python/zerodim.html)
 - [Thermodynamic properties and equilibrium](https://cantera.org/stable/python/thermo.html)
+- [Phase serialization API](https://cantera.org/stable/python/importing.html#cantera.Solution.write_yaml)
+- [Custom extension registration](https://cantera.org/stable/python/utilities.html#cantera.extension)
+- [Cantera 3.2 release notes](https://cantera.org/stable/reference/releasenotes/v3.2.html)
 - [Upstream ignition example](https://cantera.org/stable/examples/python/reactors/non_ideal_shock_tube.html)
+  uses a species mass-fraction peak; its delay definition differs from this helper's dT/dt peak.
