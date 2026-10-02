@@ -43,7 +43,7 @@ export default function ElementHero({ element }: { element: SkillElement }) {
           <p className="mt-5 max-w-[620px] text-[19px] leading-relaxed text-ink-soft">{skill.description}</p>
           <div className="mt-6 flex flex-wrap gap-3">
             <a href="#installation" className="inline-flex min-h-11 items-center bg-accent px-5 font-bold text-white hover:bg-accent-strong">
-              安裝方式
+              安裝這個 skill
             </a>
             <a href={fileUrl} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center border-2 border-ink px-5 font-bold hover:bg-ink hover:text-paper">
               原始 SKILL.md ↗

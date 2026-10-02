@@ -36,7 +36,7 @@ export default function SkillGuide({ content, sourceUrl }: SkillGuideProps) {
     <section aria-labelledby="guide-heading" className="max-w-[820px]">
       <h2 id="guide-heading" className="font-wide text-[28px] font-black">使用教學</h2>
       <p className="mt-3 mb-8 border-l-4 border-ink pl-3 text-sm leading-relaxed text-ink-soft">
-        以下為上游 SKILL.md 原文：常見段落標題譯為中文，其餘保留英文。中文重點請看頁首摘要。
+        以下為上游 SKILL.md 原文：常見段落標題譯為中文，其餘保留英文。原文中的「工具本身的安裝」是指 skill 所用的套件或程式；把 skill 加進 agent 請看上方「安裝這個 skill」。
       </p>
       <article className={PROSE}>
         <ReactMarkdown
