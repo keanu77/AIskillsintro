@@ -106,3 +106,17 @@ test("family jump links bring the family heading into view below the sticky bar"
   const [navBox, headingBox] = await Promise.all([nav.boundingBox(), heading.boundingBox()]);
   expect(headingBox!.y).toBeGreaterThanOrEqual(navBox!.y + navBox!.height - 1);
 });
+
+test("header follow links open the author's channels in a new tab on every page", async ({ page }) => {
+  for (const path of ["/", "/skills/scanpy", "/updates", "/skills/does-not-exist"]) {
+    await page.goto(path);
+    const links = page.getByRole("navigation", { name: "追蹤連結" }).getByRole("link");
+    await expect(links).toHaveCount(6);
+    for (const link of await links.all()) {
+      await expect(link).toHaveAttribute("target", "_blank");
+      await expect(link).toHaveAttribute("rel", "noopener noreferrer");
+      await expect(link).toHaveAccessibleName(/（在新分頁開啟）$/);
+    }
+  }
+  await expect(page.getByRole("link", { name: /^LINE/ })).toHaveAttribute("href", "https://line.me/R/ti/p/@521cvffb");
+});
