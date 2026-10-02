@@ -90,7 +90,19 @@ test("list view toggle shows full names and syncs the URL", async ({ page }) => 
   await expect(page).toHaveURL(/[?&]view=list\b/);
   await expect(page.getByRole("link", { name: /Algorithmic Art/ })).toBeVisible();
   await page.getByRole("searchbox").fill("scanpy");
-  await expect(page.locator("#table li")).toHaveCount(1);
+  await expect(page.locator("#table section li")).toHaveCount(1);
   await page.getByRole("button", { name: "週期表" }).click();
   await expect(page).not.toHaveURL(/view=list/);
+});
+
+test("family jump links bring the family heading into view below the sticky bar", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/");
+  const nav = page.getByRole("navigation", { name: "跳到族" });
+  await nav.getByRole("link", { name: /臨床醫療/ }).click();
+  await expect(page).toHaveURL(/#family-clinical$/);
+  const heading = page.locator("#family-clinical");
+  await expect(heading).toBeInViewport();
+  const [navBox, headingBox] = await Promise.all([nav.boundingBox(), heading.boundingBox()]);
+  expect(headingBox!.y).toBeGreaterThanOrEqual(navBox!.y + navBox!.height - 1);
 });

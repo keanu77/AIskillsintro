@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import ElementList from "@/components/periodic/ElementList";
 import ElementTile from "@/components/periodic/ElementTile";
+import FamilyNav from "@/components/periodic/FamilyNav";
 import Legend from "@/components/periodic/Legend";
 import PreviewPanel from "@/components/periodic/PreviewPanel";
 import SiteHeader from "@/components/periodic/SiteHeader";
@@ -37,6 +38,11 @@ export default function Home() {
     () => new Set(filterSkills(SKILLS, filters).map((s) => s.slug)),
     [filters],
   );
+  // The list hides non-matches (and then empty families); the table dims them to keep its shape.
+  const visibleFamilies = FAMILIES.map((f) => ({
+    ...f,
+    shown: listView ? f.elements.filter((el) => !filtering || matches.has(el.skill.slug)) : f.elements,
+  })).filter((f) => f.shown.length > 0);
 
   return (
     <>
@@ -87,15 +93,13 @@ export default function Home() {
             </div>
             <ViewToggle view={filters.view} onChange={(view) => setFilters({ ...filters, view })} />
           </div>
+          <FamilyNav families={visibleFamilies.map((f) => ({ category: f.category, count: COUNTS[f.category.id] }))} />
           <div className="flex items-start gap-8">
             <div className="flex min-w-0 flex-1 flex-col gap-6">
-              {FAMILIES.map(({ category, elements }) => {
-                // The list hides non-matches; the table dims them to keep its shape.
-                const shown = listView ? elements.filter((el) => !filtering || matches.has(el.skill.slug)) : elements;
-                if (shown.length === 0) return null;
+              {visibleFamilies.map(({ category, shown }) => {
                 return (
                   <section key={category.id} aria-labelledby={`family-${category.id}`}>
-                    <h3 id={`family-${category.id}`} className="mb-2 flex items-center gap-2 text-sm font-bold">
+                    <h3 id={`family-${category.id}`} className="mb-2 flex scroll-mt-16 items-center gap-2 text-sm font-bold">
                       <span aria-hidden className="size-3 flex-none border border-ink/40" style={{ backgroundColor: category.color }} />
                       {category.shortLabel}
                       <span className="font-mono text-xs font-normal text-ink-muted">{COUNTS[category.id]}</span>
@@ -121,7 +125,7 @@ export default function Home() {
             </div>
             {/* The list already shows each summary, so the preview is table-only. */}
             {!listView && (
-              <aside aria-label="元素預覽" className="sticky top-6 hidden w-[340px] flex-none lg:block">
+              <aside aria-label="元素預覽" className="sticky top-20 hidden w-[340px] flex-none lg:block">
                 <PreviewPanel element={preview ?? FEATURED} featured={!preview} />
               </aside>
             )}
