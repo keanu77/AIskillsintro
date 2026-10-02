@@ -31,6 +31,8 @@
 4. 執行 lint、typecheck、test、build、e2e，建立／更新 `bot/upstream-sync` PR。驗證失敗會在 PR 記錄並令 workflow 失敗。
 5. 維護者審閱後合併，沿用 main CI 發布；**沒有自動合併**。尚未合併的快照不會改變正式站。
 
+同步 PR 要能觸發必要檢查（`verify`、`lighthouse`），需要 repo secret `SYNC_PR_TOKEN`：建立 [fine-grained PAT](https://github.com/settings/personal-access-tokens/new)，Repository access 只選本 repo，權限 Contents 與 Pull requests 設為 Read and write，再到 Settings → Secrets and variables → Actions 新增。未設定時改用 `GITHUB_TOKEN` 開 PR，CI 不會自動執行，需要把 PR 關掉再重開。PAT 到期前記得換新。
+
 搜尋暫時失敗時，保留上次成功結果及原日期，標示 `stale`；不把失敗寫成零候選的成功結果。來源快照本身可以繼續審閱。`content/weekly-baselines/` 保留同日第一次同步前的資料，確保同日重跑的差異一致；`baseline: true` 表示首次啟用紀錄，既有項目不會冒充新增。
 
 ```bash
