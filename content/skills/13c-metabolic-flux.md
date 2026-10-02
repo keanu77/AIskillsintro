@@ -40,7 +40,7 @@ Run in the user's analysis directory. Set `SKILL_DIR` to this skill's installed 
 using the actual resolved path. Keep environments and generated results outside the skill.
 
 ```bash
-uv venv --python 3.11 .venv-mfa
+uv venv --python 3.12 .venv-mfa
 uv pip install --python .venv-mfa/bin/python -r "$SKILL_DIR/assets/requirements.txt"
 ```
 
@@ -49,6 +49,13 @@ The following commands use `.venv-mfa/bin/python`; on Windows use the environmen
 not distributed on PyPI. Installation executes dependency build code; model inputs
 are data, not user-supplied Python. The adapter restricts identifiers and atom-map
 syntax before they reach mfapy's internally generated numerical functions.
+
+The pinned commit matched upstream `master` on 2026-09-30. Its README labels the
+latest change "064", but its installed distribution still reports `0.6.3`; retain
+the Git commit alongside the package version in an analysis record. The refreshed
+NumPy/SciPy pins require Python 3.12 or later; the commands above use the tested 3.12
+environment. See the reviewed forward-model contract in
+[references/inference.md](references/inference.md).
 
 ## Workflow
 

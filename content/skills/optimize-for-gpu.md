@@ -4,6 +4,11 @@ Treat GPU acceleration as an evidence-driven optimization, not an automatic rewr
 user's numerical and algorithmic contract, measure with representative data, and keep the GPU
 version only when synchronized end-to-end benchmarks show a useful improvement.
 
+Reviewed against RAPIDS 26.08, CuPy 14.2, Numba-CUDA 0.30.4, and Warp 1.17.
+The references contain illustrative GPU examples: source/API review is not execution on CUDA
+hardware. Validate them on the user's target GPU before reporting correctness or speedup.
+Do not use a moving `latest` documentation page to infer compatibility with a pinned release.
+
 ## When This Skill Applies
 
 - User wants to speed up numerical/scientific Python code
@@ -146,7 +151,8 @@ transfers, unsupported fallback, memory pressure, launch granularity, or the alg
 
 - Provide a CPU fallback when the application requires portability; otherwise fail early with a
   clear hardware and dependency error.
-- Test numerical correctness against CPU results (GPU floating point may differ slightly due to operation ordering)
+- Test against a trusted reference with problem-specific tolerances; changed algorithms,
+  precision, reduction order, and random streams can produce more than roundoff differences.
 - GPU memory is limited — for datasets larger than GPU memory, consider chunking or using RAPIDS Dask for multi-GPU
 - Prefer the CUDA Array Interface or DLPack for supported zero-copy interchange, but verify device,
   dtype, contiguity, ownership, and stream semantics rather than assuming every conversion is free.

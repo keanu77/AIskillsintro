@@ -2,17 +2,19 @@
 
 ## Overview
 
-Statsmodels is Python's premier library for statistical modeling, providing tools for estimation, inference, and diagnostics across a wide range of statistical methods. Apply this skill for rigorous statistical analysis, from simple linear regression to complex time series models and econometric analyses.
+Statsmodels provides estimation, inference and diagnostics for regression, time series and econometric models. A successful fit establishes numerical execution; causal identification, calibrated uncertainty and model adequacy require a defensible study design and assumptions.
 
 ## Current Compatibility
 
-Examples target statsmodels 0.14.6, released Dec 5, 2025. For reproducible environments, pin the primary package:
+Reviewed against statsmodels 0.15.0 (released August 27, 2026). Native checks used Python 3.13, NumPy 2.5.3, SciPy 1.18.1, pandas 3.0.6, matplotlib 3.11.2 and scikit-learn 1.9.1. Install in a dedicated environment:
 
 ```bash
-uv pip install statsmodels==0.14.6
+uv pip install statsmodels==0.15.0 numpy==2.5.3 scipy==1.18.1 pandas==3.0.6 matplotlib==3.11.2 scikit-learn==1.9.1
 ```
 
 Use `statsmodels.api` and `statsmodels.formula.api` for stable high-level imports, and direct module imports when examples require newer or specialized classes such as `HurdleCountModel`.
+
+The [review and source ledger](references/review.md) records API coverage and verification limits. The quick start is executable; topic references are contextual fragments requiring the named data and a matching model result. In 0.15, use `result_object=True` and named fields for ADF/KPSS and other transitioning tests; prefer `rng=` where statsmodels formerly accepted `seed` or `random_state`.
 
 ## When to Use This Skill
 
@@ -42,17 +44,15 @@ This skill should be used when:
   [references/time_series.md](references/time_series.md), and
   [references/stats_diagnostics.md](references/stats_diagnostics.md).
 
-statsmodels is for *inference* — standard errors, confidence intervals, and hypothesis
-tests. Reach for scikit-learn when prediction is the goal and the coefficients do not
-need interpreting.
+statsmodels supports inference and prediction, including forecasting. Match validation to the sampling design: grouped splits for repeated units, chronological splits for time series, and preprocessing learned on training data only.
 
 ## Best Practices
 
 ### Data Preparation
 
-1. **Always add constant**: Use `sm.add_constant()` unless excluding intercept
+1. **Specify the intercept**: Array OLS/GLM/Logit need an explicit constant; formula models include one by default. OrderedModel and ConditionalLogit must not receive a constant.
 2. **Check for missing values**: For array-based models, use `missing="raise"` during construction to catch unexpected NaNs; the default `missing="none"` does not check and can yield all-NaN estimates. If dropping rows is justified, record retained row IDs and compare models on the same observations. Fit any imputation on training data only.
-3. **Scale if needed**: Improves convergence, interpretation (but not required for tree models)
+3. **Scale if needed**: Can improve conditioning and convergence; record units and estimate scaling on training data
 4. **Encode categoricals**: Use formula API or manual dummy coding
 
 ### Model Building
@@ -74,7 +74,7 @@ need interpreting.
 1. **Check residuals**: Plot residuals vs fitted, Q-Q plot
 2. **Influence diagnostics**: Identify and investigate influential observations
 3. **Out-of-sample validation**: Test on holdout set or cross-validate
-4. **Compare models**: Use AIC/BIC for non-nested, LR test for nested
+4. **Compare models**: Use AIC/BIC only for comparable likelihoods on the same response and rows; regular nested-model LR tests need interior parameters and valid likelihood assumptions
 
 ### Reporting
 
@@ -123,11 +123,11 @@ need interpreting.
 
 1. Plot series, check for trend/seasonality
 2. Test for stationarity (ADF, KPSS)
-3. Difference if non-stationary
-4. Identify p, q from ACF/PACF
+3. Choose deterministic terms and differencing using domain context, plots and tests; do not treat failure to reject a unit root as proof
+4. Use ACF/PACF for candidate orders, then compare converged fits on training data
 5. Fit ARIMA or SARIMAX
 6. Check residual diagnostics (Ljung-Box)
-7. Generate forecasts with confidence intervals
+7. Generate forecasts with model-based prediction intervals and required future exogenous inputs
 8. Evaluate forecast accuracy on test set
 
 ## Reference Documentation
@@ -202,9 +202,9 @@ rg "SARIMAX" references/time_series.md
 
 ## Common Pitfalls to Avoid
 
-1. **Forgetting constant term**: Always use `sm.add_constant()` unless no intercept desired
+1. **Incorrect intercept**: Keep training/prediction design columns identical; use `has_constant="add"` for a new array that lacks an intercept, including a single new row. Ordered/conditional models require no constant.
 2. **Ignoring assumptions**: Check residuals, heteroskedasticity, autocorrelation
-3. **Wrong model for outcome type**: Binary→Logit/Probit, Count→Poisson/NB, not OLS
+3. **Wrong model for the estimand**: Match support, mean and variance to the outcome and sampling design; outcome type alone does not select a valid model
 4. **Not checking convergence**: Look for optimization warnings
 5. **Misinterpreting coefficients**: Remember link functions (log, logit, etc.)
 6. **Using Poisson with overdispersion**: Check dispersion, use Negative Binomial if needed
@@ -212,11 +212,11 @@ rg "SARIMAX" references/time_series.md
 8. **Overfitting**: Too many parameters relative to sample size
 9. **Data leakage**: Fitting on test data or using future information
 10. **Not validating predictions**: Always check out-of-sample performance
-11. **Comparing non-nested models**: Use AIC/BIC, not LR test
+11. **Invalid comparison**: Non-nested or boundary comparisons do not have the usual chi-square LR reference distribution
 12. **Ignoring influential observations**: Check Cook's distance and leverage
 13. **Multiple testing**: Correct p-values when testing many hypotheses
-14. **Not differencing time series**: Fit ARIMA on non-stationary data
-15. **Confusing prediction vs confidence intervals**: Prediction intervals are wider
+14. **Over/under-differencing**: ARIMA models integrated data through `d`; do not difference manually and again inside ARIMA
+15. **Confusing uncertainty targets**: A GLM interval for the conditional mean omits future outcome noise; state-space forecasts include model-based forecast error
 
 ## Getting Help
 

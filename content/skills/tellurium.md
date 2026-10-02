@@ -19,6 +19,10 @@ The full workflow ran with these packages on macOS ARM64. It constructs SED-ML w
 archives with Tellurium/libCombine; PhraSEDML is not required by this helper. Headless runs can set
 `MPLBACKEND=Agg`. No plotting window is opened by the helper.
 
+The six pinned releases were rechecked against official PyPI metadata on 2026-10-01. RoadRunner's
+documentation site still displays an old version banner; the solver settings below were also
+checked against released 2.10.0 source and the installed native runtime.
+
 ## Workflow
 
 1. Inspect the supplied model's compartments, species, initial conditions, boundary species,
@@ -35,6 +39,8 @@ archives with Tellurium/libCombine; PhraSEDML is not required by this helper. He
    [references/experiments.md](references/experiments.md). Time values use the model's own time
    units. The tested helper outputs concentration for species with `hasOnlySubstanceUnits=false`;
    it rejects amount-only selections to avoid changing their meaning during SED-ML replay.
+   Zero-dimensional compartments and rate-rule models are also rejected; the latter need a separate
+   tolerance workflow because RoadRunner 2.10.0 can order scalar tolerances differently from states.
 4. Run baseline and desired constant-global-parameter changes. Every scenario starts from a
    fresh SBML model, so previous final concentrations cannot leak into the next condition.
    Changes to species initial values, compartment volume, assignment rules or time-varying
@@ -70,6 +76,8 @@ Output directories must be new. The reference was executed, including Antimony-t
 libSBML checks, both direct integrations, SED-ML creation and COMBINE replay. Both conditions matched
 the analytical `A(t)=exp(-k*t)`, `B(t)=1-A(t)` within 2e-8 absolute/relative tolerance; A+B was
 conserved within 1e-10, and archive replay matched direct output exactly on the tested stack.
+Additional checks use a 5-L compartment and an initial amount of 10 mol (2 mol/L), resolve every
+SED-ML species XPath against its actual SBML file, and verify the solver tolerance scaling.
 That verifies this controlled example; arbitrary SBML packages, events, delays or stochastic models
 are not covered by those tests.
 
@@ -81,15 +89,23 @@ are not covered by those tests.
 | `model_<scenario>.xml` | Exact independent SBML condition used by both execution routes |
 | `experiment.sedml` | Uniform time course, CVODE/tolerances, models, tasks and output selections |
 | `experiment.omex` | Those SBML files plus the master SED-ML and archive manifest |
-| `report.json` | Versions, input/archive checksums, parameters, units, validation findings, minimum concentrations and replay differences |
+| `report.json` | Versions, input/archive checksums, parameters, units, validation findings, initial state tolerance vectors, minimum concentrations and replay differences |
 
 The libSEDML findings in the report are **parse diagnostics**. Successful execution and equality
 provide additional evidence that this generated uniform-course experiment works in Tellurium;
 they do not certify every SED-ML feature or every simulator's compatibility.
 
+In RoadRunner 2.10.0, the JSON `absolute_tolerance` value is a **scalar adjustment factor** for
+state/amount tolerances, not a uniform concentration error bound. The archive records that meaning
+as `KISAO:0000571`; inspect `initial_state_absolute_tolerances` and the detailed explanation in
+[references/experiments.md](references/experiments.md). Declared SBML XPath namespaces and explicit
+stiff/uniform-output settings prevent successful Tellurium replay from hiding missing archive context.
+
 ## Primary references
 
 - [Tellurium model loading and export methods](https://tellurium.readthedocs.io/en/latest/tellurium_methods.html)
 - [Antimony unit and reaction semantics](https://tellurium.readthedocs.io/en/latest/antimony.html)
-- [COMBINE and SED-ML examples](https://tellurium.readthedocs.io/en/latest/notebooks.html)
-- [libRoadRunner documentation](https://libroadrunner.readthedocs.io/)
+- [Tellurium SED-ML implementation](https://tellurium.readthedocs.io/en/latest/_modules/tellurium/sedml/tesedml.html)
+- [SED-ML Level 1 Version 3 specification](https://sed-ml.org/documents/sed-ml-L1V3.pdf)
+- [RoadRunner 2.10.0 CVODE implementation](https://github.com/sys-bio/roadrunner/blob/v2.10.0/source/CVODEIntegrator.cpp)
+- [KiSAO algorithm and parameter definitions](https://github.com/SED-ML/KiSAO/blob/master/kisao.owl)

@@ -70,7 +70,7 @@ Before editing, write a short note in the working document or task log:
 ```text
 Target: ICML 2026 main track, initial submission
 Official source: https://icml.cc/Conferences/2026/AuthorInstructions
-Checked: 2026-07-20
+Checked: 2026-10-01
 Main-text limit: 8 pages
 References/appendices: additional pages allowed in the same PDF
 Anonymity: required
@@ -102,7 +102,10 @@ Verify at least:
 - reference and supplemental-material treatment; and
 - source-package and PDF requirements.
 
-The helper can inspect page totals and embedded fonts, but it cannot prove that margins, font sizes, excluded sections, or hidden metadata comply.
+The helper counts PDF pages and reads Poppler font-embedding flags. It reports
+nonembedded fonts as failures, but cannot prove margin, font-size, excluded-section,
+or anonymity compliance. A zero exit status means no automated failure was found;
+manual and skipped inspections still require attention.
 
 ## Bundled Assets
 
@@ -128,7 +131,7 @@ The matching Elsevier `.bst` files are in `assets/journals/`.
 | `assets/grants/nsf_proposal_template.tex` | Planning scaffold for common NSF narrative components; upload components separately |
 | `assets/grants/nih_specific_aims.tex` | Writing scaffold for a one-page NIH Specific Aims attachment |
 
-Use SciENcv and agency-provided common forms where required. Do not recreate biosketch or current-support forms in LaTeX.
+Use SciENcv and agency-provided common forms where required. Do not recreate biosketch or current-support forms in LaTeX. NSF DMSPs now use the Research.gov tool under Supplement 2; the bundled narrative is only a planning aid.
 
 ### Poster scaffold
 
@@ -184,7 +187,10 @@ Do not apply a publisher-wide template when the journal provides its own Guide f
 
 ## Helper Scripts
 
-Run scripts from the skill directory.
+Run scripts from the skill directory. Python helpers use only the standard library.
+Network access is needed to obtain current official instructions and author kits; the
+helpers themselves make no network requests. See `references/current_sources.md`
+for the 2026-10-01 source audit and executed compilation coverage.
 
 ### List bundled templates
 
@@ -207,11 +213,15 @@ python scripts/customize_template.py \
   --output my_paper.tex
 ```
 
-Review every replacement and compile before adding substantial content. User-provided text may need LaTeX escaping.
+Values are literal LaTeX source: escape text such as `&` as `\&` yourself.
+The helper replaces recognized placeholders only; it does not restructure PLOS
+per-author affiliation mappings or fill the empty fields in official Elsevier samples.
+Review every replacement and compile before adding substantial content.
 
 ### Inspect a PDF
 
-Use a verified preset:
+Use a dated initial-submission preset (grant presets apply only to the named
+narrative attachment). Later-stage allowances require an explicit limit and source:
 
 ```bash
 python scripts/validate_format.py \
@@ -233,7 +243,7 @@ python scripts/validate_format.py \
   --report validation.txt
 ```
 
-`--content-pages` must be counted according to the official rule. The script does not infer where references or appendices begin.
+`--content-pages` must be counted according to the official rule. The script does not infer where references or appendices begin. Do not combine `--venue` and `--max-pages`; use an explicit limit for a different year, track, stage, or solicitation.
 
 ## Final Compliance Checklist
 
@@ -250,7 +260,7 @@ python scripts/validate_format.py \
 
 ## Maintenance
 
-This skill was reviewed on 2026-07-20. Annual conference snapshots are labeled with their year. When updating:
+This skill was reviewed on 2026-10-01. Annual conference snapshots are labeled with their year and are not automatically the next open submission cycle. The source ledger records inaccessible current rules instead of retaining unverified numerical limits. When updating:
 
 1. replace year-specific claims only after checking official sources;
 2. avoid adding links to assets that are not bundled;

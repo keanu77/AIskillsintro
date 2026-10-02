@@ -16,7 +16,9 @@ Never:
 - create an individual case safety report from patient-level narrative or decide reportability;
 - sign, attest, approve, file, transmit, submit, amend a source record, or act as a licensed clinician, pathologist, radiologist, laboratorian, safety physician, statistician, privacy officer, attorney, or regulatory professional;
 - use real PHI in examples, assets, tests, prompts, logs, or external services;
-- call an external LLM, image service, API, or another skill.
+- send report inputs, manifests, source locators, or clinical content to an external model, image service, API, or another skill.
+
+Public official guidance may be retrieved separately using only public URLs or generic topic queries; include no patient or unpublished study details.
 
 All generated artifacts must remain visibly marked:
 
@@ -35,6 +37,8 @@ Proceed only when all conditions are true:
 5. **Minimum necessary is defined**: exclude fields not needed for the artifact.
 6. **Provenance exists**: every populated field or claim maps to one or more verified source-fact IDs.
 7. **Review owner is identified**: qualified clinical, statistical, safety, privacy, legal, journal, and/or regulatory review as applicable.
+
+These gates depend on documented human assessments. Scripts inspect declarations; they do not independently establish authorization, de-identification, reviewer qualifications, or jurisdictional applicability.
 
 Do not accept raw free-text patient records when a structured source-fact manifest can be supplied. Do not copy direct identifiers into this skill’s templates or scripts.
 
@@ -60,7 +64,7 @@ Read `references/report_type_routing.md` before choosing a route. Use the dated 
 
 ### 1. Create a source-fact manifest
 
-Use `assets/provenance_manifest_template.json`. Record only local record locators, field paths, verification state, verifier role, verification date, and a SHA-256 value hash. Do not duplicate source content or direct identifiers.
+Use `assets/provenance_manifest_template.json`. Record only local record locators, field paths, verification state, verifier role, verification date, and a SHA-256 value hash. Do not duplicate source content or direct identifiers. Hashes are integrity metadata, not de-identification; do not hash an identifier as a substitute for removing it.
 
 Every draft claim or populated field must cite one or more fact IDs. Unsupported content remains `null` or `missing`; never replace it with plausible text.
 
@@ -129,7 +133,7 @@ PYTHONDONTWRITEBYTECODE=1 python3 scripts/provenance_validator.py ./provenance.j
 PYTHONDONTWRITEBYTECODE=1 python3 scripts/consistency_checker.py ./consistency.json
 ```
 
-These tools use the Python standard library, local bounded files, and no network, dynamic evaluation, serialization code execution, or patient-record extraction. A successful result still says review is required.
+These tools use the Python standard library and bounded local files, with no network or patient-record extraction. Case/trial checks validate fact-ID shape, not whether those IDs exist in a separate provenance file. Run the provenance check separately and have the reviewer verify the links across artifacts; that checker does not open source records or recompute hashes. A successful result still says review is required.
 
 ### 5. Apply the right review
 
@@ -223,7 +227,7 @@ All assets contain synthetic schemas only and start blocked:
 - `references/medical_terminology.md` — versioned terminology and schema checks
 - `references/data_presentation.md` — denominators, units, missingness, and aggregate tables
 - `references/professional_review.md` — ethics, accountability, and sign-off
-- `references/sources.md` — official source ledger, checked 2026-07-23
+- `references/sources.md` — official source ledger, checked 2026-09-30
 
 ## Final Handoff
 
