@@ -1,8 +1,33 @@
-# AI Skills Catalog
+# Agent Skills 週期表
 
-每週更新的跨平台 Agent Skills 中文目錄，提供來源篩選、平台篩選、中文用途與限制、版本連結及安裝說明。
+[![CI / Deploy](https://github.com/keanu77/AIskillsintro/actions/workflows/ci.yml/badge.svg)](https://github.com/keanu77/AIskillsintro/actions/workflows/ci.yml)
+[![Lighthouse](https://github.com/keanu77/AIskillsintro/actions/workflows/lighthouse.yml/badge.svg)](https://github.com/keanu77/AIskillsintro/actions/workflows/lighthouse.yml)
+[![Weekly refresh](https://github.com/keanu77/AIskillsintro/actions/workflows/sync.yml/badge.svg)](https://github.com/keanu77/AIskillsintro/actions/workflows/sync.yml)
 
-線上：https://aiskillsintro.pages.dev
+把 Anthropic、K-Dense、OpenAI、Vercel、Hugging Face 的 200 多個 Agent Skills 排成一張週期表，每個 skill 都有中文用途、限制和可直接貼給 agent 的起手提示，以及 Claude Code、Codex、Gemini CLI、Cursor、Grok Build 的安裝指令。
+
+**👉 線上版：https://aiskillsintro.pages.dev**
+
+![首頁週期表：依族分段，右側預覽面板顯示用途與安裝指令](docs/screenshots/home.png)
+
+## 功能
+
+- **週期表／清單兩種檢視**：10 個族用顏色分段，頂部有族別捷徑；清單檢視（`?view=list`）直接列出中文描述。
+- **搜尋與篩選**：依關鍵字、族、來源、平台篩選，篩選條件寫在網址裡，可以直接分享。
+- **中文前導**：每個 skill 有「適合的任務」「使用前確認」「起手提示」三欄，依原始 `SKILL.md` 整理，原文更新後會標示待複核。
+- **安裝說明**：區分「安裝這個 skill」與「工具本身的安裝」，未經來源文件宣告的平台會標示未確認。
+- **每週同步**：每週一自動抓上游更新與新的候選專案，開 PR 給維護者審閱，不會自動上線。
+- **快又無障礙**：靜態輸出到 Cloudflare Pages，CI 守門 Lighthouse performance ≥ 95、accessibility = 100。
+
+| 詳情頁 | 清單檢視 | 手機 |
+|---|---|---|
+| ![Scanpy 詳情頁：開始之前的用途、限制與起手提示](docs/screenshots/detail.png) | ![清單檢視：每個 skill 一張卡片附中文描述](docs/screenshots/list.png) | ![手機版首頁](docs/screenshots/mobile.png) |
+
+技術：Next.js（static export）、React、Tailwind CSS、TypeScript；測試用 Vitest、Playwright、axe、Lighthouse CI。
+
+---
+
+以下是維護說明。
 
 ## 資料來源
 
