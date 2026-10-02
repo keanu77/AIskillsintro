@@ -36,8 +36,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run refresh
 
-      # GITHUB_TOKEN-created PRs do not trigger the ordinary PR workflow.
-      # Run every required check here, and retain its result even on failure.
+      # Runs every check in-workflow too, so the PR body records results even
+      # when the PR is opened with GITHUB_TOKEN (which triggers no other workflow).
       - name: Validate and append results to report
         id: verify
         if: always() && steps.install.outcome == 'success'
@@ -58,10 +58,15 @@ jobs:
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
 
+      # A PR opened with GITHUB_TOKEN never triggers the required `verify` /
+      # `lighthouse` checks. SYNC_PR_TOKEN (fine-grained PAT, this repo only:
+      # Contents + Pull requests read/write) opens it as a user so CI runs.
+      # Falls back to GITHUB_TOKEN when the secret is not set.
       - name: Open or update weekly review PR
         if: always() && steps.diff.outputs.changed == 'true'
         uses: peter-evans/create-pull-request@v8
         with:
+          token: ${{ secrets.SYNC_PR_TOKEN || secrets.GITHUB_TOKEN }}
           branch: bot/upstream-sync
           delete-branch: true
           commit-message: "chore: refresh weekly skills catalog"
