@@ -1,5 +1,5 @@
-Source: https://github.com/openai/plugins/tree/5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f/plugins/figma/skills/figma-use
-Commit: 5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f
+Source: https://github.com/openai/plugins/tree/0722921d5542fc593105c27bd52630babd8b8c2a/plugins/figma/skills/figma-use
+Commit: 0722921d5542fc593105c27bd52630babd8b8c2a
 Declared license: not declared
 Mirror decision: unrecognized-license-file
 
