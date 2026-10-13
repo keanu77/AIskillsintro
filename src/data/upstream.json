@@ -1,45 +1,45 @@
 {
-  "syncedAt": "2026-10-05",
+  "syncedAt": "2026-10-12",
   "sources": [
     {
       "id": "anthropic",
       "repo": "anthropics/skills",
-      "sha": "8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4",
-      "stars": 179685,
-      "pushedAt": "2026-10-03T20:38:10Z",
-      "observedAt": "2026-10-05T06:34:43.885Z"
+      "sha": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+      "stars": 180584,
+      "pushedAt": "2026-10-09T18:45:52Z",
+      "observedAt": "2026-10-12T07:00:16.756Z"
     },
     {
       "id": "k-dense",
       "repo": "K-Dense-AI/scientific-agent-skills",
-      "sha": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298",
-      "stars": 47618,
-      "pushedAt": "2026-10-01T22:42:43Z",
-      "observedAt": "2026-10-05T06:34:43.885Z"
+      "sha": "92ace75ac21efe19a620434e0ca4e356081fe807",
+      "stars": 48471,
+      "pushedAt": "2026-10-05T09:39:11Z",
+      "observedAt": "2026-10-12T07:00:16.756Z"
     },
     {
       "id": "openai",
       "repo": "openai/plugins",
-      "sha": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
-      "stars": 7304,
-      "pushedAt": "2026-09-28T17:08:10Z",
-      "observedAt": "2026-10-05T06:34:43.885Z"
+      "sha": "0722921d5542fc593105c27bd52630babd8b8c2a",
+      "stars": 7405,
+      "pushedAt": "2026-10-08T05:21:35Z",
+      "observedAt": "2026-10-12T07:00:16.756Z"
     },
     {
       "id": "vercel",
       "repo": "vercel-labs/agent-skills",
       "sha": "063bee94c3f4df8453406c830b0a7df0f2860278",
-      "stars": 31940,
+      "stars": 32261,
       "pushedAt": "2026-08-28T13:36:31Z",
-      "observedAt": "2026-10-05T06:34:43.885Z"
+      "observedAt": "2026-10-12T07:00:16.756Z"
     },
     {
       "id": "huggingface",
       "repo": "huggingface/skills",
-      "sha": "ca0325bb20b2d0a1b2efa893670c4c72f79e707b",
-      "stars": 11139,
-      "pushedAt": "2026-10-01T12:33:22Z",
-      "observedAt": "2026-10-05T06:34:43.885Z"
+      "sha": "c3ff942be3e07116b475253f0a8fc4f54682c1a8",
+      "stars": 11159,
+      "pushedAt": "2026-10-08T15:30:08Z",
+      "observedAt": "2026-10-12T07:00:16.756Z"
     }
   ],
   "skills": [
@@ -520,7 +520,7 @@
         "claude-code"
       ],
       "installMode": "skill",
-      "contentHash": "78fd06911ad7cdeec6c0a269db3c722222f373b52e43a8ee408c272a45b731c7"
+      "contentHash": "0a3df5ad9793ae40fc4bcbfdd2bdc60ebc82c51d4e67e959e9128ddc1d305003"
     },
     {
       "slug": "clinical-decision-support",
@@ -1373,7 +1373,7 @@
         "cursor"
       ],
       "installMode": "skill",
-      "contentHash": "8fe819c8c15cf0d7def288ead5f81fa7ba6ee66c82e80b11f3da6c695944fd03"
+      "contentHash": "fb181f9cbbb8e05bf3bb5f74d05abe3edcbd2aa092e9efda13d33943b25accf6"
     },
     {
       "slug": "huggingface--hf-cloud-aws-context-discovery",

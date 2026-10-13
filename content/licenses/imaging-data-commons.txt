@@ -1,5 +1,5 @@
-Source: https://github.com/K-Dense-AI/scientific-agent-skills/tree/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298/skills/imaging-data-commons
-Commit: 154988403bb5a18e9d3c0ce4e6d5e2e4b184a298
+Source: https://github.com/K-Dense-AI/scientific-agent-skills/tree/92ace75ac21efe19a620434e0ca4e356081fe807/skills/imaging-data-commons
+Commit: 92ace75ac21efe19a620434e0ca4e356081fe807
 Declared license: This skill is provided under the MIT License. IDC data itself has individual licensing (mostly CC-BY, some CC-NC) that must be respected when using the data.
 Mirror decision: unrecognized-declaration
 

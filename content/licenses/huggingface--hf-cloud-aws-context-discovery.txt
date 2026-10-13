@@ -1,5 +1,5 @@
-Source: https://github.com/huggingface/skills/tree/ca0325bb20b2d0a1b2efa893670c4c72f79e707b/skills/hf-cloud-aws-context-discovery
-Commit: ca0325bb20b2d0a1b2efa893670c4c72f79e707b
+Source: https://github.com/huggingface/skills/tree/c3ff942be3e07116b475253f0a8fc4f54682c1a8/skills/hf-cloud-aws-context-discovery
+Commit: c3ff942be3e07116b475253f0a8fc4f54682c1a8
 Declared license: not declared
 Mirror decision: recognized-open-license
 

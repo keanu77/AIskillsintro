@@ -1,6 +1,17 @@
 {
   "runs": [
     {
+      "date": "2026-10-12",
+      "baseline": false,
+      "added": [],
+      "changed": [
+        "claude-api",
+        "huggingface--hf-cli"
+      ],
+      "removed": [],
+      "total": 246
+    },
+    {
       "date": "2026-10-05",
       "baseline": false,
       "added": [],
