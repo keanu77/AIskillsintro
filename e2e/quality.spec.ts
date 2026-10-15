@@ -111,7 +111,7 @@ test("header follow links open the author's channels in a new tab on every page"
   for (const path of ["/", "/skills/scanpy", "/updates", "/skills/does-not-exist"]) {
     await page.goto(path);
     const links = page.getByRole("navigation", { name: "追蹤連結" }).getByRole("link");
-    await expect(links).toHaveCount(6);
+    await expect(links).toHaveCount(7);
     for (const link of await links.all()) {
       await expect(link).toHaveAttribute("target", "_blank");
       await expect(link).toHaveAttribute("rel", "noopener noreferrer");

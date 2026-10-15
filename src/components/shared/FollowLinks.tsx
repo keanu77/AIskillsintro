@@ -2,14 +2,25 @@ import type { ReactNode } from "react";
 
 type FollowLink = { label: string; href: string; icon: ReactNode };
 
-const stroke = { fill: "none", stroke: "currentColor", strokeWidth: 1.8, strokeLinecap: "round", strokeLinejoin: "round" } as const;
+const stroke = {
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: 1.8,
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+} as const;
 
 // Same set as the author's other sites (injury.sportsmedicine.tw).
 const LINKS: FollowLink[] = [
   {
     label: "衛教部落格",
     href: "https://blog.sportsmedicine.tw/",
-    icon: <path {...stroke} d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />,
+    icon: (
+      <path
+        {...stroke}
+        d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"
+      />
+    ),
   },
   {
     label: "Facebook",
@@ -29,6 +40,20 @@ const LINKS: FollowLink[] = [
         <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
         <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
         <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+      </g>
+    ),
+  },
+  {
+    label: "YouTube",
+    href: "https://www.youtube.com/@sportsmedicinetw",
+    icon: (
+      <g {...stroke}>
+        <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" />
+        <polygon
+          points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"
+          fill="currentColor"
+          stroke="none"
+        />
       </g>
     ),
   },
