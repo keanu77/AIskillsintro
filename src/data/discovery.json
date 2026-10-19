@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-10-12T07:00:16.756Z",
+  "checkedAt": "2026-10-19T05:46:02.352Z",
   "status": "ok",
-  "attemptedAt": "2026-10-12T07:00:16.756Z",
+  "attemptedAt": "2026-10-19T05:46:02.352Z",
   "queries": [
     "topic:agent-skills stars:>=50 archived:false fork:false",
     "agent skills in:name,description stars:>=50 archived:false fork:false"
@@ -9,10 +9,28 @@
   "error": null,
   "candidates": [
     {
+      "repo": "morluto/rea",
+      "url": "https://github.com/morluto/rea",
+      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "stars": 325761,
+      "pushedAt": "2026-10-19T05:37:55Z",
+      "sha": "9aca543f46085f502dbc5445002e129e5d2974e9",
+      "skillPaths": [
+        ".agents/skills/rea-analysis-optimization/SKILL.md",
+        ".agents/skills/rea-changelog-update/SKILL.md",
+        ".agents/skills/rea-ci-tests-audit/SKILL.md",
+        ".agents/skills/rea-tool-design/SKILL.md",
+        ".agents/skills/reverse-engineer-anything/SKILL.md"
+      ],
+      "skillCount": 5,
+      "skillPathsTruncated": false,
+      "discoveredAt": "2026-10-12T07:00:16.756Z"
+    },
+    {
       "repo": "obra/superpowers",
       "url": "https://github.com/obra/superpowers",
       "description": "An agentic skills framework & software development methodology that works.",
-      "stars": 297864,
+      "stars": 301737,
       "pushedAt": "2026-10-10T03:03:30Z",
       "sha": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
       "skillPaths": [
@@ -40,8 +58,8 @@
       "repo": "mattpocock/skills",
       "url": "https://github.com/mattpocock/skills",
       "description": "Skills for Real Engineers. Straight from my .agents directory.",
-      "stars": 286734,
-      "pushedAt": "2026-10-09T10:57:08Z",
+      "stars": 296468,
+      "pushedAt": "2026-10-13T08:46:40Z",
       "sha": "49dd158d1076134a641b33efb035946536778336",
       "skillPaths": [
         "skills/engineering/ask-matt/SKILL.md",
@@ -91,9 +109,9 @@
       "repo": "affaan-m/ecc",
       "url": "https://github.com/affaan-m/ecc",
       "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
-      "stars": 277396,
-      "pushedAt": "2026-10-12T06:22:31Z",
-      "sha": "b92f181b3b748d1abbc2afd94af6aa7d8c8fca29",
+      "stars": 283438,
+      "pushedAt": "2026-10-19T05:03:15Z",
+      "sha": "76aaa77df6adc5b889e689007bf99b9a4f74af34",
       "skillPaths": [
         ".agents/skills/agent-introspection-debugging/SKILL.md",
         ".agents/skills/agent-sort/SKILL.md",
@@ -144,9 +162,9 @@
       "repo": "dietrichgebert/ponytail",
       "url": "https://github.com/dietrichgebert/ponytail",
       "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
-      "stars": 161308,
-      "pushedAt": "2026-10-10T04:19:53Z",
-      "sha": "9b58c1ffb790c075ca32e70a89cf1d80588f4abf",
+      "stars": 167214,
+      "pushedAt": "2026-10-18T01:55:14Z",
+      "sha": "09c434ab73ca43761c5d8b0c5d341926c2fba710",
       "skillPaths": [
         ".openclaw/skills/ponytail-audit/SKILL.md",
         ".openclaw/skills/ponytail-debt/SKILL.md",
@@ -169,9 +187,9 @@
       "repo": "shubhamsaboo/awesome-llm-apps",
       "url": "https://github.com/shubhamsaboo/awesome-llm-apps",
       "description": "100+ AI Agents, Agent Skills and RAG Apps - Free and Open Source.",
-      "stars": 141325,
-      "pushedAt": "2026-09-30T20:31:22Z",
-      "sha": "4bf51ab704fb2c5b3803cd5191b30d7dcdb51dc2",
+      "stars": 142246,
+      "pushedAt": "2026-10-18T16:28:46Z",
+      "sha": "874bc13a57aa2ba1266a84f2444808ce3093efb6",
       "skillPaths": [
         "agent_skills/advisor-orchestrator-worker/SKILL.md",
         "agent_skills/commit-archaeologist/SKILL.md",
@@ -189,28 +207,12 @@
       "discoveredAt": "2026-10-01T05:09:54.648Z"
     },
     {
-      "repo": "morluto/rea",
-      "url": "https://github.com/morluto/rea",
-      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
-      "stars": 119626,
-      "pushedAt": "2026-10-12T06:59:18Z",
-      "sha": "d4e8ef74999666cdb735b49eb8fea367f8f86489",
-      "skillPaths": [
-        ".agents/skills/rea-changelog-update/SKILL.md",
-        ".agents/skills/rea-tool-design/SKILL.md",
-        ".agents/skills/reverse-engineer-anything/SKILL.md"
-      ],
-      "skillCount": 3,
-      "skillPathsTruncated": false,
-      "discoveredAt": "2026-10-12T07:00:16.756Z"
-    },
-    {
       "repo": "juliusbrussee/caveman",
       "url": "https://github.com/juliusbrussee/caveman",
       "description": "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
-      "stars": 111109,
-      "pushedAt": "2026-10-12T03:34:53Z",
-      "sha": "2e08b9177c07bb7249a8a2d1a6758e5db281d002",
+      "stars": 113514,
+      "pushedAt": "2026-10-18T07:42:47Z",
+      "sha": "bad48a0e1df55e05e3f52249afa35ecc1909ee76",
       "skillPaths": [
         "plugins/caveman/skills/cavecrew/SKILL.md",
         "plugins/caveman/skills/caveman-compress/SKILL.md",
@@ -249,9 +251,9 @@
       "repo": "addyosmani/agent-skills",
       "url": "https://github.com/addyosmani/agent-skills",
       "description": "Production-grade engineering skills for AI coding agents.",
-      "stars": 105197,
-      "pushedAt": "2026-10-10T08:28:49Z",
-      "sha": "1be8e34187e34647bb83adc3a1323b26ae6f6abe",
+      "stars": 108283,
+      "pushedAt": "2026-10-13T20:24:07Z",
+      "sha": "aeac41d4d005999432bb7312f7ff06383a91d59d",
       "skillPaths": [
         "skills/api-and-interface-design/SKILL.md",
         "skills/browser-testing-with-devtools/SKILL.md",
@@ -284,12 +286,65 @@
       "discoveredAt": "2026-10-01T05:09:54.648Z"
     },
     {
+      "repo": "paperclipai/paperclip",
+      "url": "https://github.com/paperclipai/paperclip",
+      "description": "The open-source app everyone uses to manage agents at work",
+      "stars": 104256,
+      "pushedAt": "2026-10-19T05:20:44Z",
+      "sha": "2f6ad2226aec330251438c47cbc45fd92e0d3132",
+      "skillPaths": [
+        ".agents/skills/add-product-e2e-eval/SKILL.md",
+        ".agents/skills/add-runner-eval/SKILL.md",
+        ".agents/skills/check-pr/SKILL.md",
+        ".agents/skills/company-creator/SKILL.md",
+        ".agents/skills/create-agent-adapter/SKILL.md",
+        ".agents/skills/create-external-bot-integration/SKILL.md",
+        ".agents/skills/create-issue-interaction-ui/SKILL.md",
+        ".agents/skills/create-paperclip-bundled-skill/SKILL.md",
+        ".agents/skills/create-verification-skill/SKILL.md",
+        ".agents/skills/deal-with-security-advisory/SKILL.md",
+        ".agents/skills/diagnose-why-work-stopped/SKILL.md",
+        ".agents/skills/doc-maintenance/SKILL.md",
+        ".agents/skills/fix-slow-queries/SKILL.md",
+        ".agents/skills/garden-inbox/SKILL.md",
+        ".agents/skills/honeycomb-tracing/SKILL.md",
+        ".agents/skills/maintain-storybook/SKILL.md",
+        ".agents/skills/maintain-verification-skill/SKILL.md",
+        ".agents/skills/paperclip-create-plugin/SKILL.md",
+        ".agents/skills/paperclip-dev-workspace-run-verify-fix/SKILL.md",
+        ".agents/skills/paperclip-evals/SKILL.md",
+        ".agents/skills/paperclip-page/SKILL.md",
+        ".agents/skills/pr-gardening/SKILL.md",
+        ".agents/skills/pr-report/SKILL.md",
+        ".agents/skills/prcheckloop/SKILL.md",
+        ".agents/skills/prepare-paperclip-pr/SKILL.md",
+        ".agents/skills/release-changelog-discord-message/SKILL.md",
+        ".agents/skills/release-changelog/SKILL.md",
+        ".agents/skills/release/SKILL.md",
+        ".agents/skills/review-storybook/SKILL.md",
+        ".agents/skills/setup-code-maintenance-bot/SKILL.md",
+        ".agents/skills/terminal-bench-loop/SKILL.md",
+        ".agents/skills/test-audit/SKILL.md",
+        ".agents/skills/verify-paperclip/SKILL.md",
+        ".claude/skills/design-guide/SKILL.md",
+        "integrations/assistant-plugins/claude/paperclip/skills/delegate-work/SKILL.md",
+        "integrations/assistant-plugins/claude/paperclip/skills/follow-up-results/SKILL.md",
+        "integrations/assistant-plugins/claude/paperclip/skills/review-my-team/SKILL.md",
+        "integrations/assistant-plugins/openai/paperclip/skills/delegate-work/SKILL.md",
+        "integrations/assistant-plugins/openai/paperclip/skills/follow-up-results/SKILL.md",
+        "integrations/assistant-plugins/openai/paperclip/skills/review-my-team/SKILL.md"
+      ],
+      "skillCount": 79,
+      "skillPathsTruncated": true,
+      "discoveredAt": "2026-10-19T05:46:02.352Z"
+    },
+    {
       "repo": "nexu-io/open-design",
       "url": "https://github.com/nexu-io/open-design",
-      "description": "🎨 Best DeepSeek Harness Design Plugin. The open-source Claude Design alternative. 🖥️ Local-first desktop app. 🖼️ Your coding agent becomes the design engine: prototypes, landing pages, dashboards, slides, images & video — real files, HTML/PDF/PPTX/MP4 export. 🤖 Claude Code / Codex / Cursor / DeepSeek Harness / OpenCode & 20+ CLIs via BYOK.",
-      "stars": 100634,
-      "pushedAt": "2026-10-12T07:00:12Z",
-      "sha": "e0946f9423bf341b7e3ee9ba0a7fd214cfdb9bcc",
+      "description": "The 1st Collaborative AI Design Agent Workspace. Local-first and open source. Create motion, prototypes, websites, apps, dashboards, presentations, images, and videos with your team and AI agents. Share work, exchange feedback, and iterate together in one workspace.",
+      "stars": 102273,
+      "pushedAt": "2026-10-19T03:34:05Z",
+      "sha": "78d5637cb49da07e81314d1544b5fc6d37c95084",
       "skillPaths": [
         ".claude/skills/od-contribute/SKILL.md",
         "apps/daemon/tests/fixtures/plugin-fixtures/sample-plugin/SKILL.md",
@@ -332,23 +387,8 @@
         "design-templates/html-ppt-zhangzara-block-frame/SKILL.md",
         "design-templates/html-ppt-zhangzara-blue-professional/SKILL.md"
       ],
-      "skillCount": 306,
+      "skillCount": 312,
       "skillPathsTruncated": true,
-      "discoveredAt": "2026-10-01T05:09:54.648Z"
-    },
-    {
-      "repo": "tt-a1i/archify",
-      "url": "https://github.com/tt-a1i/archify",
-      "description": "Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent skill for Claude Code, Codex, and more.",
-      "stars": 82223,
-      "pushedAt": "2026-10-12T04:54:47Z",
-      "sha": "58ab0b98d2d0def8e49dced705c7b566936723ec",
-      "skillPaths": [
-        ".agents/skills/archify-review/SKILL.md",
-        "archify/SKILL.md"
-      ],
-      "skillCount": 2,
-      "skillPathsTruncated": false,
       "discoveredAt": "2026-10-01T05:09:54.648Z"
     }
   ]
