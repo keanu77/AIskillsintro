@@ -1,45 +1,45 @@
 {
-  "syncedAt": "2026-10-19",
+  "syncedAt": "2026-10-26",
   "sources": [
     {
       "id": "anthropic",
       "repo": "anthropics/skills",
       "sha": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
-      "stars": 182047,
+      "stars": 183814,
       "pushedAt": "2026-10-09T18:45:52Z",
-      "observedAt": "2026-10-19T05:46:02.352Z"
+      "observedAt": "2026-10-26T05:47:55.318Z"
     },
     {
       "id": "k-dense",
       "repo": "K-Dense-AI/scientific-agent-skills",
-      "sha": "a1043ef544e3a100c28e70a736b6cf32554d0677",
-      "stars": 52714,
-      "pushedAt": "2026-10-15T23:57:39Z",
-      "observedAt": "2026-10-19T05:46:02.352Z"
+      "sha": "593377bb048752abb0152deab9fbb1083a6087df",
+      "stars": 54622,
+      "pushedAt": "2026-10-19T09:33:57Z",
+      "observedAt": "2026-10-26T05:47:55.318Z"
     },
     {
       "id": "openai",
       "repo": "openai/plugins",
       "sha": "0722921d5542fc593105c27bd52630babd8b8c2a",
-      "stars": 7494,
+      "stars": 7590,
       "pushedAt": "2026-10-08T05:21:35Z",
-      "observedAt": "2026-10-19T05:46:02.352Z"
+      "observedAt": "2026-10-26T05:47:55.318Z"
     },
     {
       "id": "vercel",
       "repo": "vercel-labs/agent-skills",
       "sha": "063bee94c3f4df8453406c830b0a7df0f2860278",
-      "stars": 32618,
+      "stars": 33025,
       "pushedAt": "2026-10-14T17:58:45Z",
-      "observedAt": "2026-10-19T05:46:02.352Z"
+      "observedAt": "2026-10-26T05:47:55.318Z"
     },
     {
       "id": "huggingface",
       "repo": "huggingface/skills",
-      "sha": "c3ff942be3e07116b475253f0a8fc4f54682c1a8",
-      "stars": 11182,
-      "pushedAt": "2026-10-08T15:30:08Z",
-      "observedAt": "2026-10-19T05:46:02.352Z"
+      "sha": "fabc634a893f62ad5c2039830397efa35fa62715",
+      "stars": 11212,
+      "pushedAt": "2026-10-23T09:08:05Z",
+      "observedAt": "2026-10-26T05:47:55.318Z"
     }
   ],
   "skills": [
@@ -1373,7 +1373,7 @@
         "cursor"
       ],
       "installMode": "skill",
-      "contentHash": "fb181f9cbbb8e05bf3bb5f74d05abe3edcbd2aa092e9efda13d33943b25accf6"
+      "contentHash": "6a16a6fe6a4eca56f7c4428daf862f611ff6341d4778852ea1585d93a294501a"
     },
     {
       "slug": "huggingface--hf-cloud-aws-context-discovery",

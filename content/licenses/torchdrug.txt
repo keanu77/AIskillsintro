@@ -1,5 +1,5 @@
-Source: https://github.com/K-Dense-AI/scientific-agent-skills/tree/a1043ef544e3a100c28e70a736b6cf32554d0677/skills/torchdrug
-Commit: a1043ef544e3a100c28e70a736b6cf32554d0677
+Source: https://github.com/K-Dense-AI/scientific-agent-skills/tree/593377bb048752abb0152deab9fbb1083a6087df/skills/torchdrug
+Commit: 593377bb048752abb0152deab9fbb1083a6087df
 Declared license: Apache-2.0 license
 Mirror decision: recognized-open-license
 
