@@ -1,6 +1,16 @@
 {
   "runs": [
     {
+      "date": "2026-10-26",
+      "baseline": false,
+      "added": [],
+      "changed": [
+        "huggingface--hf-cli"
+      ],
+      "removed": [],
+      "total": 246
+    },
+    {
       "date": "2026-10-19",
       "baseline": false,
       "added": [],

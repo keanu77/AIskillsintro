@@ -1,5 +1,5 @@
-Source: https://github.com/huggingface/skills/tree/c3ff942be3e07116b475253f0a8fc4f54682c1a8/skills/huggingface-local-models
-Commit: c3ff942be3e07116b475253f0a8fc4f54682c1a8
+Source: https://github.com/huggingface/skills/tree/fabc634a893f62ad5c2039830397efa35fa62715/skills/huggingface-local-models
+Commit: fabc634a893f62ad5c2039830397efa35fa62715
 Declared license: not declared
 Mirror decision: recognized-open-license
 
