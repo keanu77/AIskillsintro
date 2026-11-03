@@ -1,4 +1,4 @@
-Source: https://github.com/vercel-labs/agent-skills/tree/063bee94c3f4df8453406c830b0a7df0f2860278/skills/web-design-guidelines
-Commit: 063bee94c3f4df8453406c830b0a7df0f2860278
+Source: https://github.com/vercel-labs/agent-skills/tree/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/skills/web-design-guidelines
+Commit: 1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62
 Declared license: not declared
 Mirror decision: missing-license

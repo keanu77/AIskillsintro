@@ -1,6 +1,19 @@
 {
   "runs": [
     {
+      "date": "2026-11-02",
+      "baseline": false,
+      "added": [],
+      "changed": [
+        "huggingface--hf-cli",
+        "mcp-builder",
+        "vercel--deploy-to-vercel",
+        "vercel--react-view-transitions"
+      ],
+      "removed": [],
+      "total": 246
+    },
+    {
       "date": "2026-10-26",
       "baseline": false,
       "added": [],

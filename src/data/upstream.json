@@ -1,45 +1,45 @@
 {
-  "syncedAt": "2026-10-26",
+  "syncedAt": "2026-11-02",
   "sources": [
     {
       "id": "anthropic",
       "repo": "anthropics/skills",
-      "sha": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
-      "stars": 183814,
-      "pushedAt": "2026-10-09T18:45:52Z",
-      "observedAt": "2026-10-26T05:47:55.318Z"
+      "sha": "ca45fc496a3436251f191354091d557da31c15b5",
+      "stars": 186474,
+      "pushedAt": "2026-10-28T19:20:39Z",
+      "observedAt": "2026-11-02T07:17:48.335Z"
     },
     {
       "id": "k-dense",
       "repo": "K-Dense-AI/scientific-agent-skills",
-      "sha": "593377bb048752abb0152deab9fbb1083a6087df",
-      "stars": 54622,
-      "pushedAt": "2026-10-19T09:33:57Z",
-      "observedAt": "2026-10-26T05:47:55.318Z"
+      "sha": "5f2bc0341354fd5590aef76a533ada1e1e5b4e62",
+      "stars": 55726,
+      "pushedAt": "2026-10-26T09:36:15Z",
+      "observedAt": "2026-11-02T07:17:48.335Z"
     },
     {
       "id": "openai",
       "repo": "openai/plugins",
       "sha": "0722921d5542fc593105c27bd52630babd8b8c2a",
-      "stars": 7590,
-      "pushedAt": "2026-10-08T05:21:35Z",
-      "observedAt": "2026-10-26T05:47:55.318Z"
+      "stars": 7708,
+      "pushedAt": "2026-10-30T16:35:10Z",
+      "observedAt": "2026-11-02T07:17:48.335Z"
     },
     {
       "id": "vercel",
       "repo": "vercel-labs/agent-skills",
-      "sha": "063bee94c3f4df8453406c830b0a7df0f2860278",
-      "stars": 33025,
-      "pushedAt": "2026-10-14T17:58:45Z",
-      "observedAt": "2026-10-26T05:47:55.318Z"
+      "sha": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+      "stars": 33375,
+      "pushedAt": "2026-10-28T19:17:28Z",
+      "observedAt": "2026-11-02T07:17:48.335Z"
     },
     {
       "id": "huggingface",
       "repo": "huggingface/skills",
-      "sha": "fabc634a893f62ad5c2039830397efa35fa62715",
-      "stars": 11212,
-      "pushedAt": "2026-10-23T09:08:05Z",
-      "observedAt": "2026-10-26T05:47:55.318Z"
+      "sha": "25910b3d0ba31a2ba102f901cdc9e008c278a69c",
+      "stars": 11252,
+      "pushedAt": "2026-10-30T14:12:53Z",
+      "observedAt": "2026-11-02T07:17:48.335Z"
     }
   ],
   "skills": [
@@ -1373,7 +1373,7 @@
         "cursor"
       ],
       "installMode": "skill",
-      "contentHash": "6a16a6fe6a4eca56f7c4428daf862f611ff6341d4778852ea1585d93a294501a"
+      "contentHash": "f386b54edba4e3a652d3d1cb92c96feb8d664aac894004af0a75ca2fb11f9b05"
     },
     {
       "slug": "huggingface--hf-cloud-aws-context-discovery",
@@ -2241,7 +2241,7 @@
         "claude-code"
       ],
       "installMode": "skill",
-      "contentHash": "fd98a5fdf583aa59b6f50eaf9f1de6801c430a9d0f0f301bfdf623a099a4303c"
+      "contentHash": "3466da2129bfdf6fcb4a0a0f471d4ecc0d81afacb4657011d9def01b78703fb2"
     },
     {
       "slug": "medchem",
@@ -4378,7 +4378,7 @@
       "compatibility": null,
       "declaredAgents": [],
       "installMode": "skill",
-      "contentHash": "3841589fe037dd93c8e099b9d978282a351d13edbf8ab7cd4856021d9fced12c"
+      "contentHash": "b06586edab992b57ad5524e80be3f1c3ab5a3f2a1a1b9b8da43a85df882c42d3"
     },
     {
       "slug": "vercel--react-best-practices",
@@ -4420,7 +4420,7 @@
       "compatibility": null,
       "declaredAgents": [],
       "installMode": "skill",
-      "contentHash": "e5e458aa39b6bdddec9ebc16df93d232ca9fdda8dace14cf996912f352799fb8"
+      "contentHash": "d52e790cbc54056076fe8b3f112472b6e6c68f45ab748867aa84a5e2ebb22424"
     },
     {
       "slug": "vercel--vercel-cli-with-tokens",
