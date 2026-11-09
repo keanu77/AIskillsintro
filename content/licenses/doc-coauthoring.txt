@@ -1,4 +1,4 @@
-Source: https://github.com/anthropics/skills/tree/ca45fc496a3436251f191354091d557da31c15b5/skills/doc-coauthoring
-Commit: ca45fc496a3436251f191354091d557da31c15b5
+Source: https://github.com/anthropics/skills/tree/2c5958ecac7cee2b583967a2c4981d0f4a75c579/skills/doc-coauthoring
+Commit: 2c5958ecac7cee2b583967a2c4981d0f4a75c579
 Declared license: not declared
 Mirror decision: missing-license

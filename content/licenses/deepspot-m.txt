@@ -1,5 +1,5 @@
-Source: https://github.com/K-Dense-AI/scientific-agent-skills/tree/5f2bc0341354fd5590aef76a533ada1e1e5b4e62/skills/deepspot-m
-Commit: 5f2bc0341354fd5590aef76a533ada1e1e5b4e62
+Source: https://github.com/K-Dense-AI/scientific-agent-skills/tree/a25cf9ec00e2745d03f8704acf6f6919694ccd9a/skills/deepspot-m
+Commit: a25cf9ec00e2745d03f8704acf6f6919694ccd9a
 Declared license: PolyForm-Noncommercial-1.0.0
 Mirror decision: unrecognized-declaration
 

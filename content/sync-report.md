@@ -1,19 +1,19 @@
-# 每週 Skills 更新 — 2026-11-02
+# 每週 Skills 更新 — 2026-11-09
 
 固定來源：5 個；上游項目：246 個 Skills。
 
 - 新增（0）：無
-- 內容／中繼資料更新（4）：`huggingface--hf-cli`, `mcp-builder`, `vercel--deploy-to-vercel`, `vercel--react-view-transitions`
+- 內容／中繼資料更新（4）：`document-skills--docx`, `document-skills--pdf`, `document-skills--pptx`, `document-skills--xlsx`
 - 移除（0）：無
 
-- anthropics/skills: `ca45fc496a3436251f191354091d557da31c15b5`
-- K-Dense-AI/scientific-agent-skills: `5f2bc0341354fd5590aef76a533ada1e1e5b4e62`
-- openai/plugins: `0722921d5542fc593105c27bd52630babd8b8c2a`
+- anthropics/skills: `2c5958ecac7cee2b583967a2c4981d0f4a75c579`
+- K-Dense-AI/scientific-agent-skills: `a25cf9ec00e2745d03f8704acf6f6919694ccd9a`
+- openai/plugins: `d420d13051bffe4543ed39e30fa46b87148e47dd`
 - vercel-labs/agent-skills: `1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62`
 - huggingface/skills: `25910b3d0ba31a2ba102f901cdc9e008c278a69c`
 
 GitHub 候選探索：ok；保留 10 個候選。
-最近成功確認：2026-11-02T07:17:48.335Z。
+最近成功確認：2026-11-09T07:41:03.775Z。
 
 新增項目中，尚無中文介紹者維持待整理狀態；中文摘要與人工審閱由維護者處理。程式僅讀取來源資料，未執行上游 Skill。
 
