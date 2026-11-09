@@ -1,45 +1,45 @@
 {
-  "syncedAt": "2026-11-02",
+  "syncedAt": "2026-11-09",
   "sources": [
     {
       "id": "anthropic",
       "repo": "anthropics/skills",
-      "sha": "ca45fc496a3436251f191354091d557da31c15b5",
-      "stars": 186474,
-      "pushedAt": "2026-10-28T19:20:39Z",
-      "observedAt": "2026-11-02T07:17:48.335Z"
+      "sha": "2c5958ecac7cee2b583967a2c4981d0f4a75c579",
+      "stars": 189947,
+      "pushedAt": "2026-11-06T22:32:32Z",
+      "observedAt": "2026-11-09T07:41:03.775Z"
     },
     {
       "id": "k-dense",
       "repo": "K-Dense-AI/scientific-agent-skills",
-      "sha": "5f2bc0341354fd5590aef76a533ada1e1e5b4e62",
-      "stars": 55726,
-      "pushedAt": "2026-10-26T09:36:15Z",
-      "observedAt": "2026-11-02T07:17:48.335Z"
+      "sha": "a25cf9ec00e2745d03f8704acf6f6919694ccd9a",
+      "stars": 56531,
+      "pushedAt": "2026-11-02T09:23:27Z",
+      "observedAt": "2026-11-09T07:41:03.775Z"
     },
     {
       "id": "openai",
       "repo": "openai/plugins",
-      "sha": "0722921d5542fc593105c27bd52630babd8b8c2a",
-      "stars": 7708,
-      "pushedAt": "2026-10-30T16:35:10Z",
-      "observedAt": "2026-11-02T07:17:48.335Z"
+      "sha": "d420d13051bffe4543ed39e30fa46b87148e47dd",
+      "stars": 7830,
+      "pushedAt": "2026-11-06T19:08:35Z",
+      "observedAt": "2026-11-09T07:41:03.775Z"
     },
     {
       "id": "vercel",
       "repo": "vercel-labs/agent-skills",
       "sha": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
-      "stars": 33375,
+      "stars": 33742,
       "pushedAt": "2026-10-28T19:17:28Z",
-      "observedAt": "2026-11-02T07:17:48.335Z"
+      "observedAt": "2026-11-09T07:41:03.775Z"
     },
     {
       "id": "huggingface",
       "repo": "huggingface/skills",
       "sha": "25910b3d0ba31a2ba102f901cdc9e008c278a69c",
-      "stars": 11252,
+      "stars": 11306,
       "pushedAt": "2026-10-30T14:12:53Z",
-      "observedAt": "2026-11-02T07:17:48.335Z"
+      "observedAt": "2026-11-09T07:41:03.775Z"
     }
   ],
   "skills": [
@@ -845,15 +845,15 @@
       "dir": "docx",
       "path": "skills/docx",
       "name": "docx",
-      "license": "Proprietary. LICENSE.txt has complete terms",
+      "license": "Apache-2.0",
       "plugin": "document-skills",
-      "mirrored": false,
+      "mirrored": true,
       "compatibility": null,
       "declaredAgents": [
         "claude-code"
       ],
       "installMode": "skill",
-      "contentHash": "8c3b0f4e89397b54d4578dc62166e7272953396f29e6896818ebc03ca1dd90cd"
+      "contentHash": "28dc213dfcb67eb6a8bc7a2d59df3c641289ac84db28b4afc464f0f50400059f"
     },
     {
       "slug": "document-skills--pdf",
@@ -861,15 +861,15 @@
       "dir": "pdf",
       "path": "skills/pdf",
       "name": "pdf",
-      "license": "Proprietary. LICENSE.txt has complete terms",
+      "license": "Apache-2.0",
       "plugin": "document-skills",
-      "mirrored": false,
+      "mirrored": true,
       "compatibility": null,
       "declaredAgents": [
         "claude-code"
       ],
       "installMode": "skill",
-      "contentHash": "31337d87546ef6738bb85a7297bcf52c0c598daf628c806299f98db0e106c08e"
+      "contentHash": "f5ce8d48ed876ec26cd486d8ea622b45833e880a0c181d1d0aac77f5be6bc092"
     },
     {
       "slug": "document-skills--pptx",
@@ -877,15 +877,15 @@
       "dir": "pptx",
       "path": "skills/pptx",
       "name": "pptx",
-      "license": "Proprietary. LICENSE.txt has complete terms",
+      "license": "Apache-2.0",
       "plugin": "document-skills",
-      "mirrored": false,
+      "mirrored": true,
       "compatibility": null,
       "declaredAgents": [
         "claude-code"
       ],
       "installMode": "skill",
-      "contentHash": "89f9a583e0074d9e9e30f820e3fa047de7a3da754c45214e85c7bd5bf3a08382"
+      "contentHash": "3d67494ae7e637d1d10bef89b579a4e3b688326ad14e9553d041735822aa1de0"
     },
     {
       "slug": "document-skills--xlsx",
@@ -893,15 +893,15 @@
       "dir": "xlsx",
       "path": "skills/xlsx",
       "name": "xlsx",
-      "license": "Proprietary. LICENSE.txt has complete terms",
+      "license": "Apache-2.0",
       "plugin": "document-skills",
-      "mirrored": false,
+      "mirrored": true,
       "compatibility": null,
       "declaredAgents": [
         "claude-code"
       ],
       "installMode": "skill",
-      "contentHash": "eabb152c9cb4a9ecd58ca047ae2ea4e86cbeba994e9b6b9a5cbb6a901dc11054"
+      "contentHash": "d18f48664e4219c88b20d40066f1fb88b30e017d747b8dfdbd4ceeed71abfeeb"
     },
     {
       "slug": "esm",

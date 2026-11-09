@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-11-02T07:17:48.335Z",
+  "checkedAt": "2026-11-09T07:41:03.775Z",
   "status": "ok",
-  "attemptedAt": "2026-11-02T07:17:48.335Z",
+  "attemptedAt": "2026-11-09T07:41:03.775Z",
   "queries": [
     "topic:agent-skills stars:>=50 archived:false fork:false",
     "agent skills in:name,description stars:>=50 archived:false fork:false"
@@ -12,9 +12,9 @@
       "repo": "morluto/rea",
       "url": "https://github.com/morluto/rea",
       "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
-      "stars": 419949,
-      "pushedAt": "2026-11-02T07:17:47Z",
-      "sha": "f95bdbce76fa538d9383a36c7dde0468078b42f4",
+      "stars": 444754,
+      "pushedAt": "2026-11-09T07:03:35Z",
+      "sha": "4a1c4a59ba4ea964115fd36001ac3d2c05133fc6",
       "skillPaths": [
         ".agents/skills/rea-analysis-optimization/SKILL.md",
         ".agents/skills/rea-changelog-update/SKILL.md",
@@ -27,39 +27,11 @@
       "discoveredAt": "2026-10-12T07:00:16.756Z"
     },
     {
-      "repo": "obra/superpowers",
-      "url": "https://github.com/obra/superpowers",
-      "description": "An agentic skills framework & software development methodology that works.",
-      "stars": 310802,
-      "pushedAt": "2026-10-29T23:35:34Z",
-      "sha": "2ce8aa15d05bd57213e6f746f953aafb7ded7a8b",
-      "skillPaths": [
-        "skills/brainstorming/SKILL.md",
-        "skills/diagnosing-superpowers/SKILL.md",
-        "skills/dispatching-parallel-agents/SKILL.md",
-        "skills/executing-plans/SKILL.md",
-        "skills/finishing-a-development-branch/SKILL.md",
-        "skills/receiving-code-review/SKILL.md",
-        "skills/requesting-code-review/SKILL.md",
-        "skills/subagent-driven-development/SKILL.md",
-        "skills/systematic-debugging/SKILL.md",
-        "skills/test-driven-development/SKILL.md",
-        "skills/using-git-worktrees/SKILL.md",
-        "skills/using-superpowers/SKILL.md",
-        "skills/verification-before-completion/SKILL.md",
-        "skills/writing-plans/SKILL.md",
-        "skills/writing-skills/SKILL.md"
-      ],
-      "skillCount": 15,
-      "skillPathsTruncated": false,
-      "discoveredAt": "2026-10-01T05:09:54.648Z"
-    },
-    {
       "repo": "mattpocock/skills",
       "url": "https://github.com/mattpocock/skills",
       "description": "Skills for Real Engineers. Straight from my .agents directory.",
-      "stars": 309468,
-      "pushedAt": "2026-11-01T11:42:33Z",
+      "stars": 318903,
+      "pushedAt": "2026-11-05T10:40:01Z",
       "sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
       "skillPaths": [
         "skills/engineering/ask-matt/SKILL.md",
@@ -107,12 +79,40 @@
       "discoveredAt": "2026-10-01T05:09:54.648Z"
     },
     {
+      "repo": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "stars": 314725,
+      "pushedAt": "2026-11-03T23:24:58Z",
+      "sha": "22f0b463e7a5e579904dd6211a520321035526f7",
+      "skillPaths": [
+        "skills/brainstorming/SKILL.md",
+        "skills/diagnosing-superpowers/SKILL.md",
+        "skills/dispatching-parallel-agents/SKILL.md",
+        "skills/executing-plans/SKILL.md",
+        "skills/finishing-a-development-branch/SKILL.md",
+        "skills/receiving-code-review/SKILL.md",
+        "skills/requesting-code-review/SKILL.md",
+        "skills/subagent-driven-development/SKILL.md",
+        "skills/systematic-debugging/SKILL.md",
+        "skills/test-driven-development/SKILL.md",
+        "skills/using-git-worktrees/SKILL.md",
+        "skills/using-superpowers/SKILL.md",
+        "skills/verification-before-completion/SKILL.md",
+        "skills/writing-plans/SKILL.md",
+        "skills/writing-skills/SKILL.md"
+      ],
+      "skillCount": 15,
+      "skillPathsTruncated": false,
+      "discoveredAt": "2026-10-01T05:09:54.648Z"
+    },
+    {
       "repo": "affaan-m/ecc",
       "url": "https://github.com/affaan-m/ecc",
       "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
-      "stars": 294981,
-      "pushedAt": "2026-11-02T04:56:08Z",
-      "sha": "b38be6a7f6350964d59328b52f0624e1d1d552d1",
+      "stars": 299822,
+      "pushedAt": "2026-11-09T04:56:24Z",
+      "sha": "d2ef2680594f9a17526a6e1a2e18b3d242c5d17b",
       "skillPaths": [
         ".agents/skills/agent-introspection-debugging/SKILL.md",
         ".agents/skills/agent-sort/SKILL.md",
@@ -163,7 +163,7 @@
       "repo": "dietrichgebert/ponytail",
       "url": "https://github.com/dietrichgebert/ponytail",
       "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
-      "stars": 182347,
+      "stars": 187093,
       "pushedAt": "2026-10-29T11:59:31Z",
       "sha": "96608e078b2d5ea607c5c3b8b5a54d1c1fba6846",
       "skillPaths": [
@@ -188,9 +188,9 @@
       "repo": "shubhamsaboo/awesome-llm-apps",
       "url": "https://github.com/shubhamsaboo/awesome-llm-apps",
       "description": "100+ AI Agents, Agent Skills and RAG Apps - Free and Open Source.",
-      "stars": 143701,
-      "pushedAt": "2026-10-22T19:10:10Z",
-      "sha": "6c16b23f1bacd0fdf240bb5141ef45e59e82c306",
+      "stars": 144241,
+      "pushedAt": "2026-11-08T17:14:10Z",
+      "sha": "c46144eb61c18cd1a495445c79ec47145722053e",
       "skillPaths": [
         "agent_skills/advisor-orchestrator-worker/SKILL.md",
         "agent_skills/commit-archaeologist/SKILL.md",
@@ -211,9 +211,9 @@
       "repo": "juliusbrussee/caveman",
       "url": "https://github.com/juliusbrussee/caveman",
       "description": "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
-      "stars": 116777,
-      "pushedAt": "2026-11-02T04:59:49Z",
-      "sha": "2e068f735253cce28256744804785f01887d9646",
+      "stars": 118452,
+      "pushedAt": "2026-11-09T01:48:59Z",
+      "sha": "3dc497a7f858c774d6e15b25e8c6120ef3a0eda8",
       "skillPaths": [
         "plugins/caveman/skills/cavecrew/SKILL.md",
         "plugins/caveman/skills/caveman-compress/SKILL.md",
@@ -252,7 +252,7 @@
       "repo": "addyosmani/agent-skills",
       "url": "https://github.com/addyosmani/agent-skills",
       "description": "Production-grade engineering skills for AI coding agents.",
-      "stars": 112619,
+      "stars": 114263,
       "pushedAt": "2026-11-01T19:24:49Z",
       "sha": "301b02b12bff98e4688e6984af6556802322bbde",
       "skillPaths": [
@@ -290,9 +290,9 @@
       "repo": "paperclipai/paperclip",
       "url": "https://github.com/paperclipai/paperclip",
       "description": "The open-source app everyone uses to manage agents at work",
-      "stars": 110021,
-      "pushedAt": "2026-11-02T06:27:13Z",
-      "sha": "8ea240218dc1d3a94afea1294b377021045dd9c9",
+      "stars": 112415,
+      "pushedAt": "2026-11-09T07:38:40Z",
+      "sha": "6fd46c0025c9c1cc6236c1bb186bac76c4a7d2ad",
       "skillPaths": [
         ".agents/skills/add-product-e2e-eval/SKILL.md",
         ".agents/skills/add-runner-eval/SKILL.md",
@@ -343,9 +343,9 @@
       "repo": "leonxlnx/taste-skill",
       "url": "https://github.com/leonxlnx/taste-skill",
       "description": "Agent skills that give coding agents taste: art direction, reference images and a browser check instead of generic AI pages",
-      "stars": 108071,
-      "pushedAt": "2026-10-31T07:59:58Z",
-      "sha": "12af471f627f866411b4bd785b19646d3672784c",
+      "stars": 112172,
+      "pushedAt": "2026-11-08T21:51:50Z",
+      "sha": "f6b76575f949707b4e3c37cd86cb44b0b98643e8",
       "skillPaths": [
         "skills/taste-skill/SKILL.md"
       ],
